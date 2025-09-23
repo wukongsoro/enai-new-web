@@ -17,7 +17,9 @@ const CtaSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md">
                 <Link
-                  href="/demo"
+                  href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-black text-white rounded-3xl text-sm font-medium py-4 px-8 hover:bg-gray-800 hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[160px]"
                 >
                   Book a Demo

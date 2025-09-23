@@ -83,7 +83,7 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button asChild size="lg" className="px-8">
-              <Link href="/demo">Book a Demo</Link>
+              <Link href="https://calendly.com/enai-ai2024/30min?month=2025-09" target="_blank" rel="noopener noreferrer">Book a Demo</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="px-8">
               <Link href="/blog">Learn More</Link>

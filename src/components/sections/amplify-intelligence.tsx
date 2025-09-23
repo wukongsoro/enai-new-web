@@ -80,7 +80,9 @@ const AmplifyIntelligence = () => {
             Accelerate B2B growth with ENAI AI BDR agents: increase pipeline velocity by 50%, cut acquisition costs by 70%, and generate 3x more qualified meetings.
           </p>
           <Link
-            href="/demo"
+            href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition-colors hover:bg-gray-200"
           >
             Book a Demo
