@@ -128,7 +128,9 @@ export default function Navigation() {
           {/* Right section: CTA Button & Mobile Menu Toggle */}
           <div className="flex-1 flex justify-end items-center">
             <Link
-              href="/demo"
+              href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`hidden lg:block text-sm font-bold rounded-full px-8 py-3 transition-all duration-300 hover:scale-105 transform ${buttonClass}`}
             >
               Get Demo
@@ -160,7 +162,9 @@ export default function Navigation() {
             ))}
             <div className={`pt-6 border-t mt-6 ${hasScrolled ? 'border-gray-200' : 'border-white/20'}`}>
               <Link
-                href="/demo"
+                href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className={`block text-center w-full text-sm font-bold rounded-xl py-3 px-6 transition-all duration-200 hover:scale-105 ${hasScrolled ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700' : 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700'}`}
               >
