@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -300,10 +301,14 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Featured Image */}
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-orange-200 shadow-xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-orange-600 text-6xl font-bold">ENAI</div>
-                  </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/GxhEHFrWMAAIwCy.jpeg"
+                    alt="ENAI Blog Featured Image"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
 

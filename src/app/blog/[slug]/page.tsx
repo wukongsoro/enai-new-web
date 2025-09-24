@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Link from "next/link";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User, Share2, Twitter, Linkedin, Facebook, Link2 } from "lucide-react";
@@ -17,6 +18,7 @@ const blogPosts = [
     slug: "enai-ai-agents-generate-50-more-qualified-leads",
     author: "ENAI Team",
     readTime: "3 min read",
+    image: "/GZxcAKMXUAIYRGT.jpeg",
     content: `# ENAI's AI Agents Generate 50% More Qualified Leads
 
 ## The Challenge
@@ -26,10 +28,10 @@ Sales development teams struggle with manual prospecting, inconsistent follow-up
 We implemented ENAI's ProspectorAI and OutreachAI agents to automate lead generation and engagement processes.
 
 ## The Results
-- **50% increase in SQLs** generated per SDR
-- **70% reduction** in prospecting time
-- **3x higher** meeting booking rate
-- **$2.3M additional pipeline** created in 90 days
+- 50% increase in SQLs generated per SDR
+- 70% reduction in prospecting time
+- 3x higher meeting booking rate
+- $2.3M additional pipeline created in 90 days
 
 ## Key Features Used
 - Real-time lead scoring and prioritization
@@ -47,6 +49,7 @@ This case study demonstrates how AI BDR agents can transform traditional sales d
     slug: "ai-bdr-playbook-scale-outbound-without-hiring",
     author: "ENAI Team",
     readTime: "5 min read",
+    image: "/GZxcAKLXEAgrNfr.jpeg",
     content: `# The AI BDR Playbook: Scale Outbound Without Hiring
 
 ## Introduction
@@ -103,6 +106,7 @@ Ready to scale your outbound efforts? [Book a demo](https://www.enai.ai/demo) to
     slug: "enai-cuts-prospecting-time-70-ai-automation",
     author: "ENAI Team",
     readTime: "4 min read",
+    image: "/GaIPMq1WUAAEuV2.jpeg",
     content: `# ENAI Cuts Prospecting Time by 70% with AI Automation
 
 ## The Problem
@@ -119,13 +123,13 @@ ENAI's QualifierAI agent automated lead qualification and enrichment, while Pros
 - **2 hours daily** freed up per team member
 
 ### Quality Improvements
-- **40% increase** in lead qualification accuracy
-- **60% improvement** in meeting show-up rates
+- 40% increase in lead qualification accuracy
+- 60% improvement in meeting show-up rates
 - Better lead-to-customer conversion
 
 ### Revenue Growth
-- **25% increase** in monthly recurring revenue
-- **$1.8M additional** pipeline created
+- 25% increase in monthly recurring revenue
+- $1.8M additional pipeline created
 - Faster sales cycle completion
 
 ## Key Technologies
@@ -144,6 +148,7 @@ This implementation showcases how AI can transform not just efficiency, but also
     slug: "ai-sales-automation-complete-2025-guide",
     author: "ENAI Team",
     readTime: "7 min read",
+    image: "/GxhEHFrWMAAIwCy.jpeg",
     content: `# AI Sales Automation: The Complete 2025 Guide
 
 ## What is AI Sales Automation?
@@ -166,17 +171,17 @@ Forecasting deal probabilities and identifying at-risk opportunities.
 
 ## Benefits
 
-- **Increased Productivity**: Automate 70-80% of routine sales tasks
-- **Improved Conversion Rates**: Personalized, timely outreach
-- **Better Lead Quality**: AI-driven qualification and scoring
-- **Scalability**: Handle more prospects without adding headcount
+- Increased Productivity: Automate 70-80% of routine sales tasks
+- Improved Conversion Rates: Personalized, timely outreach
+- Better Lead Quality: AI-driven qualification and scoring
+- Scalability: Handle more prospects without adding headcount
 
 ## Popular Tools
 
-1. **ENAI ProspectorAI**: Autonomous lead generation and outreach
-2. **HubSpot Sales Hub**: CRM-integrated automation
-3. **Outreach**: Enterprise-grade sequence management
-4. **Salesforce Einstein**: AI-powered CRM insights
+1. ENAI ProspectorAI: Autonomous lead generation and outreach
+2. HubSpot Sales Hub: CRM-integrated automation
+3. Outreach: Enterprise-grade sequence management
+4. Salesforce Einstein: AI-powered CRM insights
 
 ## Implementation Tips
 
@@ -203,6 +208,7 @@ Ready to automate your sales process? [Schedule a demo](https://www.enai.ai/demo
     slug: "manual-to-automated-enai-journey",
     author: "ENAI Team",
     readTime: "4 min read",
+    image: "/Ghb8IWKW0AAAOt2.jpeg",
     content: `# From Manual to Automated: ENAI's Journey
 
 ## Our Beginning
@@ -227,10 +233,10 @@ Founded in 2023, ENAI started with a simple mission: to eliminate repetitive sal
 
 ## Key Milestones
 
-- **January 2024**: Launched first AI BDR agent
-- **June 2024**: 1000+ customers milestone
-- **December 2024**: Series A funding announcement
-- **2025**: Global expansion and new product launches
+- January 2024: Launched first AI BDR agent
+- June 2024: 1000+ customers milestone
+- December 2024: Series A funding announcement
+- 2025: Global expansion and new product launches
 
 ## Our Vision
 To create a world where every sales team has an AI co-pilot that handles the mundane while humans focus on strategic relationship building.
@@ -246,6 +252,7 @@ We're always looking for talented individuals to join our mission. [View open po
     slug: "roi-ai-bdr-agents-real-numbers",
     author: "ENAI Team",
     readTime: "6 min read",
+    image: "/Ghb8IpDXgAA-SiT.jpeg",
     content: `# The ROI of AI BDR Agents: Real Numbers
 
 ## Cost-Benefit Analysis
@@ -266,9 +273,9 @@ We're always looking for talented individuals to join our mission. [View open po
 ## Productivity Gains
 
 ### Performance Metrics
-- **Leads contacted per day**: Human BDR (50) vs AI (500)
-- **Response rate**: 5% vs 15%
-- **Meeting booking rate**: 10% vs 25%
+- Leads contacted per day: Human BDR (50) vs AI (500)
+- Response rate: 5% vs 15%
+- Meeting booking rate: 10% vs 25%
 
 ### Revenue Impact
 Assuming $100K average deal size and 20% win rate:
@@ -295,13 +302,14 @@ AI BDR agents don't just reduce costs—they dramatically improve sales effectiv
 ];
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((post) => post.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = blogPosts.find((post) => post.slug === slug);
 
   if (!post) {
     notFound();
@@ -412,10 +420,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Featured Image */}
         <section className="px-6 mb-8">
           <div className="max-w-4xl mx-auto">
-            <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-orange-200 shadow-xl">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-orange-600 text-4xl font-bold">ENAI</div>
-              </div>
+            <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={post.image || "/GxhEHFrWMAAIwCy.jpeg"}
+                alt={`${post.title} - Featured Image`}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -471,8 +483,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   className="group block"
                 >
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                      <div className="text-orange-600 text-xl font-bold">ENAI</div>
+                    <div className="aspect-[4/3] relative overflow-hidden">
+                      <Image
+                        src={relatedPost.image || "/GxhEHFrWMAAIwCy.jpeg"}
+                        alt={`${relatedPost.title} - Related Post`}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <div className="p-4">
                       <Badge variant="secondary" className="mb-2 text-xs">
