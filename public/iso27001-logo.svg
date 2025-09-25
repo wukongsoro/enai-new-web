@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="18" y="18" width="28" height="28" rx="2" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="32" cy="26" r="3" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M26 34 L32 40 L38 34" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="32" y="52" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="5" font-weight="bold">ISO 27001</text>
+</svg>

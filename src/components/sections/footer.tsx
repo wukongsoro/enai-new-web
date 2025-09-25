@@ -109,18 +109,71 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </div>
-              <div className="flex items-center gap-4">
-                <div title="SOC 2 Type II" className="h-16 w-16 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <div className="text-white/80 text-[10px] font-bold text-center leading-tight">SOC 2<br/>Type II</div>
-                </div>
-                <div className="h-16 w-16 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/20 p-2">
-                  <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/svgs/683dffa3be5d2151e6fe8afa_a3a25b8c5da8b4e8d64ecfdddd6df2dd_casa-tier-3-10.svg?"
-                    alt="GDPR Compliant"
-                    width={40}
-                    height={40}
-                    className="filter invert brightness-0"
-                  />
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-4">
+                  <div className="flex flex-col items-center gap-1">
+                    <div title="SOC 2 Type II Underway" className="h-12 w-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                      <Image
+                        src="/soc2-logo.svg"
+                        alt="SOC 2 Type II Underway"
+                        width={40}
+                        height={40}
+                        className="filter invert brightness-0"
+                      />
+                    </div>
+                    <Link href="/compliance/soc2" className="text-white/60 hover:text-white text-[10px] transition-colors">
+                      SOC 2 Type II
+                    </Link>
+                    <span className="text-white/40 text-[8px]">Underway</span>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-1">
+                    <div title="CCPA Compliant Underway" className="h-12 w-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                      <Image
+                        src="/ccpa-logo.svg"
+                        alt="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
+                    <Link href="/compliance/ccpa" className="text-white/60 hover:text-white text-[10px] transition-colors">
+                      CCPA
+                    </Link>
+                    <span className="text-white/40 text-[8px]">Underway</span>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-1">
+                    <div title="ISO 27001 Certified" className="h-12 w-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                      <Image
+                        src="/iso27001-logo.svg"
+                        alt="ISO 27001 Certified"
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
+                    <Link href="/compliance/iso27001" className="text-white/60 hover:text-white text-[10px] transition-colors">
+                      ISO 27001
+                    </Link>
+                    <span className="text-white/40 text-[8px]">Underway</span>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-1">
+                    <div title="GDPR Compliant" className="h-12 w-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                      <Image
+                        src="/gdpr-logo.svg"
+                        alt="GDPR Compliant"
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
+                    <Link href="/compliance/gdpr" className="text-white/60 hover:text-white text-[10px] transition-colors">
+                      GDPR
+                    </Link>
+                    <span className="text-white/40 text-[8px]">Underway</span>
+                  </div>
                 </div>
               </div>
           </div>
