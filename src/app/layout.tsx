@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enai.ai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
+    title: "Enai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
     description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
     creator: "@enai_ai",
     site: "@enai_ai",
