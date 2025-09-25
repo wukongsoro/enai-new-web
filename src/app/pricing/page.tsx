@@ -101,22 +101,6 @@ export default function PricingPage() {
                   tier.name === "Team" ? "pricing-card-shadow-primary" : "pricing-card-shadow-secondary"
                 } ${tier.popular ? "pricing-card-shadow-primary" : ""}`}
               >
-                {/* Glow effect for Enterprise/Team plan */}
-                {tier.name === "Team" && (
-                  <div className="pointer-events-none">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width="307"
-                      height="526"
-                      decoding="async"
-                      className="object-fit absolute inset-0 h-full w-full"
-                      style={{ color: 'transparent' }}
-                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzA3IiBoZWlnaHQ9IjUyNiIgdmlld0JveD0iMCAwIDMwNyA1MjYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNTMuNSAwaDMuNUMyMTYuNSA4LjUgMjUzIDQxIDI1MyA5OC41VjQyN2MwIDU3LjUtNDIgMTA0LTk5LjUgMTA0SDEwMUM0Mi41IDUzMSAwaIDQ4OSAwIDQyN1Y5OC41QzAgNDEgNDIuNSAyMC41IDEwMSAyMC41SDE1My41VjB6IiBmaWxsPSJ1cmwoI2dhdXNzaWFuR3JhZGllbnQwXzEpIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJnYXVzc2lhbkdyYWRpZW50MF8xIiB4MT0iNTMuNSUiIHkxPSItMTMuNDYlIiB4Mj0iNTMuNSUiIHkyPSIxMTMuNDYlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzgwQjVGRiIvPgo8c3RvcCBvZmZzZXQ9IjAuNDciIHN0b3AtY29sb3I9IiMzOEYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjODBCNUZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg=="
-                    />
-                  </div>
-                )}
-
                 <div className="row-start-1 grid grid-cols-2 gap-y-4">
                   <div className="flex items-center gap-x-2 self-start">
                     <h3 className="text-lg leading-snug font-semibold tracking-tight text-gray-20">{tier.name}</h3>
