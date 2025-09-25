@@ -1,26 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
-
-// Hook to detect if device is mobile
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
-      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
-      const isSmallScreen = window.innerWidth < 768;
-      setIsMobile(isMobileDevice || isSmallScreen);
-    };
-
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
-
-  return isMobile;
-};
+import React, { useRef, useEffect } from "react";
 
 // WebGL Shader Background Hook
 const useShaderBackground = () => {
@@ -258,7 +238,9 @@ void main(){gl_Position=position;}`;
     if (!canvasRef.current) return;
 
     const canvas = canvasRef.current;
-    const dpr = Math.max(1, 0.5 * window.devicePixelRatio);
+    // Optimize for mobile devices - use lower DPR on small screens
+    const isMobile = window.innerWidth < 768;
+    const dpr = isMobile ? Math.min(1, window.devicePixelRatio * 0.5) : Math.max(1, 0.5 * window.devicePixelRatio);
 
     canvas.width = window.innerWidth * dpr;
     canvas.height = window.innerHeight * dpr;
@@ -387,30 +369,14 @@ void main(void) {
 
 const HeroSection = () => {
   const canvasRef = useShaderBackground();
-  const isMobile = useIsMobile();
 
   return (
     <header className="relative flex min-h-screen items-center justify-center overflow-hidden text-white w-full" style={{ margin: 0, padding: 0 }}>
-        {/* WebGL Shader Background - disabled on mobile for performance */}
-        {!isMobile && (
-          <canvas
-            ref={canvasRef}
-            className="absolute inset-0 w-full h-full touch-none"
-            style={{ background: 'black', margin: 0, padding: 0 }}
-          />
-        )}
-
-        {/* Mobile fallback background */}
-        {isMobile && (
-          <div
-            className="absolute inset-0 w-full h-full"
-            style={{
-              background: 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)',
-              margin: 0,
-              padding: 0
-            }}
-          />
-        )}
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full touch-none"
+          style={{ background: 'black', margin: 0, padding: 0 }}
+        />
 
         <div className="relative z-[2] w-full max-w-6xl mx-auto text-center">
           <div className="pt-32 pb-12 md:pt-40 md:pb-24">
