@@ -203,17 +203,80 @@ export default function PricingPage() {
         {/* Features Comparison */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">Plan Comparison</h2>
-          <div className="overflow-x-auto">
+
+          {/* Mobile Card View */}
+          <div className="block md:hidden space-y-6 mb-12">
+            {[
+              { name: "Free Trial", features: [
+                "Emails per month: 100",
+                "Sequences: Limited",
+                "Voice features: ✗",
+                "Domain warmup: ✗",
+                "A/B testing: ✗",
+                "Integrations: ✗",
+                "Advanced analytics: ✗",
+                "Multi-seat management: ✗",
+                "SSO integration: ✗",
+                "SLA guarantees: ✗",
+                "Custom workflows: ✗"
+              ]},
+              { name: "Starter", features: [
+                "Emails per month: 2,000",
+                "Sequences: ✓",
+                "Voice features: Limited",
+                "Domain warmup: ✗",
+                "A/B testing: ✗",
+                "Integrations: ✓",
+                "Advanced analytics: Basic",
+                "Multi-seat management: ✗",
+                "SSO integration: ✗",
+                "SLA guarantees: ✗",
+                "Custom workflows: ✗"
+              ]},
+              { name: "Pro", features: [
+                "Emails per month: 10,000",
+                "Sequences: ✓",
+                "Voice features: ✓",
+                "Domain warmup: ✓",
+                "A/B testing: ✓",
+                "Integrations: ✓",
+                "Advanced analytics: ✓",
+                "Multi-seat management: ✗",
+                "SSO integration: ✗",
+                "SLA guarantees: ✗",
+                "Custom workflows: ✗"
+              ]},
+              { name: "Team", features: [
+                "Emails per month: Custom",
+                "Sequences: ✓",
+                "Voice features: ✓",
+                "Domain warmup: ✓",
+                "A/B testing: ✓",
+                "Integrations: ✓",
+                "Advanced analytics: ✓",
+                "Multi-seat management: ✓",
+                "SSO integration: ✓",
+                "SLA guarantees: ✓",
+                "Custom workflows: ✓"
+              ]}
+            ].map((plan) => (
+              <div key={plan.name} className="bg-card border rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-center mb-4 text-foreground">{plan.name}</h3>
+                <div className="space-y-2">
+                  {plan.features.map((feature, index) => (
+                    <div key={index} className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">{feature.split(':')[0]}:</span>
+                      <span className="font-medium">{feature.split(':')[1]}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left py-4 font-medium text-foreground">Feature</th>
-                  <th className="text-center py-4 font-medium text-foreground border-x">Free Trial</th>
-                  <th className="text-center py-4 font-medium text-foreground border-x">Starter</th>
-                  <th className="text-center py-4 font-medium text-foreground border-x">Pro</th>
-                  <th className="text-center py-4 font-bold text-primary border-x border-r">Team</th>
-                </tr>
-              </thead>
               <tbody className="divide-y">
                 <tr>
                   <td className="py-4 text-muted-foreground">Emails per month</td>

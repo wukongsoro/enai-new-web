@@ -418,45 +418,48 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </section>
 
         {/* Featured Image */}
-        <section className="px-6 mb-8">
+        <section className="px-4 sm:px-6 mb-6 sm:mb-8">
           <div className="max-w-4xl mx-auto">
-            <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl">
               <Image
                 src={post.image || "/GxhEHFrWMAAIwCy.jpeg"}
                 alt={`${post.title} - Featured Image`}
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
               />
             </div>
           </div>
         </section>
 
         {/* Author and Share Info */}
-        <section className="px-6 mb-12">
+        <section className="px-4 sm:px-6 mb-8 sm:mb-12">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-6 text-gray-600">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-gray-600 text-sm sm:text-base">
                 <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
+                  <User className="w-4 h-4 flex-shrink-0" />
                   <span>{post.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="w-4 h-4 flex-shrink-0" />
                   <span>{post.date}</span>
                 </div>
-                <span>{post.readTime}</span>
+                <span className="text-gray-500">{post.readTime}</span>
               </div>
 
               {/* Share Buttons */}
-              <ShareButtons title={post.title} slug={post.slug} description={post.description} />
+              <div className="flex justify-center sm:justify-end">
+                <ShareButtons title={post.title} slug={post.slug} description={post.description} />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Article Content */}
-        <article className="max-w-4xl mx-auto px-6 pb-8">
-          <div className="prose prose-lg max-w-none">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 pb-6 sm:pb-8">
+          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700">
             {renderContent(post.content)}
           </div>
         </article>

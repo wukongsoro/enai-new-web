@@ -344,23 +344,23 @@ export default function BlogPage() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
               {blogPosts.slice(1).map((post, index) => (
                 <Card key={index} className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary">{post.type}</Badge>
+                  <CardHeader className="pb-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                      <Badge variant="secondary" className="w-fit">{post.type}</Badge>
                       <span className="text-sm text-gray-500">{post.date}</span>
                     </div>
-                    <CardTitle className="text-xl font-semibold text-gray-900 line-clamp-2">
+                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 line-clamp-2 leading-tight">
                       {post.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-600 line-clamp-3 mb-4">
+                  <CardContent className="pt-0">
+                    <CardDescription className="text-gray-600 line-clamp-3 mb-6 text-sm sm:text-base leading-relaxed">
                       {post.description}
                     </CardDescription>
-                    <Button variant="outline" className="w-full" asChild>
+                    <Button variant="outline" className="w-full min-h-[44px] text-sm sm:text-base" asChild>
                       <Link href={`/blog/${post.slug}`}>
                         Read More
                       </Link>
