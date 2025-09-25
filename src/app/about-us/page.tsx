@@ -47,7 +47,7 @@ const About3 = ({
     alt: "ENAI Team",
   },
   secondaryImage = {
-    src: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312/672e7908155f536f9f79253f_Screenshot%202024-11-08%20at%2012.47.43.webp",
+    src: "",
     alt: "AI Technology",
   },
   breakout = {
@@ -75,8 +75,8 @@ const About3 = ({
             alt={mainImage.alt}
             className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
           />
-          <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
-            <div className="flex flex-col justify-between gap-6 rounded-xl bg-gray-50 p-7 md:w-1/2 lg:w-auto">
+          <div className="max-w-md mx-auto lg:mx-0">
+            <div className="flex flex-col justify-between gap-6 rounded-xl bg-gray-50 p-7">
               <div className="flex items-center gap-3">
                 <img
                   src={breakout.src}
@@ -95,11 +95,6 @@ const About3 = ({
                 </a>
               </Button>
             </div>
-            <img
-              src={secondaryImage.src}
-              alt={secondaryImage.alt}
-              className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
-            />
           </div>
         </div>
 
