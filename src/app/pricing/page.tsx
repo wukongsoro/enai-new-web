@@ -76,10 +76,10 @@ export default function PricingPage() {
         {/* Pricing Hero */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Simple, Transparent Pricing
+            Pricing
           </h1>
           <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed">
-            No hidden fees, no unlimited promises. Clear limits, fair pricing.
+            See pricing for our individual, business, and enterprise plans.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button asChild size="lg" className="px-8">

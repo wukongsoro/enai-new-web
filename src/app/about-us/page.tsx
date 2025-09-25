@@ -31,9 +31,12 @@ interface About3Props {
 
 
 const defaultAchievements = [
-  { label: "Qualified leads generated per month per client", value: "500+" },
-  { label: "Reduction in prospecting time for sales teams", value: "70%" },
-  { label: "Revenue generated for our enterprise clients", value: "$2M+" },
+  { label: "Pipeline velocity increase", value: "50%" },
+  { label: "Cost reduction in sales acquisition", value: "70%" },
+  { label: "More qualified meetings generated", value: "3x" },
+  { label: "Lead conversion rate improvement", value: "35%" },
+  { label: "Sales cycle duration reduction", value: "20 days" },
+  { label: "Year-over-year revenue growth", value: "50%" },
 ];
 
 const About3 = ({
@@ -55,8 +58,8 @@ const About3 = ({
     buttonText: "Book a Demo",
     buttonUrl: "https://calendly.com/enai-ai2024/30min",
   },
-  achievementsTitle = "Superhuman results around the clock",
-  achievementsDescription = "Our digital workers deliver measurable impact for sales teams worldwide.",
+  achievementsTitle = "Measurable Results That Drive Growth",
+  achievementsDescription = "Our AI-powered platform delivers transformative outcomes across sales teams and enterprises worldwide.",
   achievements = defaultAchievements,
 }: About3Props = {}) => {
   return (
@@ -164,19 +167,21 @@ const About3 = ({
         </div>
 
         <div className="relative overflow-hidden rounded-xl bg-gray-50 p-10 md:p-16">
-          <div className="flex flex-col gap-4 text-center md:text-left">
+          <div className="flex flex-col gap-4 text-center">
             <h2 className="text-4xl font-semibold text-black">{achievementsTitle}</h2>
-            <p className="max-w-screen-sm text-gray-600">
+            <p className="max-w-2xl text-gray-600 mx-auto">
               {achievementsDescription}
             </p>
           </div>
-          <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             {achievements.map((item, idx) => (
-              <div className="flex flex-col gap-4" key={item.label + idx}>
-                <p className="text-gray-700">{item.label}</p>
-                <span className="text-4xl font-semibold text-black md:text-5xl">
+              <div className="flex flex-col gap-3 text-center" key={item.label + idx}>
+                <span className="text-4xl md:text-5xl font-bold text-black">
                   {item.value}
                 </span>
+                <p className="text-sm md:text-base text-gray-700 leading-tight">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
