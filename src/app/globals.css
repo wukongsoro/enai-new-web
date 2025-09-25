@@ -194,7 +194,59 @@ nextjs-portal {
   .liquid-glass-navbar {
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
+    /* Ensure proper compositing for backdrop-filter */
+    isolation: isolate;
+    will-change: transform;
   }
+}
+
+/* Optional gloss effect for premium feel */
+.header-gloss::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,.18), rgba(255,255,255,0));
+  border-radius: inherit;
+}
+
+/* Fallback when blur unsupported */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .no-blur-fallback {
+    background: rgba(255,255,255,0.92);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .dark .no-blur-fallback {
+    background: rgba(12,12,12,0.92);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+}
+
+/* Hero scrim to neutralize strong background colors under nav */
+.hero-scrim {
+  position: relative;
+}
+.hero-scrim::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 140px;                    /* banner(56px) + nav(84px) = 140px */
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.25),          /* soft neutral wash */
+    rgba(255,255,255,0.12) 60%,
+    rgba(255,255,255,0.00)
+  );
+  z-index: 10;                       /* above hero content, below nav (header is z-50) */
+}
+.dark .hero-scrim::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.18) 60%,
+    rgba(0,0,0,0.00)
+  );
 }
 
 /* Pricing Card Shadows */

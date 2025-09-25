@@ -5,11 +5,11 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Enai.ai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
+  title: "Enai AI - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in UK",
   description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
   viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
-  keywords: "AI sales automation UK, B2B AI tools London, sales AI United Kingdom, lead generation AI UK, AI-powered sales London, AI workers for sales UK, sales process automation Britain, B2B sales software London, AI sales agents UK, automated lead qualification London",
-  authors: [{ name: "Enai.ai" }],
+  keywords: "AI sales automation UK, B2B AI tools UK, sales AI United Kingdom, lead generation AI UK, AI-powered sales UK, AI workers for sales UK, sales process automation Britain, B2B sales software UK, AI sales agents UK, automated lead qualification UK",
+  authors: [{ name: "Enai AI" }],
   creator: "Enai.ai",
   publisher: "Enai.ai",
   formatDetection: {
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Enai.ai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
+    title: "Enai AI - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
     description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
     url: "https://www.enai.ai/",
-    siteName: "Enai.ai",
+    siteName: "Enai AI",
     images: [
       {
         url: "https://www.enai.ai/enai-og-image.jpg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
+    title: "Enai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in UK",
     description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
     creator: "@enai_ai",
     site: "@enai_ai",

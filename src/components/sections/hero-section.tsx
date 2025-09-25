@@ -371,7 +371,7 @@ const HeroSection = () => {
   const canvasRef = useShaderBackground();
 
   return (
-    <header className="relative flex min-h-screen items-center justify-center overflow-hidden text-white w-full" style={{ margin: 0, padding: 0 }}>
+    <header className="relative flex min-h-screen items-center justify-center overflow-hidden text-white w-full hero-scrim" style={{ margin: 0, padding: 0 }}>
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full touch-none"

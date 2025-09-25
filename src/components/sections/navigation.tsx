@@ -61,21 +61,21 @@ export default function Navigation() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Apple Liquid Glass styling - authentic and minimal with better visibility
-  const navbarClass = hasScrolled
-    ? "bg-white/85 backdrop-blur-2xl backdrop-saturate-180 border-b border-white/40 shadow-sm"
-    : "bg-white/20 backdrop-blur-2xl backdrop-saturate-180 border-b border-white/20";
+  // Apple Liquid Glass styling - true glassmorphism with proper blur
+  const glassTint = hasScrolled
+    ? "bg-white/36 dark:bg-neutral-900/42"
+    : "bg-white/22 dark:bg-neutral-900/34";
 
   const linkColorClass = hasScrolled
     ? "text-gray-900 hover:text-orange-600 transition-colors duration-200"
-    : "text-gray-800 hover:text-orange-600 transition-colors duration-200";
+    : "text-gray-900 hover:text-orange-600 transition-colors duration-200"; // keep dark text for contrast over brightened glass
 
   const buttonClass = hasScrolled
     ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200"
     : "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 font-sans">
+    <header className="fixed top-0 left-0 right-0 z-50 font-sans" style={{ transform: 'translateZ(0)' }}>
       {/* Top Banner Section */}
       <div className="bg-black text-white">
         <div className="relative h-14 overflow-hidden">
@@ -95,7 +95,22 @@ export default function Navigation() {
       </div>
 
       {/* Apple Liquid Glass Navigation Bar */}
-      <div className={`w-full transition-all duration-500 ease-out liquid-glass-navbar ${navbarClass}`}>
+      <div
+        className={[
+          "w-full transition-all duration-500 ease-out header-gloss no-blur-fallback",
+          // glass + tint
+          glassTint,
+          // the blur (works in Safari/Chromium) + brightness/saturate/contrast to neutralize orange
+          "backdrop-blur-xl",
+          "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
+          "[-webkit-backdrop-filter:brightness(1.1)_saturate(1.1)_contrast(1.1)_blur(20px)]",
+          "supports-[backdrop-filter]:saturate-180",
+          // thin border like iOS
+          "border-b border-white/20 dark:border-white/10",
+          // prevent blending issues with siblings
+          "[isolation:isolate]",
+        ].join(" ")}
+      >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-[84px]">
           {/* Left section: Logo */}
           <div className="flex-1 flex justify-start">
@@ -148,7 +163,17 @@ export default function Navigation() {
       
       {/* Mobile Menu Panel */}
       {isMenuOpen && (
-        <div className={`lg:hidden fixed top-[84px] left-0 right-0 z-40 transition-all duration-300 ease-out liquid-glass-navbar ${hasScrolled ? 'bg-white/90 backdrop-blur-2xl backdrop-saturate-180 border-b border-white/40' : 'bg-white/30 backdrop-blur-2xl backdrop-saturate-180 border-b border-white/25'}`}>
+        <div
+          className={[
+            "lg:hidden fixed top-[84px] left-0 right-0 z-40 transition-all duration-300 ease-out",
+            "bg-white/20 dark:bg-neutral-900/40",
+            "backdrop-blur-xl",
+            "[-webkit-backdrop-filter:saturate(180%)_blur(20px)]",
+            "supports-[backdrop-filter]:saturate-180",
+            "border-b border-white/20 dark:border-white/10",
+            "[isolation:isolate]",
+          ].join(" ")}
+        >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-3 overflow-y-auto max-h-[calc(100vh-84px)]">
             {navLinks.map((link) => (
               <Link
