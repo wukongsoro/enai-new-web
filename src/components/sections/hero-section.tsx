@@ -2,6 +2,26 @@
 
 import React, { useRef, useEffect, useState } from "react";
 
+// Hook to detect if device is mobile
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+      const isSmallScreen = window.innerWidth < 768;
+      setIsMobile(isMobileDevice || isSmallScreen);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
+
 // WebGL Shader Background Hook
 const useShaderBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -367,14 +387,30 @@ void main(void) {
 
 const HeroSection = () => {
   const canvasRef = useShaderBackground();
+  const isMobile = useIsMobile();
 
   return (
     <header className="relative flex min-h-screen items-center justify-center overflow-hidden text-white w-full" style={{ margin: 0, padding: 0 }}>
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full touch-none"
-          style={{ background: 'black', margin: 0, padding: 0 }}
-        />
+        {/* WebGL Shader Background - disabled on mobile for performance */}
+        {!isMobile && (
+          <canvas
+            ref={canvasRef}
+            className="absolute inset-0 w-full h-full touch-none"
+            style={{ background: 'black', margin: 0, padding: 0 }}
+          />
+        )}
+
+        {/* Mobile fallback background */}
+        {isMobile && (
+          <div
+            className="absolute inset-0 w-full h-full"
+            style={{
+              background: 'linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%)',
+              margin: 0,
+              padding: 0
+            }}
+          />
+        )}
 
         <div className="relative z-[2] w-full max-w-6xl mx-auto text-center">
           <div className="pt-32 pb-12 md:pt-40 md:pb-24">
@@ -386,7 +422,7 @@ const HeroSection = () => {
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                 </div>
-                <h2 id="hero-heading" className="text-4xl md:text-6xl tracking-tighter leading-tight md:leading-[1.08] font-geist bg-clip-text text-transparent mx-auto [text-wrap:balance] animate-fade-in-up motion-reduce:animate-none bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] drop-shadow-[0_10px_30px_rgba(249,115,22,0.12)]">
+                <h2 id="hero-heading" className="text-3xl sm:text-4xl md:text-6xl tracking-tighter leading-tight md:leading-[1.08] font-geist bg-clip-text text-transparent mx-auto [text-wrap:balance] animate-fade-in-up motion-reduce:animate-none bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] drop-shadow-[0_10px_30px_rgba(249,115,22,0.12)]">
                   <span className="text-white">AI WORKERS</span>
                 </h2>
               </div>
@@ -409,13 +445,13 @@ const HeroSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Get Demo"
-                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-orange-400/30 to-transparent dark:from-zinc-300/5 dark:via-orange-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-orange-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-orange-400/30 transition-all sm:w-auto py-5 px-12 text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-orange-400/30 to-transparent dark:from-zinc-300/5 dark:via-orange-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-orange-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-orange-400/30 transition-all sm:w-auto py-5 px-12 min-h-[48px] text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                     >
                       Get Demo
                     </a>
                   </div>
                 </span>
-                <button className="inline-flex rounded-full text-center group items-center w-full justify-center bg-transparent text-white dark:text-white border-2 border-white dark:border-white hover:bg-white hover:text-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all sm:w-auto py-5 px-12 text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+                <button className="inline-flex rounded-full text-center group items-center w-full justify-center bg-transparent text-white dark:text-white border-2 border-white dark:border-white hover:bg-white hover:text-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all sm:w-auto py-5 px-12 min-h-[48px] text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
                   Learn More
                 </button>
               </div>

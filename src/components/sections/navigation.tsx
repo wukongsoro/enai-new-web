@@ -137,7 +137,7 @@ export default function Navigation() {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden transition-colors duration-300 ${linkColorClass}`}
+              className={`lg:hidden transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${linkColorClass}`}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -155,7 +155,7 @@ export default function Navigation() {
                 key={link.text}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block rounded-xl py-4 px-6 text-base font-bold transition-all duration-200 text-center hover:scale-105 ${hasScrolled ? 'text-gray-900 hover:bg-white/50' : 'text-gray-800 hover:bg-orange-50'}`}
+                className={`block rounded-xl py-4 px-6 text-base font-bold transition-all duration-200 text-center hover:scale-105 min-h-[48px] flex items-center justify-center ${hasScrolled ? 'text-gray-900 hover:bg-white/50' : 'text-gray-800 hover:bg-orange-50'}`}
               >
                 {link.text}
               </Link>

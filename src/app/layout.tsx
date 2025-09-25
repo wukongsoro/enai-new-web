@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Enai.ai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
   description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
-  viewport: "width=device-width, initial-scale=1.0, viewport-fit=cover",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
   keywords: "AI sales automation UK, B2B AI tools London, sales AI United Kingdom, lead generation AI UK, AI-powered sales London, AI workers for sales UK, sales process automation Britain, B2B sales software London, AI sales agents UK, automated lead qualification London",
   authors: [{ name: "Enai.ai" }],
   creator: "Enai.ai",

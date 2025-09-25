@@ -28,7 +28,7 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
 
   return (
   <div className="w-full h-full flex flex-col">
-    <div className={`relative overflow-hidden rounded-2xl w-full h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
+    <div className={`relative overflow-hidden rounded-2xl w-full h-64 sm:h-72 md:h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
       {bottomVideoSrc ? (
         <video
           src={bottomVideoSrc}
@@ -92,7 +92,7 @@ const DigitalWorkersIntro = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-7xl mx-auto">
           <WorkerCard
             name="ProspectorAI"
             role="Lead Discovery Agent"

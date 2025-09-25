@@ -20,13 +20,13 @@ const CtaSection = () => {
                   href="https://calendly.com/enai-ai2024/30min?month=2025-09"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-black text-white rounded-3xl text-sm font-medium py-4 px-8 hover:bg-gray-800 hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[160px]"
+                  className="inline-flex items-center justify-center bg-black text-white rounded-3xl text-sm font-medium py-4 px-8 hover:bg-gray-800 hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[160px] min-h-[48px]"
                 >
                   Book a Demo
                 </Link>
                 <Link
                   href="/pricing"
-                  className="inline-flex items-center justify-center border-2 border-black text-black rounded-3xl text-sm font-medium py-4 px-8 hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[160px]"
+                  className="inline-flex items-center justify-center border-2 border-black text-black rounded-3xl text-sm font-medium py-4 px-8 hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[160px] min-h-[48px]"
                 >
                   View Pricing
                 </Link>
