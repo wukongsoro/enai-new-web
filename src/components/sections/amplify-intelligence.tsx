@@ -73,7 +73,7 @@ const AmplifyIntelligence = () => {
           <div className="mb-4 inline-block rounded-full bg-white/20 px-3 py-1 text-sm font-medium text-white">
             24/7 Sales Automation
           </div>
-          <h2 className="text-5xl font-bold leading-tight text-white md:text-[56px]">
+          <h2 className="text-5xl heading-strong leading-tight text-white md:text-[56px]">
             Amplify Your Sales Pipeline
           </h2>
           <p className="mt-4 max-w-lg text-base text-white/90">

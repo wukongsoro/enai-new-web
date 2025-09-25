@@ -9,7 +9,7 @@ const Features = () => {
         <div className="relative">
           {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-[32px] md:text-5xl font-bold text-black mb-6">
+          <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">
               AI-Powered Sales Automation
           </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">

@@ -93,7 +93,7 @@ export default function WorkforceTransformation() {
     <section className="bg-[#E8DDD4] py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-[32px] md:text-[48px] lg:text-5xl font-bold mb-4 text-black">
+          <h2 className="text-[32px] md:text-[48px] lg:text-5xl heading-strong mb-4 text-black">
             ENAI BDR Features That Drive Results
           </h2>
           <p className="text-base md:text-lg text-[#666666] max-w-xl mx-auto leading-relaxed">

@@ -381,14 +381,14 @@ const HeroSection = () => {
         <div className="relative z-[2] w-full max-w-6xl mx-auto text-center">
           <div className="pt-32 pb-12 md:pt-40 md:pb-24">
             <div className="max-w-4xl mx-auto">
-              <div className="mb-6 md:mb-8">
-                <div className="text-sm text-white dark:text-white group font-geist font-semibold mx-auto px-5 py-2 bg-gradient-to-tr from-zinc-300/30 via-gray-400/30 to-transparent dark:from-zinc-300/10 dark:via-gray-400/10 backdrop-blur-md border-[2px] border-white/20 dark:border-white/30 rounded-3xl w-fit animate-slide-down motion-reduce:animate-none shadow-[0_4px_12px_rgba(0,0,0,0.5)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <div className="mb-3 md:mb-4">
+                <div className="text-xs tracking-[0.06em] text-white dark:text-white group font-geist font-semibold mx-auto px-5 py-2 mb-2 bg-gradient-to-tr from-zinc-300/30 via-gray-400/30 to-transparent dark:from-zinc-300/10 dark:via-gray-400/10 backdrop-blur-md border-[2px] border-white/20 dark:border-white/30 rounded-3xl w-fit animate-slide-down motion-reduce:animate-none shadow-[0_4px_12px_rgba(0,0,0,0.5)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Meet Your New
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" aria-hidden="true">
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                 </div>
-                <h2 id="hero-heading" className="text-3xl sm:text-4xl md:text-6xl tracking-tighter leading-tight md:leading-[1.08] font-geist bg-clip-text text-transparent mx-auto [text-wrap:balance] animate-fade-in-up motion-reduce:animate-none bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] drop-shadow-[0_10px_30px_rgba(249,115,22,0.12)]">
+                <h2 id="hero-heading" className="text-3xl sm:text-4xl md:text-6xl tracking-tighter leading-[1.1] md:leading-[1.15] font-geist bg-clip-text text-transparent mx-auto [text-wrap:balance] animate-fade-in-up motion-reduce:animate-none bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] drop-shadow-[0_10px_30px_rgba(249,115,22,0.12)] mt-1">
                   <span className="text-white">AI WORKERS</span>
                 </h2>
               </div>
@@ -402,7 +402,7 @@ const HeroSection = () => {
                   Stop losing leads to manual prospecting. Our AI workers handle research, outreach, and booking - so your team can focus on closing deals.
                 </p>
               </div>
-              <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+              <div className="flex justify-center">
                 <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] shadow-[0_10px_30px_rgba(249,115,22,0.15)]">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FDE68A_0%,#F97316_50%,#FDE68A_100%)]"></span>
                   <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
@@ -411,15 +411,12 @@ const HeroSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Get Demo"
-                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-orange-400/30 to-transparent dark:from-zinc-300/5 dark:via-orange-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-orange-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-orange-400/30 transition-all sm:w-auto py-5 px-12 min-h-[48px] text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-orange-400/30 to-transparent dark:from-zinc-300/5 dark:via-orange-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-orange-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-orange-400/30 transition-all sm:w-auto py-4 px-10 min-h-[44px] text-sm sm:text-base font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
                     >
                       Get Demo
                     </a>
                   </div>
                 </span>
-                <button className="inline-flex rounded-full text-center group items-center w-full justify-center bg-transparent text-white dark:text-white border-2 border-white dark:border-white hover:bg-white hover:text-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all sm:w-auto py-5 px-12 min-h-[48px] text-base sm:text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">
-                  Learn More
-                </button>
               </div>
             </div>
           </div>

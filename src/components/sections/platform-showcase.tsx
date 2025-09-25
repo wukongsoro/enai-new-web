@@ -47,7 +47,7 @@ export default function PlatformShowcase() {
           <div className="inline-block bg-[#F5F1ED] text-black text-sm font-medium py-1 px-3 rounded-full mb-4">
             ENAI BDR Platform
           </div>
-          <h2 className="text-[40px] md:text-[48px] font-bold leading-tight mb-6">
+          <h2 className="text-[40px] md:text-[48px] heading-strong leading-tight mb-6">
             Full BDR Workflow Automation
           </h2>
           <p className="text-[#666666] text-lg mb-6">

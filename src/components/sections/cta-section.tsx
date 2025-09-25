@@ -9,7 +9,7 @@ const CtaSection = () => {
         <div className="bg-[#E8DDD4] rounded-[40px] overflow-hidden shadow-xl">
           <div className="grid lg:grid-cols-2 gap-0 min-h-[500px] lg:min-h-[600px]">
             <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 order-2 lg:order-1">
-              <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold text-black leading-tight mb-6">
+              <h2 className="text-[32px] md:text-[48px] lg:text-[56px] heading-strong text-black leading-tight mb-6">
                 Deploy Your AI BDR Today
               </h2>
               <p className="text-lg md:text-xl text-[#666666] leading-relaxed mb-10 max-w-lg">
