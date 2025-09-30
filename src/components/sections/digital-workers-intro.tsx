@@ -118,7 +118,7 @@ const DigitalWorkersIntro = () => {
             description="Qualifies leads through intelligent conversations, schedules demos via calendar integration, and nurtures with follow-ups. Handles objections autonomously."
             hireLink="/agents/qualifierai"
             imageWrapperClass="bg-gray-100"
-            bottomUIImage="/qualifierai-booking-dashboard.jpg"
+            bottomUIImage="/automated-booking.png"
             bottomUIImageAlt="Meeting Room Booking Dashboard Interface"
           />
         </div>

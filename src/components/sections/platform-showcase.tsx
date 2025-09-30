@@ -3,42 +3,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useState } from "react";
-import { PlayCircle } from "lucide-react";
 
 const tabData = [
   {
     value: "identify",
     title: "Identify Leads",
     description: "Discover & Score Leads",
-    imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d92d286e1eb4cb15d5ca35_048e976b0381640b13181971d4221a5e_identify-6.webp?",
+    imageSrc: "/identify-leads.png",
     imageAlt: "Lead identification dashboard with scoring and signals.",
   },
   {
     value: "research",
     title: "Research Prospects",
     description: "Research & Enrich Prospects",
-    imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d964015aef4a098f69955b_d5c33bc4ea2687c2d60e02fa2be2a93b_tab-02-7.webp?",
+    imageSrc: "/research-prospects.png",
     imageAlt: "Prospect research interface with enriched profiles.",
   },
   {
     value: "personalize",
     title: "Personalize Outreach",
     description: "Personalize Outreach Sequences",
-    imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d9657f56d92c02498e9bef_e1945a60485e174af05deef0162da20c_tab-03-8.webp?",
+    imageSrc: "/personalize-outreach.png",
     imageAlt: "Outreach personalization tool with sequence builder.",
   },
   {
     value: "engage",
     title: "Engage & Qualify",
     description: "Engage & Qualify Leads",
-    imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d9696547049593d7d2d6ac_232390a6d24fef3e315113d28b45264f_tab-04-9.webp?",
+    imageSrc: "/engage-qualify.png",
     imageAlt: "Engagement and qualification dashboard with booking.",
   },
 ];
 
 export default function PlatformShowcase() {
-  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <section className="bg-[#1E3A3A] text-white py-20 px-6 sm:px-8">
@@ -65,34 +62,14 @@ export default function PlatformShowcase() {
           <Tabs defaultValue="identify" className="w-full">
             {tabData.map((tab) => (
               <TabsContent key={tab.value} value={tab.value} className="mt-0 rounded-3xl overflow-hidden">
-                <div className="relative aspect-[16/10] w-full max-w-5xl mx-auto">
-                  {isPlaying ? (
-                    <video
-                      src="https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/crm(1)(1)(1).mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
-                  ) : (
-                    <>
-                      <Image
-                        src="https://pub-940ccf6255b54fa799a9b01050e6c227.r2.dev/crm-featured.png"
-                        alt="CRM Demo Thumbnail"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1248px) 90vw, 1120px"
-                        className="object-cover rounded-2xl"
-                      />
-                      {/* Play button overlay */}
-                      <button
-                        onClick={() => setIsPlaying(true)}
-                        className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity group"
-                      >
-                        <PlayCircle className="w-12 h-12 sm:w-16 sm:h-16 text-white drop-shadow-lg" />
-                      </button>
-                    </>
-                  )}
+                <div className="relative w-full max-w-[1400px] mx-auto">
+                  <Image
+                    src={tab.imageSrc}
+                    alt={tab.imageAlt}
+                    width={1200}
+                    height={750}
+                    className="w-full h-auto object-contain rounded-2xl"
+                  />
                 </div>
               </TabsContent>
             ))}

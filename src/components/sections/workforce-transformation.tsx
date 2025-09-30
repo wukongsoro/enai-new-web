@@ -23,7 +23,7 @@ const features: FeatureCardProps[] = [
     title: "AI-Powered Discovery",
     description: "Intelligent prospect research and signal detection across web and CRM data",
     mediaType: "image",
-    mediaSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d92d286e1eb4cb15d5ca35_048e976b0381640b13181971d4221a5e_identify-6.webp?",
+    mediaSrc: "/bdr-workflow-image.png",
     href: "/features/ai-discovery",
   },
   {
@@ -37,7 +37,7 @@ const features: FeatureCardProps[] = [
     title: "Automated Booking",
     description: "Seamless meeting scheduling with automatic CRM synchronization",
     mediaType: "image",
-    mediaSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d964015aef4a098f69955b_d5c33bc4ea2687c2d60e02fa2be2a93b_tab-02-7.webp?",
+    mediaSrc: "/automated-booking.png",
     href: "/features/automated-booking",
   },
   {
