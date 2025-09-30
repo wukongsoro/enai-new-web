@@ -36,7 +36,7 @@ const CtaSection = () => {
             <div className="relative order-1 lg:order-2">
               <div className="relative w-full h-[300px] md:h-[400px] lg:h-full min-h-[400px]">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d9657f56d92c02498e9bef_e1945a60485e174af05deef0162da20c_tab-03-8.webp?"
+                  src="/ai-bdr-screenshot.png"
                   alt="Sales team collaborating on BDR dashboard"
                   fill
                   className="object-cover lg:rounded-l-[40px]"

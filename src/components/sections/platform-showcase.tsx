@@ -96,7 +96,7 @@ export default function PlatformShowcase() {
                 </div>
               </TabsContent>
             ))}
-            <TabsList className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 bg-transparent p-0 h-auto">
+            <TabsList className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16 bg-transparent p-0 h-auto">
               {tabData.map((tab) => (
                 <TabsTrigger
                   key={tab.value}
@@ -105,10 +105,10 @@ export default function PlatformShowcase() {
                   style={{ boxSizing: 'border-box', overflow: 'hidden' }}
                 >
                   <div className="opacity-60 group-data-[state=active]:opacity-100 transition-opacity w-full flex flex-col justify-start h-full"
-                       style={{ boxSizing: 'border-box', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
-                    <h4 className="text-xl md:text-2xl font-semibold mb-3 leading-tight text-black flex-shrink-0"
+                       style={{ boxSizing: 'border-box' }}>
+                    <h4 className="text-xl md:text-2xl font-semibold mb-3 leading-tight text-black"
                         style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)' }}>{tab.title}</h4>
-                    <p className="text-sm md:text-base text-black/80 leading-relaxed mt-auto flex-shrink-0"
+                    <p className="text-sm md:text-base text-black/80 leading-relaxed mt-auto"
                        style={{
                          fontSize: 'clamp(0.875rem, 2vw, 1rem)',
                          wordWrap: 'break-word',
