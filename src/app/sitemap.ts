@@ -7,6 +7,9 @@ import { MetadataRoute } from 'next'
  * LinkedIn: https://www.linkedin.com/in/nikhilnehra
  */
 
+// Force static generation for sitemap
+export const dynamic = "force-static"
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.enai.ai'
   
