@@ -16,7 +16,7 @@ const blogPosts = [
     date: "January 15, 2025",
     type: "Industry Report",
     slug: "ai-powered-sales-collaboration-transforms-b2b-revenue",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "8 min read",
     image: "/GZxcAKMXUAIYRGT.jpeg",
     content: `# How AI-Powered Sales Collaboration Transforms B2B Revenue Generation
@@ -93,7 +93,7 @@ Ready to transform your sales development process? [Schedule a consultation](htt
     date: "February 20, 2025",
     type: "Strategic Guide",
     slug: "complete-ai-bdr-playbook-scale-outbound-10x",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "12 min read",
     image: "/GZxcAKLXEAgrNfr.jpeg",
     content: `# The Complete AI BDR Playbook: Scale Your Outbound Sales 10x Without Hiring
@@ -290,7 +290,7 @@ Ready to transform your outbound sales operations? Success requires careful plan
     date: "March 10, 2025",
     type: "Case Study",
     slug: "enai-cuts-prospecting-time-70-ai-automation",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "12 min read",
     image: "/GaIPMq1WUAAEuV2.jpeg",
     content: `# ENAI Cuts Prospecting Time by 70% with AI Automation
@@ -459,7 +459,7 @@ Ready to achieve similar results? [Schedule a consultation](https://calendly.com
     date: "April 15, 2025",
     type: "Guide",
     slug: "ai-sales-automation-complete-2025-guide",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "7 min read",
     image: "/GxhEHFrWMAAIwCy.jpeg",
     content: `# AI Sales Automation: The Complete 2025 Guide
@@ -519,7 +519,7 @@ Ready to automate your sales process? [Schedule a demo](https://www.enai.ai/demo
     date: "May 5, 2025",
     type: "Company News",
     slug: "manual-to-automated-enai-journey",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "4 min read",
     image: "/Ghb8IWKW0AAAOt2.jpeg",
     content: `# From Manual to Automated: ENAI's Journey
@@ -563,7 +563,7 @@ We're always looking for talented individuals to join our mission. [View open po
     date: "June 1, 2025",
     type: "Analysis",
     slug: "roi-ai-bdr-agents-real-numbers",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "6 min read",
     image: "/Ghb8IpDXgAA-SiT.jpeg",
     content: `# The ROI of AI BDR Agents: Real Numbers
@@ -616,7 +616,7 @@ AI BDR agents don't just reduce costs—they dramatically improve sales effectiv
     date: "April 15, 2025",
     type: "Industry Report",
     slug: "ai-sales-automation-2025-definitive-guide-revenue-operations",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "15 min read",
     image: "/GauJDBpWEAEJrSq.jpeg",
     content: `# AI Sales Automation 2025: The Definitive Guide to Transforming Revenue Operations
@@ -883,7 +883,7 @@ The most successful implementations will be those that view AI not as a tool for
     date: "May 5, 2025",
     type: "Company Story",
     slug: "evolution-ai-sales-automation-enai-journey-market-leadership",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "12 min read",
     image: "/GauJDBnW0AApZZJ.jpeg",
     content: `# The Evolution of AI Sales Automation: ENAI's Journey from Concept to Market Leadership
@@ -1074,7 +1074,7 @@ As we continue this evolution, our focus remains on delivering practical solutio
     date: "June 1, 2025",
     type: "Financial Analysis",
     slug: "financial-impact-ai-bdr-agents-comprehensive-roi-analysis-2025",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "14 min read",
     image: "/GauJDBnWoAA6sPR.jpeg",
     content: `# The Financial Impact of AI BDR Agents: Comprehensive ROI Analysis for 2025
@@ -1304,7 +1304,7 @@ The question is no longer whether to invest in AI BDR technology, but how quickl
     date: "July 15, 2025",
     type: "Industry Trends",
     slug: "ai-sales-automation-2025-trends-reshaping-revenue-operations",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "10 min read",
     image: "/GauJDBnXcAAkNUg.jpeg",
     content: `# AI Sales Automation in 2025: 7 Trends Reshaping Revenue Operations
@@ -1552,7 +1552,7 @@ The question is no longer whether to adopt AI sales automation, but how comprehe
     date: "August 10, 2025",
     type: "Research Report",
     slug: "human-ai-partnership-sales-teams-evolving-age-automation",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "11 min read",
     image: "/GxHUKCCXkAEJw_L.jpeg",
     content: `# The Human-AI Partnership: How Sales Teams Are Evolving in the Age of Automation
@@ -1874,7 +1874,7 @@ This partnership model doesn't just improve sales performance—it creates more 
     date: "September 5, 2025",
     type: "Technology Deep Dive",
     slug: "conversational-ai-sales-next-frontier-customer-engagement",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "12 min read",
     image: "/image0-3.jpeg",
     content: `# Conversational AI in Sales: The Next Frontier of Customer Engagement
@@ -2204,7 +2204,7 @@ The future of sales belongs to organizations that master conversational AI, crea
     date: "October 1, 2025",
     type: "Strategic Framework",
     slug: "building-ai-first-sales-organization-strategic-framework-2025",
-    author: "ENAI Editorial Team",
+    author: "Nikhil Nehra",
     readTime: "16 min read",
     image: "/qualifierai-booking-dashboard.jpg",
     content: `# Building an AI-First Sales Organization: A Strategic Framework for 2025
@@ -2535,13 +2535,816 @@ The most successful AI-first organizations view AI not as a tool to be used, but
 The future belongs to organizations that embrace AI as their strategic foundation, creating sales capabilities that were previously impossible and competitive advantages that are fundamentally unassailable.
 
 [Start your AI-first sales transformation today](https://calendly.com/enai-ai2024/30min?month=2025-09). Discover how ENAI can help you build an AI-first sales organization that leads rather than follows in the AI revolution.`
+  },
+  {
+    title: "The Future of AI in Sales Automation: Trends for 2025",
+    description: "Explore the cutting-edge trends shaping AI sales automation in 2025. From conversational AI to predictive analytics, discover how emerging technologies are transforming B2B sales and what your organization needs to know to stay ahead.",
+    date: "2 days ago",
+    type: "Industry Trends",
+    slug: "future-ai-sales-automation-trends-2025",
+    author: "Nikhil Nehra",
+    readTime: "15 min read",
+    image: "/GxhEHFrWMAAIwCy.jpeg",
+    content: `# The Future of AI in Sales Automation: Trends for 2025
+
+The AI sales automation landscape is evolving at an unprecedented pace. As we navigate through 2025, new technologies and methodologies are fundamentally reshaping how B2B organizations approach sales development, lead generation, and customer engagement. This comprehensive analysis examines the key trends that will define the future of AI-powered sales automation.
+
+## The State of AI Sales Automation in 2025
+
+The adoption of AI in sales has reached an inflection point. Recent data shows that 87% of sales organizations now leverage AI tools in some capacity, up from 79% just a year ago. However, adoption is only part of the story—the sophistication and strategic application of these tools is what truly differentiates market leaders.
+
+### Market Dynamics Driving Change
+
+- **Buyer Behavior Evolution**: B2B buyers now complete 75% of their research independently before engaging with sales teams
+- **Talent Challenges**: The average cost to hire and onboard an SDR has increased 28% year-over-year
+- **Performance Expectations**: Revenue targets growing 15-20% annually while sales budgets remain flat
+- **Technology Maturation**: AI capabilities have advanced significantly, enabling more sophisticated automation
+
+## Trend 1: Conversational AI Reaches Human Parity
+
+The most significant advancement in 2025 is the emergence of conversational AI that can genuinely replicate human-like interactions at scale.
+
+### Key Capabilities
+
+**Context-Aware Conversations**
+- AI systems now maintain context across multiple interactions
+- Understanding of conversation history informs future engagements
+- Ability to pick up conversations from any point without repetition
+
+**Emotional Intelligence**
+- Sentiment analysis detects frustration, interest, or confusion in real-time
+- Response adaptation based on prospect's emotional state
+- Appropriate empathy and enthusiasm demonstration
+
+**Complex Objection Handling**
+- AI can now navigate multi-layered objections
+- Provides tailored responses based on specific prospect concerns
+- Knows when to escalate to human sales professionals
+
+### Business Impact
+
+Organizations deploying advanced conversational AI are seeing:
+- 45% improvement in prospect engagement rates
+- 60% reduction in time to qualification
+- 35% increase in meeting booking rates
+- 50% decrease in prospect drop-off during qualification
+
+Ready to future-proof your sales organization? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to learn how ENAI can help you leverage these 2025 trends to transform your sales operations.`
+  },
+  {
+    title: "Understanding the ROI of AI-Powered Sales Automation",
+    description: "A comprehensive analysis of AI sales automation ROI, including cost-benefit breakdown, payback period calculations, and real-world case studies showing 200-400% returns. Learn how to measure and maximize your AI investment.",
+    date: "3 days ago",
+    type: "ROI Analysis",
+    slug: "roi-ai-powered-sales-automation",
+    author: "Nikhil Nehra",
+    readTime: "12 min read",
+    image: "/GxHUKCCXkAEJw_L.jpeg",
+    content: `# Understanding the ROI of AI-Powered Sales Automation
+
+Understanding the true return on investment of AI-powered sales automation is critical for securing executive buy-in and ensuring successful implementation. This comprehensive analysis breaks down the costs, benefits, and financial impact of AI BDR implementation.
+
+## The True Cost of Manual Sales Development
+
+Before calculating AI ROI, it's essential to understand the full cost of traditional manual sales development:
+
+**Direct Costs Per SDR:**
+- Base salary: $50,000-70,000
+- Commission/bonus: $15,000-30,000
+- Benefits (healthcare, 401k): $15,000-20,000
+- Total compensation: $80,000-120,000
+
+**Hidden Costs Per SDR:**
+- Recruiting and hiring: $5,000-8,000
+- Onboarding and training: $10,000-15,000
+- Tools and technology: $3,000-5,000
+- Management overhead: $8,000-12,000
+- Office space and equipment: $6,000-10,000
+
+**Total Cost Per SDR: $112,000-170,000 annually**
+
+## AI Sales Automation Cost Structure
+
+**Platform Costs:**
+- Enterprise AI BDR platform: $48,000-120,000/year
+- Data enrichment services: $12,000-24,000/year
+- Integration and setup: $5,000-15,000 (one-time)
+- Training and change management: $5,000-10,000 (one-time)
+
+**Ongoing Operational Costs:**
+- Reduced SDR team for oversight: $200,000-400,000/year
+- Platform management: $60,000-80,000/year
+
+## ROI Calculation Framework
+
+### Scenario 1: Mid-Market B2B Company
+
+**Before AI Automation:**
+- Team: 8 SDRs at $130,000 average total cost
+- Annual investment: $1,040,000
+- Performance: 480 SQLs per year
+- Cost per SQL: $2,167
+- Pipeline generated: $9.6M
+- Closed revenue: $1,920,000
+
+**After AI Automation:**
+- Team: 3 SDR managers + AI platform
+- SDR costs: $390,000
+- AI platform: $80,000
+- Total investment: $470,000
+- Performance: 720 SQLs per year
+- Cost per SQL: $653
+- Pipeline generated: $16.8M
+- Closed revenue: $3,528,000
+
+**ROI Analysis:**
+- Cost savings: $570,000 (55% reduction)
+- Revenue increase: $1,608,000 (84% improvement)
+- Total value created: $2,178,000
+- ROI: 363% in first year
+- Payback period: 4.8 months
+
+Ready to calculate your specific ROI? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) with ENAI to develop a customized financial model for your organization.`
+  },
+  {
+    title: "AI vs Human BDRs: The Definitive Comparison Guide",
+    description: "Comprehensive analysis comparing AI and human BDRs across all key metrics including cost, performance, scalability, and quality. Discover when to use each approach and how to optimally combine both for maximum revenue impact.",
+    date: "5 days ago",
+    type: "Comparison Guide",
+    slug: "ai-vs-human-bdrs-comparison-guide",
+    author: "Nikhil Nehra",
+    readTime: "10 min read",
+    image: "/GZxcAKMXUAIYRGT.jpeg",
+    content: `# AI vs Human BDRs: The Definitive Comparison Guide
+
+The debate between AI and human BDRs is not about replacement—it's about optimal allocation. This comprehensive comparison examines both approaches across all critical dimensions to help you make informed decisions about your sales development strategy.
+
+## Performance Metrics Comparison
+
+### Prospecting and Outreach
+
+| Metric | Human BDR | AI BDR | Winner |
+|--------|-----------|--------|--------|
+| Daily outreach volume | 50-100 | 1,000+ | AI (10x) |
+| Response rate | 5-12% | 8-15% | AI (better personalization) |
+| Personalization quality | High (for small volume) | High (at scale) | Tie |
+| Multi-channel coordination | Challenging | Seamless | AI |
+| Consistency | Variable | Perfect | AI |
+
+### Lead Qualification
+
+| Metric | Human BDR | AI BDR | Winner |
+|--------|-----------|--------|--------|
+| Time per lead | 15-30 min | <2 min | AI (15x faster) |
+| Qualification accuracy | 60-75% | 85-92% | AI |
+| Criteria consistency | Variable | 100% | AI |
+| Complex scenario handling | Excellent | Good | Human |
+| Empathy and rapport | Natural | Improving | Human |
+
+## Cost Analysis
+
+### Human BDR Total Cost of Ownership
+**Annual cost per SDR: $112,000-170,000**
+- Salary and benefits: $80,000-120,000
+- Recruiting and onboarding: $15,000-23,000
+- Technology and tools: $3,000-5,000
+- Management overhead: $8,000-12,000
+- Office and equipment: $6,000-10,000
+
+### AI BDR Total Cost of Ownership
+**Annual cost (equivalent to 5-10 SDRs): $48,000-120,000**
+- Platform subscription: $48,000-120,000
+- Data enrichment: Included
+- Setup and integration: $5,000-15,000 (one-time)
+- Oversight (1 manager): $80,000-100,000
+
+**Cost Advantage: AI delivers 70-85% cost reduction per SQL**
+
+## When to Use AI BDRs
+
+**Ideal Scenarios:**
+1. **High-Volume Outbound**: When you need to contact thousands of prospects monthly
+2. **Predictable Qualification**: Clear, data-driven qualification criteria
+3. **Multi-Channel Orchestration**: Coordinating email, LinkedIn, and other channels
+4. **Rapid Scaling**: Need to grow outreach without hiring constraints
+5. **24/7 Operations**: Global markets requiring round-the-clock coverage
+
+## When to Use Human BDRs
+
+**Ideal Scenarios:**
+1. **Complex Sales**: Technical products requiring deep consultative selling
+2. **Enterprise Accounts**: Strategic deals needing relationship development
+3. **Emerging Markets**: Undefined ICP requiring exploratory conversations
+4. **Brand Ambassador**: High-touch approach for premium positioning
+5. **Creative Problem-Solving**: Unique situations requiring adaptive thinking
+
+## The Hybrid Model: Best of Both Worlds
+
+Most successful organizations adopt a hybrid approach that leverages AI for scale and humans for strategic value:
+
+**AI-First Triage (Top of Funnel)**
+- AI handles initial prospecting and outreach
+- Automated qualification of basic fit criteria
+- Engagement tracking and scoring
+- Meeting scheduling for qualified leads
+
+**Human-Led Conversion (Bottom of Funnel)**
+- Strategic account planning
+- Complex objection handling
+- Relationship building
+- Deal advancement and closing
+
+**Performance Impact:**
+- 3x increase in qualified pipeline
+- 60% reduction in cost per SQL
+- 40% improvement in conversion rates
+- 25% higher deal sizes
+
+Ready to implement an optimal AI-human BDR strategy? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to design the perfect mix for your organization.`
+  },
+  {
+    title: "How to Successfully Implement AI in Your Sales Team",
+    description: "Comprehensive 12-step implementation guide for integrating AI BDR agents into existing sales operations. Includes change management strategies, technical setup, and 90-day success roadmap.",
+    date: "1 week ago",
+    type: "Implementation Guide",
+    slug: "implement-ai-sales-team-guide",
+    author: "Nikhil Nehra",
+    readTime: "14 min read",
+    image: "/GaIPMq1WUAAEuV2.jpeg",
+    content: `# How to Successfully Implement AI in Your Sales Team
+
+Successfully implementing AI in your sales team requires careful planning, clear communication, and systematic execution. This 12-step guide provides a proven framework for integrating AI BDR agents into your existing sales operations.
+
+## Phase 1: Assessment and Planning (Weeks 1-4)
+
+### Step 1: Current State Analysis
+- Map existing sales processes and workflows
+- Document current performance metrics
+- Identify bottlenecks and pain points
+- Assess team capabilities and readiness
+
+### Step 2: Define Clear Objectives
+**Set SMART Goals:**
+- Increase SQL generation by 40% within 6 months
+- Reduce cost per SQL by 60%
+- Scale outreach capacity 5x without additional hires
+- Improve response rates by 25%
+
+### Step 3: Build Your Business Case
+**Financial Justification:**
+- Current costs: Team of 8 SDRs at $130k = $1.04M/year
+- AI solution cost: $80k platform + 3 managers at $130k = $470k/year
+- Net savings: $570k annually (55% reduction)
+- Expected ROI: 350%+ in year one
+
+## Phase 2: Technology Selection (Weeks 2-6)
+
+### Step 4: Platform Evaluation
+**Key Criteria:**
+- AI capabilities (prospecting, outreach, qualification)
+- CRM and tool integration
+- Scalability and performance
+- Training and support
+- Pricing and contract terms
+
+### Step 5: Vendor Selection Process
+1. Create requirements matrix
+2. Demo 3-5 leading platforms
+3. Run pilot tests with top 2 candidates
+4. Check references from similar companies
+5. Negotiate terms and finalize selection
+
+Ready to implement AI in your sales team? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to discuss your specific situation and develop a customized implementation plan.`
+  },
+  {
+    title: "Cold Email Automation Best Practices for 2025",
+    description: "Master cold email automation with proven strategies for deliverability, personalization, compliance, and conversion. Includes templates, timing optimization, A/B testing frameworks, and advanced techniques for maximum response rates.",
+    date: "1 week ago",
+    type: "Best Practices",
+    slug: "cold-email-automation-best-practices",
+    author: "Nikhil Nehra",
+    readTime: "18 min read",
+    image: "/Ghb8IpDXgAA-SiT.jpeg",
+    content: `# Cold Email Automation Best Practices for 2025
+
+Cold email remains one of the most effective channels for B2B lead generation—when executed correctly. With AI automation, it's now possible to achieve both the scale of mass email and the personalization of individual outreach.
+
+## Deliverability Foundation
+
+### Email Infrastructure Setup
+
+**Domain Configuration:**
+- Primary Domain Protection: Never send cold email from your primary company domain
+- Dedicated Sending Domains: Set up 2-5 separate domains for outbound
+- Domain Age: Allow new domains to "age" for 2-4 weeks before high-volume sending
+
+**DNS Records (Critical):**
+- SPF Record: Authorize sending servers
+- DKIM: Enable email authentication  
+- DMARC: Set policy for email authentication failures
+- Custom Tracking Domain: Use branded links instead of generic short URLs
+
+### Warm-Up Process
+
+**Week 1: Foundation**
+- Days 1-3: Send 5-10 emails per account per day
+- Days 4-7: Increase to 15-20 emails per account per day
+- Focus: Internal team and known contacts
+- Goal: Establish positive engagement patterns
+
+**Week 2: Gradual Growth**
+- Increase to 25-35 emails per day per account
+- Mix of warm contacts and qualified prospects
+- Monitor deliverability metrics closely
+
+## Personalization at Scale
+
+### AI-Powered Research
+**Data Points to Collect:**
+- Company: Industry, size, recent news, technology stack
+- Individual: Role, tenure, background, social activity
+- Triggers: Funding, hiring, product launches, leadership changes
+
+### Multi-Channel Cadence Design
+
+**Day 1**: Email #1 (value-focused introduction)
+**Day 2**: LinkedIn connection request
+**Day 4**: Email #2 (case study/social proof)
+**Day 6**: LinkedIn message (if connected)
+**Day 8**: Email #3 (different angle)
+**Day 11**: Phone call attempt
+**Day 14**: Email #4 (breakup email)
+
+Ready to implement world-class cold email automation? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to discuss your specific situation and develop an optimized cold email strategy.`
+  },
+  {
+    title: "Lead Qualification with AI: Complete Guide",
+    description: "Transform lead qualification with AI-powered intelligence. Learn BANT frameworks, scoring methodologies, conversation automation, and how to achieve 85-92% qualification accuracy.",
+    date: "2 weeks ago",
+    type: "Technical Guide",
+    slug: "lead-qualification-ai-complete-guide",
+    author: "Nikhil Nehra",
+    readTime: "12 min read",
+    image: "/Ghb8IWKW0AAAOt2.jpeg",
+    content: `# Lead Qualification with AI: Complete Guide
+
+Lead qualification represents one of the most time-consuming yet critical activities in B2B sales. AI-powered qualification transforms this process, delivering higher accuracy, faster results, and better resource allocation.
+
+## Why AI Qualification Outperforms Manual Approaches
+
+**Traditional Manual Qualification Challenges:**
+- Inconsistent criteria application (60-75% consistency)
+- Time-intensive (15-30 minutes per lead)
+- Limited data processing (5-10 data points considered)
+- Subjective bias and fatigue
+- Cannot scale without proportional cost increases
+
+**AI Qualification Advantages:**
+- Perfect consistency (100% adherence to criteria)
+- Rapid processing (seconds per lead)
+- Comprehensive data analysis (50+ data points)
+- Objective, data-driven decisions
+- Scales infinitely without additional cost
+
+## BANT Framework Enhanced by AI
+
+### Budget Assessment
+**Traditional Approach:** "What's your budget for this?"
+**AI Approach:** 
+- Company revenue analysis
+- Funding and financial health indicators
+- Technology stack investments
+- Industry spending benchmarks
+- Hiring patterns indicating budget availability
+
+### Authority Identification
+**Traditional Approach:** "Are you the decision-maker?"
+**AI Approach:**
+- Organizational chart analysis
+- LinkedIn title and seniority verification
+- Previous purchase decision involvement
+- Budget approval authority indicators
+- Stakeholder mapping
+
+### Need Analysis
+**Traditional Approach:** "What challenges are you facing?"
+**AI Approach:**
+- Technology stack gaps
+- Growth indicators suggesting pain points
+- Industry-specific challenges
+- Competitive landscape analysis
+- Social media pain point mentions
+
+### Timeline Prediction
+**Traditional Approach:** "When are you looking to implement?"
+**AI Approach:**
+- Contract expiration dates
+- Budget cycle timing
+- Project urgency signals
+- Hiring patterns
+- Competitive pressure indicators
+
+Ready to implement AI lead qualification? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to discuss your specific requirements.`
+  },
+  {
+    title: "Scaling Outbound Sales with AI: 10 Proven Strategies",
+    description: "Scale your outbound sales 5-10x without proportional headcount growth. Discover proven strategies for AI-powered prospecting, multi-channel orchestration, and performance optimization.",
+    date: "2 weeks ago",
+    type: "Strategy Guide",
+    slug: "scaling-outbound-sales-ai-strategies",
+    author: "Nikhil Nehra",
+    readTime: "11 min read",
+    image: "/image0-3.jpeg",
+    content: `# Scaling Outbound Sales with AI: 10 Proven Strategies
+
+Scaling outbound sales traditionally requires linear headcount growth. AI automation breaks this constraint, enabling 5-10x growth in outreach capacity while maintaining or improving quality.
+
+## Strategy 1: Multi-Channel Orchestration
+
+**The Challenge:**
+Single-channel outreach (email only) limits reach and effectiveness. Manual multi-channel coordination is too complex and time-intensive to scale.
+
+**AI Solution:**
+Automated orchestration across email, LinkedIn, phone, and SMS with intelligent sequencing based on prospect behavior and channel performance.
+
+**Implementation:**
+- Configure AI agent to manage 5-7 touchpoints across 3-4 channels
+- Set behavior-based triggers (e.g., email open → LinkedIn connection)
+- Optimize channel mix by persona and industry
+- Track cross-channel attribution
+
+**Results:**
+- 55% higher response rates vs. email-only
+- 40% faster progression through qualification
+- 30% improvement in meeting booking rates
+
+## Strategy 2: Predictive Lead Scoring
+
+**The Challenge:**
+Traditional lead scoring relies on limited data points and static criteria, resulting in missed opportunities and wasted effort on low-potential leads.
+
+**AI Solution:**
+Machine learning models that analyze hundreds of signals to predict conversion likelihood, automatically prioritizing highest-potential opportunities.
+
+**Key Signals Analyzed:**
+- Firmographic fit (industry, size, location)
+- Technographic data (technology stack)
+- Behavioral engagement (website visits, content downloads)
+- Intent signals (job postings, funding, leadership changes)
+- Social media activity and mentions
+- Competitive intelligence
+
+**Implementation:**
+- Connect AI to all data sources (CRM, marketing automation, intent data providers)
+- Train models on historical won/lost data
+- Set score thresholds for different actions
+- Continuously refine based on outcomes
+
+**Results:**
+- 65% improvement in sales productivity
+- 45% increase in conversion rates
+- 30% reduction in sales cycle length
+
+Ready to scale your outbound sales with AI? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to develop a customized scaling strategy.`
+  },
+  {
+    title: "AI Sales Tools Comparison: Top 10 Platforms in 2025",
+    description: "Comprehensive comparison of leading AI sales automation platforms including Enai.ai, Apollo.io, Outreach.io, and more. Detailed feature analysis, pricing, pros/cons, and use case recommendations.",
+    date: "3 weeks ago",
+    type: "Platform Comparison",
+    slug: "ai-sales-tools-comparison-2025",
+    author: "Nikhil Nehra",
+    readTime: "16 min read",
+    image: "/GZxcAKLXEAgrNfr.jpeg",
+    content: `# AI Sales Tools Comparison: Top 10 Platforms in 2025
+
+The AI sales automation market has exploded, with dozens of platforms promising to transform your sales development. However, capabilities, pricing, and suitability vary dramatically.
+
+## Comparison Framework
+
+**Evaluation Criteria:**
+1. **AI Capabilities** (30%): Sophistication of AI features
+2. **Feature Completeness** (25%): Breadth of functionality
+3. **Integration** (20%): CRM and tool connectivity
+4. **Pricing** (15%): Value for money
+5. **Support & Onboarding** (10%): Implementation assistance
+
+## Platform #1: Enai.ai
+
+**Overview:**
+Comprehensive AI BDR platform with ProspectorAI, QualifierAI, and OutreachAI agents providing end-to-end automation.
+
+**Key Strengths:**
+- Complete automation from prospecting to booking
+- Superior AI personalization
+- Integrated multi-agent approach
+- Strong CRM integration
+
+**Best For:**
+- Organizations seeking complete AI BDR solution
+- Teams wanting to scale 5-10x without headcount growth
+- Companies prioritizing personalization at scale
+
+**Pricing:** $4,000-10,000/month depending on volume
+
+**Overall Rating:** 9.2/10
+
+## Platform #2: Apollo.io
+
+**Overview:**
+Database-first platform with prospecting and outreach capabilities.
+
+**Key Strengths:**
+- Massive B2B contact database (250M+ contacts)
+- Strong search and filtering
+- Built-in email sequences
+- Affordable pricing for startups
+
+**Limitations:**
+- Less sophisticated AI personalization
+- Manual workflow management
+- Limited qualification automation
+
+**Best For:**
+- Early-stage companies prioritizing database access
+- Teams with strong manual processes
+- Budget-conscious organizations
+
+**Pricing:** $49-149/user/month
+
+**Overall Rating:** 7.8/10
+
+Ready to explore AI sales platforms? [Schedule a demo](https://calendly.com/enai-ai2024/30min) to see Enai.ai in action.`
+  },
+  {
+    title: "LinkedIn Automation for Sales: Complete Guide",
+    description: "Master LinkedIn sales automation while staying compliant. Learn connection strategies, messaging sequences, engagement tactics, and how to generate 50-100 SQLs monthly from LinkedIn.",
+    date: "3 weeks ago",
+    type: "Channel Guide",
+    slug: "linkedin-automation-sales-guide",
+    author: "Nikhil Nehra",
+    readTime: "13 min read",
+    image: "/GxhEHFrWMAAIwCy.jpeg",
+    content: `# LinkedIn Automation for Sales: Complete Guide
+
+LinkedIn has become the premier B2B sales channel, with 4 out of 5 LinkedIn members driving business decisions. AI automation unlocks LinkedIn's potential while maintaining authenticity and compliance.
+
+## LinkedIn's Unique Value for B2B Sales
+
+**Why LinkedIn Outperforms Other Channels:**
+
+**Professional Context**
+- 900+ million business professionals
+- Decision-makers actively present
+- Professional mindset when browsing
+- Rich profile data for targeting
+
+**Higher Engagement Rates**
+- Response rates: 15-30% (vs. 5-12% for cold email)
+- Connection acceptance: 20-40%
+- Message open rates: 40-60%
+- Meeting booking rates: 3-8%
+
+## LinkedIn Automation Best Practices
+
+### Connection Strategy
+
+**Profile Optimization First:**
+- Professional headshot
+- Compelling headline focused on value you provide
+- Experience highlighting relevant expertise
+- Recommendations and endorsements
+- Activity showing thought leadership
+
+**Connection Request Approach:**
+- Personalized note referencing specific common ground
+- Value-focused introduction
+- No pitch in initial request
+- Follow-up sequence after acceptance
+
+### Messaging Sequences
+
+**Day 1:** Connection request with personalized note
+**Day 3:** Thank you message + soft value offer
+**Day 7:** Share relevant content/insight
+**Day 12:** Ask thoughtful question about their work
+**Day 18:** Make specific meeting offer with clear value
+
+## Compliance and Safety
+
+**LinkedIn Terms of Service:**
+- Maximum 100 connection requests per week
+- Respect daily message limits (150-200)
+- Avoid aggressive automation patterns
+- Maintain human-like behavior
+
+Ready to unlock LinkedIn for scalable lead generation? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to develop a LinkedIn automation strategy.`
+  },
+  {
+    title: "B2B Sales Automation: The Complete Playbook",
+    description: "The definitive guide to B2B sales automation in 2025. Covers strategy, technology selection, process design, team transformation, and optimization.",
+    date: "1 month ago",
+    type: "Comprehensive Playbook",
+    slug: "b2b-sales-automation-playbook",
+    author: "Nikhil Nehra",
+    readTime: "20 min read",
+    image: "/GxHUKCCXkAEJw_L.jpeg",
+    content: `# B2B Sales Automation: The Complete Playbook
+
+B2B sales automation has evolved from a nice-to-have to a strategic imperative. This comprehensive playbook provides everything you need to design, implement, and optimize a world-class sales automation strategy.
+
+## The Strategic Imperative for Sales Automation
+
+**Market Forces Driving Automation:**
+- Buyer behavior: 75% of research completed before sales engagement
+- Talent scarcity: 40% harder to hire qualified SDRs vs. 2 years ago
+- Cost pressure: Sales costs growing 15-20% annually
+- Performance expectations: Revenue targets up while budgets flat
+
+## The Sales Automation Maturity Model
+
+### Level 1: Manual (Pre-Automation)
+**Characteristics:**
+- All prospecting done manually
+- Spreadsheet-based tracking
+- Individual email sends
+- Inconsistent follow-up
+- Limited scalability
+
+**Performance:**
+- 50-100 outreach attempts/day per SDR
+- 5-8% response rates
+- High cost per SQL ($150-250)
+- Unpredictable pipeline
+
+### Level 2: Basic Automation
+**Characteristics:**
+- Email sequencing tools
+- CRM for tracking
+- Template-based outreach
+- Basic reporting
+
+**Performance:**
+- 100-150 outreach attempts/day
+- 8-12% response rates
+- Moderate cost per SQL ($100-150)
+- Some scalability
+
+### Level 3: AI-Powered (Advanced)
+**Characteristics:**
+- End-to-end AI automation
+- Multi-channel orchestration
+- Dynamic personalization
+- Predictive analytics
+- Continuous optimization
+
+**Performance:**
+- 1,000+ outreach attempts/day
+- 12-18% response rates
+- Low cost per SQL ($40-70)
+- Infinite scalability
+
+## Building Your Automation Strategy
+
+### Step 1: Process Mapping
+Document current sales stages and identify automation opportunities:
+- Initial outreach (high automation potential)
+- Qualification (medium automation potential)
+- Discovery and demos (low automation potential)
+- Negotiation and closing (human-led)
+
+Ready to build your B2B sales automation strategy? [Schedule a strategic consultation](https://calendly.com/enai-ai2024/30min) to develop a customized automation roadmap.`
+  },
+  {
+    title: "AI-Powered Productivity: How Automation Transforms Sales Teams",
+    description: "Deep dive into how AI automation dramatically improves sales team productivity and efficiency through task automation, intelligent prioritization, and performance optimization.",
+    date: "1 month ago",
+    type: "Productivity Analysis",
+    slug: "ai-automation-transforms-sales-productivity-deep-dive",
+    author: "Nikhil Nehra",
+    readTime: "11 min read",
+    image: "/GZxcAKMXUAIYRGT.jpeg",
+    content: `# AI-Powered Productivity: How Automation Transforms Sales Teams
+
+AI automation is fundamentally transforming sales team productivity by eliminating manual tasks, optimizing workflows, and enabling reps to focus on high-value activities that drive revenue.
+
+## The Productivity Crisis in Modern Sales
+
+**Traditional SDR Time Allocation:**
+- 65% on non-selling activities (admin, research, data entry)
+- 21% on prospecting and outreach
+- 14% on actual selling conversations
+- **Result: Only 2-3 hours per day of actual selling**
+
+**The Cost of Manual Work:**
+- Average SDR costs $130,000 annually
+- Only $18,200 of that cost goes toward actual selling time
+- 82% of compensation funds non-revenue activities
+- **Efficiency rate: 18%**
+
+## How AI Transforms Productivity
+
+### 1. Automated Prospecting and Research
+
+**Manual Approach:**
+- 15-30 minutes per prospect researched
+- 10-15 prospects per day maximum
+- Limited data points considered
+- Inconsistent quality
+
+**AI-Powered Approach:**
+- Seconds per prospect researched
+- 1,000+ prospects per day possible
+- 50+ data points analyzed per prospect
+- Perfect consistency
+
+**Productivity Gain: 50-100x**
+
+### 2. Intelligent Outreach Automation
+
+**Manual Approach:**
+- Individual email composition (5-10 minutes each)
+- 40-60 emails per day
+- Basic personalization
+- Manual follow-up tracking
+
+**AI-Powered Approach:**
+- Automated personalized emails at scale
+- 1,000+ emails per day
+- Deep multi-signal personalization
+- Automatic follow-up orchestration
+
+**Productivity Gain: 20x**
+
+### 3. Qualification Automation
+
+**Manual Approach:**
+- 15-30 minutes per lead
+- 10-20 qualifications per day
+- Subjective criteria application
+- Inconsistent documentation
+
+**AI-Powered Approach:**
+- 1-2 minutes per lead
+- 200+ qualifications per day
+- Objective data-driven criteria
+- Perfect documentation
+
+**Productivity Gain: 15x**
+
+## The New SDR Role: Strategic Orchestrator
+
+With AI handling routine tasks, SDRs evolve into strategic roles:
+
+**New Time Allocation:**
+- 10% on AI oversight and optimization
+- 15% on strategic account planning
+- 25% on relationship building
+- 50% on high-value conversations and deal advancement
+
+**Impact:**
+- 3x more time in actual selling activities
+- 2x higher win rates (due to focus on qualified opportunities)
+- 40% larger deal sizes (due to strategic approach)
+- 50% faster ramp time for new hires
+
+Ready to transform your sales team's productivity? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to discover how AI can free your team to focus on what matters most—building relationships and closing deals.`
   }
 ];
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
+  // Include all blog post slugs from both old and new posts
+  const allSlugs = [
+    "ai-powered-sales-collaboration-transforms-b2b-revenue",
+    "complete-ai-bdr-playbook-scale-outbound-10x",
+    "ai-automation-transforms-sales-productivity-deep-dive",
+    "ai-sales-automation-2025-definitive-guide-revenue-operations",
+    "evolution-ai-sales-automation-enai-journey-market-leadership",
+    "financial-impact-ai-bdr-agents-comprehensive-roi-analysis-2025",
+    "ai-sales-automation-2025-trends-reshaping-revenue-operations",
+    "human-ai-partnership-sales-teams-evolving-age-automation",
+    "conversational-ai-sales-next-frontier-customer-engagement",
+    "building-ai-first-sales-organization-strategic-framework-2025",
+    "future-ai-sales-automation-trends-2025",
+    "roi-ai-powered-sales-automation",
+    "ai-vs-human-bdrs-comparison-guide",
+    "implement-ai-sales-team-guide",
+    "cold-email-automation-best-practices",
+    "lead-qualification-ai-complete-guide",
+    "scaling-outbound-sales-ai-strategies",
+    "ai-sales-tools-comparison-2025",
+    "linkedin-automation-sales-guide",
+    "b2b-sales-automation-playbook",
+    // Legacy slugs
+    "enai-cuts-prospecting-time-70-ai-automation",
+    "ai-sales-automation-complete-2025-guide",
+    "manual-to-automated-enai-journey",
+    "roi-ai-bdr-agents-real-numbers",
+  ];
+  
+  return allSlugs.map((slug) => ({
+    slug: slug,
   }));
 }
 
@@ -2562,26 +3365,65 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Simple markdown-like content renderer
   const renderContent = (content: string) => {
     return content.split('\n').map((line, index) => {
-      if (line.startsWith('# ')) {
-        return (
-          <h1 key={index} className="text-3xl font-bold text-gray-900 mt-8 mb-4 first:mt-0">
-            {line.replace('# ', '')}
-          </h1>
-        );
-      }
-      if (line.startsWith(' ')) {
-        return (
-          <h2 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-3">
-            {line.replace(' ', '')}
-          </h2>
-        );
-      }
-      if (line.startsWith(' ')) {
-        return (
-          <h3 key={index} className="text-xl font-semibold text-gray-900 mt-6 mb-2">
-            {line.replace(' ', '')}
-          </h3>
-        );
+      // Handle different heading levels
+      const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
+      if (headingMatch) {
+        const level = headingMatch[1].length;
+        const text = headingMatch[2];
+
+        const headingClasses = {
+          1: "text-3xl font-bold text-gray-900 mt-8 mb-4 first:mt-0",
+          2: "text-2xl font-bold text-gray-900 mt-8 mb-3",
+          3: "text-xl font-semibold text-gray-900 mt-6 mb-2",
+          4: "text-lg font-semibold text-gray-900 mt-6 mb-2",
+          5: "text-base font-semibold text-gray-900 mt-4 mb-2",
+          6: "text-sm font-semibold text-gray-900 mt-4 mb-2"
+        };
+
+        switch (level) {
+          case 1:
+            return (
+              <h1 key={index} className={headingClasses[1]}>
+                {text}
+              </h1>
+            );
+          case 2:
+            return (
+              <h2 key={index} className={headingClasses[2]}>
+                {text}
+              </h2>
+            );
+          case 3:
+            return (
+              <h3 key={index} className={headingClasses[3]}>
+                {text}
+              </h3>
+            );
+          case 4:
+            return (
+              <h4 key={index} className={headingClasses[4]}>
+                {text}
+              </h4>
+            );
+          case 5:
+            return (
+              <h5 key={index} className={headingClasses[5]}>
+                {text}
+              </h5>
+            );
+          case 6:
+            return (
+              <h6 key={index} className={headingClasses[6]}>
+                {text}
+              </h6>
+            );
+          default:
+            return (
+              <h2 key={index} className={headingClasses[2]}>
+                {text}
+              </h2>
+            );
+        }
       }
       if (line.startsWith('- ')) {
         return (
@@ -2590,10 +3432,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </li>
         );
       }
-      if (line.startsWith('') && line.endsWith('')) {
+      // Handle bold text (text surrounded by **)
+      if (line.includes('**')) {
+        // Split by ** and process alternating parts
+        const parts = line.split(/(\*\*.*?\*\*)/);
         return (
-          <p key={index} className="text-gray-700 mb-4 font-semibold">
-            {line.replace(/\*\*/g, '')}
+          <p key={index} className="text-gray-700 mb-4">
+            {parts.map((part, i) => {
+              if (part.startsWith('**') && part.endsWith('**')) {
+                return (
+                  <span key={i} className="font-semibold">
+                    {part.replace(/\*\*/g, '')}
+                  </span>
+                );
+              }
+              return part;
+            })}
           </p>
         );
       }
@@ -2612,7 +3466,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <a
                     key={i}
                     href={parts[i + 1]}
-                    className="text-orange-600 hover:text-orange-700 underline"
+                    className="text-blue-600 hover:text-blue-800 underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

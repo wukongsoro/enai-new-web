@@ -1,17 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 5.0,
+  userScalable: true,
+  viewportFit: 'cover',
+};
+
 export const metadata: Metadata = {
-  title: "Enai AI - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in UK",
-  description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
-  keywords: "AI sales automation UK, B2B AI tools UK, sales AI United Kingdom, lead generation AI UK, AI-powered sales UK, AI workers for sales UK, sales process automation Britain, B2B sales software UK, AI sales agents UK, automated lead qualification UK",
-  authors: [{ name: "Enai AI" }],
-  creator: "Enai.ai",
-  publisher: "Enai.ai",
+  title: "Enai AI - AI-Powered Sales Automation Platform | AI BDR Software for B2B Sales Teams",
+  description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring. Trusted by companies worldwide for AI sales automation.",
+  keywords: "AI BDR software, AI sales automation platform, automated lead generation, AI SDR tools, AI outbound sales, B2B sales automation, AI prospecting tools, sales automation software, AI lead qualification, automated sales outreach, AI sales agents, sales development AI, outbound sales automation, AI powered sales tools, sales intelligence platform",
+  authors: [{ name: "Nikhil Nehra", url: "https://www.linkedin.com/in/nikhil-nehra-57716a23b" }],
+  creator: "Nikhil Nehra",
+  publisher: "Enai AI",
   formatDetection: {
     email: false,
     address: false,
@@ -20,10 +27,15 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.enai.ai'),
   alternates: {
     canonical: '/',
+    languages: {
+      'en-US': 'https://www.enai.ai',
+      'en-GB': 'https://www.enai.ai',
+      'en': 'https://www.enai.ai',
+    },
   },
   openGraph: {
-    title: "Enai AI - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in London UK",
-    description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
+    title: "Enai AI - AI-Powered Sales Automation Platform | Scale Your B2B Sales 10x",
+    description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring. Trusted by companies worldwide.",
     url: "https://www.enai.ai/",
     siteName: "Enai AI",
     images: [
@@ -31,16 +43,16 @@ export const metadata: Metadata = {
         url: "https://www.enai.ai/enai-og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Enai.ai - AI-Powered Sales Automation",
+        alt: "Enai.ai - AI-Powered Sales Automation Platform",
       },
     ],
-    locale: "en_GB",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enai - AI-Powered Sales Automation for B2B | AI Workers for Sales Teams in UK",
-    description: "Transform your B2B sales with Enai.ai's AI workers in London. Our AI agents automate lead qualification, market research, and personalized outreach to help UK businesses scale efficiently and increase revenue by 40%.",
+    title: "Enai AI - AI-Powered Sales Automation Platform | AI BDR Software",
+    description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring.",
     creator: "@enai_ai",
     site: "@enai_ai",
     images: ["https://www.enai.ai/enai-twitter-image.jpg"],
@@ -51,6 +63,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   icons: {
@@ -65,7 +80,7 @@ export const metadata: Metadata = {
       { rel: "android-chrome-512x512", url: "/enai-logo.png" },
     ],
   },
-  manifest: "https://enai.ai/site.webmanifest",
+  manifest: "/site.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -75,14 +90,12 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#ffffff",
     "msapplication-config": "/browserconfig.xml",
     "theme-color": "#ffffff",
-    "geo.region": "GB-LND",
-    "geo.placename": "London, Harrow, Greater London",
-    "geo.position": "51.5919;-0.3392",
-    "geo.country": "United Kingdom",
-    "ICBM": "51.5919, -0.3392",
-    "DC.coverage": "London, UK",
-    "location": "London, United Kingdom",
   },
+  verification: {
+    google: "verification_token",
+    yandex: "verification_token",
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -96,6 +109,70 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.enai.ai/#organization",
+                  "name": "Enai AI",
+                  "url": "https://www.enai.ai",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.enai.ai/enai-logo.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "description": "AI-powered sales automation platform that transforms B2B sales with AI BDR agents",
+                  "founder": {
+                    "@type": "Person",
+                    "name": "Nikhil Nehra",
+                    "jobTitle": "Founder & CEO",
+                    "url": "https://www.linkedin.com/in/nikhilnehra"
+                  },
+                  "foundingDate": "2024",
+                  "sameAs": [
+                    "https://twitter.com/enai_ai",
+                    "https://www.linkedin.com/company/enai-ai"
+                  ],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Sales",
+                    "url": "https://calendly.com/enai-ai2024/30min"
+                  }
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://www.enai.ai/#nikhil-nehra",
+                  "name": "Nikhil Nehra",
+                  "jobTitle": "Founder & CEO",
+                  "worksFor": {
+                    "@id": "https://www.enai.ai/#organization"
+                  },
+                  "description": "Founder and CEO of Enai AI, a leading AI-powered sales automation platform. Expert in B2B sales automation, AI-driven lead generation, and scaling sales teams.",
+                  "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
+                  "sameAs": [
+                    "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
+                    "https://twitter.com/niknehra"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.enai.ai/#website",
+                  "url": "https://www.enai.ai",
+                  "name": "Enai AI",
+                  "publisher": {
+                    "@id": "https://www.enai.ai/#organization"
+                  },
+                  "inLanguage": "en-US"
+                }
+              ]
+            })
+          }}
         />
       </head>
       <body className="antialiased">
