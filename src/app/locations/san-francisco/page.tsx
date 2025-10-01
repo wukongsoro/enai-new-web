@@ -50,7 +50,7 @@ export default function SanFranciscoPage() {
               AI Sales Automation for San Francisco Companies
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join leading SF tech companies using Enai.ai to scale sales 10x without hiring more SDRs. Pacific timezone support included.
+              Join leading SF tech companies using Enai AI to scale sales 10x without hiring more SDRs. Pacific timezone support included.
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
@@ -63,7 +63,7 @@ export default function SanFranciscoPage() {
 
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Why SF Companies Choose Enai.ai</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Why SF Companies Choose Enai AI</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold mb-3">Built for SF Tech Scene</h3>

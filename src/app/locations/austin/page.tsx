@@ -20,7 +20,7 @@ export default function AustinPage() {
               AI Sales Automation for Austin Companies
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join Austin's fastest-growing tech companies using Enai.ai. CT timezone support included.
+              Join Austin's fastest-growing tech companies using Enai AI. CT timezone support included.
             </p>
             <Link href="https://calendly.com/enai-ai2024/30min" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-block">
               Schedule Demo
