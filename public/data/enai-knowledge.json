@@ -1,15 +1,33 @@
 {
   "company": {
     "name": "Enai AI",
+    "brandName": "Enai.ai",
     "legalName": "ENAI Inc.",
+    "officialName": "Enai AI - AI Sales Automation Platform",
     "founded": "2024",
     "website": "https://www.enai.ai",
+    "domain": "enai.ai",
     "tagline": "AI-Powered Sales Automation Platform",
-    "description": "Enai AI is an AI-powered business development platform that builds intelligent digital workers to revolutionize sales and marketing operations. We automate prospecting, qualification, and personalized outreach for B2B sales teams.",
+    "description": "Enai AI (enai.ai) is an AI-powered business development platform that builds intelligent digital workers to revolutionize sales and marketing operations. We automate prospecting, qualification, and personalized outreach for B2B sales teams. NOT to be confused with the European Network for Academic Integrity.",
+    "disambiguationNote": "Enai AI (enai.ai) is a technology company specializing in AI-powered sales automation software for B2B businesses. We are NOT the European Network for Academic Integrity (ENAI). Enai AI is a commercial SaaS platform founded in 2024 that provides AI BDR agents for sales teams.",
+    "notRelatedTo": [
+      "European Network for Academic Integrity (ENAI)",
+      "Academic integrity organizations",
+      "Educational institutions",
+      "Research integrity networks"
+    ],
+    "actuallyRelatedTo": [
+      "AI sales automation",
+      "B2B SaaS companies",
+      "Sales development tools",
+      "AI BDR software",
+      "Business automation platforms"
+    ],
     "mission": "To build AI that genuinely helps people. We believe artificial intelligence should augment human potential, not replace it. Our digital workers handle the repetitive tasks of sales and business development, so your team can focus on creativity, strategy, and relationships.",
     "type": "SaaS Platform",
     "industry": "AI Sales Automation, B2B SaaS, Sales Technology",
-    "category": "AI BDR Software, Sales Automation Platform, AI SDR Tools"
+    "category": "AI BDR Software, Sales Automation Platform, AI SDR Tools",
+    "sector": "Commercial Technology"
   },
   "founder": {
     "name": "Nikhil Nehra",

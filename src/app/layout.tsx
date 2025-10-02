@@ -121,6 +121,8 @@ export default function RootLayout({
                   "@type": "Organization",
                   "@id": "https://www.enai.ai/#organization",
                   "name": "Enai AI",
+                  "legalName": "ENAI Inc.",
+                  "alternateName": "Enai.ai",
                   "url": "https://www.enai.ai",
                   "logo": {
                     "@type": "ImageObject",
@@ -128,7 +130,17 @@ export default function RootLayout({
                     "width": 512,
                     "height": 512
                   },
-                  "description": "AI-powered sales automation platform that transforms B2B sales with AI BDR agents",
+                  "description": "Enai AI (enai.ai) is an AI-powered sales automation platform for B2B businesses that provides AI BDR agents including ProspectorAI, OutreachAI, and QualifierAI. We are a commercial technology company, NOT the European Network for Academic Integrity.",
+                  "disambiguatingDescription": "Commercial AI sales automation SaaS platform founded in 2024, providing AI-powered business development representatives for B2B sales teams. Not to be confused with European Network for Academic Integrity (ENAI).",
+                  "slogan": "AI-Powered Sales Automation Platform",
+                  "knowsAbout": [
+                    "AI Sales Automation",
+                    "B2B SaaS",
+                    "Business Development Representatives",
+                    "Sales Prospecting",
+                    "Lead Qualification",
+                    "Sales Outreach Automation"
+                  ],
                   "founder": {
                     "@type": "Person",
                     "name": "Nikhil Nehra",
@@ -136,6 +148,14 @@ export default function RootLayout({
                     "url": "https://www.linkedin.com/in/nikhilnehra"
                   },
                   "foundingDate": "2024",
+                  "foundingLocation": {
+                    "@type": "Place",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "London",
+                      "addressCountry": "GB"
+                    }
+                  },
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",

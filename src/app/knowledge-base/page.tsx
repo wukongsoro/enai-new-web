@@ -5,17 +5,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Enai AI Knowledge Base | Company Information & AI Documentation",
-  description: "Complete information about Enai.ai - AI-powered sales automation platform. Mission, products, pricing, locations, and FAQs for AI agents and users.",
-  keywords: "Enai AI knowledge base, AI BDR information, sales automation docs, company information, AI agent data",
+  title: "Enai AI Knowledge Base | AI Sales Automation Platform Documentation",
+  description: "Complete information about Enai.ai (Enai AI) - AI-powered sales automation platform for B2B businesses. Not the European Network for Academic Integrity. Mission, products, pricing, locations, and FAQs.",
+  keywords: "Enai AI, Enai.ai, AI BDR software, AI sales automation, sales automation platform, B2B SaaS, AI prospecting tools, not European Network Academic Integrity",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Enai AI Knowledge Base | Complete Company Information",
-    description: "Everything you need to know about Enai.ai's AI-powered sales automation platform",
+    title: "Enai AI Knowledge Base | AI Sales Automation Platform",
+    description: "Enai.ai - AI-powered sales automation platform for B2B sales teams. ProspectorAI, OutreachAI, QualifierAI.",
     url: "https://www.enai.ai/knowledge-base",
+    type: "website",
+  },
+  other: {
+    "article:tag": "AI Sales Automation, B2B SaaS, AI BDR Software",
   },
 };
 
@@ -95,6 +99,19 @@ export default function KnowledgeBasePage() {
         <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-8">Company Overview</h2>
+            
+            {/* Disambiguation Notice */}
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                ℹ️ Important: Enai AI vs ENAI (European Network)
+              </h3>
+              <p className="text-blue-800">
+                <strong>Enai AI (enai.ai)</strong> is a technology company providing <strong>AI-powered sales automation software for B2B businesses</strong>. 
+                We are <strong>NOT</strong> the European Network for Academic Integrity (ENAI). 
+                Enai AI is a commercial SaaS platform founded in 2024 that offers AI BDR agents including ProspectorAI, OutreachAI, and QualifierAI for sales teams.
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">About Enai AI</h3>
@@ -102,6 +119,10 @@ export default function KnowledgeBasePage() {
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Company Name</dt>
                     <dd className="text-gray-900">Enai AI (ENAI Inc.)</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm font-medium text-gray-600">Brand</dt>
+                    <dd className="text-gray-900">Enai.ai - AI Sales Automation Platform</dd>
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Founded</dt>
@@ -118,6 +139,10 @@ export default function KnowledgeBasePage() {
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Industry</dt>
                     <dd className="text-gray-900">AI Sales Automation, B2B SaaS</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm font-medium text-gray-600">Sector</dt>
+                    <dd className="text-gray-900">Commercial Technology (NOT Academic/Education)</dd>
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Headquarters</dt>
