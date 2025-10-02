@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     siteName: "Enai AI",
     images: [
       {
-        url: "https://www.enai.ai/enai-og-image.jpg",
+        url: "https://www.enai.ai/enai-dashboard.png",
         width: 1200,
         height: 630,
-        alt: "Enai.ai - AI-Powered Sales Automation Platform",
+        alt: "Enai.ai - AI-Powered Sales Automation Platform Dashboard",
       },
     ],
     locale: "en_US",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring.",
     creator: "@enai_ai",
     site: "@enai_ai",
-    images: ["https://www.enai.ai/enai-twitter-image.jpg"],
+    images: ["https://www.enai.ai/enai-dashboard.png"],
   },
   robots: {
     index: true,
@@ -90,6 +90,7 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#ffffff",
     "msapplication-config": "/browserconfig.xml",
     "theme-color": "#ffffff",
+    "fb:app_id": "YOUR_FACEBOOK_APP_ID",
   },
   verification: {
     google: "verification_token",
@@ -135,15 +136,72 @@ export default function RootLayout({
                     "url": "https://www.linkedin.com/in/nikhilnehra"
                   },
                   "foundingDate": "2024",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+                    "addressLocality": "London",
+                    "postalCode": "HA1 2BY",
+                    "addressCountry": "GB"
+                  },
+                  "areaServed": [
+                    {
+                      "@type": "City",
+                      "name": "London"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "New York"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "San Francisco"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Boston"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Austin"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Seattle"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Amsterdam"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Berlin"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Paris"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Singapore"
+                    },
+                    {
+                      "@type": "City",
+                      "name": "Sydney"
+                    }
+                  ],
                   "sameAs": [
                     "https://twitter.com/enai_ai",
                     "https://www.linkedin.com/company/enai-ai"
                   ],
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "Sales",
-                    "url": "https://calendly.com/enai-ai2024/30min"
-                  }
+                  "contactPoint": [
+                    {
+                      "@type": "ContactPoint",
+                      "contactType": "Sales",
+                      "url": "https://calendly.com/enai-ai2024/30min",
+                      "availableLanguage": ["en"],
+                      "areaServed": "Worldwide"
+                    }
+                  ]
                 },
                 {
                   "@type": "Person",
@@ -168,7 +226,48 @@ export default function RootLayout({
                   "publisher": {
                     "@id": "https://www.enai.ai/#organization"
                   },
-                  "inLanguage": "en-US"
+                  "inLanguage": "en-US",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.enai.ai/blog?search={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
+                  "@type": "LocalBusiness",
+                  "name": "Enai AI",
+                  "image": "https://www.enai.ai/enai-logo.png",
+                  "@id": "https://www.enai.ai",
+                  "url": "https://www.enai.ai",
+                  "telephone": "",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+                    "addressLocality": "London",
+                    "postalCode": "HA1 2BY",
+                    "addressCountry": "GB"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 51.5808,
+                    "longitude": -0.3368
+                  },
+                  "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  },
+                  "sameAs": [
+                    "https://twitter.com/enai_ai",
+                    "https://www.linkedin.com/company/enai-ai"
+                  ]
                 }
               ]
             })
@@ -177,6 +276,54 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ErrorReporter />
+        {/* Facebook Pixel Code */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            className="hidden"
+            src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+        {/* End Facebook Pixel Code */}
+        
+        {/* Google Analytics (if needed) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX');
+            `,
+          }}
+        />
+        
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
           strategy="afterInteractive"

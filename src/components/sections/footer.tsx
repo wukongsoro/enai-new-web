@@ -82,9 +82,15 @@ const Footer = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
               <h3 className="font-semibold mb-4 text-sm text-white/70">CONTACT</h3>
               <div className="space-y-2">
-                <a href="mailto:enai.ai2024@gmail.com" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity text-base">
+                <a 
+                  href="https://calendly.com/enai-ai2024/30min" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity text-base"
+                  title="Schedule a meeting with Enai AI"
+                >
                   <Mail className="w-4 h-4" />
-                  enai.ai2024@gmail.com
+                  Schedule a Call
                 </a>
                 
               </div>

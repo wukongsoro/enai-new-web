@@ -161,12 +161,29 @@ pnpm start
 ## 📄 Pages
 
 - **/** - Homepage with hero, features, and testimonials
+- **/knowledge-base** - AI-ready knowledge base with complete company info
 - **/about-us** - About ENAI and our mission
 - **/pricing** - Pricing plans and features
 - **/blog** - Blog posts and case studies
 - **/blog/[slug]** - Individual blog post pages
+- **/locations/[city]** - City-specific landing pages (11 cities worldwide)
 - **/privacy-policy** - Privacy policy
 - **/terms-of-service** - Terms of service
+
+## 🤖 AI Discoverability
+
+ENAI is optimized for discovery by AI agents (ChatGPT, Claude, Microsoft Copilot, etc.):
+
+- **Knowledge Base**: `/knowledge-base` - Complete company information
+- **JSON Data**: `/data/enai-knowledge.json` - Machine-readable structured data
+- **Schema Markup**: Comprehensive Schema.org markup throughout
+- **Local SEO**: 11 city-specific pages with LocalBusiness schema
+
+### Documentation
+- **AI_READINESS_GUIDE.md** - Strategy for AI agent discoverability
+- **AI_GEO_IMPLEMENTATION_SUMMARY.md** - Implementation details
+- **SEO_IMPLEMENTATION_GUIDE.md** - Complete SEO strategy
+- **BACKLINK_STRATEGY.md** - Link building playbook
 
 ## 🤝 Contributing
 

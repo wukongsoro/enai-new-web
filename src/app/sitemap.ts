@@ -69,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/knowledge-base`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/about-us`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -124,12 +130,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Location pages
+  // Location pages with enhanced priority for major cities
   const locationUrls = locationPages.map((slug) => ({
     url: `${baseUrl}/locations/${slug}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    changeFrequency: 'weekly' as const,
+    priority: ['new-york', 'london', 'san-francisco'].includes(slug) ? 0.85 : 0.75,
   }))
 
   return [
