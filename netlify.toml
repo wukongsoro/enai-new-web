@@ -4,3 +4,21 @@
 
 [build.environment]
   NODE_VERSION = "18.20.4"
+
+# Redirect rules for Next.js static export
+[[redirects]]
+  from = "/knowledge-base"
+  to = "/knowledge-base.html"
+  status = 200
+
+# Handle .html extensions for direct access
+[[redirects]]
+  from = "/knowledge-base.html"
+  to = "/knowledge-base.html"
+  status = 200
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
