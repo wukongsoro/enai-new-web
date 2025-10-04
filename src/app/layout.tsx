@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Enai AI",
     images: [
       {
-        url: "https://www.enai.ai/enai-dashboard.png",
+        url: "https://www.enai.ai/social-share-image.png",
         width: 1200,
         height: 630,
         alt: "Enai.ai - AI-Powered Sales Automation Platform Dashboard",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring.",
     creator: "@enai_ai",
     site: "@enai_ai",
-    images: ["https://www.enai.ai/enai-dashboard.png"],
+    images: ["https://www.enai.ai/social-share-image.png"],
   },
   robots: {
     index: true,
