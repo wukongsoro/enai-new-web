@@ -303,11 +303,17 @@ nextjs-portal {
     text-rendering: optimizeLegibility;
   }
 
-  /* Reduce motion for better performance on mobile */
+  /* Reduce motion for better performance on mobile - exclude navigation transitions */
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Preserve navigation menu transitions */
+  .mobile-menu-transition, .mobile-menu-transition * {
+    transition-duration: 300ms !important;
+    animation-duration: 300ms !important;
   }
 
   /* Enable reduced motion for users who prefer it */

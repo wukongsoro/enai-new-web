@@ -152,7 +152,7 @@ export default function Navigation() {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${linkColorClass}`}
+              className={`lg:hidden transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center mobile-menu-transition ${linkColorClass}`}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -165,7 +165,7 @@ export default function Navigation() {
       {isMenuOpen && (
         <div
           className={[
-            "lg:hidden fixed top-[84px] left-0 right-0 z-40 transition-all duration-300 ease-out",
+            "lg:hidden fixed top-[84px] left-0 right-0 z-40 transition-all duration-300 ease-out mobile-menu-transition",
             "bg-white/20 dark:bg-neutral-900/40",
             "backdrop-blur-xl",
             "[-webkit-backdrop-filter:saturate(180%)_blur(20px)]",
@@ -180,7 +180,7 @@ export default function Navigation() {
                 key={link.text}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block rounded-xl py-4 px-6 text-base font-bold transition-all duration-200 text-center hover:scale-105 min-h-[48px] flex items-center justify-center ${hasScrolled ? 'text-gray-900 hover:bg-white/50' : 'text-gray-800 hover:bg-orange-50'}`}
+                className={`block rounded-xl py-4 px-6 text-base font-bold transition-all duration-200 hover:scale-105 min-h-[48px] flex items-center justify-center mobile-menu-transition ${hasScrolled ? 'text-gray-900 hover:bg-white/50' : 'text-gray-800 hover:bg-orange-50'}`}
               >
                 {link.text}
               </Link>
@@ -191,7 +191,7 @@ export default function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className={`block text-center w-full text-sm font-bold rounded-xl py-3 px-6 transition-all duration-200 hover:scale-105 ${hasScrolled ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700' : 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700'}`}
+                className={`block text-center w-full text-sm font-bold rounded-xl py-3 px-6 transition-all duration-200 hover:scale-105 mobile-menu-transition ${hasScrolled ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700' : 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700'}`}
               >
                 Book a Demo
               </Link>
