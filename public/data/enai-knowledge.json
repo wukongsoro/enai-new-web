@@ -1,0 +1,433 @@
+{
+  "company": {
+    "name": "Enai AI",
+    "brandName": "Enai.ai",
+    "legalName": "ENAI Inc.",
+    "officialName": "Enai AI - AI Sales Automation Platform",
+    "founded": "2024",
+    "website": "https://www.enai.ai",
+    "domain": "enai.ai",
+    "tagline": "AI-Powered Sales Automation Platform",
+    "description": "Enai AI (enai.ai) is an AI-powered business development platform that builds intelligent digital workers to revolutionize sales and marketing operations. We automate prospecting, qualification, and personalized outreach for B2B sales teams. NOT to be confused with the European Network for Academic Integrity.",
+    "disambiguationNote": "Enai AI (enai.ai) is a technology company specializing in AI-powered sales automation software for B2B businesses. We are NOT the European Network for Academic Integrity (ENAI). Enai AI is a commercial SaaS platform founded in 2024 that provides AI BDR agents for sales teams.",
+    "notRelatedTo": [
+      "European Network for Academic Integrity (ENAI)",
+      "Academic integrity organizations",
+      "Educational institutions",
+      "Research integrity networks"
+    ],
+    "actuallyRelatedTo": [
+      "AI sales automation",
+      "B2B SaaS companies",
+      "Sales development tools",
+      "AI BDR software",
+      "Business automation platforms"
+    ],
+    "mission": "To build AI that genuinely helps people. We believe artificial intelligence should augment human potential, not replace it. Our digital workers handle the repetitive tasks of sales and business development, so your team can focus on creativity, strategy, and relationships.",
+    "type": "SaaS Platform",
+    "industry": "AI Sales Automation, B2B SaaS, Sales Technology",
+    "category": "AI BDR Software, Sales Automation Platform, AI SDR Tools",
+    "sector": "Commercial Technology"
+  },
+  "founder": {
+    "name": "Nikhil Nehra",
+    "title": "Founder & CEO",
+    "linkedin": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
+    "twitter": "https://twitter.com/niknehra",
+    "bio": "Founder and CEO of Enai AI, a leading AI-powered sales automation platform. Expert in B2B sales automation, AI-driven lead generation, and scaling sales teams."
+  },
+  "headquarters": {
+    "address": "Unit 3, Bradbury's Court, Lyon Rd",
+    "city": "London",
+    "postalCode": "HA1 2BY",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "latitude": 51.5808,
+      "longitude": -0.3368
+    },
+    "timezone": "GMT/BST",
+    "businessHours": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    }
+  },
+  "servicesOffered": {
+    "primary": "AI-Powered Sales Automation",
+    "products": [
+      {
+        "name": "ProspectorAI",
+        "description": "AI agent that identifies and researches high-quality prospects automatically",
+        "features": [
+          "Automated lead identification",
+          "Deep prospect research",
+          "Company intelligence",
+          "Contact data enrichment",
+          "ICP matching"
+        ]
+      },
+      {
+        "name": "OutreachAI",
+        "description": "AI agent that handles personalized multi-channel outreach at scale",
+        "features": [
+          "Personalized email generation",
+          "Multi-channel orchestration",
+          "A/B testing",
+          "Follow-up automation",
+          "Engagement tracking"
+        ]
+      },
+      {
+        "name": "QualifierAI",
+        "description": "AI agent that conducts qualification conversations and schedules meetings",
+        "features": [
+          "Automated lead qualification",
+          "Intelligent conversation handling",
+          "Meeting scheduling",
+          "CRM integration",
+          "Objection handling"
+        ]
+      }
+    ],
+    "capabilities": [
+      "AI-powered prospecting",
+      "Automated lead qualification",
+      "Personalized outreach at scale",
+      "Meeting scheduling automation",
+      "Multi-channel orchestration",
+      "CRM integration",
+      "Advanced analytics and reporting",
+      "Domain warmup",
+      "A/B testing",
+      "Custom workflows"
+    ]
+  },
+  "pricing": {
+    "currency": "USD",
+    "billingCycle": "Monthly",
+    "plans": [
+      {
+        "name": "Free Trial",
+        "price": 0,
+        "period": "14 days",
+        "description": "Try core features with limits",
+        "features": [
+          "100 emails/month",
+          "1 sequence template",
+          "Basic reporting",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Starter",
+        "price": 100,
+        "period": "per agent/month",
+        "description": "Essential automation for small teams",
+        "features": [
+          "2,000 emails/month",
+          "400 leads/month included",
+          "Email sequences",
+          "Basic reporting",
+          "CRM integration",
+          "Limited voice calling (50 mins/mo)",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": 200,
+        "period": "per agent/month",
+        "description": "Full automation with voice and advanced features",
+        "popular": true,
+        "features": [
+          "10,000 emails/month",
+          "2,000 leads/month included",
+          "Email + voice sequences",
+          "Domain warmup",
+          "A/B testing",
+          "All integrations",
+          "Advanced analytics"
+        ]
+      },
+      {
+        "name": "Team",
+        "price": "Custom",
+        "description": "Enterprise features with custom limits",
+        "features": [
+          "Custom email limits",
+          "Multi-seat management",
+          "SSO integration",
+          "SLA guarantees",
+          "Custom approval workflows",
+          "Dedicated success manager"
+        ]
+      }
+    ],
+    "typicalROI": {
+      "costReduction": "70%",
+      "pipelineIncrease": "50%",
+      "meetingsGenerated": "3x",
+      "conversionRateImprovement": "35%",
+      "salesCycleReduction": "20 days",
+      "revenueGrowth": "50% YoY"
+    }
+  },
+  "targetMarket": {
+    "industries": [
+      "SaaS",
+      "Technology",
+      "Recruiting",
+      "Agencies",
+      "Professional Services",
+      "B2B Services"
+    ],
+    "companySize": [
+      "Startups",
+      "Small Business (1-50 employees)",
+      "Mid-Market (51-500 employees)",
+      "Enterprise (500+ employees)"
+    ],
+    "useCase": [
+      "Outbound sales automation",
+      "Lead generation",
+      "Sales development",
+      "Pipeline building",
+      "Account-based marketing",
+      "Revenue operations"
+    ],
+    "buyerPersonas": [
+      "VP of Sales",
+      "Head of Revenue",
+      "Sales Director",
+      "BDR Manager",
+      "Chief Revenue Officer",
+      "Sales Operations"
+    ]
+  },
+  "locations": {
+    "operatingRegions": [
+      "North America",
+      "Europe",
+      "Asia Pacific",
+      "Australia"
+    ],
+    "targetCities": [
+      {
+        "city": "London",
+        "country": "United Kingdom",
+        "region": "Europe",
+        "timezone": "GMT/BST",
+        "primary": true
+      },
+      {
+        "city": "New York",
+        "state": "NY",
+        "country": "United States",
+        "region": "North America",
+        "timezone": "ET"
+      },
+      {
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "United States",
+        "region": "North America",
+        "timezone": "PT"
+      },
+      {
+        "city": "Boston",
+        "state": "MA",
+        "country": "United States",
+        "region": "North America",
+        "timezone": "ET"
+      },
+      {
+        "city": "Austin",
+        "state": "TX",
+        "country": "United States",
+        "region": "North America",
+        "timezone": "CT"
+      },
+      {
+        "city": "Seattle",
+        "state": "WA",
+        "country": "United States",
+        "region": "North America",
+        "timezone": "PT"
+      },
+      {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "region": "Europe",
+        "timezone": "CET"
+      },
+      {
+        "city": "Berlin",
+        "country": "Germany",
+        "region": "Europe",
+        "timezone": "CET"
+      },
+      {
+        "city": "Paris",
+        "country": "France",
+        "region": "Europe",
+        "timezone": "CET"
+      },
+      {
+        "city": "Singapore",
+        "country": "Singapore",
+        "region": "Asia Pacific",
+        "timezone": "SGT"
+      },
+      {
+        "city": "Sydney",
+        "country": "Australia",
+        "region": "Australia",
+        "timezone": "AEST"
+      }
+    ]
+  },
+  "contact": {
+    "website": "https://www.enai.ai",
+    "bookDemo": "https://calendly.com/enai-ai2024/30min",
+    "support": "Available via scheduling",
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/enai-ai",
+      "twitter": "https://twitter.com/enai_ai",
+      "x": "https://x.com/enai_ai"
+    }
+  },
+  "integrations": [
+    "Salesforce",
+    "HubSpot",
+    "Pipedrive",
+    "LinkedIn Sales Navigator",
+    "Google Workspace",
+    "Microsoft 365",
+    "Slack",
+    "Zapier"
+  ],
+  "certifications": {
+    "security": [
+      {
+        "name": "SOC 2 Type II",
+        "status": "Underway"
+      },
+      {
+        "name": "ISO 27001",
+        "status": "Underway"
+      }
+    ],
+    "compliance": [
+      {
+        "name": "GDPR",
+        "status": "Underway"
+      },
+      {
+        "name": "CCPA",
+        "status": "Underway"
+      }
+    ]
+  },
+  "competitiveAdvantages": [
+    "True AI agents, not just automation",
+    "Multi-channel orchestration (email + voice)",
+    "70% cost reduction vs traditional BDR teams",
+    "10x pipeline scalability",
+    "Personalization at scale",
+    "End-to-end automation from prospecting to booking",
+    "Advanced AI conversation handling",
+    "Real-time learning and optimization"
+  ],
+  "useCaseExamples": [
+    {
+      "scenario": "SaaS Company Scaling Outbound",
+      "challenge": "Need to scale pipeline without hiring 10+ BDRs",
+      "solution": "Deploy ProspectorAI, OutreachAI, and QualifierAI",
+      "result": "3x more qualified meetings at 70% lower cost"
+    },
+    {
+      "scenario": "Recruiting Firm Lead Generation",
+      "challenge": "Manual prospecting takes 80% of recruiter time",
+      "solution": "Automate candidate and client outreach",
+      "result": "50% more placements with same team size"
+    },
+    {
+      "scenario": "Agency New Business Development",
+      "challenge": "Inconsistent pipeline, no dedicated BDR",
+      "solution": "AI BDR running 24/7 outbound campaigns",
+      "result": "Consistent 20+ qualified leads per month"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Enai AI?",
+      "answer": "Enai.ai is an AI-powered sales automation platform that provides AI BDR agents to automate prospecting, qualification, and outreach for B2B sales teams. Our platform includes ProspectorAI for lead identification, OutreachAI for personalized outreach, and QualifierAI for qualification and meeting scheduling."
+    },
+    {
+      "question": "How much does Enai AI cost?",
+      "answer": "Enai.ai pricing starts at $100/month for the Starter plan and $200/month for the Pro plan with full features. We also offer a free 14-day trial and custom Team pricing for enterprises. This typically replaces 3-10 SDRs, resulting in 70-85% cost reduction."
+    },
+    {
+      "question": "How does AI BDR automation work?",
+      "answer": "AI BDR agents automate the entire sales development process: ProspectorAI identifies and researches prospects, OutreachAI handles personalized multi-channel outreach, and QualifierAI conducts qualification conversations and schedules meetings. The AI learns from every interaction to continuously improve performance."
+    },
+    {
+      "question": "What integrations does Enai AI support?",
+      "answer": "Enai.ai integrates with major CRM systems (Salesforce, HubSpot, Pipedrive), communication platforms (LinkedIn Sales Navigator, Gmail, Outlook), and productivity tools (Slack, Zapier, Google Workspace)."
+    },
+    {
+      "question": "Is Enai AI suitable for my industry?",
+      "answer": "Enai.ai is designed for B2B companies across industries including SaaS, Technology, Recruiting, Agencies, and Professional Services. It's particularly effective for companies with complex sales cycles and high-value deals."
+    },
+    {
+      "question": "How long does it take to implement?",
+      "answer": "Most customers are up and running within 1-2 weeks. This includes initial setup, CRM integration, campaign configuration, and team training. Our Pro and Team plans include dedicated onboarding support."
+    },
+    {
+      "question": "What results can I expect?",
+      "answer": "Typical results include: 50% pipeline velocity increase, 70% cost reduction in sales acquisition, 3x more qualified meetings, 35% lead conversion rate improvement, and 20-day sales cycle reduction."
+    },
+    {
+      "question": "Is my data secure?",
+      "answer": "Yes. Enai.ai is working towards SOC 2 Type II and ISO 27001 certifications. We're GDPR and CCPA compliant, with enterprise-grade security including encryption at rest and in transit, regular security audits, and data residency options."
+    },
+    {
+      "question": "Can I try Enai AI before purchasing?",
+      "answer": "Yes! We offer a free 14-day trial with no credit card required. You can also book a personalized demo at https://calendly.com/enai-ai2024/30min to see the platform in action."
+    },
+    {
+      "question": "What makes Enai AI different from other sales automation tools?",
+      "answer": "Enai.ai uses true AI agents that understand context and adapt to conversations, not just simple automation. We offer multi-channel orchestration (email + voice), end-to-end automation from prospecting to booking, and achieve 70% cost reduction compared to traditional BDR teams."
+    }
+  ],
+  "keywords": [
+    "AI BDR software",
+    "AI sales automation platform",
+    "automated lead generation",
+    "AI SDR tools",
+    "AI outbound sales",
+    "B2B sales automation",
+    "AI prospecting tools",
+    "sales automation software",
+    "AI lead qualification",
+    "automated sales outreach",
+    "AI sales agents",
+    "sales development AI",
+    "outbound sales automation",
+    "AI powered sales tools",
+    "sales intelligence platform",
+    "AI BDR platform",
+    "sales AI assistant",
+    "automated prospecting software",
+    "AI meeting scheduler",
+    "B2B lead generation AI"
+  ],
+  "lastUpdated": "2025-10-02",
+  "version": "1.0"
+}
+

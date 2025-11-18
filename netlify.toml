@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "18.20.4"
+
+# Force redirect for knowledge-base
+[[redirects]]
+  from = "/knowledge-base"
+  to = "/knowledge-base.html"
+  status = 200
+  force = true
+
+# Handle direct access to .html
+[[redirects]]
+  from = "/knowledge-base.html"
+  to = "/knowledge-base.html"
+  status = 200
+
+# SPA fallback - must be last
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
