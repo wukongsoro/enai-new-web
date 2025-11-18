@@ -162,8 +162,8 @@ export function generateStaticParams() {
   return Object.keys(agentProfiles).map((slug) => ({ agent: slug }));
 }
 
-export async function generateMetadata({ params }: { params: { agent: string } }): Promise<Metadata> {
-  const { agent } = params;
+export async function generateMetadata({ params }: { params: Promise<{ agent: string }> }): Promise<Metadata> {
+  const { agent } = await params;
   const profile = agentProfiles[agent as AgentSlug];
 
   if (!profile) {
@@ -205,8 +205,8 @@ export async function generateMetadata({ params }: { params: { agent: string } }
   } satisfies Metadata;
 }
 
-export default async function AgentPage({ params }: { params: { agent: string } }) {
-  const { agent } = params;
+export default async function AgentPage({ params }: { params: Promise<{ agent: string }> }) {
+  const { agent } = await params;
   const profile = agentProfiles[agent as AgentSlug];
 
   if (!profile) {

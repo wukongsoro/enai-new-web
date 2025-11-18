@@ -165,7 +165,7 @@ export default function Navigation() {
       {isMenuOpen && (
         <div
           className={[
-            "lg:hidden fixed top-[84px] left-0 right-0 z-40 transition-all duration-300 ease-out mobile-menu-transition",
+            "lg:hidden fixed top-[140px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out mobile-menu-transition",
             "bg-white/20 dark:bg-neutral-900/40",
             "backdrop-blur-xl",
             "[-webkit-backdrop-filter:saturate(180%)_blur(20px)]",
@@ -174,7 +174,17 @@ export default function Navigation() {
             "[isolation:isolate]",
           ].join(" ")}
         >
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-3 overflow-y-auto max-h-[calc(100vh-84px)]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-3 overflow-y-auto h-full">
+            {/* Close Button */}
+            <div className="flex justify-end pb-2">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className={`p-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors duration-200 ${linkColorClass}`}
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
             {navLinks.map((link) => (
               <Link
                 key={link.text}
