@@ -262,7 +262,7 @@ export default function ShippingIndustryPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-block bg-[#E8DDD4] text-black px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <div className="inline-block bg-[#d7dedf] text-black px-4 py-2 rounded-full text-sm font-medium mb-6 border border-black/5">
                   Real World Impact
                 </div>
                 <h2 className="text-[32px] md:text-[40px] heading-strong text-black mb-6 leading-tight">
@@ -282,13 +282,13 @@ export default function ShippingIndustryPage() {
                 </div>
               </div>
               
-              <div className="bg-[#F5F1ED] p-8 md:p-10 rounded-3xl">
+              <div className="bg-[#d7dedf] p-8 md:p-10 rounded-3xl border border-black/5">
                 <div className="grid gap-8">
                   <div>
                     <div className="text-5xl font-bold text-black mb-2">3x</div>
                     <div className="text-[#666666]">Increase in qualified pipeline</div>
                   </div>
-                  <div className="h-px bg-black/10"></div>
+                  <div className="h-px bg-black/10" style={{ backgroundColor: '#c1c9cb' }}></div>
                   <div>
                     <div className="text-5xl font-bold text-black mb-2">70%</div>
                     <div className="text-[#666666]">Reduction in prospecting time</div>
