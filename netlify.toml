@@ -18,6 +18,12 @@
   to = "/knowledge-base.html"
   status = 200
 
+# Ensure location pages resolve without the .html suffix
+[[redirects]]
+  from = "/locations/:slug"
+  to = "/locations/:slug.html"
+  status = 200
+
 # SPA fallback - must be last
 [[redirects]]
   from = "/*"
