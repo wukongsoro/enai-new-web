@@ -96,7 +96,7 @@ export default function Home() {
                     "name": "How much does Enai.ai cost?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Enai.ai pricing starts at $4,000 per month, providing complete AI BDR automation that typically replaces 3-10 SDRs, resulting in 70-85% cost reduction."
+                      "text": "Enai.ai pricing starts at $100 per agent/month, providing complete AI BDR automation. We also offer a free 14-day trial."
                     }
                   },
                   {

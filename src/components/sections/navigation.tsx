@@ -63,8 +63,8 @@ export default function Navigation() {
 
   // Apple Liquid Glass styling - true glassmorphism with proper blur
   const glassTint = hasScrolled
-    ? "bg-white/36 dark:bg-neutral-900/42"
-    : "bg-white/22 dark:bg-neutral-900/34";
+    ? "bg-white/70 dark:bg-neutral-900/70"
+    : "bg-white/50 dark:bg-neutral-900/60";
 
   const linkColorClass = hasScrolled
     ? "text-gray-900 hover:text-orange-600 transition-colors duration-200"

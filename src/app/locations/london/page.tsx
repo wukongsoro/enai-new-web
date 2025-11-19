@@ -4,17 +4,17 @@ import Footer from "@/components/sections/footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Sales Automation San Francisco | AI BDR Software SF Bay Area | Enai.ai",
-  description: "Leading AI sales automation platform serving San Francisco and Bay Area companies. Scale your sales 10x with AI BDR agents. Pacific Time (PT) support. Serving Silicon Valley, Oakland, and San Jose.",
-  keywords: "AI sales automation San Francisco, AI BDR SF, sales automation Bay Area, San Francisco sales software, Silicon Valley B2B automation, AI prospecting California",
+  title: "AI Sales Automation London | AI BDR Software UK | Enai.ai",
+  description: "Top AI sales automation platform for London and UK companies. Scale your sales team 10x with AI BDR agents. GMT/BST timezone support. Serving City of London, Canary Wharf, and Greater London.",
+  keywords: "AI sales automation London, AI BDR UK, sales automation London, UK sales software, London B2B automation, AI prospecting UK",
   openGraph: {
-    title: "AI Sales Automation for San Francisco Companies | Enai.ai",
-    description: "Transform your SF sales team with AI-powered automation. 70% cost reduction, 3x more meetings. Pacific Time support.",
-    url: "https://www.enai.ai/locations/san-francisco",
+    title: "AI Sales Automation for London Companies | Enai.ai",
+    description: "Transform your UK sales team with AI-powered automation. 70% cost reduction, 3x more meetings. GMT timezone support.",
+    url: "https://www.enai.ai/locations/london",
   },
 };
 
-export default function SanFranciscoPage() {
+export default function LondonPage() {
   return (
     <>
       <script
@@ -23,15 +23,15 @@ export default function SanFranciscoPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Enai AI - San Francisco",
+            "name": "Enai AI - London HQ",
             "image": "https://www.enai.ai/enai-logo.png",
-            "description": "AI-powered sales automation platform serving San Francisco and Bay Area companies",
+            "description": "AI-powered sales automation platform serving London and UK companies",
             "areaServed": {
               "@type": "City",
-              "name": "San Francisco",
+              "name": "London",
               "containedInPlace": {
-                "@type": "State",
-                "name": "California"
+                "@type": "Country",
+                "name": "United Kingdom"
               }
             },
             "hasOfferCatalog": {
@@ -42,44 +42,26 @@ export default function SanFranciscoPage() {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "ProspectorAI",
-                    "description": "Automated lead identification and research for SF tech companies",
-                    "url": "https://www.enai.ai/agents/prospectorai"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "OutreachAI",
-                    "description": "Personalized multi-channel outreach automation",
-                    "url": "https://www.enai.ai/agents/outreachai"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "QualifierAI",
-                    "description": "Automated lead qualification and meeting scheduling",
-                    "url": "https://www.enai.ai/agents/qualifierai"
+                    "name": "AI BDR Automation",
+                    "description": "Automated prospecting, qualification, and outreach for UK B2B companies"
                   }
                 }
               ]
             },
-            "url": "https://www.enai.ai/locations/san-francisco",
+            "url": "https://www.enai.ai/locations/london",
             "telephone": "",
             "priceRange": "$100-$200 per agent/month",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "San Francisco",
-              "addressRegion": "CA",
-              "addressCountry": "US"
+              "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+              "addressLocality": "London",
+              "postalCode": "HA1 2BY",
+              "addressCountry": "GB"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 37.7749,
-              "longitude": -122.4194
+              "latitude": 51.5808,
+              "longitude": -0.3368
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
@@ -101,70 +83,70 @@ export default function SanFranciscoPage() {
         <section className="bg-gradient-to-br from-orange-50 to-white py-20 px-6 mt-32">
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Serving San Francisco & Bay Area
+              Serving London & United Kingdom
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI Sales Automation for San Francisco Companies
+              AI Sales Automation for London Companies
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join leading SF tech companies using Enai.ai to scale sales 10x without hiring more SDRs. Pacific Time support included.
+              Join leading UK enterprises using Enai.ai to transform sales operations. GMT/BST timezone support included for London and beyond.
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
             >
-              Schedule Demo (PT Available)
+              Schedule Demo (GMT Available)
             </Link>
           </div>
         </section>
 
-        {/* Why SF Companies Choose Enai */}
+        {/* Why London Companies Choose Enai */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Why SF Tech Companies Choose Enai.ai</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">Why UK Companies Choose Enai.ai</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">🌉</div>
-                <h3 className="text-xl font-semibold mb-3">Silicon Valley Ready</h3>
+                <div className="text-4xl mb-4">🇬🇧</div>
+                <h3 className="text-xl font-semibold mb-3">UK Market Expertise</h3>
                 <p className="text-gray-600">
-                  Built for high-growth startups and enterprises. Integrate seamlessly with your modern tech stack.
+                  Optimized for the UK business environment. Local support and understanding of GDPR compliance.
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-semibold mb-3">Hyper-Growth Scaling</h3>
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold mb-3">Scale Rapidly</h3>
                 <p className="text-gray-600">
-                  Scale your outbound from 0 to 100k emails/month instantly. 70% cost reduction vs Bay Area BDR salaries.
+                  10x your pipeline without the London-level salaries. Significant cost reduction compared to hiring local BDRs.
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">⏰</div>
-                <h3 className="text-xl font-semibold mb-3">Pacific Time Support</h3>
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Ready</h3>
                 <p className="text-gray-600">
-                  Real-time support during your business hours. AI agents work 24/7 to cover global markets.
+                  Trusted by London startups and enterprises. GDPR compliant with enterprise-grade security.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Results for SF Companies */}
+        {/* Results for UK Companies */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Results for Bay Area Companies</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">Results for UK Companies</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="text-4xl font-bold text-orange-600 mb-2">70%</div>
                 <div className="text-lg font-semibold mb-2">Cost Reduction</div>
                 <p className="text-gray-600">
-                  Compared to hiring SF-based BDRs at $80-100K+ per year. AI agents provide enterprise performance at a fraction of the cost.
+                  Compared to hiring London-based BDRs at £35-50K+ per year. AI agents work 24/7 at a fraction of the cost.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="text-4xl font-bold text-orange-600 mb-2">3x</div>
                 <div className="text-lg font-semibold mb-2">More Qualified Meetings</div>
                 <p className="text-gray-600">
-                  AI-powered personalization beats generic templates. Book more meetings with hard-to-reach decision makers.
+                  AI-powered personalization at scale. More meetings with decision-makers across the UK and Europe.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
@@ -178,19 +160,19 @@ export default function SanFranciscoPage() {
                 <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
                 <div className="text-lg font-semibold mb-2">Always-On Prospecting</div>
                 <p className="text-gray-600">
-                  Your AI BDRs never sleep, ensuring you capture leads in every timezone.
+                  Never miss an opportunity. AI agents work around the clock to fill your pipeline.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Industries We Serve in SF */}
+        {/* Industries We Serve in London */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Industries We Serve in the Bay Area</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Industries We Serve in London</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {['Enterprise SaaS', 'FinTech', 'Biotech & Health', 'Deep Tech', 'Venture Capital', 'Cybersecurity', 'Cloud Infrastructure', 'DevTools'].map((industry) => (
+              {['FinTech', 'SaaS & Tech', 'Legal Tech', 'Financial Services', 'Recruitment', 'Healthcare', 'E-commerce', 'Consulting'].map((industry) => (
                 <div key={industry} className="bg-gray-50 p-4 rounded-lg text-center">
                   <div className="font-semibold text-gray-900">{industry}</div>
                 </div>
@@ -204,14 +186,14 @@ export default function SanFranciscoPage() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Sales?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join the Bay Area's top companies transforming sales with Enai.ai.
+              Join UK companies transforming their sales with AI automation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
                 href="https://calendly.com/enai-ai2024/30min" 
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition inline-block"
               >
-                Book Demo (PT Support)
+                Book Demo (GMT Support)
               </Link>
               <Link 
                 href="/pricing" 
@@ -221,7 +203,7 @@ export default function SanFranciscoPage() {
               </Link>
             </div>
             <p className="mt-6 text-sm opacity-75">
-              Serving San Francisco, Oakland, San Jose, Palo Alto, and the entire Bay Area
+              Serving City of London, Canary Wharf, Shoreditch, and the Greater London Area
             </p>
           </div>
         </section>
