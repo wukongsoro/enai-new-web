@@ -378,45 +378,40 @@ const HeroSection = () => {
           style={{ background: 'black', margin: 0, padding: 0 }}
         />
 
-        <div className="relative z-[2] w-full max-w-6xl mx-auto text-center">
+        <div className="relative z-[2] w-full max-w-6xl mx-auto text-center px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-24">
             <div className="max-w-4xl mx-auto">
-              <div className="mb-3 md:mb-4">
-                <div className="text-xs tracking-[0.06em] text-white dark:text-white group font-geist font-semibold mx-auto px-5 py-2 mb-2 bg-gradient-to-tr from-zinc-300/30 via-gray-400/30 to-transparent dark:from-zinc-300/10 dark:via-gray-400/10 backdrop-blur-md border-[2px] border-white/20 dark:border-white/30 rounded-3xl w-fit animate-slide-down motion-reduce:animate-none shadow-[0_4px_12px_rgba(0,0,0,0.5)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <div className="mb-6 md:mb-8">
+                <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
                   Meet Your New
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 ml-2" aria-hidden="true">
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                 </div>
-                <h2 id="hero-heading" className="text-3xl sm:text-4xl md:text-6xl tracking-tighter leading-[1.1] md:leading-[1.15] font-geist bg-clip-text text-transparent mx-auto [text-wrap:balance] animate-fade-in-up motion-reduce:animate-none bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] drop-shadow-[0_10px_30px_rgba(249,115,22,0.12)] mt-1">
-                  <span className="text-white">AI WORKERS</span>
-                </h2>
+                <h1 className="h1 text-white">
+                  AI Workers
+                </h1>
               </div>
-              <div className="mb-6 md:mb-8">
+              <div className="mb-8 md:mb-10">
                 <div className="max-w-md mx-auto">
-                  <div className="h-px w-full bg-white opacity-20"></div>
+                  <div className="h-px w-full bg-white/20"></div>
                 </div>
               </div>
-              <div className="max-w-2xl mx-auto mb-8">
-                <p className="text-base md:text-lg leading-relaxed text-white dark:text-white animate-fade-in-up motion-reduce:animate-none">
-                  Stop losing leads to manual prospecting. Our AI workers handle research, outreach, and booking - so your team can focus on closing deals.
+              <div className="max-w-xl mx-auto mb-10">
+                <p className="text-body-lg text-white/80 leading-relaxed">
+                  Stop losing leads to manual prospecting. Our AI workers handle research, outreach, and booking—so your team can focus on closing deals.
                 </p>
               </div>
               <div className="flex justify-center">
-                <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] shadow-[0_10px_30px_rgba(249,115,22,0.15)]">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FDE68A_0%,#F97316_50%,#FDE68A_100%)]"></span>
-                  <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
-                    <a
-                      href="https://calendly.com/enai-ai2024/30min"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Get Demo"
-                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-orange-400/30 to-transparent dark:from-zinc-300/5 dark:via-orange-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-orange-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-orange-400/30 transition-all sm:w-auto py-4 px-10 min-h-[44px] text-sm sm:text-base font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                    >
-                      Get Demo
-                    </a>
-                  </div>
-                </span>
+                <a
+                  href="https://calendly.com/enai-ai2024/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Request a Demo"
+                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
+                >
+                  Request a Demo
+                </a>
               </div>
             </div>
           </div>

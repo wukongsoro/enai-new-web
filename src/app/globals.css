@@ -1,5 +1,3 @@
-/* Updated: 2025-09-23T09:31:45.311Z */
-/* Updated: 2025-09-23T09:16:22.783Z */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -13,7 +11,7 @@
                "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
                "Segoe UI Symbol", "Noto Color Emoji";
 
-  --font-display: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
                "Liberation Mono", "Courier New", monospace;
@@ -88,7 +86,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  /* 11x.ai Color Palette */
   --deep-blue: #1A1A2E;
   --vibrant-cyan: #00A8E8;
   --dark-gray: #333333;
@@ -145,62 +142,77 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-family: var(--font-sans);
-    font-weight: 450;     /* browsers map to 500 when needed; looks great with Inter */
+    font-weight: 400;
     line-height: 1.6;
-    font-optical-sizing: auto;          /* best rendering for Inter */
-    font-synthesis-weight: none;        /* prevents fake bold on some browsers */
-    text-wrap: pretty;                  /* nicer breaks for long copy */
+    font-optical-sizing: auto;
+    font-synthesis-weight: none;
+    text-wrap: pretty;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3 {
     font-family: var(--font-display);
-    font-weight: 500;            /* was 600 → lighter, sleeker */
-    letter-spacing: -0.01em;
-    line-height: 1.15;           /* a touch tighter than 1.2 for that crisp feel */
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     text-wrap: balance;
     -webkit-font-smoothing: antialiased;
-    font-synthesis-weight: none;        /* keep Inter Tight 500 crisp */
+    font-synthesis-weight: none;
   }
 
   h4, h5, h6 {
     font-family: var(--font-sans);
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 
   code, pre {
     font-family: var(--font-mono);
   }
 
-  /* Consistent typography utilities */
-  .h1 { font-size: clamp(32px, 5vw, 56px); text-wrap: balance; }  /* use on hero/case-study titles */
-  .h2 { font-size: clamp(24px, 3.2vw, 40px); }
-  .h3 { font-size: clamp(20px, 2.4vw, 30px); }
-  .sub { font-size: clamp(16px, 2vw, 20px); line-height: 1.55; color: var(--foreground); }
+  .h1 { font-size: clamp(40px, 6vw, 80px); line-height: 1.1; text-wrap: balance; }
+  .h2 { font-size: clamp(32px, 4vw, 64px); line-height: 1.1; }
+  .h3 { font-size: clamp(24px, 3vw, 48px); line-height: 1.2; }
+  .h4 { font-size: clamp(20px, 2.5vw, 36px); line-height: 1.2; }
+  .sub { font-size: clamp(16px, 1.5vw, 18px); line-height: 1.5; color: var(--foreground); }
 
-  /* Utility for stronger headings when needed */
-  .heading-strong { font-weight: 600; }
+  .text-body-lg { font-size: 18px; line-height: 1.5; }
+  .text-body { font-size: 16px; line-height: 1.5; }
+  .text-body-sm { font-size: 14px; line-height: 1.4; }
+  .text-caption { font-size: 12px; line-height: 1.3; letter-spacing: 0.02em; }
 
-  /* Optional numeric utility for tabular numbers */
+  .text-stat { 
+    font-family: var(--font-sans); 
+    font-size: clamp(48px, 8vw, 72px); 
+    font-weight: 700; 
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .text-quote {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .heading-strong { font-weight: 500; }
   .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
 }
 
-/* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
 }
 
-/* Apple-inspired Liquid Glass Navigation Styles */
 @supports (backdrop-filter: blur(1px)) {
   .liquid-glass-navbar {
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    /* Ensure proper compositing for backdrop-filter */
     isolation: isolate;
     will-change: transform;
   }
 }
 
-/* Optional gloss effect for premium feel */
 .header-gloss::before {
   content: "";
   position: absolute;
@@ -210,7 +222,6 @@ nextjs-portal {
   border-radius: inherit;
 }
 
-/* Fallback when blur unsupported */
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .no-blur-fallback {
     background: rgba(255,255,255,0.92);
@@ -222,7 +233,6 @@ nextjs-portal {
   }
 }
 
-/* Hero scrim to neutralize strong background colors under nav */
 .hero-scrim {
   position: relative;
 }
@@ -230,15 +240,15 @@ nextjs-portal {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 140px;                    /* banner(56px) + nav(84px) = 140px */
+  height: 140px;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0.25),          /* soft neutral wash */
+    rgba(255,255,255,0.25),
     rgba(255,255,255,0.12) 60%,
     rgba(255,255,255,0.00)
   );
-  z-index: 10;                       /* above hero content, below nav (header is z-50) */
+  z-index: 10;
 }
 .dark .hero-scrim::before {
   background: linear-gradient(
@@ -249,7 +259,6 @@ nextjs-portal {
   );
 }
 
-/* Pricing Card Shadows */
 .pricing-card-shadow-secondary {
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -264,7 +273,6 @@ nextjs-portal {
     0 0 25px 0 rgba(128, 181, 255, 0.15);
 }
 
-/* Marquee Animation for Client Logos */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -278,45 +286,51 @@ nextjs-portal {
   animation: marquee 30s linear infinite;
 }
 
-/* Mobile optimizations */
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
 @media (max-width: 768px) {
   * {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Ensure no horizontal scrolling */
   html, body {
     overflow-x: hidden;
     width: 100%;
   }
 
-  /* Improve touch targets */
   button, a, input, select, textarea {
     min-height: 44px;
     min-width: 44px;
   }
 
-  /* Better text rendering on mobile */
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  /* Reduce motion for better performance on mobile - exclude navigation transitions */
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  /* Preserve navigation menu transitions */
   .mobile-menu-transition, .mobile-menu-transition * {
     transition-duration: 300ms !important;
     animation-duration: 300ms !important;
   }
 
-  /* Enable reduced motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -325,18 +339,15 @@ nextjs-portal {
     }
   }
 
-  /* Optimize images for mobile */
   img {
     max-width: 100%;
     height: auto;
   }
 
-  /* Better scrolling on iOS */
   body {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Prevent zoom on input focus on iOS */
   input[type="text"],
   input[type="email"],
   input[type="tel"],

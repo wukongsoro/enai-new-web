@@ -75,17 +75,17 @@ export default function PricingPage() {
       <main className="min-h-screen bg-background pt-32 md:pt-40 pb-16 md:pb-24">
         {/* Pricing Hero */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <h1 className="h1 text-foreground mb-6">
             Pricing
           </h1>
-          <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed">
+          <p className="max-w-3xl mx-auto text-body-lg text-muted-foreground mb-16 leading-relaxed">
             See pricing for our individual, business, and enterprise plans.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button asChild size="lg" className="px-8">
+            <Button asChild size="lg" className="px-8 rounded-lg">
               <Link href="https://calendly.com/enai-ai2024/30min?month=2025-09" target="_blank" rel="noopener noreferrer">Book a Demo</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="px-8">
+            <Button asChild size="lg" variant="outline" className="px-8 rounded-lg">
               <Link href="/blog">Learn More</Link>
             </Button>
           </div>
@@ -94,10 +94,10 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 auto-rows-min grid-rows-[auto_auto_auto_auto_1fr]">
-            {PricingTiers.map((tier, index) => (
+            {PricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`pricing-card relative z-10 row-span-5 grid grid-rows-subgrid gap-y-0 overflow-hidden rounded-[20px] px-5 pt-5 pb-7 ${
+                className={`pricing-card relative z-10 row-span-5 grid grid-rows-subgrid gap-y-0 overflow-hidden rounded-xl px-5 pt-5 pb-7 ${
                   tier.name === "Team" ? "pricing-card-shadow-primary" : "pricing-card-shadow-secondary"
                 } ${tier.popular ? "pricing-card-shadow-primary" : ""}`}
               >
@@ -133,7 +133,7 @@ export default function PricingPage() {
                   {tier.name === "Team" ? (
                     <a
                       href="/contact"
-                      className="relative inline-flex items-center justify-center gap-1 font-medium tracking-tight whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50 [&_a]:relative [&_a]:z-10 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 before:absolute before:inset-0 before:cursor-pointer before:rounded-[inherit] before:border before:border-transparent before:bg-transparent before:opacity-0 before:transition-opacity before:ease-in-out hover:before:opacity-100 bg-[linear-gradient(180deg,#80B5FF_0%,#38F_97.46%)] text-white hover:bg-[linear-gradient(180deg,#529AFF_0%,#1B73EE_97.46%)] rounded-md px-5 lg:h-11 lg:rounded-lg lg:text-base lg:leading-none h-11 w-full text-base leading-none"
+                      className="relative inline-flex items-center justify-center gap-1 font-medium tracking-tight whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50 bg-[linear-gradient(180deg,#80B5FF_0%,#38F_97.46%)] text-white hover:bg-[linear-gradient(180deg,#529AFF_0%,#1B73EE_97.46%)] rounded-lg px-5 h-11 w-full text-base leading-none"
                     >
                       <span className="relative z-10 inline-flex whitespace-nowrap items-center justify-center gap-1 w-full">
                         {tier.cta}
@@ -142,7 +142,7 @@ export default function PricingPage() {
                   ) : (
                     <a
                       href={tier.name === "Free Trial" ? "/trial" : "/signup"}
-                      className="relative inline-flex items-center justify-center gap-1 font-medium tracking-tight whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50 [&_a]:relative [&_a]:z-10 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 before:absolute before:inset-0 before:cursor-pointer before:rounded-[inherit] before:border before:border-transparent before:bg-transparent before:opacity-0 before:transition-opacity before:ease-in-out hover:before:opacity-100 bg-[radial-gradient(84.32%_100%_at_49.77%_0%,#2E3038_46.14%,#1C1D22_100%)] text-white hover:bg-[radial-gradient(84.32%_100%_at_49.77%_0%,#404451_46.14%,#2D2F38_100%)] rounded-md px-5 lg:h-11 lg:rounded-lg lg:text-base lg:leading-none h-11 w-full text-base leading-none"
+                      className="relative inline-flex items-center justify-center gap-1 font-medium tracking-tight whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50 bg-[radial-gradient(84.32%_100%_at_49.77%_0%,#2E3038_46.14%,#1C1D22_100%)] text-white hover:bg-[radial-gradient(84.32%_100%_at_49.77%_0%,#404451_46.14%,#2D2F38_100%)] rounded-lg px-5 h-11 w-full text-base leading-none"
                     >
                       <span className="relative z-10 inline-flex whitespace-nowrap items-center justify-center gap-1 w-full">
                         {tier.cta}
@@ -345,15 +345,15 @@ export default function PricingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary/5 py-16">
+        <section className="bg-[#F5F1ED] py-16 mt-16 rounded-xl mx-4 sm:mx-6 lg:mx-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Transform Your Sales?</h2>
-            <p className="text-xl text-muted-foreground mb-8">Join thousands of teams scaling their pipelines with ENAI.</p>
+            <h2 className="h3 text-foreground mb-4">Ready to Transform Your Sales?</h2>
+            <p className="text-body-lg text-muted-foreground mb-8">Join thousands of teams scaling their pipelines with ENAI.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="px-8">
+              <Button asChild size="lg" className="px-8 rounded-lg">
                 <Link href="/demo">Start Free Trial</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="px-8">
+              <Button asChild size="lg" variant="outline" className="px-8 rounded-lg">
                 <Link href="/contact">Talk to Sales</Link>
               </Button>
             </div>

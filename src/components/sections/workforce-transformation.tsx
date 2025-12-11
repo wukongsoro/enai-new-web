@@ -50,8 +50,8 @@ const features: FeatureCardProps[] = [
 ];
 
 const FeatureCard = ({ title, description, mediaType, mediaSrc, href }: FeatureCardProps) => (
-  <Link href={href} className="block group bg-[#F5F1ED] p-4 md:p-6 rounded-xl h-full flex flex-col transition-all duration-300 hover:shadow-md">
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg mb-4">
+  <Link href={href} className="block group bg-[#F5F1ED] p-5 md:p-6 rounded-xl h-full flex flex-col transition-all duration-300 hover:shadow-md">
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg mb-5">
       {mediaType === 'video' && typeof mediaSrc === 'object' ? (
         <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
           <source src={mediaSrc.mp4} type="video/mp4" />
@@ -66,8 +66,8 @@ const FeatureCard = ({ title, description, mediaType, mediaSrc, href }: FeatureC
         />
       )}
     </div>
-    <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black">{title}</h3>
-    <p className="text-base text-black/70 flex-1">{description}</p>
+    <h3 className="text-lg md:text-xl mb-2 text-black">{title}</h3>
+    <p className="text-body-sm text-black/60 flex-1">{description}</p>
   </Link>
 );
 
@@ -90,19 +90,19 @@ export default function WorkforceTransformation() {
   }, [api]);
 
   return (
-    <section className="bg-[#E8DDD4] py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-[32px] md:text-[48px] lg:text-5xl heading-strong mb-4 text-black">
+    <section className="bg-[#E8DDD4] py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <h2 className="h2 text-black mb-6">
             ENAI BDR Features That Drive Results
           </h2>
-          <p className="text-base md:text-lg text-[#666666] max-w-xl mx-auto leading-relaxed">
+          <p className="text-body-lg text-black/60 max-w-xl mx-auto leading-relaxed">
             From manual prospecting to automated pipeline generation. Our AI handles the heavy lifting so you can focus on closing deals.
           </p>
-          <div className="mt-6">
+          <div className="mt-8">
             <Link
               href="/demo"
-              className="inline-block bg-black text-white px-8 py-4 rounded-3xl font-medium text-sm transition-colors hover:bg-gray-800"
+              className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-black/90"
             >
               Get started
             </Link>
@@ -119,15 +119,14 @@ export default function WorkforceTransformation() {
               ))}
             </CarouselContent>
           </Carousel>
-          {/* Dots indicator */}
           {count > 0 && (
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-2 mt-10">
               {Array.from({ length: count }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
                   className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                    current === index ? "bg-black w-4" : "bg-gray-400 hover:bg-gray-500"
+                    current === index ? "bg-black w-6" : "bg-black/30 hover:bg-black/50"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

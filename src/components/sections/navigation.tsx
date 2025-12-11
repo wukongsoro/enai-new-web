@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 
-// Content for the top scrolling banner
 const banners = [
   {
     text: "ENAI's AI Agents Generate 50% More Qualified Leads",
@@ -21,27 +20,32 @@ const banners = [
   },
 ];
 
-// Navigation links for both desktop and mobile
 const navLinks = [
   { text: "Pricing", href: "/pricing" },
   { text: "Company", href: "/about-us" },
   { text: "Blog", href: "/blog" },
 ];
 
+const resourceLinks = [
+  { text: "Industries", href: "/industries" },
+  { text: "Case Studies", href: "/case-studies" },
+  { text: "Integrations", href: "/integrations" },
+  { text: "Security", href: "/security" },
+];
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentBanner, setCurrentBanner] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
-  // Effect for cycling through banner messages
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000); // Change every 5 seconds
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  // Effect to detect scroll position and change navbar style
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 20);
@@ -50,10 +54,9 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) { // lg breakpoint
+      if (window.innerWidth >= 1024) {
         setIsMenuOpen(false);
       }
     };
@@ -61,25 +64,19 @@ export default function Navigation() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Apple Liquid Glass styling - true glassmorphism with proper blur
   const glassTint = hasScrolled
-    ? "bg-white/70 dark:bg-neutral-900/70"
-    : "bg-white/50 dark:bg-neutral-900/60";
+    ? "bg-white/80 dark:bg-neutral-900/80"
+    : "bg-white/60 dark:bg-neutral-900/60";
 
-  const linkColorClass = hasScrolled
-    ? "text-gray-900 hover:text-orange-600 transition-colors duration-200"
-    : "text-gray-900 hover:text-orange-600 transition-colors duration-200";
+  const linkColorClass = "text-gray-800 hover:text-orange-600 transition-colors duration-200";
 
-  const buttonClass = hasScrolled
-    ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200"
-    : "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200";
+  const buttonClass = "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200";
 
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 font-sans" style={{ transform: 'translateZ(0)' }}>
-        {/* Top Banner Section */}
         <div className="bg-black text-white">
-          <div className="relative h-14 overflow-hidden">
+          <div className="relative h-12 overflow-hidden">
             {banners.map((banner, index) => (
               <Link
                 key={index}
@@ -88,62 +85,85 @@ export default function Navigation() {
                   currentBanner === index ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <span className="text-sm text-center px-4">{banner.text}</span>
-                <ArrowUpRight className="w-4 h-4 ml-1 flex-shrink-0" />
+                <span className="text-[13px] tracking-wide text-center px-4">{banner.text}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 flex-shrink-0" />
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Apple Liquid Glass Navigation Bar */}
         <div
           className={[
             "w-full transition-all duration-500 ease-out header-gloss no-blur-fallback",
-            glassTint, // Standard lighter glass for the header bar
+            glassTint,
             "backdrop-blur-xl",
             "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
             "[-webkit-backdrop-filter:brightness(1.1)_saturate(1.1)_contrast(1.1)_blur(20px)]",
             "supports-[backdrop-filter]:saturate-180",
-            "border-b border-white/20 dark:border-white/10",
+            "border-b border-black/5 dark:border-white/10",
             "[isolation:isolate]",
           ].join(" ")}
         >
-          <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-[84px]">
-            {/* Left section: Logo */}
+          <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-[72px]">
             <div className="flex-1 flex justify-start">
               <Link href="/" className="flex-shrink-0" onClick={() => isMenuOpen && setIsMenuOpen(false)}>
                 <Image
                   src="/enai-logo.png"
                   alt="ENAI logo"
-                  width={55}
-                  height={24}
+                  width={52}
+                  height={22}
                   className="transition-all duration-300 hover:scale-105"
                   priority
                 />
               </Link>
             </div>
             
-            {/* Center section: Desktop navigation links */}
-            <div className="hidden lg:flex items-center justify-center gap-10">
+            <div className="hidden lg:flex items-center justify-center gap-9">
               {navLinks.map((link) => (
                 <Link
                   key={link.text}
                   href={link.href}
-                  className={`text-sm font-bold tracking-wide transition-all duration-300 hover:scale-105 relative group ${linkColorClass}`}
+                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 relative group ${linkColorClass}`}
                 >
                   {link.text}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsResourcesOpen(true)}
+                onMouseLeave={() => setIsResourcesOpen(false)}
+              >
+                <button
+                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 relative group flex items-center gap-1.5 ${linkColorClass}`}
+                >
+                  Resources
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isResourcesOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                    <div className="bg-white rounded-xl shadow-xl border border-black/5 py-2 min-w-[180px]">
+                      {resourceLinks.map((link) => (
+                        <Link
+                          key={link.text}
+                          href={link.href}
+                          className="block px-4 py-2.5 text-[13px] font-medium text-gray-600 hover:bg-[#F5F1ED] hover:text-[#1E3A3A] transition-colors"
+                        >
+                          {link.text}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* Right section: CTA Button & Mobile Menu Toggle */}
             <div className="flex-1 flex justify-end items-center">
               <Link
                 href="https://calendly.com/enai-ai2024/30min?month=2025-09"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hidden lg:block text-sm font-bold rounded-full px-8 py-3 transition-all duration-300 hover:scale-105 transform ${buttonClass}`}
+                className={`hidden lg:block text-[13px] font-semibold tracking-wide rounded-full px-7 py-2.5 transition-all duration-300 hover:scale-105 transform ${buttonClass}`}
               >
                 Get Demo
               </Link>
@@ -152,54 +172,63 @@ export default function Navigation() {
                 className={`lg:hidden transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center mobile-menu-transition ${linkColorClass}`}
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
               </button>
             </div>
           </nav>
         </div>
       </header>
     
-      {/* Mobile Menu Panel */}
       {isMenuOpen && (
         <>
-          {/* Backdrop overlay */}
           <div
             className="lg:hidden fixed inset-0 bg-black/20 z-[45]"
             onClick={() => setIsMenuOpen(false)}
             aria-hidden="true"
           />
-          {/* Menu panel */}
           <div
             className={[
-              "lg:hidden fixed top-[140px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
-              // UPDATED: Increased opacity significantly for clarity/readability while keeping glass feel
-              "bg-white/90 dark:bg-neutral-950/90", 
+              "lg:hidden fixed top-[132px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
+              "bg-white/95 dark:bg-neutral-950/95", 
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
               "[-webkit-backdrop-filter:brightness(1.1)_saturate(1.1)_contrast(1.1)_blur(20px)]",
               "supports-[backdrop-filter]:saturate-180",
-              "border-b border-white/20 dark:border-white/10",
+              "border-b border-black/5 dark:border-white/10",
               "[isolation:isolate]",
             ].join(" ")}
           >
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-3 overflow-y-auto h-full">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-2 overflow-y-auto h-full">
               {navLinks.map((link) => (
                 <Link
                   key={link.text}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block rounded-xl py-4 px-6 text-base font-bold transition-all duration-200 hover:scale-105 min-h-[48px] flex items-center justify-center ${hasScrolled ? 'text-gray-900 hover:bg-white/50' : 'text-gray-800 hover:bg-orange-50'}`}
+                  className="block rounded-xl py-3.5 px-6 text-[15px] font-semibold text-gray-800 hover:bg-orange-50 transition-all duration-200 min-h-[48px] flex items-center"
                 >
                   {link.text}
                 </Link>
               ))}
-              <div className={`pt-6 border-t mt-6 ${hasScrolled ? 'border-gray-200' : 'border-white/20'}`}>
+              <div className="pt-4 border-t border-gray-100">
+                <p className="text-[11px] uppercase tracking-widest text-gray-400 px-6 mb-2 font-medium">Resources</p>
+                {resourceLinks.map((link) => (
+                  <Link
+                    key={link.text}
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block rounded-xl py-3 px-6 text-[15px] font-medium text-gray-600 hover:bg-[#F5F1ED] transition-colors"
+                  >
+                    {link.text}
+                  </Link>
+                ))}
+              </div>
+              <div className="pt-6 border-t border-gray-100 mt-4">
                 <Link
                   href="https://calendly.com/enai-ai2024/30min?month=2025-09"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block text-center w-full text-sm font-bold rounded-xl py-3 px-6 transition-all duration-200 hover:scale-105 ${hasScrolled ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700' : 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700'}`}
+                  className="block text-center w-full text-[14px] font-semibold rounded-xl py-3 px-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-200"
                 >
                   Book a Demo
                 </Link>

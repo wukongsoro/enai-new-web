@@ -28,7 +28,7 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
 
   return (
   <div className="w-full h-full flex flex-col">
-    <div className={`relative overflow-hidden rounded-2xl w-full h-64 sm:h-72 md:h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
+    <div className={`relative overflow-hidden rounded-xl w-full h-64 sm:h-72 md:h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
       {bottomVideoSrc ? (
         <video
           src={bottomVideoSrc}
@@ -51,22 +51,18 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
       )}
     </div>
     <div className="pt-6 md:pt-8 flex-1 flex flex-col">
-      <h3 className="text-2xl md:text-3xl font-semibold text-black leading-tight mb-3">
-        {name} <span className="opacity-50">– {role}</span>
+      <h3 className="text-xl md:text-2xl text-black leading-tight mb-3">
+        {name} <span className="text-black/50">— {role}</span>
       </h3>
-      <p className="text-base text-[#666666] leading-relaxed mb-6 flex-1">
+      <p className="text-body text-black/60 leading-relaxed mb-6 flex-1">
         {description}
       </p>
       <div className="mt-auto">
-        <Link href={hireLink} className="inline-flex items-center gap-2.5 font-medium text-black group text-sm hover:text-gray-600 transition-colors">
+        <Link href={hireLink} className="inline-flex items-center gap-2 text-sm font-medium text-black hover:text-black/70 transition-colors">
           Deploy {name}
-          <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/svgs/6728cd23fb2a7e724d17d4c5_arrow_right_alt-5.svg?"
-            alt="Arrow right"
-            width={16}
-            height={16}
-            className="transition-transform group-hover:translate-x-1"
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </Link>
       </div>
     </div>
@@ -76,23 +72,23 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
 
 const DigitalWorkersIntro = () => {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-[32px] md:text-[48px] lg:text-5xl heading-strong text-black leading-tight mb-4">
+    <section className="bg-white py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <h2 className="h2 text-black mb-6">
             Meet ENAI's AI BDR Agents
           </h2>
-          <p className="text-base md:text-lg text-[#666666] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
             From startups to enterprise sales orgs—spin up AI workers that match your motion. Research, write, and book—with approval guardrails.
           </p>
-          <div className="mt-6">
-            <Link href="/demo" className="inline-block bg-black text-white rounded-2xl py-4 px-8 text-sm font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <div className="mt-8">
+            <Link href="/demo" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">
               Get started
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
           <WorkerCard
             name="ProspectorAI"
             role="Lead Discovery Agent"
