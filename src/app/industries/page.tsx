@@ -162,16 +162,6 @@ const industries = [
   },
 ];
 
-const trustedBy = [
-  { name: "Salesforce" },
-  { name: "HubSpot" },
-  { name: "Microsoft" },
-  { name: "Google" },
-  { name: "Oracle" },
-  { name: "SAP" },
-  { name: "IBM" },
-  { name: "Adobe" },
-];
 
 export default function IndustriesPage() {
   return (
@@ -228,27 +218,6 @@ export default function IndustriesPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#F5F1ED] overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-10">
-            <p className="text-caption uppercase tracking-[0.15em] text-black/40 text-center">
-              Trusted by leading companies across industries
-            </p>
-          </div>
-          <div className="relative">
-            <div className="flex animate-marquee">
-              {[...trustedBy, ...trustedBy].map((company, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 px-12 flex items-center justify-center"
-                >
-                  <span className="text-xl font-semibold text-black/30 hover:text-black/50 transition-colors duration-300 whitespace-nowrap">
-                    {company.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">

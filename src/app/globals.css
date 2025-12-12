@@ -198,6 +198,83 @@
 
   .heading-strong { font-weight: 500; }
   .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+  /* Fixed font sizes with Playfair Display - Harvey style */
+  .text-h1 {
+    font-family: var(--font-display);
+    font-size: 3.5rem; /* 56px - lg */
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .text-h2 {
+    font-family: var(--font-display);
+    font-size: 3.5rem; /* 56px - lg */
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .text-h3 {
+    font-family: var(--font-display);
+    font-size: 3rem; /* 48px */
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .text-h4 {
+    font-family: var(--font-display);
+    font-size: 2.25rem; /* 36px */
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .text-p {
+    font-family: var(--font-sans);
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Responsive overrides for mobile */
+  @media (max-width: 768px) {
+    .text-h1 {
+      font-size: 2.25rem; /* 36px - text-4xl */
+    }
+    .text-h2 {
+      font-size: 2.25rem; /* 36px - text-4xl */
+    }
+    .text-h3 {
+      font-size: 1.875rem; /* 30px - text-3xl */
+    }
+    .text-h4 {
+      font-size: 1.5rem; /* 24px - text-2xl */
+    }
+    .text-p {
+      font-size: 1rem; /* 16px */
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-h1 {
+      font-size: 3rem; /* 48px - text-5xl */
+    }
+    .text-h2 {
+      font-size: 3rem; /* 48px - text-5xl */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-h1 {
+      font-size: 3.5rem; /* 56px */
+    }
+    .text-h2 {
+      font-size: 3.5rem; /* 56px */
+    }
+  }
 }
 
 nextjs-portal {

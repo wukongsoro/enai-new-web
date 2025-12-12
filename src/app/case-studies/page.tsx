@@ -1,89 +1,114 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import { ArrowRight, TrendingUp, Clock, Users, Target } from "lucide-react";
+import { ArrowRight, Zap, Brain, Globe, Clock, Target, Users, TrendingUp, Shield, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Studies | ENAI - AI Sales Automation Success Stories",
-  description: "Discover how leading companies use ENAI AI BDR agents to increase pipeline by 3x, reduce costs by 70%, and scale their sales operations globally.",
-  keywords: "AI BDR case studies, sales automation results, B2B sales success stories, AI prospecting ROI, sales pipeline growth",
+  title: "What ENAI Can Do | AI Sales Automation Capabilities",
+  description: "Explore ENAI's AI BDR capabilities: autonomous prospecting, multi-channel outreach, intelligent qualification, and 24/7 global coverage for B2B sales teams.",
+  keywords: "AI BDR capabilities, sales automation features, B2B prospecting AI, AI sales agent, autonomous outreach",
   openGraph: {
-    title: "Case Studies | ENAI - AI Sales Automation Success Stories",
-    description: "See real results from companies using ENAI AI BDR agents.",
+    title: "What ENAI Can Do | AI Sales Automation Capabilities",
+    description: "Discover the full potential of AI-powered sales development.",
     type: "website",
   },
 };
 
-const caseStudies = [
+const capabilities = [
   {
-    company: "TechScale Solutions",
-    domain: "techcrunch.com",
-    industry: "Software",
-    challenge: "Struggling to scale outbound with a lean SDR team while maintaining personalization quality.",
-    solution: "Deployed 3 AI BDR agents for prospecting and outreach across North America and EMEA markets.",
-    results: [
-      { metric: "3x", label: "Pipeline Growth" },
-      { metric: "67%", label: "Cost Reduction" },
-      { metric: "2 weeks", label: "Time to Deploy" },
+    icon: Brain,
+    title: "Intelligent Prospect Research",
+    description: "AI agents that deeply research every prospect—analyzing company news, funding rounds, job postings, tech stack, and organizational changes to craft perfectly timed, relevant outreach.",
+    highlights: [
+      "Real-time company intelligence gathering",
+      "Buying signal detection and prioritization",
+      "Stakeholder mapping across organizations",
+      "Competitive landscape analysis",
     ],
-    quote: "ENAI transformed our entire outbound strategy. We went from 50 meetings/month to 180 without adding headcount.",
-    author: "VP of Sales",
-    featured: true,
   },
   {
-    company: "Global Freight Partners",
-    domain: "flexport.com",
-    industry: "Shipping & Logistics",
-    challenge: "Manual prospecting couldn't keep up with global shipping demand across multiple time zones.",
-    solution: "24/7 AI agents covering APAC, EMEA, and Americas with lane-specific intelligence.",
-    results: [
-      { metric: "45%", label: "Faster RFP Response" },
-      { metric: "70%", label: "Cost Savings" },
-      { metric: "24/7", label: "Coverage" },
+    icon: Zap,
+    title: "Autonomous Multi-Channel Outreach",
+    description: "Deploy AI agents across email, LinkedIn, and phone with coordinated sequences that adapt based on prospect engagement and response patterns.",
+    highlights: [
+      "Personalized messaging at scale",
+      "Dynamic sequence optimization",
+      "A/B testing and continuous improvement",
+      "Channel preference learning",
     ],
-    quote: "Our AI agents now monitor capacity changes and reach shippers before our competitors even wake up.",
-    author: "Commercial Director",
-    featured: true,
   },
   {
-    company: "Meridian Capital",
-    domain: "blackstone.com",
-    industry: "Private Equity",
-    challenge: "Deal sourcing was bottlenecked by limited bandwidth to research and qualify opportunities.",
-    solution: "AI agents for deal flow qualification and LP outreach automation.",
-    results: [
-      { metric: "5x", label: "Deal Flow" },
-      { metric: "40%", label: "Time Saved" },
-      { metric: "200+", label: "Qualified Leads/Month" },
+    icon: Target,
+    title: "Smart Lead Qualification",
+    description: "AI-powered qualification that goes beyond basic criteria—understanding budget authority, timeline, and genuine fit before passing to your sales team.",
+    highlights: [
+      "BANT and custom framework scoring",
+      "Intent signal analysis",
+      "Conversation-based qualification",
+      "CRM enrichment and sync",
     ],
-    quote: "The AI's ability to research and qualify targets at scale has completely changed our sourcing capabilities.",
-    author: "Managing Partner",
-    featured: false,
   },
   {
-    company: "Apex Manufacturing",
-    domain: "ge.com",
-    industry: "Industrials",
-    challenge: "Complex sales cycles with multiple stakeholders required extensive manual research.",
-    solution: "AI-powered account mapping and multi-threaded outreach sequences.",
-    results: [
-      { metric: "55%", label: "Faster Qualification" },
-      { metric: "3.2x", label: "Meeting Rate" },
-      { metric: "6 weeks", label: "Sales Cycle Reduction" },
+    icon: Globe,
+    title: "24/7 Global Coverage",
+    description: "AI agents that never sleep, engaging prospects across every timezone with culturally-aware, localized communication in multiple languages.",
+    highlights: [
+      "Multi-timezone engagement",
+      "Localized messaging and cultural nuance",
+      "Follow-up timing optimization",
+      "Holiday and business hour awareness",
     ],
-    quote: "The depth of account research our AI agents deliver rivals what a dedicated analyst would produce.",
-    author: "CRO",
-    featured: false,
+  },
+  {
+    icon: Shield,
+    title: "Enterprise-Grade Compliance",
+    description: "Built-in guardrails for regulated industries with audit trails, approval workflows, and messaging controls that keep your outreach compliant.",
+    highlights: [
+      "GDPR and CCPA compliance",
+      "Industry-specific regulations (FINRA, HIPAA)",
+      "Message approval workflows",
+      "Complete audit trails",
+    ],
+  },
+  {
+    icon: Sparkles,
+    title: "Continuous Learning",
+    description: "AI agents that improve with every interaction—learning from successful conversions, refining targeting, and optimizing messaging based on real results.",
+    highlights: [
+      "Response pattern analysis",
+      "Conversion optimization",
+      "Persona refinement",
+      "Messaging effectiveness tracking",
+    ],
   },
 ];
 
-const metrics = [
-  { icon: TrendingUp, value: "3x", label: "Average Pipeline Increase", description: "Qualified opportunities generated" },
-  { icon: Clock, value: "70%", label: "Cost Reduction", description: "Compared to traditional SDR teams" },
-  { icon: Users, value: "500+", label: "Companies Trust ENAI", description: "Across 40+ countries" },
-  { icon: Target, value: "10M+", label: "Prospects Contacted", description: "With personalized outreach" },
+const useCaseScenarios = [
+  {
+    industry: "Software & SaaS",
+    scenario: "Scale from PLG to Enterprise",
+    description: "Convert free trial users to paid customers while simultaneously building enterprise pipeline with multi-threaded account engagement.",
+    outcomes: ["Product-qualified lead activation", "Enterprise account mapping", "Technical buyer engagement"],
+  },
+  {
+    industry: "Professional Services",
+    scenario: "Partner-Level Business Development",
+    description: "Extend partner rainmaking capacity with AI that maintains the personal touch and relationship quality your firm is known for.",
+    outcomes: ["Alumni network engagement", "Referral program automation", "Thought leadership distribution"],
+  },
+  {
+    industry: "Private Equity",
+    scenario: "Proprietary Deal Sourcing",
+    description: "Identify and qualify acquisition targets at scale, building relationships with founders and operators before deals go to market.",
+    outcomes: ["Target company research", "Founder outreach sequences", "LP relationship management"],
+  },
+  {
+    industry: "Industrial & Manufacturing",
+    scenario: "Complex B2B Sales Cycles",
+    description: "Navigate multi-stakeholder buying committees with coordinated outreach to engineering, procurement, and operations decision-makers.",
+    outcomes: ["Account mapping automation", "Technical qualification", "Trade show follow-up"],
+  },
 ];
 
 export default function CaseStudiesPage() {
@@ -95,157 +120,157 @@ export default function CaseStudiesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "ENAI Case Studies",
-            "description": "Success stories from companies using ENAI AI BDR agents",
+            "name": "ENAI Capabilities",
+            "description": "AI BDR capabilities and use cases for sales automation",
           })
         }}
       />
       <Navigation />
       <main className="bg-[#F5F1ED]">
+        {/* Hero Section */}
         <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 bg-[#F5F1ED] overflow-hidden">
           <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-black/60 px-4 py-2 bg-white/50 border border-black/10 rounded-full mb-8">
-                <TrendingUp className="w-4 h-4" />
-                Customer Success
+                <Sparkles className="w-4 h-4" />
+                Capabilities
               </div>
               <h1 className="h1 text-black mb-6">
-                Real Results from Real Companies
+                What ENAI Can Do
               </h1>
               <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl">
-                See how leading organizations across industries use ENAI AI BDR agents to transform their sales operations and accelerate growth.
+                Discover the full potential of AI-powered sales development. Our AI BDR agents handle everything from prospect research to qualified meeting booking.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-[#1E3A3A] rounded-lg">
-                    <metric.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-stat text-[#1E3A3A] mb-1">{metric.value}</div>
-                  <div className="text-sm font-medium text-black mb-1">{metric.label}</div>
-                  <div className="text-caption text-black/50">{metric.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28 bg-[#E8DDD4]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="h2 text-black mb-6">
-                Featured Case Studies
-              </h2>
-              <p className="text-body-lg text-black/60 leading-relaxed">
-                Deep dives into how companies transformed their sales with AI.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.filter(cs => cs.featured).map((study, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-8 md:p-10 rounded-2xl hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-[#F5F1ED] rounded-lg flex items-center justify-center p-2">
-                        <Image
-                          src={`https://logo.clearbit.com/${study.domain}`}
-                          alt={study.company}
-                          width={40}
-                          height={40}
-                          className="object-contain"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-medium text-black">{study.company}</h3>
-                        <span className="text-caption text-black/50 uppercase tracking-wider">{study.industry}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <div className="text-sm font-medium text-black/70 mb-2">Challenge</div>
-                    <p className="text-body-sm text-black/60">{study.challenge}</p>
-                  </div>
-                  <div className="mb-6">
-                    <div className="text-sm font-medium text-black/70 mb-2">Solution</div>
-                    <p className="text-body-sm text-black/60">{study.solution}</p>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 mb-6 py-6 border-y border-black/10">
-                    {study.results.map((result, rIndex) => (
-                      <div key={rIndex} className="text-center">
-                        <div className="text-2xl font-bold text-[#1E3A3A]">{result.metric}</div>
-                        <div className="text-caption text-black/50">{result.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <blockquote className="italic text-black/70 mb-4">
-                    &ldquo;{study.quote}&rdquo;
-                  </blockquote>
-                  <div className="text-body-sm text-black/50">— {study.author}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        {/* Core Capabilities Grid */}
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="h2 text-black mb-6">
-                More Success Stories
+                Core Capabilities
               </h2>
+              <p className="text-body-lg text-black/60 leading-relaxed">
+                Six powerful capabilities that transform how your team generates pipeline.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {caseStudies.filter(cs => !cs.featured).map((study, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="bg-[#F5F1ED] p-8 rounded-xl hover:shadow-md transition-all duration-300"
+                  className="bg-[#F5F1ED] p-8 rounded-2xl hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2">
-                      <Image
-                        src={`https://logo.clearbit.com/${study.domain}`}
-                        alt={study.company}
-                        width={32}
-                        height={32}
-                        className="object-contain"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium text-black">{study.company}</h3>
-                      <span className="text-caption text-black/50">{study.industry}</span>
-                    </div>
+                  <div className="w-14 h-14 bg-[#1E3A3A] rounded-lg flex items-center justify-center mb-6">
+                    <capability.icon className="w-7 h-7 text-white" />
                   </div>
-                  <div className="flex gap-6 mb-4">
-                    {study.results.slice(0, 2).map((result, rIndex) => (
-                      <div key={rIndex}>
-                        <div className="text-xl font-bold text-[#1E3A3A]">{result.metric}</div>
-                        <div className="text-caption text-black/50">{result.label}</div>
-                      </div>
+                  <h3 className="text-xl font-medium text-black mb-4">{capability.title}</h3>
+                  <p className="text-body-sm text-black/60 mb-6">{capability.description}</p>
+                  <ul className="space-y-2">
+                    {capability.highlights.map((highlight, hIndex) => (
+                      <li key={hIndex} className="flex items-start gap-2 text-body-sm text-black/70">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#1E3A3A] flex-shrink-0 mt-2" />
+                        {highlight}
+                      </li>
                     ))}
-                  </div>
-                  <p className="text-body-sm text-black/60 italic">&ldquo;{study.quote}&rdquo;</p>
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Use Case Scenarios */}
+        <section className="py-20 md:py-28 bg-[#E8DDD4]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="h2 text-black mb-6">
+                Use Case Scenarios
+              </h2>
+              <p className="text-body-lg text-black/60 leading-relaxed">
+                See how ENAI adapts to different industries and sales motions.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCaseScenarios.map((useCase, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 md:p-10 rounded-2xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-caption uppercase tracking-wider text-[#1E3A3A]/60 mb-2">
+                    {useCase.industry}
+                  </div>
+                  <h3 className="text-xl font-medium text-black mb-4">{useCase.scenario}</h3>
+                  <p className="text-body-sm text-black/60 mb-6">{useCase.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {useCase.outcomes.map((outcome, oIndex) => (
+                      <span
+                        key={oIndex}
+                        className="text-caption bg-[#F5F1ED] px-3 py-1.5 rounded-full text-black/70"
+                      >
+                        {outcome}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="h2 text-black mb-6">
+                How It Works
+              </h2>
+              <p className="text-body-lg text-black/60 leading-relaxed">
+                From setup to qualified meetings in three simple steps.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-[#1E3A3A] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-lg font-medium text-black mb-3">Define Your ICP</h3>
+                <p className="text-body-sm text-black/60">
+                  Tell us who you want to reach. We&apos;ll configure AI agents with your ideal customer profile, messaging, and qualification criteria.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-[#1E3A3A] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-lg font-medium text-black mb-3">Deploy AI Agents</h3>
+                <p className="text-body-sm text-black/60">
+                  Your AI BDR agents begin researching prospects, crafting personalized outreach, and engaging across email, LinkedIn, and phone.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-[#1E3A3A] rounded-full flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-lg font-medium text-black mb-3">Book Qualified Meetings</h3>
+                <p className="text-body-sm text-black/60">
+                  Qualified prospects are booked directly on your calendar. Your sales team focuses on closing, not prospecting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-20 md:py-28 bg-[#1E3A3A]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="h2 text-white mb-6">
-                Ready to Write Your Success Story?
+                Ready to See ENAI in Action?
               </h2>
               <p className="text-body-lg text-white/70 leading-relaxed mb-10">
-                Join hundreds of companies transforming their sales with ENAI AI BDR agents.
+                Book a demo to see how AI BDR agents can transform your sales pipeline.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

@@ -43,7 +43,7 @@ const About3 = ({
   title = "About ENAI",
   description = "ENAI is an AI-powered business development platform that builds intelligent digital workers to revolutionize sales and marketing operations. We believe artificial intelligence should augment human potential, not replace it.",
   mainImage = {
-    src: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312/672e35900c2fbc913aab53fd_about%20hero.webp",
+    src: "/GauJDBnXcAAkNUg.jpeg",
     alt: "ENAI Team",
   },
   secondaryImage = {
@@ -73,7 +73,7 @@ const About3 = ({
           <img
             src={mainImage.src}
             alt={mainImage.alt}
-            className="size-full max-h-[400px] sm:max-h-[500px] lg:max-h-[620px] rounded-xl object-cover lg:col-span-2"
+            className="w-full h-[260px] sm:h-[300px] lg:h-[340px] rounded-xl object-cover object-center lg:col-span-2"
           />
           <div className="max-w-md mx-auto lg:mx-0">
             <div className="flex flex-col justify-between gap-6 rounded-xl bg-gray-50 p-6 sm:p-7">
