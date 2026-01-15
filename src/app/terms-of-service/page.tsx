@@ -63,7 +63,7 @@ export default function TermsOfService() {
           </div>
 
           <div className="space-y-6 text-gray-700 leading-relaxed">
-            <p>Welcome to Enai Thanks for using our products and services ("Service"). The Service is provided by Enai Limited ("Enai", "we", "us" or "our"), located at Unit 3, Bradbury's Court, Lyon Rd, London HA1 2BY, UK. By using our Service, you are agreeing to these terms. Please read them carefully.</p>
+            <p>Welcome to Enai Thanks for using our products and services ("Service"). The Service is provided by Enai Limited ("Enai", "we", "us" or "our"), located at 128 City Road, London, EC1V 2NX, UK. By using our Service, you are agreeing to these terms. Please read them carefully.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Description of Service</h2>
             <p>Enai provides you with access to advanced AI-powered tools that can be accessed via a web interface. You understand that the Service may include certain communications from Enai, such as service announcements and administrative messages related to the provision of the Service. Unless explicitly stated otherwise, any new features or tools released by us in relation to the Service shall be subject to this Agreement.</p>

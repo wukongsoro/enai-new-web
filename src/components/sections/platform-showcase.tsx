@@ -42,19 +42,19 @@ export default function PlatformShowcase() {
       <div className="bg-[#E8DDD4] text-black rounded-[40px] max-w-[1248px] mx-auto py-16 px-6 sm:p-12 md:p-16 lg:px-20 lg:py-24">
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-block bg-[#F5F1ED] text-black text-sm font-medium py-1 px-3 rounded-full mb-4">
-            ENAI BDR Platform
+            The ENAI Platform
           </div>
           <h2 className="text-[40px] md:text-[48px] heading-strong leading-tight mb-6">
-            Full BDR Workflow Automation
+            Complete Revenue Workflow
           </h2>
           <p className="text-[#666666] text-lg mb-6">
-            From lead identification to qualified meetings—ENAI handles your entire outbound pipeline with AI precision and scale.
+            Signal detection to booked meeting. Every step logged, every action reversible, full compliance built in.
           </p>
           <Link
-            href="/demo"
+            href="https://calendly.com/enai-ai2024/30min"
             className="inline-block bg-black text-white text-sm font-medium py-4 px-8 rounded-full transition-transform duration-300 hover:scale-105"
           >
-            See Demo
+            Request Access
           </Link>
         </div>
 
@@ -82,15 +82,15 @@ export default function PlatformShowcase() {
                   style={{ boxSizing: 'border-box', overflow: 'hidden' }}
                 >
                   <div className="opacity-60 group-data-[state=active]:opacity-100 transition-opacity w-full flex flex-col justify-start h-full"
-                       style={{ boxSizing: 'border-box' }}>
+                    style={{ boxSizing: 'border-box' }}>
                     <h4 className="text-xl md:text-2xl font-semibold mb-3 leading-tight text-black"
-                        style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)' }}>{tab.title}</h4>
+                      style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)' }}>{tab.title}</h4>
                     <p className="text-sm md:text-base text-black/80 leading-relaxed mt-auto"
-                       style={{
-                         fontSize: 'clamp(0.875rem, 2vw, 1rem)',
-                         wordWrap: 'break-word',
-                         overflowWrap: 'break-word'
-                       }}>
+                      style={{
+                        fontSize: 'clamp(0.875rem, 2vw, 1rem)',
+                        wordWrap: 'break-word',
+                        overflowWrap: 'break-word'
+                      }}>
                       {tab.description}
                     </p>
                   </div>

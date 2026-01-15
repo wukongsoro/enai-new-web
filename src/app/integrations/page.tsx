@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import { ArrowRight, Zap, RefreshCw, Shield, Clock } from "lucide-react";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 const featuredIntegrations = [
   {
     name: "Salesforce",
-    initials: "SF",
+    logo: "https://logo.clearbit.com/salesforce.com",
     color: "#00A1E0",
     category: "CRM",
     description: "Bi-directional sync with Salesforce. Auto-create leads, log activities, and update opportunities in real-time.",
@@ -26,7 +27,7 @@ const featuredIntegrations = [
   },
   {
     name: "HubSpot",
-    initials: "HS",
+    logo: "https://logo.clearbit.com/hubspot.com",
     color: "#FF7A59",
     category: "CRM",
     description: "Full HubSpot integration for contact management, deal tracking, and marketing automation alignment.",
@@ -34,15 +35,15 @@ const featuredIntegrations = [
   },
   {
     name: "Slack",
-    initials: "SL",
+    logo: "https://logo.clearbit.com/slack.com",
     color: "#4A154B",
     category: "Communication",
     description: "Get real-time notifications on lead activity, meeting bookings, and campaign performance directly in Slack.",
     features: ["Real-time alerts", "Channel routing", "Quick actions", "Team mentions"],
   },
   {
-    name: "Microsoft",
-    initials: "MS",
+    name: "Microsoft 365",
+    logo: "https://logo.clearbit.com/microsoft.com",
     color: "#00A4EF",
     category: "Productivity",
     description: "Connect Outlook, Teams, and Calendar for seamless meeting scheduling and email synchronization.",
@@ -50,15 +51,15 @@ const featuredIntegrations = [
   },
   {
     name: "LinkedIn",
-    initials: "in",
+    logo: "https://logo.clearbit.com/linkedin.com",
     color: "#0A66C2",
     category: "Prospecting",
     description: "Enrich prospect data, automate connection requests, and track engagement across LinkedIn profiles.",
     features: ["Profile enrichment", "Connection automation", "InMail sequences", "Engagement tracking"],
   },
   {
-    name: "Google",
-    initials: "G",
+    name: "Google Workspace",
+    logo: "https://logo.clearbit.com/google.com",
     color: "#4285F4",
     category: "Productivity",
     description: "Integrate with Gmail, Google Calendar, and Drive for unified communication and scheduling.",
@@ -67,14 +68,14 @@ const featuredIntegrations = [
 ];
 
 const additionalIntegrations = [
-  { name: "Zapier", initials: "Z", color: "#FF4F00", category: "Automation" },
-  { name: "Outreach", initials: "OR", color: "#5951FF", category: "Sales Engagement" },
-  { name: "Apollo", initials: "AP", color: "#6366F1", category: "Data" },
-  { name: "ZoomInfo", initials: "ZI", color: "#E55C3D", category: "Data" },
-  { name: "Calendly", initials: "CA", color: "#006BFF", category: "Scheduling" },
-  { name: "Zoom", initials: "ZM", color: "#2D8CFF", category: "Meetings" },
-  { name: "Pipedrive", initials: "PD", color: "#1A1F36", category: "CRM" },
-  { name: "Intercom", initials: "IC", color: "#1F8DED", category: "Support" },
+  { name: "Zapier", logo: "https://logo.clearbit.com/zapier.com", color: "#FF4F00", category: "Automation" },
+  { name: "Outreach", logo: "https://logo.clearbit.com/outreach.io", color: "#5951FF", category: "Sales Engagement" },
+  { name: "Apollo", logo: "https://logo.clearbit.com/apollo.io", color: "#6366F1", category: "Data" },
+  { name: "ZoomInfo", logo: "https://logo.clearbit.com/zoominfo.com", color: "#E55C3D", category: "Data" },
+  { name: "Calendly", logo: "https://logo.clearbit.com/calendly.com", color: "#006BFF", category: "Scheduling" },
+  { name: "Zoom", logo: "https://logo.clearbit.com/zoom.us", color: "#2D8CFF", category: "Meetings" },
+  { name: "Pipedrive", logo: "https://logo.clearbit.com/pipedrive.com", color: "#1A1F36", category: "CRM" },
+  { name: "Intercom", logo: "https://logo.clearbit.com/intercom.com", color: "#1F8DED", category: "Support" },
 ];
 
 const integrationBenefits = [
@@ -191,11 +192,17 @@ export default function IntegrationsPage() {
                   className="group bg-[#F5F1ED] p-8 rounded-lg hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div 
-                      className="w-14 h-14 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm"
-                      style={{ backgroundColor: integration.color }}
+                    <div
+                      className="w-14 h-14 rounded-lg flex items-center justify-center shadow-sm overflow-hidden bg-white p-2"
                     >
-                      {integration.initials}
+                      <Image
+                        src={integration.logo}
+                        alt={`${integration.name} logo`}
+                        width={40}
+                        height={40}
+                        className="object-contain"
+                        unoptimized
+                      />
                     </div>
                     <span className="text-caption text-black/50 uppercase tracking-wider">
                       {integration.category}
@@ -246,11 +253,15 @@ export default function IntegrationsPage() {
                   key={index}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
                 >
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white font-bold"
-                    style={{ backgroundColor: integration.color }}
-                  >
-                    {integration.initials}
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-white p-2 overflow-hidden">
+                    <Image
+                      src={integration.logo}
+                      alt={`${integration.name} logo`}
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                      unoptimized
+                    />
                   </div>
                   <span className="text-sm font-medium text-white">{integration.name}</span>
                   <span className="text-caption text-white/50">{integration.category}</span>

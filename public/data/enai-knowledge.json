@@ -37,14 +37,14 @@
     "bio": "Founder and CEO of Enai AI, a leading AI-powered sales automation platform. Expert in B2B sales automation, AI-driven lead generation, and scaling sales teams."
   },
   "headquarters": {
-    "address": "Unit 3, Bradbury's Court, Lyon Rd",
+    "address": "128 City Road",
     "city": "London",
-    "postalCode": "HA1 2BY",
+    "postalCode": "EC1V 2NX",
     "country": "United Kingdom",
     "countryCode": "GB",
     "coordinates": {
-      "latitude": 51.5808,
-      "longitude": -0.3368
+      "latitude": 51.5271,
+      "longitude": -0.0857
     },
     "timezone": "GMT/BST",
     "businessHours": {
@@ -430,4 +430,3 @@
   "lastUpdated": "2025-10-02",
   "version": "1.0"
 }
-

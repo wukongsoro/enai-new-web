@@ -162,6 +162,16 @@ const industries = [
   },
 ];
 
+const trustedBy = [
+  { name: "Salesforce" },
+  { name: "HubSpot" },
+  { name: "Microsoft" },
+  { name: "Google" },
+  { name: "Oracle" },
+  { name: "SAP" },
+  { name: "IBM" },
+  { name: "Adobe" },
+];
 
 export default function IndustriesPage() {
   return (
@@ -219,6 +229,7 @@ export default function IndustriesPage() {
         </section>
 
 
+
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto mb-20">
@@ -273,9 +284,8 @@ export default function IndustriesPage() {
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className={`flex flex-col lg:flex-row items-center gap-16 py-20 ${
-                  index !== 0 ? "border-t border-black/10" : ""
-                } ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                className={`flex flex-col lg:flex-row items-center gap-16 py-20 ${index !== 0 ? "border-t border-black/10" : ""
+                  } ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
               >
                 <div className="flex-1">
                   <div className={`w-14 h-14 ${industry.color} rounded-lg flex items-center justify-center mb-6`}>

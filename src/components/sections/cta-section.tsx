@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CtaSection = () => {
+const CtaSection = async () => {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -10,10 +10,10 @@ const CtaSection = () => {
           <div className="grid lg:grid-cols-2 gap-0 min-h-[500px] lg:min-h-[600px]">
             <div className="flex flex-col justify-center p-10 md:p-14 lg:p-20 order-2 lg:order-1">
               <h2 className="h2 text-black mb-6">
-                Deploy Your AI BDR Today
+                See It In Action
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed mb-10 max-w-lg">
-                Automate prospecting, outreach, and qualification to build a predictable pipeline. Cut costs by 70%, scale outreach 10x, and focus your team on closing deals.
+                Watch a complete workflow run live. From prospect identification to booked meeting, with full transparency at every step.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

@@ -4777,6 +4777,12 @@ Ready to build your B2B sales automation strategy? [Schedule a strategic consult
 ];
 
 export default function BlogPage() {
+  const featuredPost = blogPosts[0];
+
+  if (!featuredPost) {
+    return null;
+  }
+
   return (
     <>
       <Navigation />
@@ -4801,16 +4807,16 @@ export default function BlogPage() {
               {/* Featured Content */}
               <div className="space-y-6">
                 <Badge variant="secondary" className="w-fit">
-                  {blogPosts[0].type}
+                  {featuredPost.type}
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  {blogPosts[0].title}
+                  {featuredPost.title}
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {blogPosts[0].description}
+                  {featuredPost.description}
                 </p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{blogPosts[0].date}</span>
+                  <span>{featuredPost.date}</span>
                 </div>
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
                   Read Full Article

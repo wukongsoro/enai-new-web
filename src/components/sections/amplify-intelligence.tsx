@@ -37,7 +37,7 @@ const MarqueeTag: FC<{ text: string }> = ({ text }) => (
 
 const MarqueeRow: FC<{ tags: string[]; reverse?: boolean }> = ({ tags, reverse = false }) => {
   const animationClass = reverse ? 'animate-marquee-reverse' : 'animate-marquee';
-  
+
   return (
     <div className="flex">
       <div className={`flex min-w-full shrink-0 items-center space-x-4 ${animationClass}`}>
@@ -56,21 +56,21 @@ const AmplifyIntelligence = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center text-caption uppercase tracking-wider text-white/70 px-4 py-2 bg-white/10 border border-white/10 rounded-full">
-            24/7 Sales Automation
+            Always-On Revenue Engine
           </div>
           <h2 className="h2 text-white">
-            Amplify Your Sales Pipeline
+            Predictable Pipeline At Scale
           </h2>
           <p className="mt-6 max-w-lg text-body-lg text-white/70">
-            Accelerate B2B growth with ENAI AI BDR agents: increase pipeline velocity by 50%, cut acquisition costs by 70%, and generate 3x more qualified meetings.
+            50% faster velocity. 70% lower cost. Full audit trails. Trusted by revenue teams who demand both speed and accountability.
           </p>
           <Link
-            href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+            href="https://calendly.com/enai-ai2024/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-10 inline-flex items-center justify-center bg-white text-black px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/90"
           >
-            Book a Demo
+            See The Numbers
           </Link>
         </div>
       </div>

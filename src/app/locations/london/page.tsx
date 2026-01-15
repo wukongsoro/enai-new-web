@@ -53,15 +53,15 @@ export default function LondonPage() {
             "priceRange": "$100-$200 per agent/month",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+              "streetAddress": "128 City Road",
               "addressLocality": "London",
-              "postalCode": "HA1 2BY",
+              "postalCode": "EC1V 2NX",
               "addressCountry": "GB"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 51.5808,
-              "longitude": -0.3368
+              "latitude": 51.5271,
+              "longitude": -0.0857
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
@@ -76,7 +76,7 @@ export default function LondonPage() {
           })
         }}
       />
-      
+
       <Navigation />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -189,14 +189,14 @@ export default function LondonPage() {
               Join UK companies transforming their sales with AI automation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link 
-                href="https://calendly.com/enai-ai2024/30min" 
+              <Link
+                href="https://calendly.com/enai-ai2024/30min"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition inline-block"
               >
                 Book Demo (GMT Support)
               </Link>
-              <Link 
-                href="/pricing" 
+              <Link
+                href="/pricing"
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition inline-block border-2 border-white"
               >
                 View Pricing

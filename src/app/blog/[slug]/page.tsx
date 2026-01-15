@@ -3344,7 +3344,7 @@ export function generateStaticParams() {
     "manual-to-automated-enai-journey",
     "roi-ai-bdr-agents-real-numbers",
   ];
-  
+
   return allSlugs.map((slug) => ({
     slug: slug,
   }));
@@ -3396,7 +3396,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     return content.split('\n').map((line, index) => {
       // Handle different heading levels
       const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
-      if (headingMatch) {
+      if (headingMatch && headingMatch[1] && headingMatch[2]) {
         const level = headingMatch[1].length;
         const text = headingMatch[2];
 
@@ -3407,7 +3407,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           4: "text-lg font-semibold text-gray-900 mt-6 mb-2",
           5: "text-base font-semibold text-gray-900 mt-4 mb-2",
           6: "text-sm font-semibold text-gray-900 mt-4 mb-2"
-        };
+        } as const;
 
         switch (level) {
           case 1:

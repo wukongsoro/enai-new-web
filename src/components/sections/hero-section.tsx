@@ -156,8 +156,8 @@ void main(){gl_Position=position;}`;
 
       gl.uniform2f((program as any).resolution, this.canvas.width, this.canvas.height);
       gl.uniform1f((program as any).time, now * 1e-3);
-      gl.uniform2f((program as any).move, this.mouseMove[0], this.mouseMove[1]);
-      gl.uniform2f((program as any).touch, this.mouseCoords[0], this.mouseCoords[1]);
+      gl.uniform2f((program as any).move, this.mouseMove[0] ?? 0, this.mouseMove[1] ?? 0);
+      gl.uniform2f((program as any).touch, this.mouseCoords[0] ?? 0, this.mouseCoords[1] ?? 0);
       gl.uniform1i((program as any).pointerCount, this.nbrOfPointers);
       gl.uniform2fv((program as any).pointers, this.pointerCoords);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
@@ -203,7 +203,7 @@ void main(){gl_Position=position;}`;
         if (!this.active) return;
         this.lastCoords = [e.clientX, e.clientY];
         this.pointers.set(e.pointerId, map(element, this.getScale(), e.clientX, e.clientY));
-        this.moves = [this.moves[0] + e.movementX, this.moves[1] + e.movementY];
+        this.moves = [(this.moves[0] ?? 0) + e.movementX, (this.moves[1] ?? 0) + e.movementY];
       });
     }
 
@@ -372,50 +372,50 @@ const HeroSection = () => {
 
   return (
     <header className="relative flex min-h-screen items-center justify-center overflow-hidden text-white w-full hero-scrim" style={{ margin: 0, padding: 0 }}>
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full touch-none"
-          style={{ background: 'black', margin: 0, padding: 0 }}
-        />
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full touch-none"
+        style={{ background: 'black', margin: 0, padding: 0 }}
+      />
 
-        <div className="relative z-[2] w-full max-w-6xl mx-auto text-center px-6">
-          <div className="pt-32 pb-12 md:pt-40 md:pb-24">
-            <div className="max-w-4xl mx-auto">
-              <div className="mb-6 md:mb-8">
-                <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                  Meet Your New
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 ml-2" aria-hidden="true">
-                    <path d="m9 18 6-6-6-6"></path>
-                  </svg>
-                </div>
-                <h1 className="h1 text-white">
-                  AI Workers
-                </h1>
+      <div className="relative z-[2] w-full max-w-6xl mx-auto text-center px-6">
+        <div className="pt-32 pb-12 md:pt-40 md:pb-24">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6 md:mb-8">
+              <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
+                Meet Your New
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 ml-2" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
               </div>
-              <div className="mb-8 md:mb-10">
-                <div className="max-w-md mx-auto">
-                  <div className="h-px w-full bg-white/20"></div>
-                </div>
+              <h1 className="h1 text-white">
+                AI Workers
+              </h1>
+            </div>
+            <div className="mb-8 md:mb-10">
+              <div className="max-w-md mx-auto">
+                <div className="h-px w-full bg-white/20"></div>
               </div>
-              <div className="max-w-xl mx-auto mb-10">
-                <p className="text-body-lg text-white/80 leading-relaxed">
-                  Stop losing leads to manual prospecting. Our AI workers handle research, outreach, and booking—so your team can focus on closing deals.
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <a
-                  href="https://calendly.com/enai-ai2024/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Request a Demo"
-                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
-                >
-                  Request a Demo
-                </a>
-              </div>
+            </div>
+            <div className="max-w-xl mx-auto mb-10">
+              <p className="text-body-lg text-white/80 leading-relaxed">
+                Enterprise-grade AI workers with human oversight. Research, outreach, and booking run autonomously. You approve what matters.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <a
+                href="https://calendly.com/enai-ai2024/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Request a Demo"
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
+              >
+                Request a Demo
+              </a>
             </div>
           </div>
         </div>
+      </div>
     </header>
   );
 };

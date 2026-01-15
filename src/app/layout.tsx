@@ -14,8 +14,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Enai AI - AI-Powered Sales Automation Platform | AI BDR Software for B2B Sales Teams",
-  description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring. Trusted by companies worldwide for AI sales automation.",
+  title: "ENAI | Autonomous Revenue Execution Platform",
+  description: "ENAI is the autonomous revenue execution platform for enterprise sales teams. End-to-end pipeline generation from research to booked meeting without manual work.",
   keywords: defaultKeywords,
   authors: [{ name: "Nikhil Nehra", url: "https://www.linkedin.com/in/nikhil-nehra-57716a23b" }],
   creator: "Nikhil Nehra",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Enai AI - AI-Powered Sales Automation Platform | Scale Your B2B Sales 10x",
-    description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring. Trusted by companies worldwide.",
+    title: "ENAI | Autonomous Revenue Execution Platform",
+    description: "End-to-end pipeline generation for enterprise sales teams. From research to booked meeting in 60 seconds, autonomously.",
     url: buildCanonicalUrl('/'),
     siteName: "Enai AI",
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/social-share-image.png`,
         width: 1200,
         height: 630,
-        alt: "Enai.ai - AI-Powered Sales Automation Platform Dashboard",
+        alt: "ENAI | Autonomous Revenue Execution Platform",
       },
     ],
     locale: "en_US",
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enai AI - AI-Powered Sales Automation Platform | AI BDR Software",
-    description: "Transform your B2B sales with Enai.ai's AI BDR agents. Automate lead qualification, prospecting, and personalized outreach. Scale your sales team 10x without hiring.",
+    title: "ENAI | Autonomous Revenue Execution Platform",
+    description: "End-to-end pipeline generation for enterprise sales teams. From research to booked meeting in 60 seconds, autonomously.",
     creator: "@enai_ai",
     site: "@enai_ai",
     images: [`${SITE_URL}/social-share-image.png`],
@@ -160,9 +160,9 @@ export default function RootLayout({
                   },
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+                    "streetAddress": "128 City Road",
                     "addressLocality": "London",
-                    "postalCode": "HA1 2BY",
+                    "postalCode": "EC1V 2NX",
                     "addressCountry": "GB"
                   },
                   "areaServed": [
@@ -264,15 +264,15 @@ export default function RootLayout({
                   "telephone": "",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Unit 3, Bradbury's Court, Lyon Rd",
+                    "streetAddress": "128 City Road",
                     "addressLocality": "London",
-                    "postalCode": "HA1 2BY",
+                    "postalCode": "EC1V 2NX",
                     "addressCountry": "GB"
                   },
                   "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 51.5808,
-                    "longitude": -0.3368
+                    "latitude": 51.5271,
+                    "longitude": -0.0857
                   },
                   "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
@@ -327,7 +327,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Facebook Pixel Code */}
-        
+
         {/* Google Analytics (if needed) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
@@ -345,7 +345,7 @@ export default function RootLayout({
             `,
           }}
         />
-        
+
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
           strategy="afterInteractive"

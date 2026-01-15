@@ -94,17 +94,17 @@ export default function WorkforceTransformation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="h2 text-black mb-6">
-            ENAI BDR Features That Drive Results
+            Built for Scale. Designed for Control.
           </h2>
           <p className="text-body-lg text-black/60 max-w-xl mx-auto leading-relaxed">
-            From manual prospecting to automated pipeline generation. Our AI handles the heavy lifting so you can focus on closing deals.
+            Every capability below runs with guardrails. Audit trails, approval gates, and compliance checks come standard.
           </p>
           <div className="mt-8">
             <Link
-              href="/demo"
+              href="https://calendly.com/enai-ai2024/30min"
               className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-black/90"
             >
-              Get started
+              Explore Capabilities
             </Link>
           </div>
         </div>
@@ -125,9 +125,8 @@ export default function WorkforceTransformation() {
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
-                  className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                    current === index ? "bg-black w-6" : "bg-black/30 hover:bg-black/50"
-                  }`}
+                  className={`h-2 w-2 rounded-full transition-all duration-300 ${current === index ? "bg-black w-6" : "bg-black/30 hover:bg-black/50"
+                    }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}

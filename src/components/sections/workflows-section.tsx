@@ -2,20 +2,20 @@ import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Users, Brain } from 'lucide-react';
 
-const Features = () => {
+const Features = async () => {
   return (
     <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="relative">
           {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">
               AI-Powered Sales Automation
-          </h2>
+            </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
               Transform your sales process with AI-powered automation that discovers leads, personalizes outreach, and drives measurable results.
             </p>
-        </div>
+          </div>
 
           {/* Features Grid */}
           <div className="relative z-10 grid grid-cols-6 gap-3">
@@ -94,7 +94,7 @@ const Features = () => {
                     <h2 className="text-lg font-medium transition">Team Collaboration</h2>
                     <p className="text-foreground">Seamlessly collaborate across your sales team with shared workflows, insights, and performance analytics.</p>
                   </div>
-                    </div>
+                </div>
                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
                   <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                     <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">

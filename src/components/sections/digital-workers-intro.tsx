@@ -27,46 +27,46 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
 }) => {
 
   return (
-  <div className="w-full h-full flex flex-col">
-    <div className={`relative overflow-hidden rounded-xl w-full h-64 sm:h-72 md:h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
-      {bottomVideoSrc ? (
-        <video
-          src={bottomVideoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center"
-        />
-      ) : (
-        <div className="relative w-full h-full">
-          <Image
-            src={bottomUIImage}
-            alt={bottomUIImageAlt}
-            fill
-            className="object-cover"
+    <div className="w-full h-full flex flex-col">
+      <div className={`relative overflow-hidden rounded-xl w-full h-64 sm:h-72 md:h-80 bg-cover bg-center ${imageWrapperClass} flex-shrink-0`}>
+        {bottomVideoSrc ? (
+          <video
+            src={bottomVideoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center"
           />
+        ) : (
+          <div className="relative w-full h-full">
+            <Image
+              src={bottomUIImage}
+              alt={bottomUIImageAlt}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
+      </div>
+      <div className="pt-6 md:pt-8 flex-1 flex flex-col">
+        <h3 className="text-xl md:text-2xl text-black leading-tight mb-3">
+          {name} <span className="text-black/50">— {role}</span>
+        </h3>
+        <p className="text-body text-black/60 leading-relaxed mb-6 flex-1">
+          {description}
+        </p>
+        <div className="mt-auto">
+          <Link href={hireLink} className="inline-flex items-center gap-2 text-sm font-medium text-black hover:text-black/70 transition-colors">
+            Deploy {name}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
-      )}
-    </div>
-    <div className="pt-6 md:pt-8 flex-1 flex flex-col">
-      <h3 className="text-xl md:text-2xl text-black leading-tight mb-3">
-        {name} <span className="text-black/50">— {role}</span>
-      </h3>
-      <p className="text-body text-black/60 leading-relaxed mb-6 flex-1">
-        {description}
-      </p>
-      <div className="mt-auto">
-        <Link href={hireLink} className="inline-flex items-center gap-2 text-sm font-medium text-black hover:text-black/70 transition-colors">
-          Deploy {name}
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </Link>
       </div>
     </div>
-  </div>
   );
 };
 
@@ -76,14 +76,14 @@ const DigitalWorkersIntro = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="h2 text-black mb-6">
-            Meet ENAI's AI BDR Agents
+            Three Execution Engines. One Platform.
           </h2>
           <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
-            From startups to enterprise sales orgs—spin up AI workers that match your motion. Research, write, and book—with approval guardrails.
+            Each agent handles a distinct stage of your revenue workflow with built-in approval workflows. From signal to meeting, you retain full visibility.
           </p>
           <div className="mt-8">
-            <Link href="/demo" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">
-              Get started
+            <Link href="https://calendly.com/enai-ai2024/30min" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">
+              Watch It Work
             </Link>
           </div>
         </div>

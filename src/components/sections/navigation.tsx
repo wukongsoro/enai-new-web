@@ -7,15 +7,19 @@ import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 
 const banners = [
   {
-    text: "ENAI's AI Agents Generate 50% More Qualified Leads",
+    text: "🇶🇦 ENAI Selected for Web Summit Qatar 2026: 1 of 20 Worldwide",
+    href: "https://calendly.com/enai-ai2024/30min",
+  },
+  {
+    text: "Autonomous Revenue Execution: From Research to Booked Meeting in 60 Seconds",
     href: "/blog/enai-ai-agents-generate-50-more-qualified-leads",
   },
   {
-    text: "Scale Your Sales Team with ENAI's AI BDR Agents",
+    text: "Enterprise Teams Are Replacing Manual SDR Work with AI-Native Execution",
     href: "/blog/ai-bdr-playbook-scale-outbound-without-hiring",
   },
   {
-    text: "ENAI Cuts Prospecting Time by 70% with AI Automation",
+    text: "How Leading Revenue Teams Achieve 70% Faster Pipeline Velocity",
     href: "/blog/enai-cuts-prospecting-time-70-ai-automation",
   },
 ];
@@ -81,9 +85,8 @@ export default function Navigation() {
               <Link
                 key={index}
                 href={banner.href}
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out ${
-                  currentBanner === index ? "opacity-100" : "opacity-0"
-                }`}
+                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out ${currentBanner === index ? "opacity-100" : "opacity-0"
+                  }`}
               >
                 <span className="text-[13px] tracking-wide text-center px-4">{banner.text}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 flex-shrink-0" />
@@ -117,7 +120,7 @@ export default function Navigation() {
                 />
               </Link>
             </div>
-            
+
             <div className="hidden lg:flex items-center justify-center gap-9">
               {navLinks.map((link) => (
                 <Link
@@ -129,7 +132,7 @@ export default function Navigation() {
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
@@ -178,7 +181,7 @@ export default function Navigation() {
           </nav>
         </div>
       </header>
-    
+
       {isMenuOpen && (
         <>
           <div
@@ -189,7 +192,7 @@ export default function Navigation() {
           <div
             className={[
               "lg:hidden fixed top-[132px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
-              "bg-white/95 dark:bg-neutral-950/95", 
+              "bg-white/95 dark:bg-neutral-950/95",
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
               "[-webkit-backdrop-filter:brightness(1.1)_saturate(1.1)_contrast(1.1)_blur(20px)]",
