@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 h-full">
-            <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">BDR Agents</h3>
+            <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Autonomous Revenue</h3>
             <ul className="space-y-3">
               <li><Link href="/agents/prospectorai" className="text-white hover:text-white/70 transition-colors text-body-sm">ProspectorAI</Link></li>
               <li><Link href="/agents/outreachai" className="text-white hover:text-white/70 transition-colors text-body-sm">OutreachAI</Link></li>
@@ -62,6 +62,16 @@ const Footer = () => {
               <li><Link href="/integrations" className="text-white hover:text-white/70 transition-colors text-body-sm">Integrations</Link></li>
               <li><Link href="/solutions/shipping" className="text-white hover:text-white/70 transition-colors text-body-sm">Shipping & Logistics</Link></li>
               <li><Link href="/security" className="text-white hover:text-white/70 transition-colors text-body-sm">Security</Link></li>
+              <li>
+                <a
+                  href="https://enai.statuspage.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-white/70 transition-colors text-body-sm"
+                >
+                  Status
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,6 +86,14 @@ const Footer = () => {
                 <p>London, EC1V 2NX</p>
                 <p>United Kingdom</p>
               </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+              <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Web Summit Qatar</h3>
+              <ul className="space-y-3">
+                <li><Link href="/events/qatar-summit-2026" className="text-white hover:text-white/70 transition-colors text-body-sm">Investor Brief</Link></li>
+                <li><Link href="/events/qatar-summit-2026/customers" className="text-white hover:text-white/70 transition-colors text-body-sm">Enterprise Demo</Link></li>
+              </ul>
             </div>
           </div>
 
@@ -116,7 +134,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col justify-end items-start h-full pt-4 w-full sm:w-auto">
-            <p className="text-white/40 text-caption mb-2">© 2025 ENAI Inc. All rights reserved.</p>
+            <p className="text-white/40 text-caption mb-2">© 2026 ENAI Inc. All rights reserved.</p>
             <div className="flex items-center gap-6 mb-4">
               <Link href="/terms-of-service" className="text-white/40 hover:text-white/70 text-caption transition-colors">
                 Terms of Service

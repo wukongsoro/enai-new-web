@@ -4786,80 +4786,133 @@ export default function BlogPage() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-white pt-[152px]">
-        {/* Featured Article Section */}
-        <section className="bg-gradient-to-br from-gray-50 to-white py-20 px-6">
+      <main className="min-h-screen bg-white">
+        {/* Hero Section - Clean and Light */}
+        <section className="pt-40 pb-20 px-6 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Featured Image */}
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/GxhEHFrWMAAIwCy.jpeg"
-                    alt="ENAI Blog Featured Image"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h1 className="h1 text-black mb-6">
+                The ENAI
+                <span className="block italic">Intelligence Hub</span>
+              </h1>
+              <p className="text-body-lg text-black/60">
+                Deep dives on autonomous revenue execution, enterprise sales automation, and the future of AI-powered pipeline generation.
+              </p>
+            </div>
 
-              {/* Featured Content */}
-              <div className="space-y-6">
-                <Badge variant="secondary" className="w-fit">
-                  {featuredPost.type}
-                </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  {featuredPost.title}
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  {featuredPost.description}
-                </p>
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{featuredPost.date}</span>
+            {/* Featured Article Card */}
+            <Link href={`/blog/${featuredPost.slug}`} className="block group">
+              <div className="bg-[#F5F1ED] rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500">
+                <div className="grid lg:grid-cols-2 gap-0">
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[400px]">
+                    <Image
+                      src="/GxhEHFrWMAAIwCy.jpeg"
+                      alt="Featured Article"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      priority
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-600 bg-orange-100 rounded-full">
+                        Featured
+                      </span>
+                      <span className="px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-black/50 bg-black/5 rounded-full">
+                        {featuredPost.type}
+                      </span>
+                    </div>
+                    <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4 group-hover:text-black/70 transition-colors leading-tight font-[family-name:var(--font-display)]">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="text-black/60 mb-6 line-clamp-3 leading-relaxed">
+                      {featuredPost.description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <span className="text-black/40 text-sm">{featuredPost.date}</span>
+                      <span className="inline-flex items-center gap-2 text-orange-500 font-medium text-sm group-hover:gap-3 transition-all">
+                        Read Article
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                  Read Full Article
-                </Button>
               </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* Blog Posts Grid - Warm Beige Background */}
+        <section className="py-24 px-6 bg-[#F5F1ED]">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-12">
+              <div>
+                <h2 className="text-3xl font-semibold text-black mb-2 font-[family-name:var(--font-display)]">Latest Articles</h2>
+                <p className="text-black/50">Insights, playbooks, and deep dives from the ENAI team.</p>
+              </div>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.slice(1).map((post, index) => (
+                <Link key={index} href={`/blog/${post.slug}`} className="group block">
+                  <article className="relative h-full bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                    <div className="p-8">
+                      {/* Header */}
+                      <div className="flex items-center justify-between mb-6">
+                        <span className="inline-flex items-center px-3 py-1 text-xs font-medium uppercase tracking-wider text-black/60 bg-black/5 rounded-full">
+                          {post.type}
+                        </span>
+                        <span className="text-sm text-black/30">{post.date}</span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-semibold text-black mb-4 line-clamp-2 group-hover:text-black/70 transition-colors leading-snug">
+                        {post.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-black/50 text-sm leading-relaxed line-clamp-3 mb-8">
+                        {post.description}
+                      </p>
+
+                      {/* Read More */}
+                      <div className="flex items-center gap-2 text-sm font-medium text-orange-500 group-hover:gap-3 transition-all">
+                        Read Article
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Blog Posts Grid */}
-        <section className="bg-gray-50 py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Insights, case studies, and guides to help you scale your sales with AI.
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.slice(1).map((post, index) => (
-                <Card key={index} className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader className="pb-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                      <Badge variant="secondary" className="w-fit">{post.type}</Badge>
-                      <span className="text-sm text-gray-500">{post.date}</span>
-                    </div>
-                    <CardTitle className="text-lg sm:text-xl font-semibold text-gray-900 line-clamp-2 leading-tight">
-                      {post.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <CardDescription className="text-gray-600 line-clamp-3 mb-6 text-sm sm:text-base leading-relaxed">
-                      {post.description}
-                    </CardDescription>
-                    <Button variant="outline" className="w-full min-h-[44px] text-sm sm:text-base" asChild>
-                      <Link href={`/blog/${post.slug}`}>
-                        Read More
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+        {/* Newsletter CTA Section - Warm Beige Darker */}
+        <section className="py-20 px-6 bg-[#E8DDD4]">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-semibold text-black mb-4 font-[family-name:var(--font-display)]">
+              Stay Ahead of the Curve
+            </h2>
+            <p className="text-black/50 mb-8 text-lg">
+              Get the latest insights on autonomous revenue execution delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-5 py-4 rounded-xl bg-white border border-black/10 text-black placeholder:text-black/30 focus:outline-none focus:border-orange-500/50 transition-colors"
+              />
+              <button className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-all">
+                Subscribe
+              </button>
             </div>
           </div>
         </section>

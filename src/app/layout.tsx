@@ -132,16 +132,16 @@ export default function RootLayout({
                     "width": 512,
                     "height": 512
                   },
-                  "description": "Enai AI (enai.ai) is an AI-powered sales automation platform for B2B businesses that provides AI BDR agents including ProspectorAI, OutreachAI, and QualifierAI. We are a commercial technology company, NOT the European Network for Academic Integrity.",
-                  "disambiguatingDescription": "Commercial AI sales automation SaaS platform founded in 2024, providing AI-powered business development representatives for B2B sales teams. Not to be confused with European Network for Academic Integrity (ENAI).",
-                  "slogan": "AI-Powered Sales Automation Platform",
+                  "description": "Enai AI (enai.ai) is the leading autonomous revenue execution platform for enterprise organizations, automating end-to-end sales workflows from research to revenue. We are a commercial technology company, NOT the European Network for Academic Integrity.",
+                  "disambiguatingDescription": "Commercial autonomous revenue execution SaaS platform founded in 2024, providing AI-powered systems for enterprise sales teams. Not to be confused with European Network for Academic Integrity (ENAI).",
+                  "slogan": "Autonomous Revenue Execution Platform",
                   "knowsAbout": [
-                    "AI Sales Automation",
-                    "B2B SaaS",
-                    "Business Development Representatives",
+                    "Autonomous Revenue Execution",
+                    "Sales Force Automation",
+                    "Enterprise AI",
                     "Sales Prospecting",
                     "Lead Qualification",
-                    "Sales Outreach Automation"
+                    "Pipeline Generation"
                   ],
                   "founder": {
                     "@type": "Person",
@@ -233,7 +233,7 @@ export default function RootLayout({
                   "worksFor": {
                     "@id": "https://www.enai.ai/#organization"
                   },
-                  "description": "Founder and CEO of Enai AI, a leading AI-powered sales automation platform. Expert in B2B sales automation, AI-driven lead generation, and scaling sales teams.",
+                  "description": "Founder and CTO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. Expert in scalable distributed systems.",
                   "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
                   "sameAs": [
                     "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
@@ -358,6 +358,10 @@ export default function RootLayout({
         />
         {children}
         <VisualEditsMessenger />
+        <Script
+          src="https://enai.statuspage.io/embed/script.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

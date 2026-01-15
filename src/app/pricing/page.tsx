@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/sections/navigation";
@@ -46,9 +47,9 @@ const comparisonData = {
   usageLimits: {
     title: "Usage Limits",
     items: [
-      { name: "# Users", starter: "Unlimited", core: "Unlimited", enterprise: "Unlimited" },
-      { name: "# Accounts (one agent per)", starter: "10", core: "100", enterprise: "Unlimited" },
-      { name: "# Agent Actions per month", starter: "2,500", core: "5,000", enterprise: "Contact Us" },
+      { name: "Users", starter: "Unlimited", core: "Unlimited", enterprise: "Unlimited" },
+      { name: "Accounts (one agent per)", starter: "10", core: "100", enterprise: "Unlimited" },
+      { name: "Agent Actions per month", starter: "2,500", core: "5,000", enterprise: "Contact Us" },
     ]
   },
   plan: {
@@ -171,9 +172,8 @@ export default function PricingPage() {
             {PricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`relative rounded-2xl border bg-card p-8 flex flex-col ${
-                  tier.popular ? "border-primary shadow-lg ring-2 ring-primary" : "border-border"
-                }`}
+                className={`relative rounded-2xl border bg-card p-8 flex flex-col ${tier.popular ? "border-primary shadow-lg ring-2 ring-primary" : "border-border"
+                  }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-medium">
@@ -203,11 +203,10 @@ export default function PricingPage() {
                 </div>
                 <Link
                   href={tier.ctaLink || "/contact"}
-                  className={`w-full inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors ${
-                    tier.popular
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
+                  className={`w-full inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors ${tier.popular
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
                 >
                   {tier.cta}
                 </Link>
@@ -246,8 +245,8 @@ export default function PricingPage() {
               </thead>
               <tbody>
                 {Object.values(comparisonData).map((section) => (
-                  <>
-                    <tr key={section.title} className="bg-muted/30">
+                  <React.Fragment key={section.title}>
+                    <tr className="bg-muted/30">
                       <td colSpan={4} className="py-3 px-4 font-semibold text-foreground">{section.title}</td>
                     </tr>
                     {section.items.map((item) => (
@@ -258,7 +257,7 @@ export default function PricingPage() {
                         <td className="py-3 text-center">{renderValue(item.enterprise)}</td>
                       </tr>
                     ))}
-                  </>
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>

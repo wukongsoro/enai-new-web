@@ -15,8 +15,8 @@ const banners = [
     href: "/blog/enai-ai-agents-generate-50-more-qualified-leads",
   },
   {
-    text: "Enterprise Teams Are Replacing Manual SDR Work with AI-Native Execution",
-    href: "/blog/ai-bdr-playbook-scale-outbound-without-hiring",
+    text: "Enterprise Teams Are Replacing Manual Sales Work with Autonomous Execution",
+    href: "/blog/autonomous-revenue-playbook-scale-outbound-at-speed",
   },
   {
     text: "How Leading Revenue Teams Achieve 70% Faster Pipeline Velocity",

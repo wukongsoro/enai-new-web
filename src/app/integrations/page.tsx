@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const featuredIntegrations = [
   {
     name: "Salesforce",
-    logo: "https://logo.clearbit.com/salesforce.com",
+    logo: "https://www.google.com/s2/favicons?domain=salesforce.com&sz=128",
     color: "#00A1E0",
     category: "CRM",
     description: "Bi-directional sync with Salesforce. Auto-create leads, log activities, and update opportunities in real-time.",
@@ -27,7 +27,7 @@ const featuredIntegrations = [
   },
   {
     name: "HubSpot",
-    logo: "https://logo.clearbit.com/hubspot.com",
+    logo: "https://www.google.com/s2/favicons?domain=hubspot.com&sz=128",
     color: "#FF7A59",
     category: "CRM",
     description: "Full HubSpot integration for contact management, deal tracking, and marketing automation alignment.",
@@ -35,7 +35,7 @@ const featuredIntegrations = [
   },
   {
     name: "Slack",
-    logo: "https://logo.clearbit.com/slack.com",
+    logo: "https://www.google.com/s2/favicons?domain=slack.com&sz=128",
     color: "#4A154B",
     category: "Communication",
     description: "Get real-time notifications on lead activity, meeting bookings, and campaign performance directly in Slack.",
@@ -43,7 +43,7 @@ const featuredIntegrations = [
   },
   {
     name: "Microsoft 365",
-    logo: "https://logo.clearbit.com/microsoft.com",
+    logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
     color: "#00A4EF",
     category: "Productivity",
     description: "Connect Outlook, Teams, and Calendar for seamless meeting scheduling and email synchronization.",
@@ -51,7 +51,7 @@ const featuredIntegrations = [
   },
   {
     name: "LinkedIn",
-    logo: "https://logo.clearbit.com/linkedin.com",
+    logo: "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128",
     color: "#0A66C2",
     category: "Prospecting",
     description: "Enrich prospect data, automate connection requests, and track engagement across LinkedIn profiles.",
@@ -59,7 +59,7 @@ const featuredIntegrations = [
   },
   {
     name: "Google Workspace",
-    logo: "https://logo.clearbit.com/google.com",
+    logo: "https://www.google.com/s2/favicons?domain=google.com&sz=128",
     color: "#4285F4",
     category: "Productivity",
     description: "Integrate with Gmail, Google Calendar, and Drive for unified communication and scheduling.",
@@ -68,14 +68,14 @@ const featuredIntegrations = [
 ];
 
 const additionalIntegrations = [
-  { name: "Zapier", logo: "https://logo.clearbit.com/zapier.com", color: "#FF4F00", category: "Automation" },
-  { name: "Outreach", logo: "https://logo.clearbit.com/outreach.io", color: "#5951FF", category: "Sales Engagement" },
-  { name: "Apollo", logo: "https://logo.clearbit.com/apollo.io", color: "#6366F1", category: "Data" },
-  { name: "ZoomInfo", logo: "https://logo.clearbit.com/zoominfo.com", color: "#E55C3D", category: "Data" },
-  { name: "Calendly", logo: "https://logo.clearbit.com/calendly.com", color: "#006BFF", category: "Scheduling" },
-  { name: "Zoom", logo: "https://logo.clearbit.com/zoom.us", color: "#2D8CFF", category: "Meetings" },
-  { name: "Pipedrive", logo: "https://logo.clearbit.com/pipedrive.com", color: "#1A1F36", category: "CRM" },
-  { name: "Intercom", logo: "https://logo.clearbit.com/intercom.com", color: "#1F8DED", category: "Support" },
+  { name: "Zapier", logo: "https://www.google.com/s2/favicons?domain=zapier.com&sz=128", color: "#FF4F00", category: "Automation" },
+  { name: "Outreach", logo: "https://www.google.com/s2/favicons?domain=outreach.io&sz=128", color: "#5951FF", category: "Sales Engagement" },
+  { name: "Apollo", logo: "https://www.google.com/s2/favicons?domain=apollo.io&sz=128", color: "#6366F1", category: "Data" },
+  { name: "ZoomInfo", logo: "https://www.google.com/s2/favicons?domain=zoominfo.com&sz=128", color: "#E55C3D", category: "Data" },
+  { name: "Calendly", logo: "https://www.google.com/s2/favicons?domain=calendly.com&sz=128", color: "#006BFF", category: "Scheduling" },
+  { name: "Zoom", logo: "https://www.google.com/s2/favicons?domain=zoom.us&sz=128", color: "#2D8CFF", category: "Meetings" },
+  { name: "Pipedrive", logo: "https://www.google.com/s2/favicons?domain=pipedrive.com&sz=128", color: "#1A1F36", category: "CRM" },
+  { name: "Intercom", logo: "https://www.google.com/s2/favicons?domain=intercom.com&sz=128", color: "#1F8DED", category: "Support" },
 ];
 
 const integrationBenefits = [
