@@ -126,44 +126,44 @@ export default function QatarSummitCustomersPage() {
             />
             <Navigation />
             <main className="bg-white">
-                {/* Hero Section */}
-                <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A3A] via-[#2A4A4A] to-[#0D1F1F]" />
+                {/* Hero Section - Soft Cream Theme */}
+                <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-br from-amber-50/60 via-orange-50/20 to-white">
                     <div className="absolute inset-0 opacity-30">
-                        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-amber-500/20 to-transparent rounded-full blur-3xl" />
-                        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-amber-500/10 to-transparent rounded-full blur-3xl" />
+                        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-amber-100/40 to-transparent rounded-full blur-3xl" />
+                        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-orange-50/30 to-transparent rounded-full blur-3xl" />
                     </div>
+
 
                     <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="max-w-4xl mx-auto text-center">
                             {/* Badge */}
-                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-300/90 px-5 py-2.5 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6 backdrop-blur-sm">
+                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-[#1E3A3A] px-5 py-2.5 bg-white border border-black/10 rounded-full mb-6 shadow-sm">
                                 <Rocket className="w-4 h-4" />
                                 Live at Web Summit Qatar — Booth Feb 4
                             </div>
 
-                            <h1 className="h1 text-white mb-4">
+                            <h1 className="h1 text-black mb-4">
                                 Autonomous Revenue Agents
-                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-200">
+                                <span className="block italic text-black/80">
                                     for the Enterprise
                                 </span>
                             </h1>
 
-                            <p className="text-body-lg text-white/80 leading-relaxed max-w-2xl mx-auto mb-4">
+                            <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto mb-4">
                                 ENAI deploys autonomous agents to run your revenue engine end to end. From research to booked meetings, without the headcount.
                             </p>
 
-                            <p className="text-body text-amber-300/90 font-medium mb-8">
+                            <p className="text-body text-[#1E3A3A] font-medium mb-8">
                                 See it live. Wednesday, February 4. DECC, Doha.
                             </p>
 
                             {/* Event Badge */}
-                            <div className="flex flex-col items-center gap-2 mb-10 text-white/60">
+                            <div className="flex flex-col items-center gap-2 mb-10 text-black/50">
                                 <div className="inline-flex items-center gap-2 text-body-sm">
                                     <Calendar className="w-4 h-4" />
                                     February 1-4, 2026 at DECC, Doha
                                 </div>
-                                <div className="inline-flex items-center gap-2 text-amber-300 font-medium">
+                                <div className="inline-flex items-center gap-2 text-[#1E3A3A] font-medium">
                                     <Rocket className="w-4 h-4" />
                                     ENAI Booth: Wednesday, Feb 4
                                 </div>
@@ -174,14 +174,14 @@ export default function QatarSummitCustomersPage() {
                                     href={DEMO_BOOKING_LINK}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 text-black px-8 py-4 text-sm font-semibold hover:from-amber-300 hover:to-amber-400 transition-all duration-300 rounded-lg shadow-lg shadow-amber-500/25"
+                                    className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 text-sm font-semibold hover:bg-orange-600 transition-all duration-300 rounded-lg shadow-lg"
                                 >
                                     Get 30 Min with the Founders
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <Link
                                     href="#how-it-works"
-                                    className="inline-flex items-center justify-center border border-white/30 text-white px-8 py-4 text-sm font-medium hover:bg-white/10 transition-all duration-300 rounded-lg"
+                                    className="inline-flex items-center justify-center border border-black/20 text-black px-8 py-4 text-sm font-medium hover:bg-black/5 transition-all duration-300 rounded-lg"
                                 >
                                     See It Work
                                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -210,6 +210,7 @@ export default function QatarSummitCustomersPage() {
                         </div>
                     </div>
                 </section>
+
 
                 {/* THE PROBLEM */}
                 <section className="py-20 md:py-28 bg-white">
@@ -257,17 +258,17 @@ export default function QatarSummitCustomersPage() {
                     </div>
                 </section>
 
-                {/* PLATFORM CAPABILITIES */}
-                <section className="py-20 md:py-28 bg-[#1E3A3A]">
+                {/* PLATFORM CAPABILITIES - Light Theme */}
+                <section className="py-20 md:py-28 bg-[#F5F1ED]" >
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="text-center mb-16">
-                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-300/80 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-[#1E3A3A]/70 px-4 py-2 bg-white border border-black/5 rounded-full mb-6 shadow-sm">
                                 Pipeline Generation
                             </div>
-                            <h2 className="h2 text-white mb-4">
+                            <h2 className="h2 text-black mb-4">
                                 Drive Consistent Pipeline Growth
                             </h2>
-                            <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
+                            <p className="text-body-lg text-black/60 max-w-2xl mx-auto">
                                 ENAI continuously surfaces opportunities, packages strategy into repeatable plays, and helps you launch personalized campaigns in minutes.
                             </p>
                         </div>
@@ -276,12 +277,12 @@ export default function QatarSummitCustomersPage() {
                             {platformCapabilities.map((capability, index) => {
                                 const CapIcon = capability.icon;
                                 return (
-                                    <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                                        <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4">
-                                            <CapIcon className="w-6 h-6 text-amber-300" />
+                                    <div key={index} className="bg-white rounded-xl p-6 border border-black/5 shadow-sm hover:shadow-lg transition-all duration-300">
+                                        <div className="w-12 h-12 bg-[#1E3A3A]/10 rounded-xl flex items-center justify-center mb-4">
+                                            <CapIcon className="w-6 h-6 text-[#1E3A3A]" />
                                         </div>
-                                        <h3 className="text-lg font-semibold text-white mb-2">{capability.name}</h3>
-                                        <p className="text-body-sm text-white/60">{capability.capability}</p>
+                                        <h3 className="text-lg font-semibold text-black mb-2">{capability.name}</h3>
+                                        <p className="text-body-sm text-black/60">{capability.capability}</p>
                                     </div>
                                 );
                             })}
@@ -290,7 +291,7 @@ export default function QatarSummitCustomersPage() {
                 </section>
 
                 {/* QUANTIFIABLE RESULTS */}
-                <section className="py-20 md:py-28 bg-white">
+                <section className="py-20 md:py-28 bg-white" >
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-green-600/80 px-4 py-2 bg-green-50 border border-green-100 rounded-full mb-6">
@@ -322,7 +323,7 @@ export default function QatarSummitCustomersPage() {
                 </section>
 
                 {/* HOW IT WORKS */}
-                <section id="how-it-works" className="py-20 md:py-28 bg-[#F5F1ED]">
+                <section id="how-it-works" className="py-20 md:py-28 bg-[#F5F1ED]" >
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-[#1E3A3A]/60 px-4 py-2 bg-white border border-black/5 rounded-full mb-6">
@@ -349,7 +350,7 @@ export default function QatarSummitCustomersPage() {
                 </section>
 
                 {/* TESTIMONIALS */}
-                <section className="py-20 md:py-28 bg-white">
+                <section className="py-20 md:py-28 bg-white" >
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-600/80 px-4 py-2 bg-amber-50 border border-amber-100 rounded-full mb-6">
@@ -374,11 +375,11 @@ export default function QatarSummitCustomersPage() {
                     </div>
                 </section>
 
-                {/* MEET US AT THE BOOTH */}
+                {/* MEET US AT THE BOOTH - Dark Teal Theme for Contrast */}
                 <section className="py-20 md:py-28 bg-[#1E3A3A]">
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="max-w-3xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-300/80 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-300/90 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
                                 <MapPin className="w-4 h-4" />
                                 Find Us
                             </div>
@@ -432,7 +433,7 @@ export default function QatarSummitCustomersPage() {
                 </section>
 
                 {/* FINAL CTA */}
-                <section className="py-20 md:py-28 bg-[#E8DDD4]">
+                <section className="py-20 md:py-28 bg-[#E8DDD4]" >
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="max-w-3xl mx-auto text-center">
                             <h2 className="h2 text-black mb-6">
@@ -461,7 +462,7 @@ export default function QatarSummitCustomersPage() {
                         </div>
                     </div>
                 </section>
-            </main>
+            </main >
             <Footer />
         </>
     );
