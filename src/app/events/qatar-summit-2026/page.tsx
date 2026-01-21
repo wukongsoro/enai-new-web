@@ -273,6 +273,72 @@ export default function QatarSummit2026Page() {
                     </div>
                 </section>
 
+                {/* Startup Showcase Announcement */}
+                <section className="py-12 bg-white relative">
+                    <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                        <div className="bg-[#F5F1ED] rounded-3xl p-8 md:p-12 border border-black/5 shadow-sm overflow-hidden relative">
+                            {/* Decorative accent */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -mr-32 -mt-32" />
+
+                            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                                <div className="flex-1">
+                                    <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-amber-600 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full mb-6">
+                                        <Award className="w-4 h-4" />
+                                        Official Selection
+                                    </div>
+                                    <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A3A] mb-6">
+                                        Web Summit Qatar <span className="text-amber-600">Startup Showcase</span>
+                                    </h2>
+                                    <div className="space-y-4 text-body text-black/60 mb-8">
+                                        <p>
+                                            We are thrilled to announce that ENAI has been selected for the <strong>Startup Showcase at Web Summit Qatar 2026</strong>.
+                                            Out of thousands of applicants, ENAI will take the stage to present the future of autonomous revenue execution.
+                                        </p>
+                                        <div className="grid sm:grid-cols-2 gap-4">
+                                            <div className="flex items-start gap-3">
+                                                <BadgeCheck className="w-5 h-5 text-amber-600 flex-shrink-0 mt-1" />
+                                                <div>
+                                                    <span className="block font-bold text-[#1E3A3A]">Pitch Date</span>
+                                                    <span className="text-sm">Wednesday, February 4, 2026</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-start gap-3">
+                                                <BadgeCheck className="w-5 h-5 text-amber-600 flex-shrink-0 mt-1" />
+                                                <div>
+                                                    <span className="block font-bold text-[#1E3A3A]">Location</span>
+                                                    <span className="text-sm">Main Stage / Showcase Area, DECC</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap gap-4">
+                                        <Link
+                                            href={WEB_SUMMIT_BOOKING_LINK}
+                                            className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 text-sm font-medium hover:bg-black/90 transition-all duration-300 rounded-lg"
+                                        >
+                                            Meet the Founders in Doha
+                                            <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="w-full md:w-1/3 flex justify-center">
+                                    <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center bg-white rounded-2xl shadow-xl border border-black/5 rotate-3 hover:rotate-0 transition-transform duration-500">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src="/web-summit-stacked-logo.png"
+                                            alt="Web Summit Startup Showcase"
+                                            className="w-3/4 h-auto"
+                                        />
+                                        <div className="absolute -bottom-4 -right-4 bg-amber-500 text-white p-4 rounded-xl shadow-lg font-bold text-center leading-tight">
+                                            FEBRUARY<br />04
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Event Context Bar */}
                 <section className="py-8 bg-[#F5F1ED] border-y border-black/5">
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">

@@ -1,5 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero-section";
+import WebSummitBanner from "@/components/sections/web-summit-banner";
+import TractionSignal from "@/components/sections/traction-signal";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
 import WorkforceTransformation from "@/components/sections/workforce-transformation";
 import AmplifyIntelligence from "@/components/sections/amplify-intelligence";
@@ -116,6 +118,8 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
+        <WebSummitBanner />
+        <TractionSignal />
         <DigitalWorkersIntro />
         <WorkforceTransformation />
         <AmplifyIntelligence />
