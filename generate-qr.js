@@ -2,8 +2,8 @@
 const QRCode = require('qrcode');
 const path = require('path');
 
-// Production URL (for printing/sharing)
-const PROD_URL = 'https://www.enai.ai/events/qatar-summit-2026?access=ENAI-INVESTOR-2026';
+// Production URL (for printing/sharing) - NOTE: No "www" prefix
+const PROD_URL = 'https://enai.ai/events/qatar-summit-2026?access=ENAI-INVESTOR-2026';
 
 // Local testing URL
 const LOCAL_URL = 'http://localhost:3000/events/qatar-summit-2026?access=ENAI-INVESTOR-2026';
@@ -45,9 +45,9 @@ async function generateQRCodes() {
 
         console.log('📱 Access Token: ENAI-INVESTOR-2026');
 
-        // Show terminal QR for local testing
-        console.log('\n📱 Local Testing QR (scan with phone on same network):\n');
-        const terminalQR = await QRCode.toString(LOCAL_URL, { type: 'terminal', small: true });
+        // Show terminal QR for production
+        console.log('\n📱 Production QR (scan to verify):\n');
+        const terminalQR = await QRCode.toString(PROD_URL, { type: 'terminal', small: true });
         console.log(terminalQR);
     } catch (err) {
         console.error('Error generating QR code:', err);
