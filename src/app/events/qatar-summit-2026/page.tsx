@@ -94,8 +94,8 @@ const customerResults = [
 const teamMembers = [
     {
         name: "Nikhil Nehra",
-        role: "Founder and CTO",
-        background: "Founder and CTO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. With expertise in scalable distributed systems, he oversees the engineering of ENAI's core infrastructure. Holds a Master’s degree from Brunel University London.",
+        role: "Founder and CEO",
+        background: "Founder and CEO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. With expertise in scalable distributed systems, he oversees the engineering of ENAI's core infrastructure. Holds a Master’s degree from Brunel University London.",
         email: "Nikhil@enai.ai",
     },
     {

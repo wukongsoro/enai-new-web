@@ -233,7 +233,7 @@ export default function RootLayout({
                   "worksFor": {
                     "@id": "https://www.enai.ai/#organization"
                   },
-                  "description": "Founder and CTO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. Expert in scalable distributed systems.",
+                  "description": "Founder and CEO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. Expert in scalable distributed systems.",
                   "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
                   "sameAs": [
                     "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
