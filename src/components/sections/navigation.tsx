@@ -79,6 +79,18 @@ export default function Navigation() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 font-sans" style={{ transform: 'translateZ(0)' }}>
+        {/* Static Promo Banner - 100 Free Leads */}
+        <div className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black">
+          <Link
+            href="/free-leads"
+            className="flex items-center justify-center gap-3 h-10 px-4 hover:bg-amber-400/50 transition-colors"
+          >
+            <span className="text-[13px] font-bold tracking-wide">🎯 Get 100 FREE Leads</span>
+            <span className="hidden sm:inline text-[13px]">based on your target market</span>
+            <span className="text-[13px] font-semibold">→ Booth A4-67 | Wed Feb 4</span>
+            <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
+          </Link>
+        </div>
         <div className="bg-black text-white">
           <div className="relative h-12 overflow-hidden">
             {banners.map((banner, index) => (
@@ -191,7 +203,7 @@ export default function Navigation() {
           />
           <div
             className={[
-              "lg:hidden fixed top-[132px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
+              "lg:hidden fixed top-[172px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
               "bg-white/95 dark:bg-neutral-950/95",
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",

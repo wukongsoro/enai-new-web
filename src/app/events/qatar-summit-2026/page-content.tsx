@@ -329,6 +329,42 @@ export default function QatarSummit2026Content() {
                     </div>
                 </section>
 
+                {/* Free Leads Promo Banner */}
+                <section className="py-6 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+                    <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center md:text-left">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-black/10 rounded-full flex items-center justify-center">
+                                    <Target className="w-6 h-6 text-black" />
+                                </div>
+                                <div>
+                                    <div className="text-2xl md:text-3xl font-bold text-black">Get 100 FREE Leads</div>
+                                    <div className="text-sm text-black/70">Based on your target market</div>
+                                </div>
+                            </div>
+                            <div className="hidden md:block w-px h-12 bg-black/20" />
+                            <div className="flex flex-col sm:flex-row items-center gap-4">
+                                <div className="flex items-center gap-2 text-black font-medium">
+                                    <MapPin className="w-5 h-5" />
+                                    <span>Booth A4-67</span>
+                                </div>
+                                <div className="flex items-center gap-2 text-black font-medium">
+                                    <Calendar className="w-5 h-5" />
+                                    <span>Wed, Feb 4</span>
+                                </div>
+                            </div>
+                            <Link
+                                href="/free-leads"
+                                className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 text-sm font-semibold hover:bg-black/90 transition-all duration-300 rounded-lg shadow-lg"
+                            >
+                                Meet ENAI at Doha Web Summit
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Event Context Bar */}
                 <section className="py-8 bg-[#F5F1ED] border-y border-black/5">
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
