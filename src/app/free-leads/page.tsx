@@ -142,7 +142,7 @@ export default function FreeLeadsPage() {
                             <div className="space-y-4 mb-10">
                                 {[
                                     "100 verified business contacts",
-                                    "Matched to your target industry",
+                                    "Matched to your target market, including Doha Summit attendees",
                                     "Complete with emails & LinkedIn profiles",
                                     "Ready to import into your CRM",
                                 ].map((benefit, index) => (
