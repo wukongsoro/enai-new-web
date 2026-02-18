@@ -94,7 +94,7 @@ export default function Navigation() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
-              EXECUTIVE LETTER: Read Founder Nikhil on Sovereign Enterprise Autonomy at Web Summit
+              EXECUTIVE LETTER: Read Founder Nikhil Nehra on Sovereign Enterprise Autonomy at Web Summit
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
           </Link>
