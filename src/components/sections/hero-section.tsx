@@ -379,7 +379,7 @@ const HeroSection = () => {
       />
 
       <div className="relative z-[2] w-full max-w-6xl mx-auto text-center px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-24">
+        <div className="pt-28 pb-10 md:pt-40 md:pb-24">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 md:mb-8">
               <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
@@ -388,17 +388,17 @@ const HeroSection = () => {
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </div>
-              <h1 className="h1 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight leading-[1.1]">
                 Foundational Revenue Infrastructure
               </h1>
             </div>
-            <div className="mb-8 md:mb-10">
+            <div className="mb-6 md:mb-10">
               <div className="max-w-md mx-auto">
                 <div className="h-px w-full bg-white/20"></div>
               </div>
             </div>
-            <div className="max-w-2xl mx-auto mb-10">
-              <p className="text-body-lg text-white/80 leading-relaxed">
+            <div className="max-w-2xl mx-auto mb-8 md:mb-10">
+              <p className="text-base md:text-body-lg text-white/80 leading-relaxed">
                 Autonomous execution will fundamentally transform the enterprise landscape. Enai is a foundational infrastructure organization dedicated to governing these systems and ensuring sovereign revenue certainty.
               </p>
             </div>

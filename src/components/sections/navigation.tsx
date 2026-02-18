@@ -94,12 +94,12 @@ export default function Navigation() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
-              EXECUTIVE LETTER: Read Founder Nikhil Nehra on Sovereign Enterprise Autonomy at Web Summit
+              EXECUTIVE LETTER: Read Founder Nikhil Nehra on Sovereign Enterprise Autonomy at Doha Web Summit 2026
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
           </Link>
         </div>
-        <div className="bg-black text-white">
+        <div className="bg-black text-white hidden md:block">
           <div className="relative h-12 overflow-hidden">
             {banners.map((banner, index) => (
               <Link
@@ -211,7 +211,7 @@ export default function Navigation() {
           />
           <div
             className={[
-              "lg:hidden fixed top-[160px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
+              "lg:hidden fixed top-[112px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
               "bg-white/95 dark:bg-neutral-950/95",
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
