@@ -3,29 +3,29 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 const tagsRow1: string[] = [
-  'Scale Pipeline 50%',
-  'Reduce SDR Costs 70%',
-  'Increase SQLs 3x',
-  '24/7 Prospecting',
-  'Personalized Outreach',
-  'CRM Integration',
-  'Lead Qualification',
-  'A/B Testing',
-  'Objection Handling',
-  'Meeting Booking',
+  'Governed Execution',
+  'Audit Lineage',
+  'Signal Ontology',
+  'Sovereign Control',
+  'Deterministic Logic',
+  'Compliance Gates',
+  'Closed-Loop Ops',
+  'Revenue Certainty',
+  'Human Authority',
+  'Zero-Trust Pipeline',
 ];
 
 const tagsRow2: string[] = [
-  'Meeting Booking',
-  'Objection Handling',
-  'A/B Testing',
-  'Lead Qualification',
-  'CRM Integration',
-  'Personalized Outreach',
-  '24/7 Prospecting',
-  'Increase SQLs 3x',
-  'Reduce SDR Costs 70%',
-  'Scale Pipeline 50%',
+  'Zero-Trust Pipeline',
+  'Human Authority',
+  'Revenue Certainty',
+  'Closed-Loop Ops',
+  'Compliance Gates',
+  'Deterministic Logic',
+  'Sovereign Control',
+  'Signal Ontology',
+  'Audit Lineage',
+  'Governed Execution',
 ];
 
 const MarqueeTag: FC<{ text: string }> = ({ text }) => (
@@ -56,13 +56,13 @@ const AmplifyIntelligence = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center text-caption uppercase tracking-wider text-white/70 px-4 py-2 bg-white/10 border border-white/10 rounded-full">
-            Always-On Revenue Engine
+            Sovereign Execution Infrastructure
           </div>
           <h2 className="h2 text-white">
-            Predictable Pipeline At Scale
+            Revenue Certainty At Scale
           </h2>
           <p className="mt-6 max-w-lg text-body-lg text-white/70">
-            50% faster velocity. 70% lower cost. Full audit trails. Trusted by revenue teams who demand both speed and accountability.
+            50% faster velocity. 70% lower cost-per-opportunity. Full audit lineage on every action. Trusted by revenue teams who demand both execution speed and sovereign control.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"
@@ -70,7 +70,7 @@ const AmplifyIntelligence = () => {
             rel="noopener noreferrer"
             className="mt-10 inline-flex items-center justify-center bg-white text-black px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/90"
           >
-            See The Numbers
+            See the Evidence
           </Link>
         </div>
       </div>

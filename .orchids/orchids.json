@@ -1,0 +1,9 @@
+{
+  "projectId": "f1ff7c5c-532c-47c2-815f-0d883eeccbb4",
+  "createdAt": 1770908205131,
+  "version": "1.0",
+  "startupCommands": [
+    "bun install; bun run dev --turbopack -p 3000"
+  ],
+  "templateId": "any"
+}

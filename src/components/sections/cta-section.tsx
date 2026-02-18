@@ -10,10 +10,10 @@ const CtaSection = async () => {
           <div className="grid lg:grid-cols-2 gap-0 min-h-[500px] lg:min-h-[600px]">
             <div className="flex flex-col justify-center p-10 md:p-14 lg:p-20 order-2 lg:order-1">
               <h2 className="h2 text-black mb-6">
-                See It In Action
+                See Governed Execution
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed mb-10 max-w-lg">
-                Watch a complete workflow run live. From prospect identification to booked meeting, with full transparency at every step.
+                Watch a governed revenue workflow execute. We provide a complete audit trail and human override capability at every decision point.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

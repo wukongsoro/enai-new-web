@@ -7,19 +7,23 @@ import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 
 const banners = [
   {
+    text: "Read Founder Nikhil Nehra's Letter on Governed Autonomous Execution at Web Summit Qatar",
+    href: "/blog/founder-enterprise-autonomous-governance",
+  },
+  {
     text: "🇶🇦 ENAI Selected for Web Summit Qatar 2026: 1 of 20 Worldwide",
     href: "https://calendly.com/enai-ai2024/30min",
   },
   {
-    text: "Autonomous Revenue Execution: From Research to Booked Meeting in 60 Seconds",
+    text: "Sovereign Revenue Execution: Full Audit Trail From Signal to Closed Deal",
     href: "/blog/enai-ai-agents-generate-50-more-qualified-leads",
   },
   {
-    text: "Enterprise Teams Are Replacing Manual Sales Work with Autonomous Execution",
+    text: "Enterprise Revenue Teams Are Moving to Governed Autonomous Execution",
     href: "/blog/autonomous-revenue-playbook-scale-outbound-at-speed",
   },
   {
-    text: "How Leading Revenue Teams Achieve 70% Faster Pipeline Velocity",
+    text: "How Institutional Revenue Teams Achieve 70% Faster Pipeline Velocity",
     href: "/blog/enai-cuts-prospecting-time-70-ai-automation",
   },
 ];
@@ -79,15 +83,19 @@ export default function Navigation() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 font-sans" style={{ transform: 'translateZ(0)' }}>
-        {/* Static Promo Banner - 100 Free Leads */}
-        <div className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black">
+        {/* Mission Banner - Founder's Letter */}
+        <div className="bg-orange-600 text-white border-b border-orange-700">
           <Link
-            href="/free-leads"
-            className="flex items-center justify-center gap-3 h-10 px-4 hover:bg-amber-400/50 transition-colors"
+            href="/blog/founder-enterprise-autonomous-governance"
+            className="flex items-center justify-center gap-3 h-10 px-4 hover:bg-orange-700 transition-colors"
           >
-            <span className="text-[13px] font-bold tracking-wide">🎯 Get 100 FREE Leads</span>
-            <span className="hidden sm:inline text-[13px]">based on your target market</span>
-            <span className="text-[13px] font-semibold">→ Booth A4-67 | Wed Feb 4</span>
+            <span className="text-[13px] font-bold tracking-wide flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+              </span>
+              EXECUTIVE LETTER: Read Founder Nikhil on Sovereign Enterprise Autonomy at Web Summit
+            </span>
             <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
           </Link>
         </div>
@@ -203,7 +211,7 @@ export default function Navigation() {
           />
           <div
             className={[
-              "lg:hidden fixed top-[172px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
+              "lg:hidden fixed top-[160px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
               "bg-white/95 dark:bg-neutral-950/95",
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",

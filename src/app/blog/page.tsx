@@ -16,6 +16,7 @@ interface BlogPost {
   type: string;
   slug: string;
   content: string;
+  image?: string;
 }
 
 const BLOG_URL = buildCanonicalUrl('/blog');
@@ -52,6 +53,93 @@ export const metadata: Metadata = {
 };
 
 const blogPosts: BlogPost[] = [
+  {
+    title: "The Enterprise Will Be Autonomous. The Question Is Who Governs It.",
+    description: "Enai founder Nikhil Nehra on why autonomous execution is the defining infrastructure challenge of the next decade, and why governance is the only path to enterprise adoption at scale.",
+    date: "Feb 18, 2026",
+    type: "Founder's Letter",
+    slug: "founder-enterprise-autonomous-governance",
+    image: "/enai-founder.jpeg",
+    content: `# The Enterprise Will Be Autonomous. The Question Is Who Governs It.
+
+A letter from Nikhil Nehra, Founder & CEO of Enai
+
+---
+
+We are at an inflection point. Not the kind that trend reports describe. Not the incremental kind. The kind that restructures entire categories of work, redistributes decision-making authority, and forces organizations to confront a question they have never had to answer before:
+
+**If a machine can execute better than a human, who decides when it should?**
+
+This is the question that led me to build Enai. Not because the technology was new. The technology has been converging for years. What was missing was the architecture of trust around it. The governance layer. The institutional framework that allows an enterprise to deploy autonomous systems without losing control of its own operations.
+
+## The Problem with the Current Landscape
+
+The AI industry has spent the last three years building tools. Copilots. Assistants. Chat interfaces bolted onto existing workflows. These are useful. They are also insufficient.
+
+The enterprise does not need another tool. It needs infrastructure. It needs systems that can execute end-to-end workflows autonomously, with full audit lineage, deterministic governance, and human override authority at every decision point.
+
+The gap between "AI-assisted" and "AI-autonomous" is not a feature gap. It is an architecture gap. It is the difference between a calculator and a financial system. Between a search engine and an intelligence platform.
+
+Most companies are building calculators. We are building the financial system.
+
+## Why Governance Is the Moat
+
+Every enterprise leader I speak with asks the same three questions:
+
+1. **Can I trust it?** Not in the abstract. Can I prove to my board, my regulators, and my customers that every decision this system made was auditable, explainable, and reversible?
+
+2. **Can I control it?** When the system encounters a situation outside its training distribution, does it escalate? Does it halt? Does it notify the right human with the right context at the right time?
+
+3. **Can I scale it?** Not from 10 to 100 tasks. From 100 to 100,000 decisions per day, across geographies, compliance regimes, and organizational boundaries.
+
+These are not product questions. They are infrastructure questions. And they require infrastructure answers.
+
+At Enai, governance is not a feature we added after building the product. Governance is the product. Every workflow runs within defined compliance boundaries. Every agent action is logged, scored, and reversible. Every escalation path is deterministic, not probabilistic.
+
+This is what separates infrastructure from tooling.
+
+## The Architecture of Sovereign Execution
+
+We use the term "sovereign" deliberately. In a world where AI systems increasingly make decisions that affect revenue, reputation, and regulatory standing, the enterprise must maintain sovereignty over its own operations.
+
+This means three things:
+
+**Ontological Control.** The enterprise defines the data model, the decision logic, and the execution boundaries. The AI operates within these parameters. It does not define them.
+
+**Audit Lineage.** Every action taken by every agent is traceable to a source signal, a governance rule, and a human authority. This is not logging. This is institutional memory.
+
+**Deterministic Escalation.** When confidence drops below threshold, execution halts. The right human is notified with full context. The system does not guess. It governs.
+
+## What I See Coming
+
+The next five years will separate two kinds of companies:
+
+Those that adopted AI tools and achieved incremental productivity gains. And those that built autonomous execution infrastructure and fundamentally restructured how enterprise work gets done.
+
+The first category will see 10-20% efficiency improvements. The second will see order-of-magnitude changes in speed, scale, and competitive position.
+
+We are building for the second category.
+
+Revenue operations is our beachhead. Not because it is the largest market. But because it is the market where the cost of ungoverned autonomy is highest. A single rogue email sent to the wrong executive at the wrong time can destroy a relationship that took years to build. A single unaudited decision in a regulated industry can trigger enforcement action.
+
+The stakes are real. The governance must be real.
+
+## Our Commitment
+
+Enai is not a startup in the conventional sense. We are a foundational infrastructure organization. Our job is to build the systems that allow enterprises to trust autonomous execution.
+
+This is a generational opportunity. And it requires generational thinking. We are not optimizing for the next quarter. We are building for the next decade.
+
+The enterprise will be autonomous. The only question is whether it will be governed.
+
+We intend to make sure it is.
+
+---
+
+Nikhil Nehra is the Founder and CEO of Enai, a sovereign revenue execution platform headquartered in London with R&D operations in Doha. Enai was selected for the Web Summit Qatar 2026 Startup Showcase.
+
+[Learn more about our approach to governed autonomous execution.](https://calendly.com/enai-ai2024/30min)`
+  },
   {
     title: "How AI-Powered Sales Collaboration Transforms B2B Revenue Generation",
     description: "Discover how AI BDR agents are revolutionizing sales development, with 79% of sales leaders adopting AI tools in 2024. Learn from real case studies showing 50% more qualified leads and 70% cost reduction.",
@@ -4807,8 +4895,8 @@ export default function BlogPage() {
                   {/* Image */}
                   <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[400px]">
                     <Image
-                      src="/GxhEHFrWMAAIwCy.jpeg"
-                      alt="Featured Article"
+                      src={featuredPost.image || "/GxhEHFrWMAAIwCy.jpeg"}
+                      alt={featuredPost.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       priority

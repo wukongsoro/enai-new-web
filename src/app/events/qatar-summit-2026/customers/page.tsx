@@ -44,7 +44,7 @@ const platformCapabilities = [
     {
         icon: MessageSquare,
         name: "Outbound Execution",
-        capability: "Launch personalized campaigns in minutes, not weeks. ENAI packages strategy into repeatable plays and executes multi-channel outreach at scale—email, LinkedIn, and phone.",
+        capability: "Launch personalized campaigns in minutes, not weeks. ENAI packages strategy into repeatable plays and executes multi-channel outreach at scale. This includes email, LinkedIn, and phone.",
     },
     {
         icon: Layers,
@@ -76,7 +76,7 @@ const howItWorks = [
     {
         step: "02",
         title: "Deploy",
-        description: "ENAI agents continuously surface opportunities, score intent, and build personalized outreach sequences—automatically.",
+        description: "ENAI agents continuously surface opportunities, score intent, and build personalized outreach sequences automatically.",
     },
     {
         step: "03",
@@ -139,7 +139,7 @@ export default function QatarSummitCustomersPage() {
                             {/* Badge */}
                             <div className="inline-flex items-center gap-2 text-caption uppercase tracking-wider text-[#1E3A3A] px-5 py-2.5 bg-white border border-black/10 rounded-full mb-6 shadow-sm">
                                 <Rocket className="w-4 h-4" />
-                                Live at Web Summit Qatar — Booth Feb 4
+                                Live at Web Summit Qatar . Booth Feb 4
                             </div>
 
                             <h1 className="h1 text-black mb-4">
@@ -224,7 +224,7 @@ export default function QatarSummitCustomersPage() {
                                     Sales Productivity
                                 </h2>
                                 <p className="text-body-lg text-black/60 mb-8">
-                                    The barrier to revenue growth isn't your team—it's the manual work consuming their time. Reps spend more time on research and admin than actually selling. ENAI changes that.
+                                    The barrier to revenue growth is not your team. It is the manual work consuming their time. Reps spend more time on research and admin than actually selling. ENAI changes that.
                                 </p>
                                 <ul className="space-y-4 text-black/70">
                                     <li className="flex items-start gap-3">
@@ -387,7 +387,7 @@ export default function QatarSummitCustomersPage() {
                                 See It Live. Feb 4. Doha.
                             </h2>
                             <p className="text-body-lg text-white/70 mb-8">
-                                30-minute live demo. Walk through the platform. Ask anything. No pitch deck—just the product.
+                                30-minute live demo. Walk through the platform. Ask anything. No pitch deck. Just the product.
                             </p>
 
                             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 mb-10">

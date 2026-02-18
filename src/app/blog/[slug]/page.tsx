@@ -13,6 +13,100 @@ import { buildAbsoluteUrl, buildCanonicalUrl, defaultKeywords, SITE_URL, primary
 // This would typically come from a CMS or database
 const blogPosts = [
   {
+    title: "The Enterprise Will Be Autonomous. The Question Is Who Governs It.",
+    description: "Enai founder Nikhil Nehra on why autonomous execution is the defining infrastructure challenge of the next decade, and why governance is the only path to enterprise adoption at scale.",
+    date: "February 18, 2026",
+    type: "Founder's Letter",
+    slug: "founder-enterprise-autonomous-governance",
+    author: "Enai Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-founder.jpeg",
+    content: `A letter from Nikhil Nehra, Founder & CEO of Enai
+Selected for Web Summit Qatar 2026 Startup Showcase. 1 of 20 companies worldwide.
+
+---
+
+We are at an inflection point. Not the kind that trend reports describe. Not the incremental kind. The kind that restructures entire categories of work, redistributes decision-making authority, and forces organizations to confront a question they have never had to answer before:
+
+**If a machine can execute better than a human, who decides when it should?**
+
+This is the question that led me to build Enai.
+
+## The Moment It Became Clear
+
+Last year I sat with a CRO at a Series C SaaS company. His team had just spent 18 hours manually reviewing a single AI-generated outreach sequence before they felt confident enough to send it. Eighteen hours. For one campaign. The AI had done the work in four minutes. The trust infrastructure to act on it didn't exist.
+
+That conversation crystallized something I had been circling for months. The bottleneck in enterprise AI adoption is not capability. It is accountability. Organizations are not afraid of what AI can do. They are afraid of not being able to explain what it did.
+
+## What the Industry Got Wrong
+
+The AI industry has spent three years building tools. Copilots. Assistants. Chat interfaces bolted onto existing workflows. These are useful. They are also insufficient.
+
+The enterprise does not need another tool. It needs infrastructure. Systems that can execute end-to-end workflows autonomously, with full audit lineage and human override authority at every decision point.
+
+The gap between "AI-assisted" and "AI-autonomous" is not a feature gap. It is an architecture gap. The difference between a calculator and a financial system. Between a search engine and an intelligence platform.
+
+Most companies are building calculators. We are building the financial system.
+
+## Why Governance Is the Moat
+
+Every enterprise leader I speak with asks the same three questions:
+
+1. **Can I trust it?** Can I prove to my board, my regulators, and my customers that every decision this system made was auditable, explainable, and reversible?
+
+2. **Can I control it?** When the system encounters a situation outside its parameters, does it escalate? Does it halt? Does it notify the right human with the right context at the right time?
+
+3. **Can I scale it?** Not from 10 to 100 tasks. From 100 to 100,000 decisions per day, across geographies, compliance regimes, and organizational boundaries.
+
+These are not product questions. They are infrastructure questions.
+
+At Enai, governance is not a feature we added after building the product. It is the product. Every workflow runs within defined compliance boundaries. Every agent action is logged, scored, and reversible. Every escalation path is deterministic, not probabilistic.
+
+## The Architecture of Sovereign Execution
+
+We use the term "sovereign" deliberately. In a world where AI systems make decisions that affect revenue, reputation, and regulatory standing, the enterprise must maintain sovereignty over its own operations.
+
+This means three things:
+
+**Ontological Control.** The enterprise defines the data model, the decision logic, and the execution boundaries. The AI operates within these parameters. It does not define them. Put simply: the enterprise, not the model, defines what "good" even means.
+
+**Audit Lineage.** Every action taken by every agent is traceable to a source signal, a rule, and a human authority. This is not logging. This is institutional memory.
+
+**Deterministic Escalation.** When confidence drops below threshold, execution halts. The right human is notified with full context. The system does not guess.
+
+Here is what that looks like in practice. A financial services firm using Enai had an AI agent preparing outreach to a senior procurement contact at a regulated institution. The agent flagged a compliance boundary — the contact had opted out of a specific communication channel under their internal policy. Rather than proceeding or failing silently, the system halted, surfaced the conflict to the account owner with full context, and waited. The human made the call in 90 seconds. No enforcement risk. No relationship damage. Full audit trail.
+
+That is the difference between a tool and infrastructure.
+
+## What I See Coming
+
+The next five years will separate two kinds of companies: those that adopted AI tools and achieved incremental productivity gains, and those that built autonomous execution infrastructure and fundamentally restructured how enterprise work gets done.
+
+The first category will see 10–20% efficiency improvements. The second will see order-of-magnitude changes in speed, scale, and competitive position.
+
+Revenue operations is our beachhead. Not because it is the largest market. But because it is where the cost of ungoverned autonomy is highest. A single rogue email sent to the wrong executive destroys a relationship that took years to build. A single unaudited decision in a regulated industry triggers enforcement action.
+
+## Our Commitment
+
+Enai is not a startup in the conventional sense. We are a foundational infrastructure organization. Our job is to build the systems that allow enterprises to trust autonomous execution.
+
+This is a generational opportunity. And it requires generational thinking. We are not optimizing for the next quarter. We are building for the next decade.
+
+The enterprise will be autonomous. The only question is whether it will be governed.
+
+We intend to make sure it is.
+
+---
+
+**If you are responsible for revenue operations at a Series B+ company and want to see what governed autonomy actually looks like in production, book 15 minutes here: [calendly.com/enai-ai2024/30min](https://calendly.com/enai-ai2024/30min)**
+
+We are opening a small cohort of design partners in Q2. Spots are limited.
+
+---
+
+Nikhil Nehra is the Founder and CEO of Enai. Enai was selected for the Web Summit Qatar 2026 Startup Showcase, one of 20 companies chosen worldwide. Enai is headquartered in London with R&D operations in Doha.`
+  },
+  {
     title: "How AI-Powered Sales Collaboration Transforms B2B Revenue Generation",
     description: "Discover how AI BDR agents are revolutionizing sales development, with 79% of sales leaders adopting AI tools in 2024. Learn from real case studies showing 50% more qualified leads and 70% cost reduction.",
     date: "January 15, 2025",
@@ -3318,6 +3412,7 @@ Ready to transform your sales team's productivity? [Schedule a consultation](htt
 export function generateStaticParams() {
   // Include all blog post slugs from both old and new posts
   const allSlugs = [
+    "founder-enterprise-autonomous-governance",
     "ai-powered-sales-collaboration-transforms-b2b-revenue",
     "complete-ai-bdr-playbook-scale-outbound-10x",
     "ai-automation-transforms-sales-productivity-deep-dive",
@@ -3454,64 +3549,85 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             );
         }
       }
-      if (line.startsWith('- ')) {
+      const renderInline = (text: string) => {
+        // Handle bold first
+        const boldRegex = /(\*\*.*?\*\*)/g;
+        const parts = text.split(boldRegex);
+
+        return parts.map((part, i) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            const innerText = part.slice(2, -2);
+            return (
+              <span key={i} className="font-semibold">
+                {renderLinks(innerText)}
+              </span>
+            );
+          }
+          return renderLinks(part);
+        });
+      };
+
+      const renderLinks = (text: string) => {
+        if (!text) return null;
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        const parts = text.split(linkRegex);
+        return parts.map((part, i) => {
+          if (i % 3 === 1) {
+            return (
+              <a
+                key={i}
+                href={parts[i + 1]}
+                className="text-blue-600 hover:text-blue-800 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {part}
+              </a>
+            );
+          }
+          if (i % 3 === 2) return null;
+          return part;
+        });
+      };
+
+      if (line.startsWith('### ')) {
         return (
-          <li key={index} className="text-gray-700 mb-1 ml-4">
-            {line.replace('- ', '')}
-          </li>
+          <h3 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+            {line.replace('### ', '')}
+          </h3>
         );
       }
-      // Handle bold text (text surrounded by **)
-      if (line.includes('**')) {
-        // Split by ** and process alternating parts
-        const parts = line.split(/(\*\*.*?\*\*)/);
+      if (line.startsWith('## ')) {
         return (
-          <p key={index} className="text-gray-700 mb-4">
-            {parts.map((part, i) => {
-              if (part.startsWith('**') && part.endsWith('**')) {
-                return (
-                  <span key={i} className="font-semibold">
-                    {part.replace(/\*\*/g, '')}
-                  </span>
-                );
-              }
-              return part;
-            })}
-          </p>
+          <h2 key={index} className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+            {line.replace('## ', '')}
+          </h2>
+        );
+      }
+      if (line.startsWith('# ')) {
+        return (
+          <h1 key={index} className="text-4xl font-bold text-gray-900 mt-16 mb-8">
+            {line.replace('# ', '')}
+          </h1>
+        );
+      }
+      if (line.startsWith('- ')) {
+        return (
+          <li key={index} className="text-gray-700 mb-2 ml-6 list-disc">
+            {renderInline(line.replace('- ', ''))}
+          </li>
         );
       }
       if (line.trim() === '') {
         return null;
       }
-      if (line.includes('http')) {
-        // Handle links
-        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-        const parts = line.split(linkRegex);
-        return (
-          <p key={index} className="text-gray-700 mb-4">
-            {parts.map((part, i) => {
-              if (i % 3 === 1) {
-                return (
-                  <a
-                    key={i}
-                    href={parts[i + 1]}
-                    className="text-blue-600 hover:text-blue-800 underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {part}
-                  </a>
-                );
-              }
-              if (i % 3 === 2) return null;
-              return part;
-            })}
-          </p>
-        );
+      if (line.trim() === '---') {
+        return <hr key={index} className="my-12 border-gray-200" />;
       }
+
       return (
-        <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-          {line}
+        <p key={index} className="text-gray-700 mb-6 text-lg leading-relaxed">
+          {renderInline(line)}
         </p>
       );
     }).filter(Boolean);

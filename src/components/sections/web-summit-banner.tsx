@@ -47,7 +47,7 @@ const WebSummitBanner = () => {
                             Meet us in Doha this February
                         </h2>
                         <p className="text-black/60 text-sm md:text-base leading-relaxed mb-6 max-w-lg">
-                            Enai has been selected for the <strong className="text-black">Startup Showcase</strong> at Web Summit Qatar 2026 —
+                            Enai has been selected for the <strong className="text-black">Startup Showcase</strong> at Web Summit Qatar 2026. This is
                             the Middle East&apos;s premier tech conference with 30,000+ founders, investors, and global media.
                         </p>
 

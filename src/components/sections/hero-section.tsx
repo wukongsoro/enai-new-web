@@ -383,13 +383,13 @@ const HeroSection = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 md:mb-8">
               <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                Meet Your New
+                Sovereign Execution Platform
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 ml-2" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </div>
               <h1 className="h1 text-white">
-                AI Workers
+                Foundational Revenue Infrastructure
               </h1>
             </div>
             <div className="mb-8 md:mb-10">
@@ -397,9 +397,9 @@ const HeroSection = () => {
                 <div className="h-px w-full bg-white/20"></div>
               </div>
             </div>
-            <div className="max-w-xl mx-auto mb-10">
+            <div className="max-w-2xl mx-auto mb-10">
               <p className="text-body-lg text-white/80 leading-relaxed">
-                Enterprise-grade AI workers with human oversight. Research, outreach, and booking run autonomously. You approve what matters.
+                Autonomous execution will fundamentally transform the enterprise landscape. Enai is a foundational infrastructure organization dedicated to governing these systems and ensuring sovereign revenue certainty.
               </p>
             </div>
             <div className="flex justify-center">
@@ -410,7 +410,7 @@ const HeroSection = () => {
                 aria-label="Request a Demo"
                 className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
               >
-                Request a Demo
+                Request Access
               </a>
             </div>
           </div>

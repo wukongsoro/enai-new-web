@@ -10,10 +10,10 @@ const Features = async () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">
-              AI-Powered Sales Automation
+              The Execution Infrastructure
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
-              Transform your sales process with AI-powered automation that discovers leads, personalizes outreach, and drives measurable results.
+              Purpose-built systems for revenue teams who require auditability, deterministic logic, and sovereign control over every action in their pipeline.
             </p>
           </div>
 
@@ -30,8 +30,8 @@ const Features = async () => {
                   </svg>
                   <span className="mx-auto block w-fit text-5xl font-semibold">100%</span>
                 </div>
-                <h2 className="mt-6 text-center text-3xl font-semibold">Fully Customizable</h2>
-                <p className="text-center text-sm text-muted-foreground mt-2">Tailor workflows to your unique business needs and sales processes</p>
+                <h2 className="mt-6 text-center text-3xl font-semibold">Your Revenue Logic</h2>
+                <p className="text-center text-sm text-muted-foreground mt-2">Encode approval gates, escalation paths, and compliance boundaries. Your rules are enforced by the system.</p>
               </CardContent>
             </Card>
             <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
@@ -40,8 +40,8 @@ const Features = async () => {
                   <Shield className="m-auto size-8" strokeWidth={1} />
                 </div>
                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                  <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">Enterprise Security</h2>
-                  <p className="text-foreground">Bank-grade encryption and compliance ensure your sales data remains protected while maintaining full functionality.</p>
+                  <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">Zero-Trust Architecture</h2>
+                  <p className="text-foreground">Tenant-isolated execution. SOC 2 and ISO 27001 governance apply to every agent action, not just data at rest.</p>
                 </div>
               </CardContent>
             </Card>
@@ -51,8 +51,8 @@ const Features = async () => {
                   <Brain className="m-auto size-8" strokeWidth={1} />
                 </div>
                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                  <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">AI Intelligence</h2>
-                  <p className="text-foreground">Advanced machine learning algorithms analyze patterns and predict optimal engagement strategies for maximum conversion.</p>
+                  <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">Signal Ontology</h2>
+                  <p className="text-foreground">Maps intent data, firmographic signals, and relationship graphs into deterministic execution plans. All plans are auditable at every step.</p>
                 </div>
               </CardContent>
             </Card>
@@ -63,8 +63,8 @@ const Features = async () => {
                     <Shield className="m-auto size-5" strokeWidth={1} />
                   </div>
                   <div className="space-y-2">
-                    <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Lightning Fast</h2>
-                    <p className="text-foreground">Process thousands of leads and generate personalized outreach sequences in seconds, not hours.</p>
+                    <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Closed-Loop Execution</h2>
+                    <p className="text-foreground">From signal detection to governed outreach in seconds. Every decision captured for continuous learning.</p>
                   </div>
                 </div>
                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -78,7 +78,7 @@ const Features = async () => {
                       href="/demo"
                       className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium"
                     >
-                      Explore Workflows
+                      Explore Architecture
                     </Link>
                   </div>
                 </div>
@@ -91,8 +91,8 @@ const Features = async () => {
                     <Users className="m-auto size-6" strokeWidth={1} />
                   </div>
                   <div className="space-y-2">
-                    <h2 className="text-lg font-medium transition">Team Collaboration</h2>
-                    <p className="text-foreground">Seamlessly collaborate across your sales team with shared workflows, insights, and performance analytics.</p>
+                    <h2 className="text-lg font-medium transition">Unified Command Layer</h2>
+                    <p className="text-foreground">Shared execution context, governed permissions, and cross-team visibility with complete audit lineage.</p>
                   </div>
                 </div>
                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">

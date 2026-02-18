@@ -17,12 +17,12 @@ const tractionSignals = [
     {
         icon: Building2,
         title: "Enterprise Ready",
-        description: "Trusted by Series B+ companies to automate multi-channel revenue workflows.",
+        description: "Trusted by institutional revenue teams to govern autonomous execution at scale.",
     },
     {
         icon: CheckCircle2,
         title: "Category Leader",
-        description: "Defining the future of the Autonomous Revenue Execution category.",
+        description: "Defining the Sovereign Revenue Execution category.",
     },
 ];
 

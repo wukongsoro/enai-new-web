@@ -52,7 +52,7 @@ const WorkerCard: React.FC<WorkerCardProps> = ({
       </div>
       <div className="pt-6 md:pt-8 flex-1 flex flex-col">
         <h3 className="text-xl md:text-2xl text-black leading-tight mb-3">
-          {name} <span className="text-black/50">— {role}</span>
+          {name} <span className="text-black/50">. {role}</span>
         </h3>
         <p className="text-body text-black/60 leading-relaxed mb-6 flex-1">
           {description}
@@ -76,14 +76,14 @@ const DigitalWorkersIntro = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="h2 text-black mb-6">
-            Three Execution Engines. One Platform.
+            Three Execution Engines. One Governed Platform.
           </h2>
           <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
-            Each agent handles a distinct stage of your revenue workflow with built-in approval workflows. From signal to meeting, you retain full visibility.
+            Each engine operates within defined compliance boundaries. Approval gates, audit trails, and human override authority come standard. Full visibility from signal to execution.
           </p>
           <div className="mt-8">
             <Link href="https://calendly.com/enai-ai2024/30min" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">
-              Watch It Work
+              See the Architecture
             </Link>
           </div>
         </div>
@@ -91,8 +91,8 @@ const DigitalWorkersIntro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
           <WorkerCard
             name="ProspectorAI"
-            role="Lead Discovery Agent"
-            description="Automatically identifies high-potential B2B leads using advanced data signals from LinkedIn, company news, and intent data. Builds targeted lists at scale."
+            role="Signal Intelligence Engine"
+            description="Maps firmographic, intent, and relationship signals into prioritized target ontologies. Every signal source auditable. Every score explainable."
             hireLink="/agents/prospectorai"
             imageWrapperClass="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500"
             bottomUIImage="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d92d286e1eb4cb15d5ca35_048e976b0381640b13181971d4221a5e_identify-6.webp?"
@@ -101,8 +101,8 @@ const DigitalWorkersIntro = () => {
           />
           <WorkerCard
             name="OutreachAI"
-            role="Personalized Outreach Agent"
-            description="Crafts hyper-personalized cold emails and LinkedIn messages based on prospect behavior and company fit. A/B tests sequences for optimal engagement."
+            role="Governed Outreach Engine"
+            description="Executes multi-channel outreach sequences within defined compliance boundaries. Message logic, approval gates, and send governance. All actions are auditable."
             hireLink="/agents/outreachai"
             imageWrapperClass="bg-gray-50"
             bottomUIImage="/image0-3.jpeg"
@@ -110,8 +110,8 @@ const DigitalWorkersIntro = () => {
           />
           <WorkerCard
             name="QualifierAI"
-            role="Meeting Booker Agent"
-            description="Qualifies leads through intelligent conversations, schedules demos via calendar integration, and nurtures with follow-ups. Handles objections autonomously."
+            role="Qualification & Execution Engine"
+            description="Runs deterministic qualification logic against defined criteria. Schedules through governed calendar integration. Every qualification decision logged and reversible."
             hireLink="/agents/qualifierai"
             imageWrapperClass="bg-gray-100"
             bottomUIImage="/automated-booking.png"

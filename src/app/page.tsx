@@ -1,6 +1,6 @@
 import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero-section";
-import WebSummitBanner from "@/components/sections/web-summit-banner";
+import EnterpriseAutonomy from "@/components/sections/enterprise-autonomy";
 import TractionSignal from "@/components/sections/traction-signal";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
 import WorkforceTransformation from "@/components/sections/workforce-transformation";
@@ -118,7 +118,7 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <WebSummitBanner />
+        <EnterpriseAutonomy />
         <TractionSignal />
         <DigitalWorkersIntro />
         <WorkforceTransformation />

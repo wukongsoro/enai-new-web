@@ -7,17 +7,17 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-               "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-               "Segoe UI Symbol", "Noto Color Emoji";
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-               "Liberation Mono", "Courier New", monospace;
+    "Liberation Mono", "Courier New", monospace;
 
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -130,7 +130,9 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html, body {
+
+  html,
+  body {
     margin: 0;
     padding: 0;
   }
@@ -150,7 +152,9 @@
     letter-spacing: -0.01em;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -160,31 +164,71 @@
     font-synthesis-weight: none;
   }
 
-  h4, h5, h6 {
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-sans);
     font-weight: 500;
     letter-spacing: -0.01em;
   }
 
-  code, pre {
+  code,
+  pre {
     font-family: var(--font-mono);
   }
 
-  .h1 { font-size: clamp(40px, 6vw, 80px); line-height: 1.1; text-wrap: balance; }
-  .h2 { font-size: clamp(32px, 4vw, 64px); line-height: 1.1; }
-  .h3 { font-size: clamp(24px, 3vw, 48px); line-height: 1.2; }
-  .h4 { font-size: clamp(20px, 2.5vw, 36px); line-height: 1.2; }
-  .sub { font-size: clamp(16px, 1.5vw, 18px); line-height: 1.5; color: var(--foreground); }
+  .h1 {
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1.1;
+    text-wrap: balance;
+  }
 
-  .text-body-lg { font-size: 18px; line-height: 1.5; }
-  .text-body { font-size: 16px; line-height: 1.5; }
-  .text-body-sm { font-size: 14px; line-height: 1.4; }
-  .text-caption { font-size: 12px; line-height: 1.3; letter-spacing: 0.02em; }
+  .h2 {
+    font-size: clamp(32px, 4vw, 64px);
+    line-height: 1.1;
+  }
 
-  .text-stat { 
-    font-family: var(--font-sans); 
-    font-size: clamp(48px, 8vw, 72px); 
-    font-weight: 700; 
+  .h3 {
+    font-size: clamp(24px, 3vw, 48px);
+    line-height: 1.2;
+  }
+
+  .h4 {
+    font-size: clamp(20px, 2.5vw, 36px);
+    line-height: 1.2;
+  }
+
+  .sub {
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.5;
+    color: var(--foreground);
+  }
+
+  .text-body-lg {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .text-body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .text-body-sm {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .text-caption {
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .text-stat {
+    font-family: var(--font-sans);
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 700;
     line-height: 1;
     letter-spacing: -0.02em;
   }
@@ -196,13 +240,20 @@
     font-style: italic;
   }
 
-  .heading-strong { font-weight: 500; }
-  .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+  .heading-strong {
+    font-weight: 500;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
 
   /* Fixed font sizes with Playfair Display - Harvey style */
   .text-h1 {
     font-family: var(--font-display);
-    font-size: 3.5rem; /* 56px - lg */
+    font-size: 3.5rem;
+    /* 56px - lg */
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.025em;
@@ -210,7 +261,8 @@
 
   .text-h2 {
     font-family: var(--font-display);
-    font-size: 3.5rem; /* 56px - lg */
+    font-size: 3.5rem;
+    /* 56px - lg */
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.025em;
@@ -218,7 +270,8 @@
 
   .text-h3 {
     font-family: var(--font-display);
-    font-size: 3rem; /* 48px */
+    font-size: 3rem;
+    /* 48px */
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.025em;
@@ -226,7 +279,8 @@
 
   .text-h4 {
     font-family: var(--font-display);
-    font-size: 2.25rem; /* 36px */
+    font-size: 2.25rem;
+    /* 36px */
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.025em;
@@ -234,7 +288,8 @@
 
   .text-p {
     font-family: var(--font-sans);
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
     font-weight: 400;
     line-height: 1.6;
   }
@@ -242,37 +297,52 @@
   /* Responsive overrides for mobile */
   @media (max-width: 768px) {
     .text-h1 {
-      font-size: 2.25rem; /* 36px - text-4xl */
+      font-size: 2.25rem;
+      /* 36px - text-4xl */
     }
+
     .text-h2 {
-      font-size: 2.25rem; /* 36px - text-4xl */
+      font-size: 2.25rem;
+      /* 36px - text-4xl */
     }
+
     .text-h3 {
-      font-size: 1.875rem; /* 30px - text-3xl */
+      font-size: 1.875rem;
+      /* 30px - text-3xl */
     }
+
     .text-h4 {
-      font-size: 1.5rem; /* 24px - text-2xl */
+      font-size: 1.5rem;
+      /* 24px - text-2xl */
     }
+
     .text-p {
-      font-size: 1rem; /* 16px */
+      font-size: 1rem;
+      /* 16px */
     }
   }
 
   @media (min-width: 768px) {
     .text-h1 {
-      font-size: 3rem; /* 48px - text-5xl */
+      font-size: 3rem;
+      /* 48px - text-5xl */
     }
+
     .text-h2 {
-      font-size: 3rem; /* 48px - text-5xl */
+      font-size: 3rem;
+      /* 48px - text-5xl */
     }
   }
 
   @media (min-width: 1024px) {
     .text-h1 {
-      font-size: 3.5rem; /* 56px */
+      font-size: 3.5rem;
+      /* 56px */
     }
+
     .text-h2 {
-      font-size: 3.5rem; /* 56px */
+      font-size: 3.5rem;
+      /* 56px */
     }
   }
 }
@@ -295,45 +365,44 @@ nextjs-portal {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255,255,255,.18), rgba(255,255,255,0));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .18), rgba(255, 255, 255, 0));
   border-radius: inherit;
 }
 
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .no-blur-fallback {
-    background: rgba(255,255,255,0.92);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
+
   .dark .no-blur-fallback {
-    background: rgba(12,12,12,0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(12, 12, 12, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
 .hero-scrim {
   position: relative;
 }
+
 .hero-scrim::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
   height: 140px;
   pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0.12) 60%,
-    rgba(255,255,255,0.00)
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.12) 60%,
+      rgba(255, 255, 255, 0.00));
   z-index: 10;
 }
+
 .dark .hero-scrim::before {
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.18) 60%,
-    rgba(0,0,0,0.00)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.18) 60%,
+      rgba(0, 0, 0, 0.00));
 }
 
 .pricing-card-shadow-secondary {
@@ -354,6 +423,7 @@ nextjs-portal {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -367,6 +437,7 @@ nextjs-portal {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -381,12 +452,17 @@ nextjs-portal {
     -webkit-tap-highlight-color: transparent;
   }
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
     width: 100%;
   }
 
-  button, a, input, select, textarea {
+  button,
+  a,
+  input,
+  select,
+  textarea {
     min-height: 44px;
     min-width: 44px;
   }
@@ -397,19 +473,25 @@ nextjs-portal {
     text-rendering: optimizeLegibility;
   }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  .mobile-menu-transition, .mobile-menu-transition * {
+  .mobile-menu-transition,
+  .mobile-menu-transition * {
     transition-duration: 300ms !important;
     animation-duration: 300ms !important;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;

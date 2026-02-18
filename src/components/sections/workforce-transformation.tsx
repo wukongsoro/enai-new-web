@@ -20,31 +20,25 @@ interface FeatureCardProps {
 
 const features: FeatureCardProps[] = [
   {
-    title: "AI-Powered Discovery",
-    description: "Intelligent prospect research and signal detection across web and CRM data",
+    title: "Signal Ontology",
+    description: "Signal ontology and intent mapping across structured and unstructured data",
     mediaType: "image",
-    mediaSrc: "/bdr-workflow-image.png",
+    mediaSrc: "/signal-ontology.png",
     href: "/features/ai-discovery",
   },
   {
-    title: "Multi-Channel Outreach",
-    description: "Personalized sequences across email, LinkedIn, SMS, and voice",
+    title: "Governed Multi-Channel",
+    description: "Governed multi-channel execution with approval gates and send compliance",
     mediaType: "video",
     mediaSrc: { mp4: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F672b97ee6fe4e015e89a719a_Book%20Meeting%20On%20Autopilot%281%29-transcode.mp4", webm: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F672b97ee6fe4e015e89a719a_Book%20Meeting%20On%20Autopilot%281%29-transcode.webm" },
     href: "/features/multi-channel",
   },
+
   {
-    title: "Automated Booking",
-    description: "Seamless meeting scheduling with automatic CRM synchronization",
-    mediaType: "image",
-    mediaSrc: "/automated-booking.png",
-    href: "/features/automated-booking",
-  },
-  {
-    title: "24/7 Prospecting",
-    description: "Run autonomous outbound campaigns around the clock. Handle follow-ups, objection handling, and nurturing to fill your pipeline while you sleep.",
+    title: "Continuous Execution",
+    description: "Continuous execution within defined compliance windows. Autonomous follow-up, governed objection handling, and auditable pipeline operations.",
     mediaType: "video",
-    mediaSrc: { mp4: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F67d392625c0e86d7a5f944ee_deeply-integrated-crop-transcode.mp4", webm: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F67d392625c0e86d7a5f944ee_deeply-integrated-crop-transcode.webm" },
+    mediaSrc: { mp4: "https://www.palantir.com/assets/xrfr7uokpv1b/6SnJjmQnRloLuqa1Wngeqm/c765141a58a6fa88e4e41a479a78ee2d/read-write.mp4", webm: "https://www.palantir.com/assets/xrfr7uokpv1b/6SnJjmQnRloLuqa1Wngeqm/c765141a58a6fa88e4e41a479a78ee2d/read-write.mp4" },
     href: "/features/24-7-prospecting",
   },
 ];
@@ -97,7 +91,7 @@ export default function WorkforceTransformation() {
             Built for Scale. Designed for Control.
           </h2>
           <p className="text-body-lg text-black/60 max-w-xl mx-auto leading-relaxed">
-            Every capability below runs with guardrails. Audit trails, approval gates, and compliance checks come standard.
+            Every capability operates within defined governance boundaries. Audit trails, approval gates, and compliance verification are not add-ons. They are the foundation.
           </p>
           <div className="mt-8">
             <Link

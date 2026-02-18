@@ -19,7 +19,7 @@ const capabilities = [
   {
     icon: Brain,
     title: "Intelligent Prospect Research",
-    description: "AI agents that deeply research every prospect—analyzing company news, funding rounds, job postings, tech stack, and organizational changes to craft perfectly timed, relevant outreach.",
+    description: "AI agents that deeply research every prospect. We analyze company news, funding rounds, job postings, tech stack, and organizational changes to craft perfectly timed, relevant outreach.",
     highlights: [
       "Real-time company intelligence gathering",
       "Buying signal detection and prioritization",
@@ -41,7 +41,7 @@ const capabilities = [
   {
     icon: Target,
     title: "Smart Lead Qualification",
-    description: "AI-powered qualification that goes beyond basic criteria—understanding budget authority, timeline, and genuine fit before passing to your sales team.",
+    description: "AI-powered qualification that goes beyond basic criteria: understanding budget authority, timeline, and genuine fit before passing to your sales team.",
     highlights: [
       "BANT and custom framework scoring",
       "Intent signal analysis",
@@ -74,7 +74,7 @@ const capabilities = [
   {
     icon: Sparkles,
     title: "Continuous Learning",
-    description: "AI agents that improve with every interaction—learning from successful conversions, refining targeting, and optimizing messaging based on real results.",
+    description: "AI agents that improve with every interaction. They learn from successful conversions, refine targeting, and optimize messaging based on real results.",
     highlights: [
       "Response pattern analysis",
       "Conversion optimization",
