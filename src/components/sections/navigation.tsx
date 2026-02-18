@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
@@ -46,6 +46,19 @@ export default function Navigation() {
   const [currentBanner, setCurrentBanner] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(112);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -82,12 +95,16 @@ export default function Navigation() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 font-sans" style={{ transform: 'translateZ(0)' }}>
+      <header
+        ref={headerRef}
+        className="fixed top-0 left-0 right-0 z-50 font-sans"
+        style={{ transform: 'translateZ(0)' }}
+      >
         {/* Mission Banner - Founder's Letter */}
         <div className="bg-orange-600 text-white border-b border-orange-700">
           <Link
             href="/blog/founder-enterprise-autonomous-governance"
-            className="flex items-center justify-center gap-3 h-10 px-4 hover:bg-orange-700 transition-colors"
+            className="flex items-center justify-center gap-3 min-h-[40px] py-2 px-4 hover:bg-orange-700 transition-colors"
           >
             <span className="text-[13px] font-bold tracking-wide flex items-center gap-2">
               <span className="relative flex h-2 w-2">
@@ -211,7 +228,7 @@ export default function Navigation() {
           />
           <div
             className={[
-              "lg:hidden fixed top-[112px] left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
+              "lg:hidden fixed left-0 right-0 bottom-0 z-[60] transition-all duration-300 ease-out",
               "bg-white/95 dark:bg-neutral-950/95",
               "backdrop-blur-xl",
               "backdrop-brightness-110 backdrop-saturate-110 backdrop-contrast-110",
@@ -220,6 +237,7 @@ export default function Navigation() {
               "border-b border-black/5 dark:border-white/10",
               "[isolation:isolate]",
             ].join(" ")}
+            style={{ top: `${headerHeight}px` }}
           >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-2 overflow-y-auto h-full">
               {navLinks.map((link) => (
