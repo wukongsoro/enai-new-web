@@ -388,7 +388,7 @@ const HeroSection = () => {
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight leading-[1.1]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white tracking-tight leading-[1.1]">
                 Foundational Revenue Infrastructure
               </h1>
             </div>
