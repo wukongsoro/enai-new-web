@@ -1,48 +1,32 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
-const CtaSection = async () => {
+const CtaSection = () => {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="bg-[#E8DDD4] rounded-xl overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-0 min-h-[500px] lg:min-h-[600px]">
-            <div className="flex flex-col justify-center p-10 md:p-14 lg:p-20 order-2 lg:order-1">
-              <h2 className="h2 text-black mb-6">
-                See Governed Execution
-              </h2>
-              <p className="text-body-lg text-black/60 leading-relaxed mb-10 max-w-lg">
-                Watch a governed revenue workflow execute. We provide a complete audit trail and human override capability at every decision point.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="https://calendly.com/enai-ai2024/30min?month=2025-09"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-black text-white text-sm font-medium py-4 px-8 rounded-lg hover:bg-black/90 transition-all duration-300"
-                >
-                  Book a Demo
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center border border-black text-black text-sm font-medium py-4 px-8 rounded-lg hover:bg-black hover:text-white transition-all duration-300"
-                >
-                  View Pricing
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative order-1 lg:order-2">
-              <div className="relative w-full h-[300px] md:h-[400px] lg:h-full min-h-[400px]">
-                <Image
-                  src="/ai-bdr-screenshot.png"
-                  alt="Sales team collaborating on BDR dashboard"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+    <section className="bg-white py-12 md:py-16 mb-20 md:mb-24">
+      <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+        <div className="bg-[#E8DDD4] rounded-[2rem] p-12 md:p-20 shadow-sm border border-black/5">
+          <h2 className="text-[36px] md:text-[48px] heading-strong text-[#1E3A3A] leading-[1.1] mb-6">
+            Ready to see ENAI running your revenue motion?
+          </h2>
+          <p className="text-lg text-[#1E3A3A]/70 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
+            The next generation of Revenue OS isn't a better dashboard. It's a system that understands your entire go-to-market motion, reads every signal in real time, and takes action.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1E3A3A] text-white text-[15px] font-semibold py-4 px-10 rounded-lg hover:bg-[#1E3A3A]/90 transition-all duration-300 shadow-md"
+            >
+              Book a Demo
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center bg-transparent text-[#1E3A3A] border border-[#1E3A3A]/20 text-[15px] font-semibold py-4 px-10 rounded-lg hover:bg-white/50 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
           </div>
         </div>
       </div>

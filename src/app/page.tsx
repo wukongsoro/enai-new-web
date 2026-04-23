@@ -2,11 +2,13 @@ import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero-section";
 import EnterpriseAutonomy from "@/components/sections/enterprise-autonomy";
 import TractionSignal from "@/components/sections/traction-signal";
+import FounderVideoSection from "@/components/sections/founder-video-section";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
 import WorkforceTransformation from "@/components/sections/workforce-transformation";
 import AmplifyIntelligence from "@/components/sections/amplify-intelligence";
 import PlatformShowcase from "@/components/sections/platform-showcase";
 import WorkflowsSection from "@/components/sections/workflows-section";
+import GlobeSection from "@/components/sections/globe-section";
 import CtaSection from "@/components/sections/cta-section";
 import Footer from "@/components/sections/footer";
 
@@ -120,11 +122,13 @@ export default function Home() {
         <HeroSection />
         <EnterpriseAutonomy />
         <TractionSignal />
+        <FounderVideoSection />
         <DigitalWorkersIntro />
         <WorkforceTransformation />
         <AmplifyIntelligence />
         <PlatformShowcase />
         <WorkflowsSection />
+        <GlobeSection />
         <CtaSection />
       </main>
       <Footer />

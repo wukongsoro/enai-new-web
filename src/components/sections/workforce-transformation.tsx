@@ -1,133 +1,160 @@
 "use client";
 
-import * as React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
+import React, { useState, useEffect, useRef } from "react";
 
-interface FeatureCardProps {
-  title: string;
-  description: string;
-  mediaType: "image" | "video";
-  mediaSrc: string | { mp4: string; webm: string };
-  href: string;
-}
-
-const features: FeatureCardProps[] = [
-  {
-    title: "Signal Ontology",
-    description: "Signal ontology and intent mapping across structured and unstructured data",
-    mediaType: "image",
-    mediaSrc: "/signal-ontology.png",
-    href: "/features/ai-discovery",
-  },
-  {
-    title: "Governed Multi-Channel",
-    description: "Governed multi-channel execution with approval gates and send compliance",
-    mediaType: "video",
-    mediaSrc: { mp4: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F672b97ee6fe4e015e89a719a_Book%20Meeting%20On%20Autopilot%281%29-transcode.mp4", webm: "https://cdn.prod.website-files.com/66fe5a1a88c73ef8f270d312%2F672b97ee6fe4e015e89a719a_Book%20Meeting%20On%20Autopilot%281%29-transcode.webm" },
-    href: "/features/multi-channel",
-  },
-
-  {
-    title: "Continuous Execution",
-    description: "Continuous execution within defined compliance windows. Autonomous follow-up, governed objection handling, and auditable pipeline operations.",
-    mediaType: "video",
-    mediaSrc: { mp4: "https://www.palantir.com/assets/xrfr7uokpv1b/6SnJjmQnRloLuqa1Wngeqm/c765141a58a6fa88e4e41a479a78ee2d/read-write.mp4", webm: "https://www.palantir.com/assets/xrfr7uokpv1b/6SnJjmQnRloLuqa1Wngeqm/c765141a58a6fa88e4e41a479a78ee2d/read-write.mp4" },
-    href: "/features/24-7-prospecting",
-  },
+const features = [
+    {
+        id: "tam",
+        title: "Your TAM builds itself",
+        description: "ENAI agents continuously discover, enrich, and score accounts so your TAM stays fresh.",
+    },
+    {
+        id: "runs",
+        title: "Your system runs itself",
+        description: "Outreach, data capture, enrichment, and pipeline updates happen automatically.",
+    },
+    {
+        id: "copilot",
+        title: "Revenue Copilot",
+        description: "ENAI proactively coaches you on what you should be doing to close more revenue.",
+    },
 ];
 
-const FeatureCard = ({ title, description, mediaType, mediaSrc, href }: FeatureCardProps) => (
-  <Link href={href} className="block group bg-[#F5F1ED] p-5 md:p-6 rounded-xl h-full flex flex-col transition-all duration-300 hover:shadow-md">
-    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg mb-5">
-      {mediaType === 'video' && typeof mediaSrc === 'object' ? (
-        <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
-          <source src={mediaSrc.mp4} type="video/mp4" />
-          <source src={mediaSrc.webm} type="video/webm" />
-        </video>
-      ) : (
-        <Image
-          src={mediaSrc as string}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-      )}
-    </div>
-    <h3 className="text-lg md:text-xl mb-2 text-black">{title}</h3>
-    <p className="text-body-sm text-black/60 flex-1">{description}</p>
-  </Link>
-);
+const AUTOPLAY_DURATION = 10000; // 10 seconds
 
 export default function WorkforceTransformation() {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const progressRef = useRef<HTMLDivElement>(null);
+    const [progress, setProgress] = useState(0);
+    const animationRef = useRef<number | null>(null);
+    const startTimeRef = useRef<number | null>(null);
 
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
+    // Autoplay logic
+    useEffect(() => {
+        startTimeRef.current = performance.now();
+        setProgress(0);
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
+        const animate = (time: number) => {
+            if (!startTimeRef.current) startTimeRef.current = time;
+            const elapsed = time - startTimeRef.current;
+            const percentage = Math.min((elapsed / AUTOPLAY_DURATION) * 100, 100);
+            
+            setProgress(percentage);
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+            if (elapsed < AUTOPLAY_DURATION) {
+                animationRef.current = requestAnimationFrame(animate);
+            } else {
+                // Next slide
+                setActiveIndex((prev) => (prev + 1) % features.length);
+            }
+        };
 
-  return (
-    <section className="bg-[#E8DDD4] py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <h2 className="h2 text-black mb-6">
-            Built for Scale. Designed for Control.
-          </h2>
-          <p className="text-body-lg text-black/60 max-w-xl mx-auto leading-relaxed">
-            Every capability operates within defined governance boundaries. Audit trails, approval gates, and compliance verification are not add-ons. They are the foundation.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="https://calendly.com/enai-ai2024/30min"
-              className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-black/90"
-            >
-              Explore Capabilities
-            </Link>
-          </div>
-        </div>
+        animationRef.current = requestAnimationFrame(animate);
 
-        <div className="overflow-hidden">
-          <Carousel setApi={setApi} opts={{ align: "start", loop: true }} className="w-full max-w-7xl mx-auto">
-            <CarouselContent className="-ml-4 sm:-ml-6">
-              {features.map((feature, index) => (
-                <CarouselItem key={index} className="pl-4 sm:pl-6 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <FeatureCard {...feature} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-          {count > 0 && (
-            <div className="flex justify-center gap-2 mt-10">
-              {Array.from({ length: count }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => api?.scrollTo(index)}
-                  className={`h-2 w-2 rounded-full transition-all duration-300 ${current === index ? "bg-black w-6" : "bg-black/30 hover:bg-black/50"
-                    }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+        return () => {
+            if (animationRef.current) cancelAnimationFrame(animationRef.current);
+        };
+    }, [activeIndex]);
+
+    const handleManualClick = (index: number) => {
+        setActiveIndex(index);
+    };
+
+    return (
+        <section className="bg-[#E8DDD4] py-24 md:py-32 overflow-hidden border-t border-black/5">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                
+                <div className="w-full flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20">
+                    
+                    {/* Left: Video */}
+                    <div className="w-full lg:w-[45%] lg:shrink-0">
+                        <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#F5F1ED] border border-black/10 shadow-2xl">
+                            <video 
+                                loop 
+                                muted 
+                                playsInline 
+                                autoPlay 
+                                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500" 
+                                poster="https://cdn.monaco.com/landing/public/pages/home/features/3-1-poster.jpg"
+                            >
+                                <source src="https://cdn.monaco.com/landing/public/pages/home/features/3-1.webm" type="video/webm" />
+                                <source src="https://cdn.monaco.com/landing/public/pages/home/features/3-1.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+
+                    {/* Right: Accordion Content */}
+                    <div className="flex flex-col justify-center mt-8 md:mt-4 lg:mt-0 w-full lg:flex-1">
+                        <div className="flex flex-col gap-10 md:gap-10 lg:gap-16 items-start w-full">
+                            
+                            {/* Header */}
+                            <div className="flex flex-col gap-6 md:gap-4 lg:gap-6 items-start w-full">
+                                <div className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 border border-black/10 rounded-full bg-white/40">
+                                    Autonomous Execution
+                                </div>
+                                <h2 className="text-[36px] md:text-[48px] heading-strong text-black leading-tight text-balance">
+                                    Agents working for you
+                                </h2>
+                                <p className="text-lg md:text-xl text-black/60 max-w-lg leading-relaxed">
+                                    ENAI agents automate demand gen, pipeline management, and follow-ups so you can spend your time with customers.
+                                </p>
+                            </div>
+
+                            {/* Accordion Items */}
+                            <div className="flex flex-col gap-4 md:gap-6 items-start w-full max-w-lg">
+                                {features.map((feature, index) => {
+                                    const isActive = index === activeIndex;
+                                    
+                                    return (
+                                        <button 
+                                            key={feature.id}
+                                            type="button" 
+                                            onClick={() => handleManualClick(index)}
+                                            className="flex relative w-full text-left cursor-pointer group focus:outline-none"
+                                        >
+                                            {/* Progress Bar Container */}
+                                            <div className="relative w-1.5 md:w-2 mr-6 shrink-0 self-stretch py-1">
+                                                <div className="relative w-full h-full bg-black/10 rounded-full overflow-hidden">
+                                                    {isActive && (
+                                                        <div 
+                                                            className="absolute top-0 left-0 w-full bg-[#1E3A3A] rounded-full"
+                                                            style={{ 
+                                                                height: `${progress}%`,
+                                                                transition: 'height 0.1s linear'
+                                                            }}
+                                                        />
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            {/* Text Content */}
+                                            <div className="flex flex-col items-start flex-1 pb-4">
+                                                <p className={`text-xl md:text-2xl font-semibold transition-all duration-300 ${
+                                                    isActive ? "text-black" : "text-black/40 group-hover:text-black/60"
+                                                }`}>
+                                                    {feature.title}
+                                                </p>
+                                                
+                                                <div 
+                                                    className={`overflow-hidden transition-all duration-500 ease-out ${
+                                                        isActive ? "max-h-[200px] opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+                                                    }`}
+                                                >
+                                                    <p className="text-base text-black/60 leading-relaxed text-balance pr-4">
+                                                        {feature.description}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          )}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 }

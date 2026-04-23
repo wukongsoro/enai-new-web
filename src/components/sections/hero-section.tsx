@@ -383,13 +383,13 @@ const HeroSection = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 md:mb-8">
               <div className="inline-flex items-center text-xs tracking-[0.08em] uppercase text-white/80 font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                Sovereign Execution Platform
+                Sovereign Revenue OS
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 ml-2" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white tracking-tight leading-[1.1]">
-                Foundational Revenue Infrastructure
+                The Revenue Operating System.
               </h1>
             </div>
             <div className="mb-6 md:mb-10">
@@ -399,7 +399,7 @@ const HeroSection = () => {
             </div>
             <div className="max-w-2xl mx-auto mb-8 md:mb-10">
               <p className="text-base md:text-body-lg text-white/80 leading-relaxed">
-                Autonomous execution will fundamentally transform the enterprise landscape. Enai is a foundational infrastructure organization dedicated to governing these systems and ensuring sovereign revenue certainty.
+                AI that runs revenue, with you in control. One system that reads every signal across your GTM stack and acts automatically, delivering enterprise grade revenue certainty without the RevOps overhead.
               </p>
             </div>
             <div className="flex justify-center">

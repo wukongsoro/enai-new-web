@@ -76,10 +76,10 @@ const DigitalWorkersIntro = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="h2 text-black mb-6">
-            Three Execution Engines. One Governed Platform.
+            The OS layer across your entire GTM stack
           </h2>
           <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
-            Each engine operates within defined compliance boundaries. Approval gates, audit trails, and human override authority come standard. Full visibility from signal to execution.
+            SMBs have every tool. No system that runs them. ENAI doesn't replace your tools. It makes every tool investment finally pay off by being the intelligence layer that connects, reads, and acts across all of them.
           </p>
           <div className="mt-8">
             <Link href="https://calendly.com/enai-ai2024/30min" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">

@@ -7,25 +7,30 @@ const tagsRow1: string[] = [
   'Audit Lineage',
   'Signal Ontology',
   'Sovereign Control',
+  'Revenue OS',
   'Deterministic Logic',
   'Compliance Gates',
   'Closed-Loop Ops',
   'Revenue Certainty',
   'Human Authority',
   'Zero-Trust Pipeline',
+  'GTM Orchestration',
 ];
 
 const tagsRow2: string[] = [
   'Zero-Trust Pipeline',
+  'GTM Orchestration',
   'Human Authority',
   'Revenue Certainty',
   'Closed-Loop Ops',
   'Compliance Gates',
   'Deterministic Logic',
+  'Revenue OS',
   'Sovereign Control',
   'Signal Ontology',
   'Audit Lineage',
   'Governed Execution',
+  'Prompt-driven Engine',
 ];
 
 const MarqueeTag: FC<{ text: string }> = ({ text }) => (
@@ -62,7 +67,7 @@ const AmplifyIntelligence = () => {
             Revenue Certainty At Scale
           </h2>
           <p className="mt-6 max-w-lg text-body-lg text-white/70">
-            50% faster velocity. 70% lower cost-per-opportunity. Full audit lineage on every action. Trusted by revenue teams who demand both execution speed and sovereign control.
+            From pipeline to closed revenue in production. Revenue operations as simple as asking in plain language. Trusted by teams who demand both execution speed and sovereign control.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"

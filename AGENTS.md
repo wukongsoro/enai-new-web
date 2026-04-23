@@ -40,5 +40,5 @@ Page components remain Server Components by default for optimal performance.
 ## 5. Audit Status
 
 - **Vulnerabilities**: 0 (all fixed via package updates and overrides)
-- **Next.js Version**: 16.1.2 (latest stable)
-- **React Version**: 19.2.3 (latest stable)
+- **Next.js Version**: 16.2.1 (latest stable)
+- **React Version**: 19.2.4 (latest stable)

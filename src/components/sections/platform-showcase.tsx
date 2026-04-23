@@ -31,13 +31,13 @@ export default function PlatformShowcase() {
             The Revenue Operating System
           </div>
           <h2 className="text-[40px] md:text-[48px] heading-strong leading-tight mb-4">
-            Closed-Loop Revenue Execution
+            Revenue operations, as simple as asking
           </h2>
           <p className="text-[22px] md:text-[26px] font-medium text-black/80 mb-6 leading-snug">
-            Millions of decisions. Thousands of humans and agents. One Ontology.
+            You ask it anything in plain language, and it acts across your entire stack instantly.
           </p>
           <p className="text-[#666666] text-lg mb-8 max-w-2xl mx-auto">
-            From signal ontology to governed execution. Every decision captured, every action reversible, every outcome auditable. Compliance is not a feature. It is the architecture.
+            ENAI doesn't give you another dashboard to check. No training. No workflows to configure. No RevOps team required. It makes every tool investment finally pay off by being the intelligence layer that connects, reads, and acts.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"
