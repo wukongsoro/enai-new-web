@@ -5,6 +5,7 @@ import TractionSignal from "@/components/sections/traction-signal";
 import FounderVideoSection from "@/components/sections/founder-video-section";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
 import WorkforceTransformation from "@/components/sections/workforce-transformation";
+import MartechArchitectureFit from "@/components/sections/martech-architecture-fit";
 import AmplifyIntelligence from "@/components/sections/amplify-intelligence";
 import PlatformShowcase from "@/components/sections/platform-showcase";
 import WorkflowsSection from "@/components/sections/workflows-section";
@@ -125,6 +126,7 @@ export default function Home() {
         <FounderVideoSection />
         <DigitalWorkersIntro />
         <WorkforceTransformation />
+        <MartechArchitectureFit />
         <AmplifyIntelligence />
         <PlatformShowcase />
         <WorkflowsSection />
