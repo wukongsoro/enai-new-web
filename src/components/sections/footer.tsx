@@ -89,10 +89,11 @@ const Footer = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-              <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Web Summit Qatar</h3>
+              <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Events</h3>
               <ul className="space-y-3">
                 <li><Link href="/events/qatar-summit-2026" className="text-white hover:text-white/70 transition-colors text-body-sm">Investor Brief</Link></li>
                 <li><Link href="/events/qatar-summit-2026/customers" className="text-white hover:text-white/70 transition-colors text-body-sm">Enterprise Demo</Link></li>
+                <li><Link href="/webinar/revenue-execution-gap" className="text-white hover:text-white/70 transition-colors text-body-sm">Webinar</Link></li>
               </ul>
             </div>
           </div>

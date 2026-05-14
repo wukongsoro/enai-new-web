@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "20.18.0"
 
+# Netlify Forms configuration for webinar registration
+[[forms]]
+  name = "webinar-registration"
+  [[forms.notifications]]
+    to = ["fatima.amir@industrygeniuses.com", "nikhil@enai.ai", "zidrees@industrygeniuses.com"]
+    subject = "New Webinar Registration: The Revenue Execution Gap"
+
 # Security headers for all pages
 [[headers]]
   for = "/*"
