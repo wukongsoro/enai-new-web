@@ -1,6 +1,6 @@
 "use client";
 
-import { Share2, Twitter, Linkedin, Facebook, Link2 } from "lucide-react";
+import { Share2, X, Link2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ShareButtonsProps {
@@ -45,26 +45,9 @@ export default function ShareButtons({ title, slug, description }: ShareButtonsP
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center w-8 h-8 rounded border border-gray-300 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-colors"
       >
-        <Twitter className="w-4 h-4" />
+        <X className="w-4 h-4" />
       </a>
 
-      <a
-        href={shareUrls.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center w-8 h-8 rounded border border-gray-300 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-colors"
-      >
-        <Linkedin className="w-4 h-4" />
-      </a>
-
-      <a
-        href={shareUrls.facebook}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center w-8 h-8 rounded border border-gray-300 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-colors"
-      >
-        <Facebook className="w-4 h-4" />
-      </a>
     </div>
   );
 }
