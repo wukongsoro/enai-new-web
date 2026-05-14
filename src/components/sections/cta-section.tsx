@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const CtaSection = () => {
   return (
@@ -13,20 +14,16 @@ const CtaSection = () => {
             The next generation of Revenue OS isn't a better dashboard. It's a system that understands your entire go-to-market motion, reads every signal in real time, and takes action.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="https://calendly.com/enai-ai2024/30min?month=2025-09"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1E3A3A] text-white text-[15px] font-semibold py-4 px-10 rounded-lg hover:bg-[#1E3A3A]/90 transition-all duration-300 shadow-md"
-            >
-              Book a Demo
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center bg-transparent text-[#1E3A3A] border border-[#1E3A3A]/20 text-[15px] font-semibold py-4 px-10 rounded-lg hover:bg-white/50 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
+            <Button asChild size="lg" className="bg-[#1E3A3A] text-white text-[15px] font-semibold px-10 hover:bg-[#1E3A3A]/90 shadow-md">
+              <Link href="https://calendly.com/enai-ai2024/30min?month=2025-09" target="_blank" rel="noopener noreferrer">
+                Book a Demo
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-[#1E3A3A] border-[#1E3A3A]/20 text-[15px] font-semibold px-10 hover:bg-white/50">
+              <Link href="/pricing">
+                View Pricing
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

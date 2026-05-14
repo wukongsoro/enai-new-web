@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Button } from "@/components/ui/button";
 
 const features = [
     {
@@ -106,11 +107,11 @@ export default function WorkforceTransformation() {
                                     const isActive = index === activeIndex;
                                     
                                     return (
-                                        <button 
+                                        <Button 
                                             key={feature.id}
-                                            type="button" 
+                                            variant="ghost"
                                             onClick={() => handleManualClick(index)}
-                                            className="flex relative w-full text-left cursor-pointer group focus:outline-none"
+                                            className="flex relative w-full h-auto text-left cursor-pointer group p-0 justify-start hover:bg-transparent focus:outline-none"
                                         >
                                             {/* Progress Bar Container */}
                                             <div className="relative w-1.5 md:w-2 mr-6 shrink-0 self-stretch py-1">
@@ -145,7 +146,7 @@ export default function WorkforceTransformation() {
                                                     </p>
                                                 </div>
                                             </div>
-                                        </button>
+                                        </Button>
                                     );
                                 })}
                             </div>

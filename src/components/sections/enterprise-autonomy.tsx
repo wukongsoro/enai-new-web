@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Search, Mail, CalendarCheck, Zap, CheckCircle2, Clock, Users, BarChart3 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const workflowTabs = [
     { id: "prospect", label: "Prospect" },
@@ -124,17 +125,18 @@ const EnterpriseAutonomy = () => {
                             {/* Workflow Tab Bar */}
                             <div className="flex border-b border-black/5 bg-white/60">
                                 {workflowTabs.map((tab) => (
-                                    <button
+                                    <Button
                                         key={tab.id}
+                                        variant="ghost"
                                         onClick={() => setActiveTab(tab.id)}
-                                        className={`flex-1 py-4 text-xs font-bold uppercase tracking-[0.15em] transition-all duration-200 ${
+                                        className={`flex-1 py-4 h-auto rounded-none text-xs font-bold uppercase tracking-[0.15em] transition-all duration-200 ${
                                             activeTab === tab.id
-                                                ? "text-[#1E3A3A] border-b-2 border-[#1E3A3A] bg-white"
-                                                : "text-black/30 hover:text-black/60"
+                                                ? "text-[#1E3A3A] border-b-2 border-[#1E3A3A] bg-white hover:bg-white"
+                                                : "text-black/30 hover:text-black/60 hover:bg-transparent"
                                         }`}
                                     >
                                         {tab.label}
-                                    </button>
+                                    </Button>
                                 ))}
                             </div>
 

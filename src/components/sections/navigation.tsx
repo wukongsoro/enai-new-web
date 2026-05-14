@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const banners = [
   {
@@ -174,12 +175,14 @@ export default function Navigation() {
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
-                <button
-                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 relative group flex items-center gap-1.5 ${linkColorClass}`}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 hover:bg-transparent flex items-center gap-1.5 px-0 ${linkColorClass}`}
                 >
                   Resources
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`} />
-                </button>
+                </Button>
                 {isResourcesOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                     <div className="bg-white rounded-xl shadow-xl border border-black/5 py-2 min-w-[180px]">
@@ -199,21 +202,24 @@ export default function Navigation() {
             </div>
 
             <div className="flex-1 flex justify-end items-center">
-              <Link
-                href="https://calendly.com/enai-ai2024/30min?month=2025-09"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`hidden lg:block text-[13px] font-semibold tracking-wide rounded-full px-7 py-2.5 transition-all duration-300 hover:scale-105 transform ${buttonClass}`}
-              >
-                Get Demo
-              </Link>
-              <button
+              <Button asChild size="sm" className={`hidden lg:flex text-[13px] font-semibold tracking-wide rounded-full px-7 transition-all duration-300 hover:scale-105 ${buttonClass}`}>
+                <Link
+                  href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Demo
+                </Link>
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center mobile-menu-transition ${linkColorClass}`}
+                className={`lg:hidden transition-colors duration-300 min-w-[44px] min-h-[44px] ${linkColorClass}`}
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-              </button>
+              </Button>
             </div>
           </nav>
         </div>
@@ -264,15 +270,16 @@ export default function Navigation() {
                 ))}
               </div>
               <div className="pt-6 border-t border-gray-100 mt-4">
-                <Link
-                  href="https://calendly.com/enai-ai2024/30min?month=2025-09"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block text-center w-full text-[14px] font-semibold rounded-xl py-3 px-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-200"
-                >
-                  Book a Demo
-                </Link>
+                <Button asChild size="lg" className="w-full text-[14px] font-semibold rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+                  <Link
+                    href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Book a Demo
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
