@@ -29,9 +29,34 @@ export default function WorkforceTransformation() {
     const [progress, setProgress] = useState(0);
     const animationRef = useRef<number | null>(null);
     const startTimeRef = useRef<number | null>(null);
+    const sectionRef = useRef<HTMLElement>(null);
+    const [active, setActive] = useState(false);
+
+    // Only autoplay while the section is on-screen and the tab is foregrounded.
+    useEffect(() => {
+        const el = sectionRef.current;
+        if (!el) return;
+        let inView = false;
+        const update = () => setActive(inView && !document.hidden);
+        const io = new IntersectionObserver(
+            (entries) => {
+                inView = entries.some((e) => e.isIntersecting);
+                update();
+            },
+            { threshold: 0.15 }
+        );
+        io.observe(el);
+        const onVisibility = () => update();
+        document.addEventListener("visibilitychange", onVisibility);
+        return () => {
+            io.disconnect();
+            document.removeEventListener("visibilitychange", onVisibility);
+        };
+    }, []);
 
     // Autoplay logic
     useEffect(() => {
+        if (!active) return;
         startTimeRef.current = performance.now();
         setProgress(0);
 
@@ -55,14 +80,14 @@ export default function WorkforceTransformation() {
         return () => {
             if (animationRef.current) cancelAnimationFrame(animationRef.current);
         };
-    }, [activeIndex]);
+    }, [activeIndex, active]);
 
     const handleManualClick = (index: number) => {
         setActiveIndex(index);
     };
 
     return (
-        <section className="bg-[#E8DDD4] py-24 md:py-32 overflow-hidden border-t border-black/5">
+        <section ref={sectionRef} className="bg-[#E8DDD4] py-24 md:py-32 overflow-hidden border-t border-black/5">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 
                 <div className="w-full flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20">

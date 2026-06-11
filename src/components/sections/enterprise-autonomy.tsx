@@ -1,226 +1,305 @@
 "use client";
 
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Search, Mail, CalendarCheck, Zap, CheckCircle2, Clock, Users, BarChart3 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Phosphor30 from "@/components/ui/phosphor-30";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Loader2,
+  Mail,
+  MessageSquareText,
+  Plus,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
-const workflowTabs = [
-    { id: "research", label: "Research" },
-    { id: "committee", label: "Committee" },
-    { id: "execute", label: "Execute" },
-    { id: "govern", label: "Govern" },
+const workflowSteps = [
+  "Read market signals",
+  "Build the account brief",
+  "Map the buying committee",
+  "Prepare governed outreach",
+];
+const TOTAL = workflowSteps.length;
+
+const accountNodes = [
+  { name: "Operations", role: "Route owner", x: "50%", y: "20%", tone: "neutral" },
+  { name: "Finance", role: "Economic buyer", x: "25%", y: "48%", tone: "supporter" },
+  { name: "Commercial", role: "Revenue owner", x: "67%", y: "47%", tone: "supporter" },
+  { name: "Procurement", role: "Approval path", x: "43%", y: "72%", tone: "detractor" },
 ];
 
-interface WorkflowStep {
-    icon: React.ElementType;
-    label: string;
-    detail: string;
-    status: "complete" | "active" | "pending";
-}
+// Light, on-brand surfaces (cream + deep green accents).
+const cardClass =
+  "overflow-hidden rounded-2xl border border-black/[0.07] bg-white text-[#1E3A3A] shadow-[0_24px_70px_-60px_rgba(30,58,58,0.45)]";
 
-const workflowData: Record<string, { title: string; stats: { value: string; label: string }[]; steps: WorkflowStep[] }> = {
-    research: {
-        title: "Research account reality",
-        stats: [
-            { value: "40-60%", label: "Research time saved" },
-            { value: "12", label: "Signal sources" },
-            { value: "412", label: "Accounts scored" },
-        ],
-        steps: [
-            { icon: Search, label: "Read market signals", detail: "Hiring, funding, RFPs, events, and intent", status: "complete" },
-            { icon: BarChart3, label: "Score against your ICP", detail: "Fit, timing, territory, and use case", status: "complete" },
-            { icon: Users, label: "Build the account brief", detail: "Why this account, why now, what to say", status: "active" },
-            { icon: CheckCircle2, label: "Route to the right playbook", detail: "Industry workflow selected automatically", status: "pending" },
-        ],
-    },
-    committee: {
-        title: "Map the buying committee",
-        stats: [
-            { value: "3.2x", label: "More qualified meetings" },
-            { value: "6-18m", label: "Cycle coverage" },
-            { value: "5+", label: "Stakeholder types" },
-        ],
-        steps: [
-            { icon: Users, label: "Find economic and technical buyers", detail: "Role relevance by industry and deal type", status: "complete" },
-            { icon: Search, label: "Identify procurement paths", detail: "RFP, security, partner, or executive route", status: "complete" },
-            { icon: Mail, label: "Personalize by stakeholder", detail: "Different message for CFO, operator, engineer", status: "active" },
-            { icon: CheckCircle2, label: "Multi-thread the account", detail: "No single-threaded pipeline risk", status: "pending" },
-        ],
-    },
-    execute: {
-        title: "Execute the revenue motion",
-        stats: [
-            { value: "20-35%", label: "Conversion lift" },
-            { value: "3", label: "Channels" },
-            { value: "24/7", label: "Follow-up coverage" },
-        ],
-        steps: [
-            { icon: Mail, label: "Run email, social, and voice", detail: "One playbook across the buyer journey", status: "complete" },
-            { icon: Clock, label: "Follow up until signal changes", detail: "Event, reply, meeting, no-show, or reactivation", status: "complete" },
-            { icon: CalendarCheck, label: "Qualify and book", detail: "Meetings handed over with account context", status: "active" },
-            { icon: Zap, label: "Trigger next action", detail: "Sales, partner, compliance, or founder handoff", status: "pending" },
-        ],
-    },
-    govern: {
-        title: "Govern every action",
-        stats: [
-            { value: "100%", label: "Auditable actions" },
-            { value: "$300K+", label: "Annual savings" },
-            { value: "0", label: "Black-box decisions" },
-        ],
-        steps: [
-            { icon: CheckCircle2, label: "Apply approval rules", detail: "Industry, brand, and compliance controls", status: "complete" },
-            { icon: BarChart3, label: "Explain why it acted", detail: "Source, score, message, and result logged", status: "complete" },
-            { icon: Users, label: "Keep humans in control", detail: "Escalation for sensitive accounts and decisions", status: "active" },
-            { icon: Zap, label: "Earn more autonomy", detail: "Shadow mode to approved execution", status: "pending" },
-        ],
-    },
-};
+export default function EnterpriseAutonomy() {
+  // Fluid execution: the plan builds one step at a time, then loops.
+  const [step, setStep] = useState(1); // 1..TOTAL+1 (TOTAL+1 = all complete)
 
-const EnterpriseAutonomy = () => {
-    const [activeTab, setActiveTab] = useState("research");
-    const current = workflowData[activeTab];
+  useEffect(() => {
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      setStep(TOTAL + 1);
+      return;
+    }
+    const id = setInterval(() => {
+      setStep((s) => (s >= TOTAL + 1 ? 1 : s + 1));
+    }, 1100);
+    return () => clearInterval(id);
+  }, []);
 
-    return (
-        <section id="platform" className="bg-white py-24 md:py-32 border-b border-black/5">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-                    {/* Left: Text Content */}
-                    <div>
-                        <div className="flex flex-col gap-8">
-                            <div className="space-y-2">
-                                <span className="font-mono text-[11px] font-medium tracking-[0.2em] uppercase text-black/40 block">
-                                    What ENAI does
-                                </span>
-                                <h2 className="text-h2 text-black max-w-xl">
-                                    Revenue work, executed end-to-end
-                                </h2>
-                            </div>
+  const allDone = step > TOTAL;
+  const revealed = Math.min(step, TOTAL);
+  const doneCount = allDone ? TOTAL : Math.max(0, revealed - 1);
 
-                            <div className="space-y-6">
-                                <p className="text-xl md:text-2xl font-medium text-black/80 leading-snug">
-                                    ENAI coordinates prospecting, qualification, outreach, and handoff in one governed workflow.
-                                </p>
-                                <p className="text-body-lg text-black/60 max-w-lg leading-relaxed">
-                                    Give ENAI your market, offer, and rules. It reads the signal, prepares the account, executes the next step, and leaves an audit trail.
-                                </p>
-                            </div>
+  return (
+    <section
+      id="platform"
+      className="relative overflow-hidden bg-[#E8DDD4] py-20 md:py-28"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
+          <h2 className="max-w-4xl text-[42px] leading-[1.02] text-[#1E3A3A] md:text-[64px] lg:text-[82px]">
+            Run the revenue motion
+            <span className="block text-[#1E3A3A]/35">from signal to meeting</span>
+          </h2>
+          <p className="max-w-sm text-base leading-relaxed text-black/55 md:text-lg">
+            ENAI turns account signals, buyer context, outreach, qualification,
+            and handoff into one governed operating layer.
+          </p>
+        </div>
 
-                            <div className="pt-4">
-                                <Link
-                                    href="https://calendly.com/enai-ai2024/30min"
-                                    className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold rounded-lg hover:bg-black/90 transition-all duration-300 group"
-                                >
-                                    See the workflow
-                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right: Interactive Workflow Visualization */}
-                    <div className="relative mt-4 lg:mt-0">
-                        <div className="bg-[#F5F1ED] rounded-3xl overflow-hidden border border-black/5 shadow-lg">
-                            {/* Workflow Tab Bar */}
-                            <div className="flex border-b border-black/5 bg-white/60">
-                                {workflowTabs.map((tab) => (
-                                    <Button
-                                        key={tab.id}
-                                        variant="ghost"
-                                        onClick={() => setActiveTab(tab.id)}
-                                        className={`flex-1 min-w-0 px-1 md:px-4 py-4 h-auto rounded-none text-[10px] md:text-xs font-bold uppercase tracking-[0.08em] md:tracking-[0.15em] transition-all duration-200 ${
-                                            activeTab === tab.id
-                                                ? "text-[#1E3A3A] border-b-2 border-[#1E3A3A] bg-white hover:bg-white"
-                                                : "text-black/30 hover:text-black/60 hover:bg-transparent"
-                                        }`}
-                                    >
-                                        {tab.label}
-                                    </Button>
-                                ))}
-                            </div>
-
-                            {/* Workflow Content */}
-                            <div className="p-6 md:p-8">
-                                {/* Header */}
-                                <div className="flex items-center justify-between mb-6">
-                                    <div>
-                                        <p className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[#1E3A3A]/60 mb-1">
-                                            Active Workflow
-                                        </p>
-                                        <h3 className="text-lg font-semibold text-black">
-                                            {current.title}
-                                        </h3>
-                                    </div>
-                                    <div className="w-8 h-8 rounded-full bg-[#1E3A3A]/10 flex items-center justify-center">
-                                        <div className="w-2 h-2 rounded-full bg-[#1E3A3A] animate-pulse" />
-                                    </div>
-                                </div>
-
-                                {/* Stats Row */}
-                                <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
-                                    {current.stats.map((stat, i) => (
-                                        <div key={i} className="bg-white rounded-xl p-3 md:p-4 border border-black/5 min-w-0">
-                                            <p className="text-lg md:text-2xl font-semibold text-black">{stat.value}</p>
-                                            <p className="text-[10px] md:font-mono text-[11px] font-medium uppercase tracking-wider md:tracking-widest text-black/40 mt-1">{stat.label}</p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Steps */}
-                                <div className="space-y-3">
-                                    {current.steps.map((step, i) => {
-                                        const StepIcon = step.icon;
-                                        return (
-                                            <div
-                                                key={i}
-                                                className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 ${
-                                                    step.status === "active"
-                                                        ? "bg-white border-[#1E3A3A]/20 shadow-sm"
-                                                        : step.status === "complete"
-                                                        ? "bg-white/60 border-black/5"
-                                                        : "bg-transparent border-dashed border-black/10"
-                                                }`}
-                                            >
-                                                <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${
-                                                    step.status === "active"
-                                                        ? "bg-[#1E3A3A] text-white"
-                                                        : step.status === "complete"
-                                                        ? "bg-[#1E3A3A]/10 text-[#1E3A3A]"
-                                                        : "bg-black/5 text-black/30"
-                                                }`}>
-                                                    <StepIcon className="w-4 h-4" />
-                                                </div>
-                                                <div className="flex-1 min-w-0">
-                                                    <p className={`text-sm font-semibold ${
-                                                        step.status === "pending" ? "text-black/30" : "text-black"
-                                                    }`}>
-                                                        {step.label}
-                                                    </p>
-                                                    <p className="text-xs text-black/40 mt-0.5">{step.detail}</p>
-                                                </div>
-                                                <div className="shrink-0">
-                                                    {step.status === "complete" && (
-                                                        <CheckCircle2 className="w-4 h-4 text-[#1E3A3A]" />
-                                                    )}
-                                                    {step.status === "active" && (
-                                                        <div className="w-4 h-4 rounded-full border-2 border-[#1E3A3A] border-t-transparent animate-spin" />
-                                                    )}
-                                                    {step.status === "pending" && (
-                                                        <div className="w-4 h-4 rounded-full border-2 border-black/10" />
-                                                    )}
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          {/* Agent Workflows — fluid, step-by-step execution */}
+          <article className={`${cardClass} flex min-h-[500px] flex-col p-6 md:p-8 lg:col-span-2`}>
+            <div>
+              <h3 className="text-2xl font-medium tracking-[-0.02em] md:text-[28px]">
+                Agent Workflows
+              </h3>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-black/50">
+                Ask for the outcome. ENAI plans the work, applies your rules,
+                and moves the account forward.
+              </p>
             </div>
-        </section>
-    );
-};
 
-export default EnterpriseAutonomy;
+            {/* Command input */}
+            <div className="mt-8 rounded-2xl border border-black/[0.07] bg-[#F5F1ED] p-4 md:p-5">
+              <p className="text-[15px] leading-relaxed text-black/80">
+                Find logistics accounts showing expansion intent, map the buying
+                committee, and prepare a governed first-touch sequence.
+                <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-[#1E3A3A]/70 align-middle" />
+              </p>
+              <div className="mt-5 flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-black/45">
+                  <Plus className="h-3 w-3" /> Ask
+                </span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1E3A3A] text-white">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+
+            {/* Live status */}
+            <div className="mt-5 flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#1E3A3A]/20 bg-[#1E3A3A]/[0.07] px-3 py-1 text-xs font-medium text-[#1E3A3A]">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#1E3A3A]" />
+                {allDone ? "Plan complete" : "ENAI working"}
+              </span>
+              <span className="font-mono text-[11px] text-black/35">
+                {doneCount}/{TOTAL} steps
+              </span>
+            </div>
+
+            {/* Steps reveal one by one */}
+            <div className="mt-4 grid flex-1 content-start gap-3 sm:grid-cols-2">
+              {workflowSteps.slice(0, revealed).map((row, index) => {
+                const isActive = !allDone && index === revealed - 1;
+                const done = allDone || index < revealed - 1;
+                return (
+                  <div
+                    key={row}
+                    className={`enai-step-in flex items-center gap-3 rounded-xl border px-3 py-3 transition-colors duration-500 ${
+                      isActive
+                        ? "border-[#1E3A3A]/25 bg-[#1E3A3A]/[0.05]"
+                        : "border-black/[0.07] bg-[#F8F5F2]"
+                    }`}
+                  >
+                    <span
+                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-colors duration-500 ${
+                        done
+                          ? "bg-[#1E3A3A]/12 text-[#1E3A3A]"
+                          : "bg-[#1E3A3A]/[0.06] text-[#1E3A3A]/70"
+                      }`}
+                    >
+                      {done ? (
+                        <CheckCircle2 className="h-3.5 w-3.5" />
+                      ) : (
+                        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      )}
+                    </span>
+                    <span className="text-sm font-medium text-black/75">{row}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </article>
+
+          {/* Buyer Intelligence — contained orb */}
+          <article className={`${cardClass} relative flex min-h-[500px] flex-col p-6 md:p-8`}>
+            <div>
+              <h3 className="text-2xl font-medium tracking-[-0.02em] md:text-[28px]">
+                Buyer Intelligence
+              </h3>
+              <p className="mt-2 max-w-xs text-sm leading-relaxed text-black/50">
+                Signals, context, and stakeholder routes in motion.
+              </p>
+            </div>
+
+            <div className="relative flex flex-1 items-center justify-center">
+              {/* Contained orb */}
+              <div className="relative h-[210px] w-[210px]">
+                <div className="absolute inset-0 overflow-hidden rounded-full [mask-image:radial-gradient(circle,black_56%,transparent_76%)]">
+                  <Phosphor30 pixelRatio={1.25} />
+                </div>
+                <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-black/10" />
+              </div>
+
+              {/* Floating questions */}
+              <div className="absolute left-0 top-[24%] max-w-[235px] rounded-xl border border-black/[0.07] bg-white/95 px-4 py-3 text-[14px] leading-snug text-black/70 shadow-[0_20px_50px_-30px_rgba(30,58,58,0.5)] backdrop-blur-sm">
+                Which accounts are showing expansion intent this week?
+              </div>
+              <div className="absolute bottom-[14%] right-0 max-w-[235px] rounded-xl border border-black/[0.07] bg-white/95 px-4 py-3 text-[14px] leading-snug text-black/70 shadow-[0_20px_50px_-30px_rgba(30,58,58,0.5)] backdrop-blur-sm">
+                Who is the buyer, operator, and safest route in?
+              </div>
+            </div>
+          </article>
+
+          {/* Governed Outreach */}
+          <article className={`${cardClass} min-h-[310px] p-6 md:p-7`}>
+            <div className="flex items-start justify-between">
+              <h3 className="text-2xl font-medium tracking-[-0.02em]">Governed Outreach</h3>
+              <Mail className="h-5 w-5 text-black/35" />
+            </div>
+            <div className="mt-12 rounded-xl border border-black/[0.06] bg-[#F5F1ED] p-4 text-[15px] leading-relaxed text-black/65">
+              Draft a first-touch message for the COO based on port congestion,
+              cost pressure, and regional expansion.
+            </div>
+          </article>
+
+          {/* Qualification */}
+          <article className={`${cardClass} min-h-[310px] p-6 md:p-7`}>
+            <div className="flex items-start justify-between">
+              <h3 className="text-2xl font-medium tracking-[-0.02em]">Qualification</h3>
+              <MessageSquareText className="h-5 w-5 text-black/35" />
+            </div>
+            <div className="mt-12 space-y-3">
+              {["Budget confirmed", "Route volume shared", "Meeting booked"].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-between rounded-xl border border-black/[0.06] bg-[#F8F5F2] px-3 py-3"
+                >
+                  <span className="text-sm font-medium text-black/65">{item}</span>
+                  <CheckCircle2 className="h-4 w-4 text-[#1E3A3A]/70" />
+                </div>
+              ))}
+            </div>
+          </article>
+
+          {/* Control Layer */}
+          <article className={`${cardClass} flex min-h-[310px] flex-col p-6 md:p-7`}>
+            <div className="flex items-start justify-between">
+              <h3 className="text-2xl font-medium tracking-[-0.02em]">Control Layer</h3>
+              <ShieldCheck className="h-5 w-5 text-black/35" />
+            </div>
+            <p className="mt-12 text-[15px] leading-relaxed text-black/55">
+              Every action is traceable to source context, approval rules, and
+              the handoff path your team controls.
+            </p>
+            <Link
+              href="https://calendly.com/enai-ai2024/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-[#1E3A3A] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#16302F]"
+            >
+              See ENAI run it
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </article>
+
+          {/* Account Map */}
+          <article className={`${cardClass} relative min-h-[420px] p-6 md:p-8 lg:col-span-3`}>
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-2xl font-medium tracking-[-0.02em] md:text-[28px]">
+                  Account Map
+                </h3>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-black/50">
+                  ENAI does not stop at a lead. It builds the route through the account.
+                </p>
+              </div>
+              <Users className="h-5 w-5 text-black/35" />
+            </div>
+
+            <div className="relative mx-auto mt-10 h-[285px] max-w-4xl">
+              <div className="absolute left-1/2 top-1/2 h-[210px] w-[620px] max-w-[92vw] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-[#1E3A3A]/25" />
+              <div className="absolute left-1/2 top-1/2 h-[150px] w-[430px] max-w-[78vw] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-[#1E3A3A]/15" />
+
+              {/* Connection lines from the ENAI hub to each stakeholder */}
+              <svg
+                className="absolute inset-0 h-full w-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden
+              >
+                {accountNodes.map((node) => (
+                  <line
+                    key={node.name}
+                    x1="50"
+                    y1="47"
+                    x2={parseFloat(node.x)}
+                    y2={parseFloat(node.y)}
+                    stroke="#1E3A3A"
+                    strokeOpacity="0.22"
+                    strokeWidth="0.18"
+                    strokeDasharray="0.9 0.9"
+                  />
+                ))}
+              </svg>
+
+              {/* Central ENAI hub */}
+              <div className="absolute left-1/2 top-[47%] z-10 -translate-x-1/2 -translate-y-1/2">
+                <div className="flex items-center gap-2 rounded-full border border-[#1E3A3A]/15 bg-[#1E3A3A] px-4 py-2 shadow-[0_14px_40px_-22px_rgba(30,58,58,0.8)]">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-300" />
+                  <span className="text-sm font-semibold tracking-tight text-white">ENAI</span>
+                </div>
+              </div>
+
+              {accountNodes.map((node) => (
+                <div
+                  key={node.name}
+                  className="absolute w-[190px] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-black/[0.07] bg-white p-3 shadow-[0_18px_50px_-38px_rgba(30,58,58,0.55)]"
+                  style={{ left: node.x, top: node.y }}
+                >
+                  <p className="text-sm font-semibold text-[#1E3A3A]">{node.name}</p>
+                  <p className="mt-1 text-xs text-black/45">{node.role}</p>
+                  <span
+                    className={`mt-3 inline-flex rounded-full px-2 py-1 text-[11px] ${
+                      node.tone === "detractor"
+                        ? "bg-amber-500/15 text-amber-700"
+                        : node.tone === "supporter"
+                          ? "bg-[#1E3A3A]/10 text-[#1E3A3A]"
+                          : "bg-black/[0.05] text-black/45"
+                    }`}
+                  >
+                    {node.tone}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+}

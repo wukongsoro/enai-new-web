@@ -122,8 +122,11 @@ export function Globe({
     if (!canvasRef.current) return
     const canvas = canvasRef.current
     let globe: ReturnType<typeof createGlobe> | null = null
-    let animationId: number
+    let animationId = 0
     let phi = 0
+    let visible = true
+    let tabHidden = typeof document !== "undefined" && document.hidden
+    let animateFn: (() => void) | null = null
 
     function init() {
       const width = canvas.offsetWidth
@@ -164,6 +167,10 @@ export function Globe({
       globe = createGlobe(canvas, options)
 
       function animate() {
+        if (!visible || tabHidden) {
+          animationId = 0
+          return
+        }
         if (!isPausedRef.current) {
           phi += speed
           if (
@@ -193,6 +200,7 @@ export function Globe({
         animationId = requestAnimationFrame(animate)
       }
 
+      animateFn = animate
       animate()
       setTimeout(() => canvas && (canvas.style.opacity = "1"))
     }
@@ -209,8 +217,26 @@ export function Globe({
       ro.observe(canvas)
     }
 
+    // Pause the globe when off-screen or the tab is backgrounded.
+    const io = new IntersectionObserver(
+      (entries) => {
+        visible = entries.some((e) => e.isIntersecting)
+        if (visible && !animationId && animateFn) animateFn()
+      },
+      { threshold: 0 }
+    )
+    io.observe(canvas)
+
+    const onVisibility = () => {
+      tabHidden = document.hidden
+      if (!tabHidden && !animationId && animateFn) animateFn()
+    }
+    document.addEventListener("visibilitychange", onVisibility)
+
     return () => {
       if (animationId) cancelAnimationFrame(animationId)
+      io.disconnect()
+      document.removeEventListener("visibilitychange", onVisibility)
       if (globe) globe.destroy()
     }
   }, [markers, arcs, markerColor, baseColor, arcColor, glowColor, dark, mapBrightness, markerSize, markerElevation, arcWidth, arcHeight, speed, theta, diffuse, mapSamples])

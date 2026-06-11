@@ -249,6 +249,27 @@
     font-feature-settings: "tnum" 1;
   }
 
+  @keyframes enai-step-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .enai-step-in {
+    animation: enai-step-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .enai-step-in {
+      animation: none;
+    }
+  }
+
   /* Fixed font sizes with Playfair Display - Harvey style */
   .text-h1 {
     font-family: var(--font-display);

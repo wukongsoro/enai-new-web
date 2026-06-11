@@ -8,6 +8,9 @@ const useShaderBackground = () => {
   const animationFrameRef = useRef<number | null>(null);
   const rendererRef = useRef<WebGLRenderer | null>(null);
   const pointersRef = useRef<PointerHandler | null>(null);
+  const visibleRef = useRef(true);
+  const tabHiddenRef = useRef(false);
+  const lastDrawRef = useRef(0);
 
   // WebGL Renderer class
   class WebGLRenderer {
@@ -250,15 +253,32 @@ void main(){gl_Position=position;}`;
     }
   };
 
+  const FRAME_MS = 1000 / 30; // cap to 30fps to cut GPU/CPU load
+
   const loop = (now: number) => {
     if (!rendererRef.current || !pointersRef.current) return;
 
-    rendererRef.current.updateMouse(pointersRef.current.first);
-    rendererRef.current.updatePointerCount(pointersRef.current.count);
-    rendererRef.current.updatePointerCoords(pointersRef.current.coords);
-    rendererRef.current.updateMove(pointersRef.current.move);
-    rendererRef.current.render(now);
+    // Pause entirely when scrolled off-screen or the tab is backgrounded.
+    if (!visibleRef.current || tabHiddenRef.current) {
+      animationFrameRef.current = null;
+      return;
+    }
+
+    if (now - lastDrawRef.current >= FRAME_MS) {
+      lastDrawRef.current = now;
+      rendererRef.current.updateMouse(pointersRef.current.first);
+      rendererRef.current.updatePointerCount(pointersRef.current.count);
+      rendererRef.current.updatePointerCoords(pointersRef.current.coords);
+      rendererRef.current.updateMove(pointersRef.current.move);
+      rendererRef.current.render(now);
+    }
     animationFrameRef.current = requestAnimationFrame(loop);
+  };
+
+  const startLoop = () => {
+    if (animationFrameRef.current == null) {
+      animationFrameRef.current = requestAnimationFrame(loop);
+    }
   };
 
   useEffect(() => {
@@ -279,14 +299,33 @@ void main(){gl_Position=position;}`;
       rendererRef.current.updateShader(defaultShaderSource);
     }
 
-    loop(0);
+    tabHiddenRef.current = typeof document !== "undefined" && document.hidden;
+    startLoop();
 
     window.addEventListener('resize', resize);
 
+    const io = new IntersectionObserver(
+      (entries) => {
+        visibleRef.current = entries.some((e) => e.isIntersecting);
+        if (visibleRef.current) startLoop();
+      },
+      { threshold: 0 }
+    );
+    io.observe(canvas);
+
+    const onVisibility = () => {
+      tabHiddenRef.current = document.hidden;
+      if (!document.hidden) startLoop();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
     return () => {
       window.removeEventListener('resize', resize);
+      io.disconnect();
+      document.removeEventListener("visibilitychange", onVisibility);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
       }
       if (rendererRef.current) {
         rendererRef.current.reset();
