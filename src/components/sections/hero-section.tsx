@@ -377,26 +377,29 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full touch-none"
         style={{ background: 'black', margin: 0, padding: 0 }}
       />
+      <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.48)_0%,rgba(0,0,0,0.64)_48%,rgba(0,0,0,0.82)_100%)]" />
+      <div className="absolute inset-x-0 top-0 z-[1] h-2/3 bg-gradient-to-b from-black/35 via-black/10 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 z-[1] h-1/2 bg-gradient-to-t from-black/40 to-transparent" />
 
       <div className="relative z-[2] w-full max-w-6xl mx-auto text-center px-6">
-        <div className="pt-28 pb-10 md:pt-40 md:pb-24">
+        <div className="pt-24 pb-12 md:pt-40 md:pb-24">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 md:mb-8">
               <a
                 href="/webinar/revenue-execution-gap"
-                className="inline-flex items-center gap-2.5 text-xs font-medium px-4 py-2 mb-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/10 hover:border-white/20 transition-all duration-200 group"
+                className="inline-flex max-w-full items-center gap-2.5 text-xs font-medium px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full hover:bg-white/15 hover:border-white/25 transition-all duration-200 group"
               >
                 <span className="flex items-center gap-1.5">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                  <span className="text-amber-400 tracking-[0.08em] uppercase font-semibold">Live Webinar</span>
+                  <span className="text-amber-300 tracking-[0.08em] uppercase font-semibold">Live Webinar</span>
                 </span>
                 <span className="w-px h-3 bg-white/20" />
-                <span className="text-white/70 tracking-[0.04em]">The Revenue Execution Gap &mdash; 24 June 2026</span>
+                <span className="min-w-0 text-white/80 tracking-[0.02em]">Revenue execution in practice &mdash; 24 June 2026</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-white/40 group-hover:text-white/70 group-hover:translate-x-0.5 transition-all duration-200" aria-hidden="true">
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </a>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-semibold text-white tracking-tight leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
                 The Revenue Operating System.
               </h1>
             </div>
@@ -406,8 +409,8 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="max-w-2xl mx-auto mb-8 md:mb-10">
-              <p className="text-base md:text-body-lg text-white/80 leading-relaxed">
-                AI that runs revenue, with you in control. One system that reads every signal across your GTM stack and acts automatically, delivering enterprise grade revenue certainty without the RevOps overhead.
+              <p className="text-base md:text-xl text-white/90 leading-relaxed [text-shadow:0_2px_18px_rgba(0,0,0,0.75)]">
+                ENAI researches accounts, maps buying committees, and executes governed revenue workflows from first signal to booked meeting.
               </p>
             </div>
             <div className="flex justify-center">
@@ -416,9 +419,9 @@ const HeroSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Request a Demo"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
               >
-                Request Access
+                Request a demo
               </a>
             </div>
           </div>

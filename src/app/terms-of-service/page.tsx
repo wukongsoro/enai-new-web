@@ -7,13 +7,13 @@ const TERMS_URL = buildCanonicalUrl('/terms-of-service');
 const TERMS_IMAGE = buildAbsoluteUrl('/social-share-image.png');
 
 export const metadata: Metadata = {
-  title: 'ENAI Terms of Service | AI Sales Automation Platform',
-  description: 'Review the ENAI Terms of Service covering AI BDR automation, data usage, and compliance protections for global sales teams.',
+  title: 'ENAI Terms of Service | Revenue Workflows Platform',
+  description: 'Review the ENAI Terms of Service covering Revenue Workflow automation, data usage, and compliance protections for global sales teams.',
   keywords: [...defaultKeywords, 'ENAI terms of service', 'AI sales compliance'],
   alternates: { canonical: TERMS_URL },
   openGraph: {
     title: 'ENAI Terms of Service',
-    description: 'Understand the legal framework behind ENAI’s AI-powered sales automation platform.',
+    description: 'Understand the legal framework behind ENAI’s Revenue Operating System platform.',
     url: TERMS_URL,
     type: 'article',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ENAI Terms of Service',
-    description: 'Learn how ENAI protects your data and governs AI BDR usage.',
+    description: 'Learn how ENAI protects your data and governs Revenue Workflow usage.',
     images: [TERMS_IMAGE],
     creator: '@enai_ai',
   },
@@ -66,7 +66,7 @@ export default function TermsOfService() {
             <p>Welcome to Enai Thanks for using our products and services ("Service"). The Service is provided by Enai Limited ("Enai", "we", "us" or "our"), located at 128 City Road, London, EC1V 2NX, UK. By using our Service, you are agreeing to these terms. Please read them carefully.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Description of Service</h2>
-            <p>Enai provides you with access to advanced AI-powered tools that can be accessed via a web interface. You understand that the Service may include certain communications from Enai, such as service announcements and administrative messages related to the provision of the Service. Unless explicitly stated otherwise, any new features or tools released by us in relation to the Service shall be subject to this Agreement.</p>
+            <p>Enai provides you with access to advanced AI-assisted tools that can be accessed via a web interface. You understand that the Service may include certain communications from Enai, such as service announcements and administrative messages related to the provision of the Service. Unless explicitly stated otherwise, any new features or tools released by us in relation to the Service shall be subject to this Agreement.</p>
             <p>The Service is an online product that requires access via an internet or other network connection. You are responsible for obtaining the necessary internet or network connection to access Enai's Service and for the associated third-party fees (such as internet service provider or airtime charges) for connectivity. Additionally, you are responsible for procuring and maintaining all equipment necessary to connect to the Service. The quality of the Service you experience may depend on your connectivity and equipment. Enai is not responsible for any claims or losses arising as a result of your connectivity or equipment.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">2. Registration and Use of Service</h2>

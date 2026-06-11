@@ -9,7 +9,7 @@ const WorkflowsSection = () => {
             Streamline Your Work
           </h2>
           <p className="text-lg md:text-xl text-black/70 mb-12 max-w-3xl mx-auto">
-            AI-powered workflows designed to collaborate with sales professionals to deliver precise, purpose-built work product. More coming soon.
+            Governed workflows designed to help revenue teams deliver precise, purpose-built work. More coming soon.
           </p>
           <div className="flex justify-center">
             <Link

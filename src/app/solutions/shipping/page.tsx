@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Check, ArrowRight, Clock, Globe, Package, TrendingUp, Ship, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Sales Automation for Shipping & Logistics | Enai.ai",
+  title: "Revenue Workflows for Shipping & Logistics | Enai.ai",
   description:
-    "Transform shipping and logistics sales with AI BDR agents. Automate lane research, shipper outreach, and deal qualification while staying compliant across regions.",
+    "Transform shipping and logistics sales with Revenue Workflow agents. Automate lane research, shipper outreach, and deal qualification while staying compliant across regions.",
   keywords:
     "shipping sales automation, logistics ai bdr, ai for freight brokerages, maritime sales automation, supply chain prospecting",
 };
@@ -266,7 +266,7 @@ export default function ShippingIndustryPage() {
                   Real World Impact
                 </div>
                 <h2 className="text-[32px] md:text-[40px] heading-strong text-black mb-6 leading-tight">
-                  Scale your commercial team without the headcount
+                  Build your commercial team without the headcount
                 </h2>
                 <p className="text-[#666666] text-lg mb-8 leading-relaxed">
                   Deploying AI associates reduces prospecting time by 70%, allowing your team to focus on high-value negotiations and closing deals.

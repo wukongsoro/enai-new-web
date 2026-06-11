@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button";
 const features = [
     {
         id: "tam",
-        title: "Your TAM builds itself",
-        description: "ENAI agents continuously discover, enrich, and score accounts so your TAM stays fresh.",
+        title: "Founder-led teams",
+        description: "Open new markets without hiring a full SDR team or stitching together a fragile tool stack.",
     },
     {
         id: "runs",
-        title: "Your system runs itself",
-        description: "Outreach, data capture, enrichment, and pipeline updates happen automatically.",
+        title: "Revenue leaders",
+        description: "Keep reps focused on qualified conversations while ENAI handles research, follow-up, and booking.",
     },
     {
         id: "copilot",
-        title: "Revenue Copilot",
-        description: "ENAI proactively coaches you on what you should be doing to close more revenue.",
+        title: "Marketing teams",
+        description: "Turn webinars, inbound interest, and campaign engagement into sales-ready meetings.",
     },
 ];
 
@@ -67,20 +67,47 @@ export default function WorkforceTransformation() {
                 
                 <div className="w-full flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20">
                     
-                    {/* Left: Video */}
+                    {/* Left: Product workflow */}
                     <div className="w-full lg:w-[45%] lg:shrink-0">
-                        <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#F5F1ED] border border-black/10 shadow-2xl">
-                            <video 
-                                loop 
-                                muted 
-                                playsInline 
-                                autoPlay 
-                                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500" 
-                                poster="https://cdn.monaco.com/landing/public/pages/home/features/3-1-poster.jpg"
-                            >
-                                <source src="https://cdn.monaco.com/landing/public/pages/home/features/3-1.webm" type="video/webm" />
-                                <source src="https://cdn.monaco.com/landing/public/pages/home/features/3-1.mp4" type="video/mp4" />
-                            </video>
+                        <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-[#F5F1ED] border border-black/10 shadow-2xl p-6 md:p-8">
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(30,58,58,0.16),transparent_36%),radial-gradient(circle_at_80%_85%,rgba(255,89,0,0.16),transparent_34%)]" />
+                            <div className="relative flex h-full flex-col justify-between rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm backdrop-blur">
+                                <div>
+                                    <div className="flex items-center justify-between">
+                                        <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-[#1E3A3A]/60">
+                                            Live revenue workflow
+                                        </p>
+                                        <span className="rounded-full bg-[#1E3A3A] px-3 py-1 text-xs font-semibold text-white">
+                                            Running
+                                        </span>
+                                    </div>
+                                    <h3 className="mt-5 text-2xl md:text-3xl font-semibold leading-tight text-black">
+                                        Webinar attendee became a qualified meeting
+                                    </h3>
+                                    <p className="mt-3 text-sm text-black/60">
+                                        ENAI spotted the signal, found the buying committee, wrote the follow-up, and booked the handoff.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-3">
+                                    {[
+                                        ["Signal found", "Visited pricing after webinar"],
+                                        ["Contact mapped", "VP Sales + RevOps lead"],
+                                        ["Reply qualified", "Budget and timing confirmed"],
+                                        ["Meeting booked", "Tuesday 10:30 with context"],
+                                    ].map(([label, detail], index) => (
+                                        <div key={label} className="flex items-center gap-3 rounded-xl border border-black/10 bg-white p-3">
+                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1E3A3A]/10 text-sm font-bold text-[#1E3A3A]">
+                                                {index + 1}
+                                            </div>
+                                            <div>
+                                                <p className="text-sm font-semibold text-black">{label}</p>
+                                                <p className="text-xs text-black/50">{detail}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -90,14 +117,14 @@ export default function WorkforceTransformation() {
                             
                             {/* Header */}
                             <div className="flex flex-col gap-6 md:gap-4 lg:gap-6 items-start w-full">
-                                <div className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 border border-black/10 rounded-full bg-white/40">
-                                    Autonomous Execution
+                                <div className="inline-flex items-center font-mono text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 border border-black/10 rounded-full bg-white/40">
+                                    Built around your team
                                 </div>
                                 <h2 className="text-[36px] md:text-[48px] heading-strong text-black leading-tight text-balance">
-                                    Agents working for you
+                                    Built for the revenue work between signal and meeting
                                 </h2>
                                 <p className="text-lg md:text-xl text-black/60 max-w-lg leading-relaxed">
-                                    ENAI agents automate demand gen, pipeline management, and follow-ups so you can spend your time with customers.
+                                    ENAI handles the repetitive work across research, follow-up, qualification, and handoff, with human approval where judgment matters.
                                 </p>
                             </div>
 

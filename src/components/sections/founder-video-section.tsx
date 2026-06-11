@@ -13,7 +13,7 @@ const FounderVideoSection = () => {
                         <div className="space-y-4">
                             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1E3A3A]/5 border border-[#1E3A3A]/10">
                                 <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A3A] animate-pulse"></span>
-                                <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#1E3A3A]">
+                                <span className="font-mono text-[11px] font-medium tracking-[0.2em] uppercase text-[#1E3A3A]">
                                     Top 10 Agentic AI London 2026
                                 </span>
                             </div>

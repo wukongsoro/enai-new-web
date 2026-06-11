@@ -181,7 +181,7 @@ As AI technology continues to advance, we can expect even more sophisticated col
 
 The most successful sales organizations will be those that view AI not as a tool, but as a collaborative partner that enhances human capabilities and drives sustainable growth.
 
-Ready to transform your sales development process? [Schedule a consultation](https://calendly.com/enai-ai2024/30min?month=2025-09) to learn how ENAI's AI BDR agents can accelerate your revenue growth.`
+Ready to transform your sales development process? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to learn how ENAI's AI BDR agents can accelerate your revenue growth.`
   },
   {
     title: "The Complete AI BDR Playbook: Scale Your Outbound Sales 10x Without Hiring",
@@ -378,7 +378,7 @@ The most successful organizations will be those that view AI not as a tool, but 
 
 Ready to transform your outbound sales operations? Success requires careful planning, the right technology partners, and a commitment to data-driven optimization.
 
-[Schedule a strategic consultation](https://calendly.com/enai-ai2024/30min?month=2025-09) to discuss your specific requirements and learn how ENAI's AI BDR agents can accelerate your revenue growth. Our team will provide a customized implementation roadmap based on your current operations and growth objectives.`
+[Schedule a strategic consultation](https://calendly.com/enai-ai2024/30min) to discuss your specific requirements and learn how ENAI's AI BDR agents can accelerate your revenue growth. Our team will provide a customized implementation roadmap based on your current operations and growth objectives.`
   },
   {
     title: "ENAI Cuts Prospecting Time by 70% with AI Automation",
@@ -547,7 +547,7 @@ This case study demonstrates that AI automation doesn't just improve efficiency�
 
 Organizations facing similar challenges should consider AI-powered sales automation not as a cost-cutting measure, but as a strategic investment in competitive advantage. The key to success lies in thoughtful implementation, quality data, and a commitment to human-AI collaboration.
 
-Ready to achieve similar results? [Schedule a consultation](https://calendly.com/enai-ai2024/30min?month=2025-09) to learn how ENAI's AI agents can transform your sales development process.`
+Ready to achieve similar results? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to learn how ENAI's AI agents can transform your sales development process.`
   },
   {
     title: "AI Sales Automation: The Complete 2025 Guide",
@@ -971,7 +971,7 @@ In 2025, AI sales automation is no longer a competitive advantage—it's a strat
 
 The most successful implementations will be those that view AI not as a tool for efficiency, but as a platform for creating more meaningful, effective customer relationships. By combining AI's analytical power and consistency with human emotional intelligence and strategic thinking, sales teams can achieve unprecedented levels of engagement and conversion.
 
-[Ready to transform your sales operations with AI automation?](https://calendly.com/enai-ai2024/30min?month=2025-09) Schedule a strategic consultation to learn how ENAI's AI BDR agents can accelerate your revenue growth and competitive positioning.`
+[Ready to transform your sales operations with AI automation?](https://calendly.com/enai-ai2024/30min) Schedule a strategic consultation to learn how ENAI's AI BDR agents can accelerate your revenue growth and competitive positioning.`
   },
   {
     title: "The Evolution of AI Sales Automation: ENAI's Journey from Concept to Market Leadership",
@@ -1162,7 +1162,7 @@ ENAI's journey represents more than technological advancement—it's a commitmen
 
 As we continue this evolution, our focus remains on delivering practical solutions that generate measurable results. Every feature, every algorithm, every integration is designed with one goal: to help sales teams succeed in an increasingly competitive marketplace.
 
-[Join us in shaping the future of sales automation](https://calendly.com/enai-ai2024/30min?month=2025-09). Whether you're just beginning your AI journey or looking to optimize existing implementations, our team provides the insights and technology to accelerate your success.`
+[Join us in shaping the future of sales automation](https://calendly.com/enai-ai2024/30min). Whether you're just beginning your AI journey or looking to optimize existing implementations, our team provides the insights and technology to accelerate your success.`
   },
   {
     title: "The Financial Impact of AI BDR Agents: Comprehensive ROI Analysis for 2025",
@@ -1392,7 +1392,7 @@ In an environment where [83% of sales leaders expect increased demand with const
 
 The question is no longer whether to invest in AI BDR technology, but how quickly organizations can implement and optimize these solutions to capture the available market opportunity.
 
-[Calculate your organization's specific ROI potential](https://calendly.com/enai-ai2024/30min?month=2025-09). Our team provides customized financial modeling based on your current operations, revenue model, and growth objectives.`
+[Calculate your organization's specific ROI potential](https://calendly.com/enai-ai2024/30min). Our team provides customized financial modeling based on your current operations, revenue model, and growth objectives.`
   },
   {
     title: "AI Sales Automation in 2025: 7 Trends Reshaping Revenue Operations",
@@ -1640,7 +1640,7 @@ The trends reshaping AI sales automation in 2025 represent not just technologica
 
 The question is no longer whether to adopt AI sales automation, but how comprehensively and strategically to implement it. Organizations that view AI as a collaborative partner rather than a replacement for human expertise will be best positioned to capture the transformative opportunities ahead.
 
-[Explore how ENAI can help your organization navigate these trends](https://calendly.com/enai-ai2024/30min?month=2025-09). Our team provides strategic guidance on implementing AI sales automation that aligns with your business objectives and market position.`
+[Explore how ENAI can help your organization navigate these trends](https://calendly.com/enai-ai2024/30min). Our team provides strategic guidance on implementing AI sales automation that aligns with your business objectives and market position.`
   },
   {
     title: "The Human-AI Partnership: How Sales Teams Are Evolving in the Age of Automation",
@@ -1962,7 +1962,7 @@ The future belongs to organizations that invest in their people as much as their
 
 This partnership model doesn't just improve sales performance—it creates more meaningful work, better customer experiences, and sustainable competitive advantage in an increasingly automated marketplace.
 
-[Discover how ENAI can accelerate your team's evolution to AI-powered selling](https://calendly.com/enai-ai2024/30min?month=2025-09). Our human-centric approach ensures your sales professionals thrive alongside our AI agents, creating unprecedented revenue growth and career satisfaction.`
+[Discover how ENAI can accelerate your team's evolution to AI-powered selling](https://calendly.com/enai-ai2024/30min). Our human-centric approach ensures your sales professionals thrive alongside our AI agents, creating unprecedented revenue growth and career satisfaction.`
   },
   {
     title: "Conversational AI in Sales: The Next Frontier of Customer Engagement",
@@ -2292,7 +2292,7 @@ The most successful organizations will be those that view conversational AI not 
 
 The future of sales belongs to organizations that master conversational AI, creating not just more conversations, but better conversations that drive revenue growth and customer loyalty.
 
-[Experience the power of conversational AI in sales](https://calendly.com/enai-ai2024/30min?month=2025-09). Discover how ENAI's conversational AI agents can transform your sales engagement and accelerate your revenue growth.`
+[Experience the power of conversational AI in sales](https://calendly.com/enai-ai2024/30min). Discover how ENAI's conversational AI agents can transform your sales engagement and accelerate your revenue growth.`
   },
   {
     title: "Building an AI-First Sales Organization: A Strategic Framework for 2025",
@@ -2630,7 +2630,7 @@ The most successful AI-first organizations view AI not as a tool to be used, but
 
 The future belongs to organizations that embrace AI as their strategic foundation, creating sales capabilities that were previously impossible and competitive advantages that are fundamentally unassailable.
 
-[Start your AI-first sales transformation today](https://calendly.com/enai-ai2024/30min?month=2025-09). Discover how ENAI can help you build an AI-first sales organization that leads rather than follows in the AI revolution.`
+[Start your AI-first sales transformation today](https://calendly.com/enai-ai2024/30min). Discover how ENAI can help you build an AI-first sales organization that leads rather than follows in the AI revolution.`
   },
   {
     title: "The Future of AI in Sales Automation: Trends for 2025",
@@ -3745,7 +3745,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <Badge variant="secondary" className="mb-2 text-xs">
                         {relatedPost.type}
                       </Badge>
-                      <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                      <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#1E3A3A] transition-colors">
                         {relatedPost.title}
                       </h4>
                       <p className="text-gray-600 text-sm line-clamp-2">
@@ -3761,7 +3761,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* CTA Section */}
         <section className="max-w-4xl mx-auto px-6 pb-20">
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200">
+          <div className="bg-[#F5F1ED] rounded-2xl p-8 border border-black/10">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Hire our Digital Workers
@@ -3769,7 +3769,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
                 Automate every step of your outreach process, from finding and researching prospects to personalizing messages and booking meetings.
               </p>
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+              <Button size="lg" className="bg-[#1E3A3A] hover:bg-[#16302F]">
                 <Link href="/demo">Book a Call</Link>
               </Button>
             </div>

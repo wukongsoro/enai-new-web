@@ -12,9 +12,9 @@ const industries = {
     domain: "ge.com",
     heroColor: "#1E3A3A",
     shortDesc: "Manufacturing, Construction & Heavy Industry",
-    headline: "AI Sales Automation for Industrial Companies",
-    subheadline: "Navigate complex B2B industrial sales cycles with AI agents built for manufacturing, construction, energy, and infrastructure sectors.",
-    description: "The industrials sector encompasses manufacturing, construction, aerospace & defense, electrical equipment, and industrial conglomerates. ENAI's AI agents are trained to understand long procurement cycles (6-18 months), technical RFP requirements, and the multiple stakeholders involved in capital equipment purchases.",
+    headline: "Revenue Workflows for Industrial Companies",
+    subheadline: "Navigate complex B2B industrial sales cycles with workflows built for manufacturing, construction, energy, and infrastructure sectors.",
+    description: "The industrials sector encompasses manufacturing, construction, aerospace & defense, electrical equipment, and industrial conglomerates. ENAI is configured for long procurement cycles (6-18 months), technical RFP requirements, and the multiple stakeholders involved in capital equipment purchases.",
     challenges: [
       "Long sales cycles requiring persistent, coordinated outreach",
       "Multiple stakeholders across engineering, procurement, and operations",
@@ -43,7 +43,7 @@ const industries = {
       { metric: "40%", label: "Larger Deal Sizes" },
     ],
     testimonial: {
-      quote: "ENAI transformed how we approach enterprise manufacturing accounts. What used to take weeks of manual research now happens automatically.",
+      quote: "ENAI changed how we approach enterprise manufacturing accounts. What used to take weeks of manual research is now handled in a governed workflow.",
       author: "VP of Sales",
       company: "Industrial Equipment Manufacturer",
     },
@@ -55,9 +55,9 @@ const industries = {
     domain: "deloitte.com",
     heroColor: "#2D4A5E",
     shortDesc: "Consulting, Legal, Accounting & Advisory",
-    headline: "AI-Powered Business Development for Professional Firms",
+    headline: "Business Development Workflows for Professional Firms",
     subheadline: "Scale rainmaking activities without diluting the personal relationships that define consulting, legal, and accounting success.",
-    description: "Professional services firms—including management consulting, legal services, accounting, and advisory—rely on relationships and reputation. ENAI agents are designed to support rainmaking activities without diluting brand equity, handling initial outreach and qualification while maintaining the white-glove experience clients expect.",
+    description: "Professional services firms—including management consulting, legal services, accounting, and advisory—rely on relationships and reputation. ENAI supports rainmaking activities without diluting brand equity, handling initial outreach and qualification while maintaining the white-glove experience clients expect.",
     challenges: [
       "Partner time constraints limiting business development",
       "Maintaining relationship quality while scaling outreach",
@@ -99,8 +99,8 @@ const industries = {
     heroColor: "#1A365D",
     shortDesc: "PE, VC, Growth Equity & Fund Services",
     headline: "AI Deal Sourcing for Private Equity",
-    subheadline: "Automate proprietary deal flow generation and LP relationship management with AI agents built for investment professionals.",
-    description: "Private equity firms, venture capital, and growth equity investors face intense competition for deals and LP capital. ENAI agents support the entire investment lifecycle: sourcing proprietary deal flow, qualifying targets against investment criteria, managing LP outreach, and facilitating portfolio company introductions.",
+    subheadline: "Support proprietary deal flow generation and LP relationship management with workflows built for investment professionals.",
+    description: "Private equity firms, venture capital, and growth equity investors face intense competition for deals and LP capital. ENAI supports the investment lifecycle: sourcing proprietary deal flow, qualifying targets against investment criteria, managing LP outreach, and facilitating portfolio company introductions.",
     challenges: [
       "Generating proprietary deal flow in competitive markets",
       "Maintaining LP relationships and communication",
@@ -142,8 +142,8 @@ const industries = {
     heroColor: "#0D3B66",
     shortDesc: "Banking, Insurance, Wealth & Asset Management",
     headline: "Compliant AI Prospecting for Financial Services",
-    subheadline: "Deploy AI agents with built-in regulatory guardrails across banking, insurance, and wealth management.",
-    description: "Financial services—including commercial and retail banking, insurance carriers, asset management, and wealth advisory—operate under strict regulatory oversight. ENAI agents are configured with compliance-first messaging, FINRA/SEC-aware guardrails, and audit trails for every client interaction.",
+    subheadline: "Run governed workflows with regulatory guardrails across banking, insurance, and wealth management.",
+    description: "Financial services—including commercial and retail banking, insurance carriers, asset management, and wealth advisory—operate under strict regulatory oversight. ENAI is configured with compliance-first messaging, FINRA/SEC-aware guardrails, and audit trails for every client interaction.",
     challenges: [
       "Regulatory compliance in client communications",
       "High-net-worth prospect identification and qualification",
@@ -184,9 +184,9 @@ const industries = {
     domain: "salesforce.com",
     heroColor: "#0A4D68",
     shortDesc: "SaaS, Enterprise Software & Developer Tools",
-    headline: "AI Sales Automation for Software Companies",
-    subheadline: "Scale from PLG to enterprise sales with AI agents that understand the full software buying journey.",
-    description: "Software companies—SaaS platforms, enterprise software vendors, and developer tool providers—require flexible go-to-market approaches. ENAI agents adapt to product-led growth motions (activating free users), sales-assisted models (qualifying inbound), and outbound enterprise sales (multi-threading into large accounts).",
+    headline: "Revenue Workflows for Software Companies",
+    subheadline: "Move from PLG to enterprise sales with workflows built for the software buying journey.",
+    description: "Software companies—SaaS platforms, enterprise software vendors, and developer tool providers—require flexible go-to-market approaches. ENAI adapts to product-led growth motions, sales-assisted models, and outbound enterprise sales.",
     challenges: [
       "Activating free trial users into paying customers",
       "Qualifying product-qualified leads (PQLs) at scale",
@@ -229,7 +229,7 @@ const industries = {
     shortDesc: "Semiconductors, Devices & Physical Products",
     headline: "AI Sales for Hardware Companies",
     subheadline: "Navigate technical complexity with AI that understands specs, certifications, and engineering buyers.",
-    description: "Hardware companies—semiconductors, computer hardware, electronic equipment, and IoT devices—sell into complex technical environments with long evaluation cycles. ENAI agents are trained on technical specification matching, certification requirements, and the unique dynamics of distributor and OEM relationships.",
+    description: "Hardware companies—semiconductors, computer hardware, electronic equipment, and IoT devices—sell into complex technical environments with long evaluation cycles. ENAI supports technical specification matching, certification requirements, and the unique dynamics of distributor and OEM relationships.",
     challenges: [
       "Technical specification matching for diverse use cases",
       "Distributor and channel partner coordination",
@@ -272,7 +272,7 @@ const industries = {
     shortDesc: "AI/ML Platforms, Foundation Models & AI Tooling",
     headline: "AI Agents for AI Companies",
     subheadline: "Sell AI to AI-savvy buyers with agents that understand the technical landscape.",
-    description: "AI-native companies—foundation model providers, AI/ML platforms, MLOps tools, and AI application vendors—sell to technically sophisticated buyers. ENAI agents are trained on the AI ecosystem, understand technical differentiators, and can engage in meaningful conversations about model performance, integration complexity, and use case fit.",
+    description: "AI-native companies—foundation model providers, AI/ML platforms, MLOps tools, and AI application vendors—sell to technically sophisticated buyers. ENAI is configured around the AI ecosystem, technical differentiators, model performance, integration complexity, and use case fit.",
     challenges: [
       "Engaging highly technical ML engineering buyers",
       "Differentiating in a crowded AI market",
@@ -315,7 +315,7 @@ const industries = {
     shortDesc: "Government AI, Defense & National Infrastructure",
     headline: "Secure AI Sales for Government & Defense",
     subheadline: "Support national AI initiatives with compliant, auditable sales automation built for public sector requirements.",
-    description: "Sovereign AI encompasses government AI programs, defense contractors, national AI infrastructure, and regulated critical systems. ENAI agents for this sector operate with enhanced security controls, support complex compliance frameworks (FedRAMP, ITAR, CMMC), and understand the unique procurement processes of government and defense buyers.",
+    description: "Sovereign AI encompasses government AI programs, defense contractors, national AI infrastructure, and regulated critical systems. ENAI supports this sector with enhanced security controls, complex compliance frameworks (FedRAMP, ITAR, CMMC), and workflows for government and defense procurement.",
     challenges: [
       "Complex government procurement processes",
       "FedRAMP, ITAR, and CMMC compliance requirements",
@@ -364,9 +364,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!industry) return {};
   
   return {
-    title: `${industry.name} | ENAI - AI Sales Automation`,
+    title: `${industry.name} | ENAI - Revenue Workflows`,
     description: industry.description,
-    keywords: `${industry.name} AI sales, ${industry.shortDesc.toLowerCase()}, sales automation, AI BDR`,
+    keywords: `${industry.name} revenue workflows, ${industry.shortDesc.toLowerCase()}, account research, governed outreach, qualified meetings`,
     openGraph: {
       title: `${industry.name} | ENAI`,
       description: industry.subheadline,

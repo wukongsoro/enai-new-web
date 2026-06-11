@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI Sales Tools for Recruiting Agencies | Automate Candidate Outreach | Enai.ai",
-  description: "Transform your recruiting agency with AI-powered candidate and client outreach. Place 3x more candidates without hiring more recruiters. Built for staffing agencies.",
+  description: "Improve your recruiting agency with AI-assisted candidate and client outreach. Place more candidates without hiring more recruiters. Built for staffing agencies.",
   keywords: "AI for recruiting agencies, staffing agency automation, candidate outreach automation, recruiting sales tools",
 };
 
@@ -14,17 +14,17 @@ export default function RecruitingSolutionPage() {
     <>
       <Navigation />
       <main className="min-h-screen bg-white">
-        <section className="bg-gradient-to-br from-orange-50 to-white py-20 px-6 mt-32">
+        <section className="bg-[#F5F1ED] py-20 px-6 mt-32">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               AI-Powered Sales Automation for Recruiting Agencies
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Place 3x more candidates without hiring more recruiters. Automate candidate and client outreach at scale.
+              Place more candidates without hiring more recruiters. Automate candidate and client outreach at scale.
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
+              className="bg-[#1E3A3A] hover:bg-[#16302F] text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
             >
               Book Demo for Recruiting Agencies
             </Link>
@@ -50,7 +50,7 @@ export default function RecruitingSolutionPage() {
               <div className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold mb-3">Placement Acceleration</h3>
                 <p className="text-gray-600">
-                  Match candidates to opportunities faster with AI-powered qualification and scheduling.
+                  Match candidates to opportunities faster with AI-assisted qualification and scheduling.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function RecruitingSolutionPage() {
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Recruiting Agency?</h2>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
+              className="bg-[#1E3A3A] hover:bg-[#16302F] text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
             >
               Schedule Demo
             </Link>

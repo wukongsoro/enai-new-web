@@ -76,14 +76,14 @@ const DigitalWorkersIntro = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="h2 text-black mb-6">
-            The OS layer across your entire GTM stack
+            Meet the agents your team can actually use
           </h2>
           <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl mx-auto">
-            SMBs have every tool. No system that runs them. ENAI doesn't replace your tools. It makes every tool investment finally pay off by being the intelligence layer that connects, reads, and acts across all of them.
+            Each ENAI agent owns a clear job in the revenue workflow, so business teams understand what changes on day one: better targets, better follow-up, and more qualified meetings.
           </p>
           <div className="mt-8">
             <Link href="https://calendly.com/enai-ai2024/30min" className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-medium rounded-lg hover:bg-black/90 transition-all duration-300">
-              See the Architecture
+              See the agents
             </Link>
           </div>
         </div>
@@ -91,8 +91,8 @@ const DigitalWorkersIntro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
           <WorkerCard
             name="ProspectorAI"
-            role="Signal Intelligence Engine"
-            description="Maps firmographic, intent, and relationship signals into prioritized target ontologies. Every signal source auditable. Every score explainable."
+            role="Finds your best accounts"
+            description="Builds target lists from fit, timing, and live buying signals so your team starts with accounts that are more likely to convert."
             hireLink="/agents/prospectorai"
             imageWrapperClass="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500"
             bottomUIImage="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/b4117007-ba70-4ecf-8e44-b80106e53fc2-11x-ai/assets/images/67d92d286e1eb4cb15d5ca35_048e976b0381640b13181971d4221a5e_identify-6.webp?"
@@ -101,8 +101,8 @@ const DigitalWorkersIntro = () => {
           />
           <WorkerCard
             name="OutreachAI"
-            role="Governed Outreach Engine"
-            description="Executes multi-channel outreach sequences within defined compliance boundaries. Message logic, approval gates, and send governance. All actions are auditable."
+            role="Writes and follows up"
+            description="Creates account-specific outreach, follows up across channels, and keeps every message inside your approval and brand rules."
             hireLink="/agents/outreachai"
             imageWrapperClass="bg-gray-50"
             bottomUIImage="/image0-3.jpeg"
@@ -110,8 +110,8 @@ const DigitalWorkersIntro = () => {
           />
           <WorkerCard
             name="QualifierAI"
-            role="Qualification & Execution Engine"
-            description="Runs deterministic qualification logic against defined criteria. Schedules through governed calendar integration. Every qualification decision logged and reversible."
+            role="Qualifies and books"
+            description="Handles interested replies, confirms fit and timing, and books meetings with the context your sales team needs."
             hireLink="/agents/qualifierai"
             imageWrapperClass="bg-gray-100"
             bottomUIImage="/automated-booking.png"

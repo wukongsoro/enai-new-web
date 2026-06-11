@@ -6,12 +6,12 @@ import Footer from "@/components/sections/footer";
 import { ArrowRight, Zap, RefreshCw, Shield, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Integrations | ENAI - Connect Salesforce, HubSpot, Slack & 50+ Tools",
-  description: "ENAI integrates seamlessly with Salesforce, HubSpot, Slack, Microsoft 365, LinkedIn, and 50+ more tools. Connect your entire sales stack for unified AI-powered prospecting and automation.",
-  keywords: "CRM integrations, Salesforce integration, HubSpot integration, Slack integration, sales automation, AI prospecting tools, LinkedIn automation, Microsoft 365 integration",
+  title: "Integrations | ENAI - Connect Your Revenue Workflow",
+  description: "Connect ENAI with Salesforce, HubSpot, Slack, Microsoft 365, LinkedIn, and the systems your revenue team already uses.",
+  keywords: "CRM integrations, Salesforce integration, HubSpot integration, Slack integration, revenue workflow integrations, LinkedIn, Microsoft 365 integration",
   openGraph: {
-    title: "Integrations | ENAI - Connect Your Sales Stack",
-    description: "Connect ENAI with Salesforce, HubSpot, Slack, and 50+ tools for seamless AI-powered sales automation.",
+    title: "Integrations | ENAI - Connect Your Revenue Workflow",
+    description: "Connect ENAI with the CRM, communication, and data systems behind your revenue motion.",
     type: "website",
   },
 };
@@ -46,7 +46,7 @@ const featuredIntegrations = [
     logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
     color: "#00A4EF",
     category: "Productivity",
-    description: "Connect Outlook, Teams, and Calendar for seamless meeting scheduling and email synchronization.",
+    description: "Connect Outlook, Teams, and Calendar for meeting scheduling and email synchronization.",
     features: ["Calendar sync", "Email integration", "Teams notifications", "OneDrive access"],
   },
   {
@@ -82,12 +82,12 @@ const integrationBenefits = [
   {
     icon: Zap,
     title: "Instant Setup",
-    description: "Connect your tools in minutes with our one-click integrations. No engineering required.",
+    description: "Connect core systems quickly without a custom engineering project.",
   },
   {
     icon: RefreshCw,
     title: "Real-Time Sync",
-    description: "Data flows bidirectionally, keeping your CRM and ENAI in perfect sync.",
+    description: "Keep account, activity, and meeting data aligned between ENAI and your CRM.",
   },
   {
     icon: Shield,
@@ -111,10 +111,10 @@ export default function IntegrationsPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "ENAI Integrations",
-            "description": "Connect ENAI with your sales stack including Salesforce, HubSpot, Slack, and 50+ more tools.",
+            "description": "Connect ENAI with your revenue workflow including Salesforce, HubSpot, Slack, and 50+ more tools.",
             "mainEntity": {
               "@type": "SoftwareApplication",
-              "name": "ENAI AI BDR Platform",
+              "name": "ENAI Revenue Operating System",
               "applicationCategory": "BusinessApplication",
               "featureList": featuredIntegrations.map(i => `${i.name} Integration`),
             }
@@ -134,10 +134,10 @@ export default function IntegrationsPage() {
                 Platform Integrations
               </div>
               <h1 className="h1 text-black mb-6">
-                Connect Your Sales Stack
+                Connect Your Revenue Workflow
               </h1>
               <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl">
-                ENAI integrates seamlessly with your existing tools. Connect your CRM, communication platforms, and data sources to power AI-driven prospecting at scale.
+                ENAI works with your CRM, communication platforms, calendars, and data sources so governed revenue work happens inside the systems your team already trusts.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -182,7 +182,7 @@ export default function IntegrationsPage() {
                 Featured Integrations
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed">
-                Deep integrations with the tools your sales team relies on every day.
+                Deep integrations with the tools your revenue team relies on every day.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -5,20 +5,20 @@ import Link from "next/link";
 
 const capabilities = [
   {
-    title: "Signal Detection & Scoring",
-    description: "Intent signals, firmographic data, and relationship graphs mapped into prioritized target ontologies.",
+    title: "Find the right buyers",
+    description: "Spot accounts showing intent and rank them by fit, timing, and reachable decision makers.",
   },
   {
-    title: "Intelligence & Enrichment",
-    description: "Automated prospect research and data enrichment with full provenance tracking on every source.",
+    title: "Research before outreach",
+    description: "Pull company context, role relevance, and recent triggers into every message and handoff.",
   },
   {
-    title: "Governed Outreach Execution",
-    description: "Multi-channel sequences executed within defined compliance boundaries and approval gates.",
+    title: "Run outreach safely",
+    description: "Send personalized follow-ups across channels while keeping your approval rules and brand voice intact.",
   },
   {
-    title: "Qualification & Booking",
-    description: "Deterministic qualification logic with governed calendar integration. Every decision logged.",
+    title: "Book qualified meetings",
+    description: "Ask the right questions, handle objections, and schedule sales conversations with full context.",
   },
 ];
 
@@ -28,22 +28,22 @@ export default function PlatformShowcase() {
       <div className="bg-[#E8DDD4] text-black rounded-[40px] max-w-[1248px] mx-auto py-16 px-6 sm:p-12 md:p-16 lg:px-20 lg:py-24">
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-block bg-[#F5F1ED] text-black text-sm font-medium py-1 px-3 rounded-full mb-4">
-            The Revenue Operating System
+            Controlled AI sales execution
           </div>
           <h2 className="text-[40px] md:text-[48px] heading-strong leading-tight mb-4">
-            Revenue operations, as simple as asking
+            Ask for pipeline. ENAI does the work.
           </h2>
           <p className="text-[22px] md:text-[26px] font-medium text-black/80 mb-6 leading-snug">
-            You ask it anything in plain language, and it acts across your entire stack instantly.
+            Tell ENAI who you sell to and what good looks like. It finds buyers, runs outreach, qualifies interest, and books meetings.
           </p>
           <p className="text-[#666666] text-lg mb-8 max-w-2xl mx-auto">
-            ENAI doesn't give you another dashboard to check. No training. No workflows to configure. No RevOps team required. It makes every tool investment finally pay off by being the intelligence layer that connects, reads, and acts.
+            Your team can review, approve, and trace every action. That means automation without losing control of customer experience, data, or brand.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"
-            className="inline-block bg-black text-white text-sm font-medium py-4 px-8 rounded-full transition-transform duration-300 hover:scale-105"
+            className="inline-block bg-black text-white text-sm font-medium py-4 px-8 rounded-full transition-colors duration-300 hover:bg-black/85"
           >
-            Request Access
+            Book a demo
           </Link>
         </div>
 

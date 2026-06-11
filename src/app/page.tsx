@@ -33,7 +33,7 @@ export default function Home() {
                   "width": 512,
                   "height": 512
                 },
-                "description": "AI-powered sales automation platform that transforms B2B sales with AI BDR agents",
+                "description": "The Revenue Operating System for complex B2B teams, coordinating account research, buying committee mapping, governed outreach, qualification, and meeting handoff.",
                 "sameAs": [
                   "https://twitter.com/enai_ai",
                   "https://www.linkedin.com/company/enai-ai"
@@ -55,7 +55,7 @@ export default function Home() {
               },
               {
                 "@type": "SoftwareApplication",
-                "name": "Enai.ai AI BDR Platform",
+                "name": "ENAI Revenue Operating System",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Web",
                 "offers": {
@@ -76,13 +76,13 @@ export default function Home() {
                   "bestRating": "5",
                   "worstRating": "1"
                 },
-                "description": "Complete AI BDR platform with ProspectorAI, QualifierAI, and OutreachAI agents for automated sales development",
+                "description": "Revenue Operating System that researches accounts, maps buying committees, executes governed outreach, qualifies replies, and books meetings.",
                 "featureList": [
-                  "AI-powered prospecting",
-                  "Automated lead qualification",
-                  "Personalized outreach at scale",
-                  "Meeting scheduling automation",
-                  "Multi-channel orchestration"
+                  "Account research",
+                  "Buying committee mapping",
+                  "Governed outreach",
+                  "Lead qualification",
+                  "Meeting handoff"
                 ]
               },
               {
@@ -93,7 +93,7 @@ export default function Home() {
                     "name": "What is Enai.ai?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Enai.ai is an AI-powered sales automation platform that provides AI BDR agents to automate prospecting, qualification, and outreach for B2B sales teams."
+                      "text": "Enai.ai is the Revenue Operating System for complex B2B teams. It coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
                     }
                   },
                   {
@@ -101,15 +101,15 @@ export default function Home() {
                     "name": "How much does Enai.ai cost?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Enai.ai pricing starts at $100 per agent/month, providing complete AI BDR automation. We also offer a free 14-day trial."
+                      "text": "Enai.ai offers plans for individuals, teams, and enterprise revenue organizations. Enterprise pricing depends on usage, integrations, governance requirements, and deployment scope."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How does AI BDR automation work?",
+                    "name": "How does ENAI work?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "AI BDR agents automate the entire sales development process: ProspectorAI identifies and researches prospects, OutreachAI handles personalized multi-channel outreach, and QualifierAI conducts qualification conversations and schedules meetings."
+                      "text": "ProspectorAI researches accounts and contacts, OutreachAI prepares governed outreach, and QualifierAI handles qualification signals and meeting handoff with audit trails and human control points."
                     }
                   }
                 ]

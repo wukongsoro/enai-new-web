@@ -4,12 +4,12 @@ import Footer from "@/components/sections/footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Sales Automation San Francisco | AI BDR Software SF Bay Area | Enai.ai",
-  description: "Leading AI sales automation platform serving San Francisco and Bay Area companies. Scale your sales 10x with AI BDR agents. Pacific Time (PT) support. Serving Silicon Valley, Oakland, and San Jose.",
-  keywords: "AI sales automation San Francisco, AI BDR SF, sales automation Bay Area, San Francisco sales software, Silicon Valley B2B automation, AI prospecting California",
+  title: "Revenue Workflows San Francisco | Revenue OS SF Bay Area | Enai.ai",
+  description: "Leading revenue workflows platform serving San Francisco and Bay Area companies. Coordinate account research, outreach, qualification, and handoff. Pacific Time (PT) support. Serving Silicon Valley, Oakland, and San Jose.",
+  keywords: "revenue workflows San Francisco, Revenue Workflow SF, revenue workflows Bay Area, San Francisco revenue software, Silicon Valley B2B revenue workflows, account research California",
   openGraph: {
-    title: "AI Sales Automation for San Francisco Companies | Enai.ai",
-    description: "Transform your SF sales team with AI-powered automation. 70% cost reduction, 3x more meetings. Pacific Time support.",
+    title: "Revenue Workflows for San Francisco Companies | Enai.ai",
+    description: "Transform your SF sales team with governed revenue workflows. 70% cost reduction, 3x more meetings. Pacific Time support.",
     url: "https://www.enai.ai/locations/san-francisco",
   },
 };
@@ -25,7 +25,7 @@ export default function SanFranciscoPage() {
             "@type": "LocalBusiness",
             "name": "Enai AI - San Francisco",
             "image": "https://www.enai.ai/enai-logo.png",
-            "description": "AI-powered sales automation platform serving San Francisco and Bay Area companies",
+            "description": "Revenue Operating System serving San Francisco and Bay Area companies",
             "areaServed": {
               "@type": "City",
               "name": "San Francisco",
@@ -36,7 +36,7 @@ export default function SanFranciscoPage() {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Sales Automation Services",
+              "name": "Revenue Workflow Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
@@ -98,20 +98,20 @@ export default function SanFranciscoPage() {
       <Navigation />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-50 to-white py-20 px-6 mt-32">
+        <section className="bg-[#F5F1ED] py-20 px-6 mt-32">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block bg-white border border-black/10 text-[#1E3A3A] px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Serving San Francisco & Bay Area
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI Sales Automation for San Francisco Companies
+              Revenue Workflows for San Francisco Companies
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join leading SF tech companies using Enai.ai to scale sales 10x without hiring more SDRs. Pacific Time support included.
+              Join leading SF tech companies using Enai.ai to coordinate account research, outreach, qualification, and handoff with regional context. Pacific Time support included.
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
+              className="bg-[#1E3A3A] hover:bg-[#16302F] text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
             >
               Schedule Demo (PT Available)
             </Link>
@@ -124,24 +124,21 @@ export default function SanFranciscoPage() {
             <h2 className="text-3xl font-bold mb-12 text-center">Why SF Tech Companies Choose Enai.ai</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">🌉</div>
                 <h3 className="text-xl font-semibold mb-3">Silicon Valley Ready</h3>
                 <p className="text-gray-600">
                   Built for high-growth startups and enterprises. Integrate seamlessly with your modern tech stack.
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold mb-3">Hyper-Growth Scaling</h3>
                 <p className="text-gray-600">
-                  Scale your outbound from 0 to 100k emails/month instantly. 70% cost reduction vs Bay Area BDR salaries.
+                  Coordinate outbound programs with governed volume and pacing. 70% cost reduction vs Bay Area BDR salaries.
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">⏰</div>
                 <h3 className="text-xl font-semibold mb-3">Pacific Time Support</h3>
                 <p className="text-gray-600">
-                  Real-time support during your business hours. AI agents work 24/7 to cover global markets.
+                  Real-time support during your business hours. ENAI workflows run across time zones to cover global markets.
                 </p>
               </div>
             </div>
@@ -154,31 +151,31 @@ export default function SanFranciscoPage() {
             <h2 className="text-3xl font-bold mb-12 text-center">Results for Bay Area Companies</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="text-4xl font-bold text-orange-600 mb-2">70%</div>
+                <div className="text-4xl font-bold text-[#1E3A3A] mb-2">70%</div>
                 <div className="text-lg font-semibold mb-2">Cost Reduction</div>
                 <p className="text-gray-600">
-                  Compared to hiring SF-based BDRs at $80-100K+ per year. AI agents provide enterprise performance at a fraction of the cost.
+                  Compared to hiring SF-based BDRs at $80-100K+ per year. ENAI provides governed workflow coverage at a fraction of the cost.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="text-4xl font-bold text-orange-600 mb-2">3x</div>
+                <div className="text-4xl font-bold text-[#1E3A3A] mb-2">3x</div>
                 <div className="text-lg font-semibold mb-2">More Qualified Meetings</div>
                 <p className="text-gray-600">
-                  AI-powered personalization beats generic templates. Book more meetings with hard-to-reach decision makers.
+                  Context-led outreach replaces generic templates and helps teams reach hard-to-engage decision makers.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="text-4xl font-bold text-orange-600 mb-2">50%</div>
+                <div className="text-4xl font-bold text-[#1E3A3A] mb-2">50%</div>
                 <div className="text-lg font-semibold mb-2">Pipeline Velocity Increase</div>
                 <p className="text-gray-600">
                   Faster deal flow with automated follow-ups and intelligent lead qualification.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-lg font-semibold mb-2">Always-On Prospecting</div>
+                <div className="text-4xl font-bold text-[#1E3A3A] mb-2">24/7</div>
+                <div className="text-lg font-semibold mb-2">Always-On Workflow Coverage</div>
                 <p className="text-gray-600">
-                  Your AI BDRs never sleep, ensuring you capture leads in every timezone.
+                  ENAI workflows run across time zones, ensuring you capture leads in every timezone.
                 </p>
               </div>
             </div>
@@ -200,22 +197,22 @@ export default function SanFranciscoPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-orange-500 text-white">
+        <section className="py-16 px-6 bg-[#1E3A3A] text-white">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Sales?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join the Bay Area's top companies transforming sales with Enai.ai.
+              Join the Bay Area's top companies running revenue work with ENAI.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
                 href="https://calendly.com/enai-ai2024/30min" 
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition inline-block"
+                className="bg-white text-[#1E3A3A] hover:bg-[#F5F1ED] px-8 py-4 rounded-lg font-semibold transition inline-block"
               >
                 Book Demo (PT Support)
               </Link>
               <Link 
                 href="/pricing" 
-                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition inline-block border-2 border-white"
+                className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold transition inline-block border-2 border-white"
               >
                 View Pricing
               </Link>

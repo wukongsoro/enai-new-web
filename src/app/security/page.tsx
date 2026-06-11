@@ -5,12 +5,12 @@ import Footer from "@/components/sections/footer";
 import { Shield, Lock, Eye, Server, FileCheck, Users, Clock, CheckCircle2, Award, Globe, ShieldCheck, CreditCard, Heart, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security & Trust | ENAI - Enterprise-Grade AI Security & Compliance",
-  description: "Learn about ENAI's commitment to security, privacy, and compliance. SOC 2 Type II, ISO 27001, GDPR, CCPA, HIPAA compliant AI sales automation platform.",
-  keywords: "enterprise security, SOC 2 compliance, ISO 27001, GDPR compliant, CCPA compliant, AI security, data privacy, sales automation security",
+  title: "Security & Trust | ENAI",
+  description: "Learn how ENAI protects customer data with encryption, access controls, audit logging, secure infrastructure, and compliance programs.",
+  keywords: "enterprise security, SOC 2 compliance, ISO 27001, GDPR, CCPA, AI security, data privacy, revenue platform security",
   openGraph: {
-    title: "Security & Trust | ENAI - Enterprise-Grade AI Security",
-    description: "Enterprise security and compliance for AI-powered sales automation. SOC 2, ISO 27001, GDPR ready.",
+    title: "Security & Trust | ENAI",
+    description: "Security and compliance controls for governed revenue workflows.",
     type: "website",
   },
 };
@@ -110,7 +110,7 @@ export default function SecurityPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "ENAI Security & Trust",
-            "description": "Enterprise-grade security and compliance for AI-powered sales automation.",
+            "description": "Security and compliance controls for governed revenue workflows.",
           })
         }}
       />
@@ -127,10 +127,10 @@ export default function SecurityPage() {
                 Trust & Security
               </div>
               <h1 className="h1 text-white mb-6">
-                Enterprise-Grade Security
+                Security Built for Governed Revenue Work
               </h1>
               <p className="text-body-lg text-white/70 leading-relaxed max-w-2xl">
-                Your data security is our top priority. ENAI is built with enterprise-grade security controls, ensuring your sensitive business information remains protected.
+                ENAI is built with encryption, access controls, audit logging, and governance workflows to protect sensitive revenue data.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -172,7 +172,7 @@ export default function SecurityPage() {
                 Compliance & Certifications
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed">
-                Industry-leading security certifications to protect your data.
+                Compliance programs and security controls designed for enterprise review.
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">

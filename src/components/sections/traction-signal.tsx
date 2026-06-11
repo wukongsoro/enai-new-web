@@ -13,24 +13,24 @@ const tractionSignals = [
     },
     {
         icon: Globe,
-        title: "Global Presence",
-        description: "Headquartered in London, UK with operations expanding to the US and GCC.",
-        metric: "3",
-        metricLabel: "Regions",
+        title: "Research Automation",
+        description: "Account research, enrichment, and qualification compressed into governed workflows.",
+        metric: "40-60%",
+        metricLabel: "Less Research Time",
     },
     {
         icon: Building2,
-        title: "Enterprise Ready",
-        description: "Trusted by institutional revenue teams to govern autonomous execution at scale.",
-        metric: "100%",
-        metricLabel: "Governed",
+        title: "Meeting Conversion",
+        description: "Industry-trained playbooks improve fit, timing, and stakeholder relevance.",
+        metric: "20-35%",
+        metricLabel: "Conversion Lift",
     },
     {
         icon: CheckCircle2,
-        title: "Category Leader",
-        description: "Defining the Sovereign Revenue Execution category.",
-        metric: "1st",
-        metricLabel: "Revenue OS",
+        title: "Stack Consolidation",
+        description: "Replace fragmented research, orchestration, and engagement workflows.",
+        metric: "$300K+",
+        metricLabel: "Annual Savings",
     },
 ];
 
@@ -52,7 +52,7 @@ const TractionSignal = () => {
                                         <p className="text-3xl md:text-4xl font-semibold text-black tracking-tight">
                                             {signal.metric}
                                         </p>
-                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1E3A3A] mt-1">
+                                        <p className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-[#1E3A3A] mt-1">
                                             {signal.metricLabel}
                                         </p>
                                     </div>

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 /**
- * Sitemap for Enai AI - AI-Powered Sales Automation Platform
+ * Sitemap for Enai AI - Revenue Operating System
  * Founder & CEO: Nikhil Nehra
  * Website: https://www.enai.ai
  * LinkedIn: https://www.linkedin.com/in/nikhilnehra
@@ -13,30 +13,13 @@ export const dynamic = "force-static"
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.enai.ai'
   
-  // Blog post slugs
+  // Launch-ready blog post slugs
   const blogPosts = [
-    'ai-powered-sales-collaboration-transforms-b2b-revenue',
-    'complete-ai-bdr-playbook-scale-outbound-10x',
-    'ai-automation-transforms-sales-productivity-70-percent-time-savings',
-    'future-ai-sales-automation-trends-2025',
-    'roi-ai-powered-sales-automation',
-    'ai-vs-human-bdrs-comparison-guide',
-    'implement-ai-sales-team-guide',
-    'cold-email-automation-best-practices',
-    'lead-qualification-ai-complete-guide',
-    'scaling-outbound-sales-ai-strategies',
-    'ai-sales-tools-comparison-2025',
-    'linkedin-automation-sales-guide',
-    'b2b-sales-automation-playbook',
+    'founder-enterprise-autonomous-governance',
   ]
 
-  // Comparison pages
-  const comparisonPages = [
-    'enai-vs-apollo',
-    'enai-vs-outreach',
-    'enai-vs-clay',
-    'enai-vs-salesloft',
-    'best-ai-bdr-tools',
+  // Comparison pages are excluded from launch sitemap until rewritten.
+  const comparisonPages: string[] = [
   ]
 
   // Solution pages
@@ -88,15 +71,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/pricing`,
+      url: `${baseUrl}/demo-library`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/pricing`,
       lastModified: new Date(),
-      changeFrequency: 'daily' as const,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
@@ -159,4 +142,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...locationUrls,
   ]
 }
-

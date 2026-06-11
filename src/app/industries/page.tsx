@@ -5,12 +5,12 @@ import Footer from "@/components/sections/footer";
 import { ArrowRight, Building2, Briefcase, TrendingUp, DollarSign, Code, Cpu, Sparkles, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industries | ENAI - AI Sales Automation by Industry",
-  description: "ENAI AI BDR agents tailored for Industrials, Professional Services, Private Equity, Financial Services, Software, Hardware, AI-Native Companies, and Sovereign AI initiatives.",
-  keywords: "AI sales automation industries, industrial sales AI, professional services sales, private equity deal sourcing, financial services prospecting, software sales automation, hardware sales AI, AI-native company sales, sovereign AI",
+  title: "Industries | ENAI - Revenue Workflows by Market",
+  description: "ENAI supports Industrials, Professional Services, Private Equity, Financial Services, Software, Hardware, AI-Native Companies, and Sovereign AI initiatives.",
+  keywords: "revenue workflows by industry, industrial sales, professional services business development, private equity deal sourcing, financial services prospecting, software revenue operations, hardware sales, AI-native companies, sovereign AI",
   openGraph: {
-    title: "Industries | ENAI - AI Sales Automation by Industry",
-    description: "Industry-specific AI BDR solutions for every sector.",
+    title: "Industries | ENAI - Revenue Workflows by Market",
+    description: "Industry-specific revenue workflows for complex B2B markets.",
     type: "website",
   },
 };
@@ -39,7 +39,7 @@ const industries = [
     slug: "professional-services",
     icon: Briefcase,
     shortDesc: "Consulting, Legal, Accounting & Advisory",
-    description: "Scale business development for knowledge-intensive firms. Our AI agents preserve the personal touch critical to consulting, legal, and accounting relationships while automating the outreach that partners can't prioritize.",
+    description: "Scale business development for knowledge-intensive firms. ENAI preserves the relationship quality clients expect while handling outreach partners cannot always prioritize.",
     fullDefinition: "Professional services firms—including management consulting, legal services, accounting, and advisory—rely on relationships and reputation. ENAI agents are designed to support rainmaking activities without diluting brand equity, handling initial outreach and qualification while maintaining the white-glove experience clients expect.",
     useCases: [
       "Client referral outreach",
@@ -57,7 +57,7 @@ const industries = [
     slug: "private-equity",
     icon: TrendingUp,
     shortDesc: "PE, VC, Growth Equity & Fund Services",
-    description: "Automate proprietary deal sourcing and LP relationship management. Our AI agents are built for the unique workflows of investment firms—from identifying acquisition targets to maintaining investor communications at scale.",
+    description: "Support proprietary deal sourcing and LP relationship management with workflows built for investment firms, from target research to investor communication.",
     fullDefinition: "Private equity firms, venture capital, and growth equity investors face intense competition for deals and LP capital. ENAI agents support the entire investment lifecycle: sourcing proprietary deal flow, qualifying targets against investment criteria, managing LP outreach, and facilitating portfolio company introductions.",
     useCases: [
       "Proprietary deal flow generation",
@@ -75,7 +75,7 @@ const industries = [
     slug: "financial-services",
     icon: DollarSign,
     shortDesc: "Banking, Insurance, Wealth & Asset Management",
-    description: "Compliant AI prospecting with built-in regulatory guardrails. Deploy AI agents across retail banking, commercial lending, insurance, and wealth management with confidence that every interaction meets compliance standards.",
+    description: "Compliant revenue workflows with built-in regulatory guardrails across retail banking, commercial lending, insurance, and wealth management.",
     fullDefinition: "Financial services—including commercial and retail banking, insurance carriers, asset management, and wealth advisory—operate under strict regulatory oversight. ENAI agents are configured with compliance-first messaging, FINRA/SEC-aware guardrails, and audit trails for every client interaction.",
     useCases: [
       "HNW prospect identification",
@@ -183,7 +183,7 @@ export default function IndustriesPage() {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "ENAI Industries",
-            "description": "AI BDR solutions for every industry",
+            "description": "Revenue workflows for complex B2B industries",
             "mainEntity": industries.map(i => ({
               "@type": "Service",
               "name": `ENAI for ${i.name}`,
@@ -204,10 +204,10 @@ export default function IndustriesPage() {
               Industry Solutions
             </p>
             <h1 className="text-[clamp(40px,8vw,80px)] leading-[1.05] font-display text-white mb-8 text-balance">
-              AI Sales Automation<br />Built for Your Industry
+              Revenue Workflows<br />Built for Your Market
             </h1>
             <p className="text-body-lg text-white/70 max-w-2xl mx-auto leading-relaxed mb-12">
-              Industry-specific AI BDR agents trained on sector nuances, terminology, and buying patterns. Deploy pre-configured solutions or customize for your exact workflow.
+              ENAI adapts account research, stakeholder mapping, outreach, qualification, and handoff to the realities of your market.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -278,8 +278,8 @@ export default function IndustriesPage() {
         <section className="py-24 bg-[#F5F1ED]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="h2 text-black mb-4">Industry Deep Dives</h2>
-              <p className="text-body-lg text-black/60">Detailed solutions tailored to your sector&apos;s unique challenges</p>
+              <h2 className="h2 text-black mb-4">Industry Workflows</h2>
+              <p className="text-body-lg text-black/60">Practical workflows for the sectors where buying committees, timing, and trust matter.</p>
             </div>
             {industries.map((industry, index) => (
               <div
@@ -333,13 +333,13 @@ export default function IndustriesPage() {
         <section className="py-24 bg-[#1E3A3A]">
           <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
             <p className="text-caption uppercase tracking-[0.15em] text-white/40 mb-6">
-              Custom Solutions
+              Custom Workflows
             </p>
             <h2 className="h2 text-white mb-6">
               Don&apos;t See Your Industry?
             </h2>
             <p className="text-body-lg text-white/60 leading-relaxed mb-12 max-w-2xl mx-auto">
-              Our AI agents are highly customizable. We&apos;ve deployed solutions across 50+ verticals. Let&apos;s discuss your specific requirements.
+              We configure ENAI around your market, approval rules, target accounts, and revenue process.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

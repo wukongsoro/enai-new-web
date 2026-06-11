@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Check, ArrowRight, Zap, TrendingUp, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Sales Automation for SaaS Companies | Scale MRR Growth with Enai.ai",
-  description: "Transform your SaaS sales with AI BDR agents. Increase trial signups 3x, reduce CAC by 70%, and scale ARR without hiring. Built specifically for SaaS go-to-market.",
-  keywords: "AI sales automation for SaaS, SaaS sales tools, AI BDR for SaaS companies, SaaS lead generation, MRR growth automation",
+  title: "Revenue Workflows for SaaS Companies | ENAI",
+  description: "Use ENAI to connect product signals, account research, qualification, and sales handoff for SaaS go-to-market teams.",
+  keywords: "revenue workflows for SaaS, SaaS sales tools, Revenue Workflow for SaaS companies, SaaS lead generation, MRR growth automation",
   openGraph: {
-    title: "AI Sales Automation Built for SaaS Companies",
-    description: "Scale your SaaS ARR 5-10x without hiring more SDRs. AI-powered prospecting, qualification, and trial conversion.",
+    title: "Revenue Workflows Built for SaaS Companies",
+    description: "Connect product signals, account research, qualification, and sales handoff for SaaS go-to-market teams.",
     type: "website",
   },
 };
@@ -25,12 +25,12 @@ export default function SaaSSolutionPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "AI Sales Automation for SaaS",
+            "name": "Revenue Workflows for SaaS",
             "provider": {
               "@type": "Organization",
               "name": "Enai.ai"
             },
-            "description": "AI-powered sales automation specifically designed for SaaS companies",
+            "description": "Revenue Operating System specifically designed for SaaS companies",
             "audience": {
               "@type": "Audience",
               "audienceType": "SaaS Companies"
@@ -41,24 +41,24 @@ export default function SaaSSolutionPage() {
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-50 via-white to-orange-50 py-20 px-6 mt-32">
+        <section className="bg-[#F5F1ED] py-20 px-6 mt-32">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <div className="inline-block bg-white border border-black/10 text-[#1E3A3A] px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 Built for SaaS
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Scale Your SaaS ARR 5-10x
+                Turn SaaS Signals Into Revenue Meetings
                 <br />
-                <span className="text-orange-500">Without Hiring More SDRs</span>
+                <span className="text-[#1E3A3A]">Without Hiring More SDRs</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                AI-powered sales automation designed specifically for SaaS companies. Increase trial signups, reduce CAC, and accelerate time-to-revenue.
+                ENAI connects product usage, account research, stakeholder mapping, qualification, and handoff for SaaS go-to-market teams.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
                 <Link
                   href="https://calendly.com/enai-ai2024/30min"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition text-lg inline-flex items-center gap-2"
+                  className="bg-[#1E3A3A] hover:bg-[#16302F] text-white px-8 py-4 rounded-lg font-semibold transition text-lg inline-flex items-center gap-2"
                 >
                   Book SaaS Demo
                   <ArrowRight size={20} />
@@ -80,32 +80,32 @@ export default function SaaSSolutionPage() {
             <h2 className="text-3xl font-bold text-center mb-12">SaaS Sales Challenges We Solve</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="text-orange-500" size={24} />
+                <div className="bg-[#F5F1ED] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="text-[#1E3A3A]" size={24} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">High CAC, Low Conversion</h3>
                 <p className="text-gray-600">
-                  Traditional SDRs cost $150K+ per year but generate only 50-80 SQLs. AI reduces CAC by 70-80% while increasing trial signups 3x.
+                  Traditional SDR capacity is expensive and inconsistent. ENAI gives teams a governed workflow for turning account signals into qualified meetings.
                 </p>
               </div>
 
               <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="text-orange-500" size={24} />
+                <div className="bg-[#F5F1ED] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="text-[#1E3A3A]" size={24} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Slow Time-to-Revenue</h3>
                 <p className="text-gray-600">
-                  Long sales cycles delay ARR growth. AI accelerates qualification and trial conversion, reducing time-to-revenue by 40-60%.
+                  Long sales cycles delay ARR growth. ENAI accelerates qualification and handoff by keeping account context, stakeholder data, and next steps in one workflow.
                 </p>
               </div>
 
               <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="text-orange-500" size={24} />
+                <div className="bg-[#F5F1ED] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="text-[#1E3A3A]" size={24} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Scaling Bottleneck</h3>
                 <p className="text-gray-600">
-                  Can't scale outbound without proportional headcount growth. AI enables 10x outreach capacity with same team size.
+                  Outbound should not require a new tool or hire for every step. ENAI gives the team consistent research, outreach, and follow-up coverage.
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function SaaSSolutionPage() {
         </section>
 
         {/* SaaS-Specific Features */}
-        <section id="saas-features" className="py-16 px-6 bg-orange-50">
+        <section id="saas-features" className="py-16 px-6 bg-[#F5F1ED]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Built for SaaS Go-To-Market</h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -141,7 +141,7 @@ export default function SaaSSolutionPage() {
               <div className="bg-white p-8 rounded-xl shadow-sm">
                 <h3 className="text-2xl font-bold mb-4">SaaS-Specific Messaging</h3>
                 <p className="text-gray-600 mb-4">
-                  AI-powered personalization using SaaS metrics, tech stack, and growth indicators.
+                  AI-assisted personalization using SaaS metrics, tech stack, and growth indicators.
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -207,29 +207,29 @@ export default function SaaSSolutionPage() {
         {/* SaaS Case Study */}
         <section className="py-16 px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-12 rounded-2xl text-white">
+            <div className="bg-[#1E3A3A] p-12 rounded-2xl text-white">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold mb-4">SaaS Success Story</h2>
-                <p className="text-orange-100 text-lg">
+                <p className="text-white/75 text-lg">
                   Mid-market SaaS company (Series B, $15M ARR)
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                   <div className="text-4xl font-bold mb-2">320%</div>
-                  <div className="text-orange-100">Increase in trial signups</div>
+                  <div className="text-white/75">Increase in trial signups</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold mb-2">75%</div>
-                  <div className="text-orange-100">Reduction in CAC</div>
+                  <div className="text-white/75">Reduction in CAC</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold mb-2">$4.2M</div>
-                  <div className="text-orange-100">Additional ARR in 12 months</div>
+                  <div className="text-white/75">Additional ARR in 12 months</div>
                 </div>
               </div>
-              <p className="text-orange-50">
-                "Enai.ai allowed us to scale our outbound motion 5x without adding headcount. The AI agents understand our SaaS value proposition and speak fluently to technical buyers. Game changer for our growth."
+              <p className="text-white/75">
+                "Enai.ai allowed us to scale our outbound motion 5x without adding headcount. The AI agents understand our SaaS value proposition and speak fluently to technical buyers. Strategic advantage for our growth."
               </p>
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function SaaSSolutionPage() {
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"
-              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition text-lg"
+              className="inline-flex items-center gap-2 bg-[#1E3A3A] hover:bg-[#16302F] text-white px-8 py-4 rounded-lg font-semibold transition text-lg"
             >
               Schedule Your SaaS Demo
               <ArrowRight size={20} />
@@ -257,4 +257,3 @@ export default function SaaSSolutionPage() {
     </>
   );
 }
-

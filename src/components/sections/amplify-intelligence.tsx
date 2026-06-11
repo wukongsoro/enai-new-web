@@ -3,34 +3,34 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 const tagsRow1: string[] = [
-  'Governed Execution',
-  'Audit Lineage',
-  'Signal Ontology',
-  'Sovereign Control',
-  'Revenue OS',
-  'Deterministic Logic',
-  'Compliance Gates',
-  'Closed-Loop Ops',
-  'Revenue Certainty',
-  'Human Authority',
-  'Zero-Trust Pipeline',
-  'GTM Orchestration',
+  'Find high-intent accounts',
+  'Write personalized outreach',
+  'Follow up automatically',
+  'Qualify every reply',
+  'Book meetings',
+  'Revive closed-lost deals',
+  'Work event leads',
+  'Alert the right owner',
+  'Keep CRM updated',
+  'Explain every action',
+  'Human approvals',
+  'Scale without headcount',
 ];
 
 const tagsRow2: string[] = [
-  'Zero-Trust Pipeline',
-  'GTM Orchestration',
-  'Human Authority',
-  'Revenue Certainty',
-  'Closed-Loop Ops',
-  'Compliance Gates',
-  'Deterministic Logic',
-  'Revenue OS',
-  'Sovereign Control',
-  'Signal Ontology',
-  'Audit Lineage',
-  'Governed Execution',
-  'Prompt-driven Engine',
+  'Inbound qualification',
+  'Outbound prospecting',
+  'Webinar follow-up',
+  'Account expansion',
+  'No-show prevention',
+  'Buyer research',
+  'Meeting handoff',
+  'Pipeline hygiene',
+  'Signal monitoring',
+  'Campaign testing',
+  'Brand guardrails',
+  'Calendar booking',
+  'Sales-ready context',
 ];
 
 const MarqueeTag: FC<{ text: string }> = ({ text }) => (
@@ -61,13 +61,13 @@ const AmplifyIntelligence = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center text-caption uppercase tracking-wider text-white/70 px-4 py-2 bg-white/10 border border-white/10 rounded-full">
-            Sovereign Execution Infrastructure
+            Practical use cases
           </div>
           <h2 className="h2 text-white">
-            Revenue Certainty At Scale
+            What ENAI can do for you
           </h2>
           <p className="mt-6 max-w-lg text-body-lg text-white/70">
-            From pipeline to closed revenue in production. Revenue operations as simple as asking in plain language. Trusted by teams who demand both execution speed and sovereign control.
+            Start with one workflow: outbound, inbound qualification, webinar follow-up, closed-lost revival, or account expansion. ENAI runs the work and shows your team exactly what happened.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"
@@ -75,7 +75,7 @@ const AmplifyIntelligence = () => {
             rel="noopener noreferrer"
             className="mt-10 inline-flex items-center justify-center bg-white text-black px-8 py-4 text-sm font-medium rounded-lg transition-colors hover:bg-white/90"
           >
-            See the Evidence
+            Explore use cases
           </Link>
         </div>
       </div>

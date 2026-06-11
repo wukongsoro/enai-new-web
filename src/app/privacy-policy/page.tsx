@@ -7,13 +7,13 @@ const PRIVACY_URL = buildCanonicalUrl('/privacy-policy');
 const PRIVACY_IMAGE = buildAbsoluteUrl('/social-share-image.png');
 
 export const metadata: Metadata = {
-  title: 'ENAI Privacy Policy | AI Sales Automation Platform',
-  description: 'Learn how ENAI protects customer data, complies with GDPR/CCPA, and secures AI BDR workflows.',
+  title: 'ENAI Privacy Policy | Revenue Operating System',
+  description: 'Learn how ENAI protects customer data, supports GDPR/CCPA requirements, and secures governed revenue workflows.',
   keywords: [...defaultKeywords, 'ENAI privacy policy', 'AI data protection'],
   alternates: { canonical: PRIVACY_URL },
   openGraph: {
     title: 'ENAI Privacy Policy',
-    description: 'Detailed privacy practices for the ENAI AI-powered sales automation platform.',
+    description: 'Detailed privacy practices for the ENAI Revenue Operating System.',
     url: PRIVACY_URL,
     type: 'article',
     images: [

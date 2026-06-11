@@ -5,7 +5,7 @@ const CustomerStories = () => {
     <section className="bg-[#E8DDD4] py-20 md:py-32 border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 mb-6 border border-black/10 rounded-full">
+          <div className="inline-flex items-center font-mono text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 mb-6 border border-black/10 rounded-full">
             Real Teams. Real Revenue.
           </div>
           <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">

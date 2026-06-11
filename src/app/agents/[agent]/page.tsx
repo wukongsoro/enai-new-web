@@ -54,7 +54,7 @@ const agentProfiles = {
       "Alerts SDRs in Slack the moment new ICP-fit companies emerge",
     ],
     integrations: ["Salesforce", "HubSpot", "6sense", "Apollo", "LinkedIn", "Snowflake"],
-    keywords: [...defaultKeywords, "ProspectorAI", "AI prospecting", "lead research automation"],
+    keywords: [...defaultKeywords, "ProspectorAI", "account research", "lead research workflow"],
   },
   outreachai: {
     name: "OutreachAI",
@@ -101,7 +101,7 @@ const agentProfiles = {
       "Pauses prospects automatically when meetings book or deals open",
     ],
     integrations: ["Salesforce", "HubSpot", "Outreach", "Gmail", "LinkedIn", "Slack"],
-    keywords: [...defaultKeywords, "OutreachAI", "AI email personalization", "sales sequence automation"],
+    keywords: [...defaultKeywords, "OutreachAI", "governed outreach", "revenue sequence workflow"],
   },
   qualifierai: {
     name: "QualifierAI",
@@ -149,14 +149,14 @@ const agentProfiles = {
       "Triggers nurture tracks automatically when prospects defer",
     ],
     integrations: ["Google Calendar", "Outlook", "Calendly", "Zoom", "Teams", "Salesforce"],
-    keywords: [...defaultKeywords, "QualifierAI", "AI meeting scheduler", "sales qualification automation"],
+    keywords: [...defaultKeywords, "QualifierAI", "meeting handoff", "sales qualification workflow"],
   },
 } as const;
 
 type AgentSlug = keyof typeof agentProfiles;
 
 const tileClass = "rounded-[32px] border border-gray-100 bg-white p-8 shadow-sm";
-const schedulingUrl = "https://calendly.com/enai-ai2024/30min?month=2025-09" as const;
+const schedulingUrl = "https://calendly.com/enai-ai2024/30min" as const;
 
 export function generateStaticParams() {
   return Object.keys(agentProfiles).map((slug) => ({ agent: slug }));
@@ -265,7 +265,7 @@ export default async function AgentPage({ params }: { params: Promise<{ agent: s
           <div className={`${tileClass} space-y-4`}>
             <h2 className="text-3xl font-semibold">Build a workforce, not one-off automations</h2>
             <p className="text-gray-600 leading-relaxed">
-              ENAI’s digital workers stay aligned with your guardrails. We orchestrate approvals, data governance, and human feedback loops so you scale
+              ENAI’s revenue agents stay aligned with your guardrails. We orchestrate approvals, data governance, and human feedback loops so you scale
               responsibly.
             </p>
             <div className="space-y-3">

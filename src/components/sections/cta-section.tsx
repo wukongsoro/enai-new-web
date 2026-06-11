@@ -11,17 +11,17 @@ const CtaSection = () => {
             Ready to see ENAI running your revenue motion?
           </h2>
           <p className="text-lg text-[#1E3A3A]/70 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
-            The next generation of Revenue OS isn't a better dashboard. It's a system that understands your entire go-to-market motion, reads every signal in real time, and takes action.
+            See how ENAI coordinates account research, outreach, qualification, and handoff in one governed workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-[#1E3A3A] text-white text-[15px] font-semibold px-10 hover:bg-[#1E3A3A]/90 shadow-md">
-              <Link href="https://calendly.com/enai-ai2024/30min?month=2025-09" target="_blank" rel="noopener noreferrer">
-                Book a Demo
+              <Link href="https://calendly.com/enai-ai2024/30min" target="_blank" rel="noopener noreferrer">
+                Book a demo
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-[#1E3A3A] border-[#1E3A3A]/20 text-[15px] font-semibold px-10 hover:bg-white/50">
               <Link href="/pricing">
-                View Pricing
+                View pricing
               </Link>
             </Button>
           </div>

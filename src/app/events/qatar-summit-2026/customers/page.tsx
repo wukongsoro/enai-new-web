@@ -7,7 +7,7 @@ import { Calendar, MapPin, Users, TrendingUp, Zap, ArrowRight, Target, CheckCirc
 export const metadata: Metadata = {
     title: "Web Summit Qatar 2026 | ENAI - Autonomous Revenue Agents",
     description: "ENAI deploys autonomous agents to run your revenue engine end to end. From research to booked meetings, without the headcount. See it live Feb 4.",
-    keywords: "Web Summit Qatar 2026, ENAI demo, AI sales platform, enterprise sales automation, Doha conference, autonomous revenue agents",
+    keywords: "Web Summit Qatar 2026, ENAI demo, revenue platform, enterprise sales automation, Doha conference, revenue operating system agents",
     openGraph: {
         title: "Autonomous Revenue Agents | ENAI at Web Summit Qatar",
         description: "ENAI deploys autonomous agents to run your revenue engine end to end. See it live at our booth Feb 4, DECC Doha.",
@@ -109,7 +109,7 @@ export default function QatarSummitCustomersPage() {
                         "@context": "https://schema.org",
                         "@type": "Event",
                         "name": "ENAI Demo at Web Summit Qatar 2026",
-                        "description": "See the ENAI autonomous revenue platform in action at Web Summit Qatar 2026.",
+                        "description": "See the ENAI Revenue Operating System in action at Web Summit Qatar 2026.",
                         "startDate": "2026-02-04",
                         "endDate": "2026-02-04",
                         "location": {

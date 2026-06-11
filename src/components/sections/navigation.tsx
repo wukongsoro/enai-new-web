@@ -30,16 +30,18 @@ const banners = [
 ];
 
 const navLinks = [
-  { text: "Pricing", href: "/pricing" },
+  { text: "Platform", href: "/#platform" },
+  { text: "Solutions", href: "/#use-cases" },
+  { text: "Security", href: "/security" },
   { text: "Company", href: "/about-us" },
-  { text: "Blog", href: "/blog" },
 ];
 
 const resourceLinks = [
+  { text: "Demo Library", href: "/demo-library" },
   { text: "Industries", href: "/industries" },
   { text: "Case Studies", href: "/case-studies" },
   { text: "Integrations", href: "/integrations" },
-  { text: "Security", href: "/security" },
+  { text: "Pricing", href: "/pricing" },
 ];
 
 export default function Navigation() {
@@ -90,9 +92,9 @@ export default function Navigation() {
     ? "bg-white/80 dark:bg-neutral-900/80"
     : "bg-white/60 dark:bg-neutral-900/60";
 
-  const linkColorClass = "text-gray-800 hover:text-orange-600 transition-colors duration-200";
+  const linkColorClass = "text-gray-800 hover:text-[#1E3A3A] transition-colors duration-200";
 
-  const buttonClass = "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-sm hover:shadow-orange-500/25 transition-all duration-200";
+  const buttonClass = "bg-[#1E3A3A] text-white hover:bg-[#16302F] shadow-sm transition-colors duration-200";
 
   return (
     <>
@@ -102,22 +104,27 @@ export default function Navigation() {
         style={{ transform: 'translateZ(0)' }}
       >
         {/* Mission Banner - Founder's Letter */}
-        <div className="bg-orange-600 text-white border-b border-orange-700">
+        <div className="bg-black text-white border-b border-white/10">
           <Link
             href="/blog/founder-enterprise-autonomous-governance"
-            className="flex items-center justify-center gap-3 min-h-[40px] py-2 px-4 hover:bg-orange-700 transition-colors"
+            className="flex items-center justify-center gap-3 min-h-[34px] sm:min-h-[40px] py-1.5 sm:py-2 px-4 hover:bg-white/5 transition-colors"
           >
-            <span className="text-[13px] font-bold tracking-wide flex items-center gap-2">
+            <span className="text-[12px] sm:text-[13px] font-bold tracking-wide flex items-center gap-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-60"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300"></span>
               </span>
-              EXECUTIVE LETTER: Read Founder Nikhil Nehra on Sovereign Enterprise Autonomy at Doha Web Summit 2026
+              <span className="hidden sm:inline">
+                Founder Letter: Governed Autonomous Execution at Web Summit Qatar 2026
+              </span>
+              <span className="sm:hidden">
+                Founder letter: ENAI at Doha 2026
+              </span>
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
           </Link>
         </div>
-        <div className="bg-black text-white hidden md:block">
+        <div className="bg-black text-white hidden">
           <div className="relative h-12 overflow-hidden">
             {banners.map((banner, index) => (
               <Link
@@ -153,7 +160,7 @@ export default function Navigation() {
                   alt="ENAI logo"
                   width={52}
                   height={22}
-                  className="transition-all duration-300 hover:scale-105"
+                  className="transition-opacity duration-300 hover:opacity-80"
                   priority
                 />
               </Link>
@@ -164,10 +171,10 @@ export default function Navigation() {
                 <Link
                   key={link.text}
                   href={link.href}
-                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 relative group ${linkColorClass}`}
+                  className={`text-[13px] font-semibold tracking-[0.02em] relative group ${linkColorClass}`}
                 >
                   {link.text}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-[#1E3A3A] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
               <div
@@ -178,7 +185,7 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`text-[13px] font-semibold tracking-[0.02em] transition-all duration-300 hover:scale-105 hover:bg-transparent flex items-center gap-1.5 px-0 ${linkColorClass}`}
+                  className={`text-[13px] font-semibold tracking-[0.02em] hover:bg-transparent flex items-center gap-1.5 px-0 ${linkColorClass}`}
                 >
                   Resources
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isResourcesOpen ? 'rotate-180' : ''}`} />
@@ -202,13 +209,13 @@ export default function Navigation() {
             </div>
 
             <div className="flex-1 flex justify-end items-center">
-              <Button asChild size="sm" className={`hidden lg:flex text-[13px] font-semibold tracking-wide rounded-full px-7 transition-all duration-300 hover:scale-105 ${buttonClass}`}>
+              <Button asChild size="sm" className={`hidden lg:flex text-[13px] font-semibold tracking-wide rounded-full px-7 ${buttonClass}`}>
                 <Link
-                  href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                  href="https://calendly.com/enai-ai2024/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get Demo
+                  Request a demo
                 </Link>
               </Button>
               <Button
@@ -251,7 +258,7 @@ export default function Navigation() {
                   key={link.text}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block rounded-xl py-3.5 px-6 text-[15px] font-semibold text-gray-800 hover:bg-orange-50 transition-all duration-200 min-h-[48px] flex items-center"
+                  className="block rounded-xl py-3.5 px-6 text-[15px] font-semibold text-gray-800 hover:bg-[#F5F1ED] transition-all duration-200 min-h-[48px] flex items-center"
                 >
                   {link.text}
                 </Link>
@@ -270,14 +277,14 @@ export default function Navigation() {
                 ))}
               </div>
               <div className="pt-6 border-t border-gray-100 mt-4">
-                <Button asChild size="lg" className="w-full text-[14px] font-semibold rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+                <Button asChild size="lg" className="w-full text-[14px] font-semibold rounded-xl bg-[#1E3A3A] text-white hover:bg-[#16302F]">
                   <Link
-                    href="https://calendly.com/enai-ai2024/30min?month=2025-09"
+                    href="https://calendly.com/enai-ai2024/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Book a Demo
+                    Request a demo
                   </Link>
                 </Button>
               </div>

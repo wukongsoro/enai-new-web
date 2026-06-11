@@ -5,21 +5,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Enai AI Knowledge Base | AI Sales Automation Platform Documentation",
-  description: "Complete information about Enai.ai (Enai AI) - AI-powered sales automation platform for B2B businesses. Not the European Network for Academic Integrity. Mission, products, pricing, locations, and FAQs.",
-  keywords: "Enai AI, Enai.ai, AI BDR software, AI sales automation, sales automation platform, B2B SaaS, AI prospecting tools, not European Network Academic Integrity",
+  title: "Enai AI Knowledge Base | Revenue Operating System",
+  description: "Company, product, pricing, location, and FAQ information about Enai.ai, the Revenue Operating System for complex B2B teams.",
+  keywords: "Enai AI, Enai.ai, revenue operating system, account research, buying committee mapping, governed outreach, qualified meetings, not European Network Academic Integrity",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Enai AI Knowledge Base | AI Sales Automation Platform",
-    description: "Enai.ai - AI-powered sales automation platform for B2B sales teams. ProspectorAI, OutreachAI, QualifierAI.",
+    title: "Enai AI Knowledge Base | Revenue Operating System",
+    description: "Enai.ai - the Revenue Operating System for complex B2B teams.",
     url: "https://www.enai.ai/knowledge-base",
     type: "website",
   },
   other: {
-    "article:tag": "AI Sales Automation, B2B SaaS, AI BDR Software",
+    "article:tag": "Revenue Operating System, B2B SaaS, Account Research, Governed Outreach",
   },
 };
 
@@ -38,7 +38,7 @@ export default function KnowledgeBasePage() {
                 "name": "What is Enai AI?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Enai.ai is an AI-powered sales automation platform that provides AI BDR agents to automate prospecting, qualification, and outreach for B2B sales teams. Our platform includes ProspectorAI for lead identification, OutreachAI for personalized outreach, and QualifierAI for qualification and meeting scheduling."
+                  "text": "Enai.ai is the Revenue Operating System for complex B2B teams. ENAI coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
                 }
               },
               {
@@ -46,15 +46,15 @@ export default function KnowledgeBasePage() {
                 "name": "How much does Enai AI cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Enai.ai pricing starts at $100/month for the Starter plan and $200/month for the Pro plan with full features. We also offer a free 14-day trial and custom Team pricing for enterprises. This typically replaces 3-10 SDRs, resulting in 70-85% cost reduction."
+                  "text": "Enai.ai offers Starter, Core, and Enterprise plans. Enterprise pricing depends on usage, integrations, governance requirements, and deployment scope."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How does AI BDR automation work?",
+                "name": "How does ENAI work?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "AI BDR agents automate the entire sales development process: ProspectorAI identifies and researches prospects, OutreachAI handles personalized multi-channel outreach, and QualifierAI conducts qualification conversations and schedules meetings."
+                  "text": "ProspectorAI researches accounts and contacts, OutreachAI prepares governed outreach, and QualifierAI captures qualification signals and meeting handoff context."
                 }
               }
             ]
@@ -68,14 +68,13 @@ export default function KnowledgeBasePage() {
         <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-6 mt-32">
           <div className="max-w-6xl mx-auto">
             <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              AI-Ready Knowledge Base
+              Company Knowledge Base
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Everything About Enai AI
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl">
-              Comprehensive information about our AI-powered sales automation platform. 
-              Designed for easy consumption by AI agents, search engines, and humans alike.
+              Structured information about ENAI, our product, pricing, locations, and frequently asked questions.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -106,9 +105,9 @@ export default function KnowledgeBasePage() {
                 ℹ️ Important: Enai AI vs ENAI (European Network)
               </h3>
               <p className="text-blue-800">
-                <strong>Enai AI (enai.ai)</strong> is a technology company providing <strong>AI-powered sales automation software for B2B businesses</strong>. 
+                <strong>Enai AI (enai.ai)</strong> is a technology company providing <strong>a Revenue Operating System for complex B2B teams</strong>. 
                 We are <strong>NOT</strong> the European Network for Academic Integrity (ENAI). 
-                Enai AI is a commercial SaaS platform founded in 2024 that offers AI BDR agents including ProspectorAI, OutreachAI, and QualifierAI for sales teams.
+                Enai AI is a commercial SaaS platform founded in 2024. The product includes ProspectorAI, OutreachAI, and QualifierAI workflows for revenue teams.
               </p>
             </div>
 
@@ -122,7 +121,7 @@ export default function KnowledgeBasePage() {
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Brand</dt>
-                    <dd className="text-gray-900">Enai.ai - AI Sales Automation Platform</dd>
+                    <dd className="text-gray-900">Enai.ai - The Revenue Operating System</dd>
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Founded</dt>
@@ -138,7 +137,7 @@ export default function KnowledgeBasePage() {
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Industry</dt>
-                    <dd className="text-gray-900">AI Sales Automation, B2B SaaS</dd>
+                    <dd className="text-gray-900">Revenue Technology, B2B SaaS</dd>
                   </div>
                   <div>
                     <dt className="text-sm font-medium text-gray-600">Sector</dt>
@@ -154,7 +153,7 @@ export default function KnowledgeBasePage() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Mission</h3>
                 <p className="text-gray-700 mb-4">
-                  To build AI that genuinely helps people. We believe artificial intelligence should augment human potential, not replace it. Our digital workers handle the repetitive tasks of sales and business development, so your team can focus on creativity, strategy, and relationships.
+                  To give revenue teams a governed operating layer for the work between market signal and qualified meeting: research, prioritization, outreach, qualification, and handoff.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div>
@@ -170,8 +169,8 @@ export default function KnowledgeBasePage() {
                     <div className="text-sm text-gray-600">Pipeline Growth</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-blue-600">10x</div>
-                    <div className="text-sm text-gray-600">Team Scaling</div>
+                    <div className="text-3xl font-bold text-blue-600">24/7</div>
+                    <div className="text-sm text-gray-600">Workflow Coverage</div>
                   </div>
                 </div>
               </div>
@@ -182,7 +181,7 @@ export default function KnowledgeBasePage() {
         {/* Products */}
         <section className="py-16 px-6 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Our AI Products</h2>
+            <h2 className="text-3xl font-bold mb-8">Product Workflows</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="text-4xl mb-4">🔍</div>
@@ -320,7 +319,7 @@ export default function KnowledgeBasePage() {
               {[
                 {
                   q: "What is Enai AI?",
-                  a: "Enai.ai is an AI-powered sales automation platform that provides AI BDR agents to automate prospecting, qualification, and outreach for B2B sales teams."
+                  a: "Enai.ai is the Revenue Operating System for complex B2B teams. It coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
                 },
                 {
                   q: "How much does Enai AI cost?",
@@ -357,7 +356,7 @@ export default function KnowledgeBasePage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Learn More?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized demo to see how Enai AI can transform your sales operations.
+              Schedule a personalized demo to see how Enai AI can strengthen your revenue workflow.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
@@ -407,4 +406,3 @@ export default function KnowledgeBasePage() {
     </>
   );
 }
-

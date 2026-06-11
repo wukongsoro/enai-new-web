@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
-import Script from "next/script";
 import { SITE_URL, buildCanonicalUrl, defaultKeywords, primaryGeoRegion } from "@/lib/seo";
 
 export const viewport: Viewport = {
@@ -14,8 +13,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ENAI | Autonomous Revenue Execution Platform",
-  description: "ENAI is the autonomous revenue execution platform for enterprise sales teams. End-to-end pipeline generation from research to booked meeting without manual work.",
+  title: "ENAI | The Revenue Operating System",
+  description: "ENAI is the Revenue Operating System for complex B2B teams. Research accounts, map buying committees, execute governed outreach, and book qualified meetings.",
   keywords: defaultKeywords,
   authors: [{ name: "Nikhil Nehra", url: "https://www.linkedin.com/in/nikhil-nehra-57716a23b" }],
   creator: "Nikhil Nehra",
@@ -35,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "ENAI | Autonomous Revenue Execution Platform",
-    description: "End-to-end pipeline generation for enterprise sales teams. From research to booked meeting in 60 seconds, autonomously.",
+    title: "ENAI | The Revenue Operating System",
+    description: "The Revenue Operating System for complex B2B teams: account research, buying committee mapping, governed outreach, and qualified meetings.",
     url: buildCanonicalUrl('/'),
     siteName: "Enai AI",
     images: [
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/social-share-image.png`,
         width: 1200,
         height: 630,
-        alt: "ENAI | Autonomous Revenue Execution Platform",
+        alt: "ENAI | The Revenue Operating System",
       },
     ],
     locale: "en_US",
@@ -52,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ENAI | Autonomous Revenue Execution Platform",
-    description: "End-to-end pipeline generation for enterprise sales teams. From research to booked meeting in 60 seconds, autonomously.",
+    title: "ENAI | The Revenue Operating System",
+    description: "The Revenue Operating System for complex B2B teams: account research, buying committee mapping, governed outreach, and qualified meetings.",
     creator: "@enai_ai",
     site: "@enai_ai",
     images: [`${SITE_URL}/social-share-image.png`],
@@ -91,12 +90,7 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#ffffff",
     "msapplication-config": "/browserconfig.xml",
     "theme-color": "#ffffff",
-    "fb:app_id": "YOUR_FACEBOOK_APP_ID",
     'geo.region': primaryGeoRegion,
-  },
-  verification: {
-    google: "verification_token",
-    yandex: "verification_token",
   },
   category: "technology",
 };
@@ -110,7 +104,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500;600;700&family=Playfair+Display:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
         <script
@@ -132,11 +126,11 @@ export default function RootLayout({
                     "width": 512,
                     "height": 512
                   },
-                  "description": "Enai AI (enai.ai) is the leading autonomous revenue execution platform for enterprise organizations, automating end-to-end sales workflows from research to revenue. We are a commercial technology company, NOT the European Network for Academic Integrity.",
-                  "disambiguatingDescription": "Commercial autonomous revenue execution SaaS platform founded in 2024, providing AI-powered systems for enterprise sales teams. Not to be confused with European Network for Academic Integrity (ENAI).",
-                  "slogan": "Autonomous Revenue Execution Platform",
+                  "description": "Enai AI (enai.ai) is the Revenue Operating System for complex B2B teams, coordinating account research, buying committee mapping, governed outreach, qualification, and meeting handoff. We are a commercial technology company, NOT the European Network for Academic Integrity.",
+                  "disambiguatingDescription": "Commercial revenue technology company founded in 2024, providing governed AI workflows for B2B revenue teams. Not to be confused with European Network for Academic Integrity (ENAI).",
+                  "slogan": "The Revenue Operating System",
                   "knowsAbout": [
-                    "Autonomous Revenue Execution",
+                    "Revenue Operating System",
                     "Sales Force Automation",
                     "Enterprise AI",
                     "Sales Prospecting",
@@ -233,7 +227,7 @@ export default function RootLayout({
                   "worksFor": {
                     "@id": "https://www.enai.ai/#organization"
                   },
-                  "description": "Founder and CEO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. Expert in scalable distributed systems.",
+                  "description": "Founder and CEO of ENAI, leading the architecture and development of the company's governed revenue workflow platform.",
                   "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
                   "sameAs": [
                     "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
@@ -298,70 +292,8 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ErrorReporter />
-        {/* Facebook Pixel Code */}
-        <Script
-          id="facebook-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            className="hidden"
-            src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
-        {/* End Facebook Pixel Code */}
-
-        {/* Google Analytics (if needed) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX');
-            `,
-          }}
-        />
-
-        <Script
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-          strategy="afterInteractive"
-          data-target-origin="*"
-          data-message-type="ROUTE_CHANGE"
-          data-include-search-params="true"
-          data-only-in-iframe="true"
-          data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
-        />
         {children}
         <VisualEditsMessenger />
-        <Script
-          src="https://enai.statuspage.io/embed/script.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

@@ -41,7 +41,7 @@ const defaultAchievements = [
 
 const About3 = ({
   title = "About ENAI",
-  description = "ENAI is an AI-powered business development platform that builds intelligent digital workers to revolutionize sales and marketing operations. We believe artificial intelligence should augment human potential, not replace it.",
+  description = "ENAI is the Revenue Operating System for complex B2B teams. We help companies research accounts, map buying committees, run governed outreach, qualify replies, and hand off meetings with context.",
   mainImage = {
     src: "/GauJDBnXcAAkNUg.jpeg",
     alt: "ENAI Team",
@@ -53,13 +53,13 @@ const About3 = ({
   breakout = {
     src: "/enai-logo.png",
     alt: "ENAI Logo",
-    title: "Trusted by leading companies",
-    description: "Our AI-powered sales automation platform helps businesses scale their outbound operations while maintaining human connection.",
+    title: "Built for serious revenue teams",
+    description: "ENAI gives teams a governed way to move from signal to qualified meeting without losing control of brand, data, or process.",
     buttonText: "Book a Demo",
     buttonUrl: "https://calendly.com/enai-ai2024/30min",
   },
-  achievementsTitle = "Measurable Results That Drive Growth",
-  achievementsDescription = "Our AI-powered platform delivers transformative outcomes across sales teams and enterprises worldwide.",
+  achievementsTitle = "Measured by Revenue Outcomes",
+  achievementsDescription = "ENAI is built around the operating metrics revenue leaders already track: pipeline quality, meeting volume, cycle time, and acquisition cost.",
   achievements = defaultAchievements,
 }: About3Props = {}) => {
   return (
@@ -106,7 +106,7 @@ const About3 = ({
             </h2>
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gray-900 mx-auto mb-8 sm:mb-12 lg:mb-16"></div>
             <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
-              To build AI that genuinely helps people. We believe artificial intelligence should augment human potential, not replace it. Our digital workers handle the repetitive tasks of sales and business development, so your team can focus on creativity, strategy, and relationships.
+              To give revenue teams a governed operating layer for the work that happens before a qualified meeting: research, prioritization, outreach, qualification, and handoff.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-5xl mx-auto px-4 sm:px-0">
@@ -116,9 +116,9 @@ const About3 = ({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Intelligent Automation</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Account Intelligence</h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Our AI understands sales context and human behavior, creating outreach that's both effective and authentic.
+                  ENAI reads account signals, company context, and buying committee structure before outreach begins.
                 </p>
               </div>
 
@@ -128,9 +128,9 @@ const About3 = ({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Human-Centric Design</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Human Control</h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  We build technology that respects human intelligence and enhances human work, never replacing the irreplaceable.
+                  Teams define the rules, approvals, and handoff points. ENAI executes the repeatable work inside those boundaries.
                 </p>
               </div>
 
@@ -142,7 +142,7 @@ const About3 = ({
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Measurable Impact</h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Every feature we build must demonstrably improve sales outcomes and human productivity.
+                  Every workflow is judged by pipeline quality, meeting readiness, and the time saved by the team.
                 </p>
               </div>
 
@@ -152,9 +152,9 @@ const About3 = ({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Ethical AI</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Responsible Execution</h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  We prioritize responsible AI development, transparency, and the long-term benefit of humanity.
+                  We prioritize clear audit trails, transparent decisioning, and responsible use of customer and prospect data.
                 </p>
               </div>
             </div>

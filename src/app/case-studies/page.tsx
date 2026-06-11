@@ -5,12 +5,12 @@ import Footer from "@/components/sections/footer";
 import { ArrowRight, Zap, Brain, Globe, Clock, Target, Users, TrendingUp, Shield, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "What ENAI Can Do | AI Sales Automation Capabilities",
-  description: "Explore ENAI's AI BDR capabilities: autonomous prospecting, multi-channel outreach, intelligent qualification, and 24/7 global coverage for B2B sales teams.",
-  keywords: "AI BDR capabilities, sales automation features, B2B prospecting AI, AI sales agent, autonomous outreach",
+  title: "What ENAI Can Do | Revenue Workflows and Proof Points",
+  description: "Explore how ENAI researches accounts, maps buying committees, executes governed outreach, qualifies replies, and books revenue meetings.",
+  keywords: "revenue operating system, account research, buying committee mapping, governed outreach, qualified meetings",
   openGraph: {
-    title: "What ENAI Can Do | AI Sales Automation Capabilities",
-    description: "Discover the full potential of AI-powered sales development.",
+    title: "What ENAI Can Do | Revenue Workflows and Proof Points",
+    description: "See how ENAI turns signals into qualified meetings through governed revenue workflows.",
     type: "website",
   },
 };
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 const capabilities = [
   {
     icon: Brain,
-    title: "Intelligent Prospect Research",
-    description: "AI agents that deeply research every prospect. We analyze company news, funding rounds, job postings, tech stack, and organizational changes to craft perfectly timed, relevant outreach.",
+    title: "Account Research",
+    description: "ENAI reviews company news, funding, hiring, technology, and organizational change so every account has a reason to act.",
     highlights: [
       "Real-time company intelligence gathering",
       "Buying signal detection and prioritization",
@@ -29,8 +29,8 @@ const capabilities = [
   },
   {
     icon: Zap,
-    title: "Autonomous Multi-Channel Outreach",
-    description: "Deploy AI agents across email, LinkedIn, and phone with coordinated sequences that adapt based on prospect engagement and response patterns.",
+    title: "Governed Outreach",
+    description: "Run coordinated email, social, and voice workflows with approved messaging, timing rules, and clear escalation paths.",
     highlights: [
       "Personalized messaging at scale",
       "Dynamic sequence optimization",
@@ -40,8 +40,8 @@ const capabilities = [
   },
   {
     icon: Target,
-    title: "Smart Lead Qualification",
-    description: "AI-powered qualification that goes beyond basic criteria: understanding budget authority, timeline, and genuine fit before passing to your sales team.",
+    title: "Reply Qualification",
+    description: "Qualify budget, authority, timing, and fit before anything reaches your sales team.",
     highlights: [
       "BANT and custom framework scoring",
       "Intent signal analysis",
@@ -51,8 +51,8 @@ const capabilities = [
   },
   {
     icon: Globe,
-    title: "24/7 Global Coverage",
-    description: "AI agents that never sleep, engaging prospects across every timezone with culturally-aware, localized communication in multiple languages.",
+    title: "Global Coverage",
+    description: "Coordinate follow-up across time zones with localized timing, language, and business-hour controls.",
     highlights: [
       "Multi-timezone engagement",
       "Localized messaging and cultural nuance",
@@ -62,8 +62,8 @@ const capabilities = [
   },
   {
     icon: Shield,
-    title: "Enterprise-Grade Compliance",
-    description: "Built-in guardrails for regulated industries with audit trails, approval workflows, and messaging controls that keep your outreach compliant.",
+    title: "Enterprise Controls",
+    description: "Use approval workflows, audit trails, and messaging controls for regulated or brand-sensitive markets.",
     highlights: [
       "GDPR and CCPA compliance",
       "Industry-specific regulations (FINRA, HIPAA)",
@@ -73,8 +73,8 @@ const capabilities = [
   },
   {
     icon: Sparkles,
-    title: "Continuous Learning",
-    description: "AI agents that improve with every interaction. They learn from successful conversions, refine targeting, and optimize messaging based on real results.",
+    title: "Performance Feedback",
+    description: "Use response patterns and conversion data to refine targeting, messaging, and handoff rules.",
     highlights: [
       "Response pattern analysis",
       "Conversion optimization",
@@ -121,7 +121,7 @@ export default function CaseStudiesPage() {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "ENAI Capabilities",
-            "description": "AI BDR capabilities and use cases for sales automation",
+            "description": "Revenue workflows and use cases for complex B2B teams",
           })
         }}
       />
@@ -139,7 +139,7 @@ export default function CaseStudiesPage() {
                 What ENAI Can Do
               </h1>
               <p className="text-body-lg text-black/60 leading-relaxed max-w-2xl">
-                Discover the full potential of AI-powered sales development. Our AI BDR agents handle everything from prospect research to qualified meeting booking.
+                ENAI handles the operational work between market signal and qualified meeting: account research, committee mapping, governed outreach, qualification, and handoff.
               </p>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function CaseStudiesPage() {
                 Core Capabilities
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed">
-                Six powerful capabilities that transform how your team generates pipeline.
+                Six core workflows that make pipeline generation more consistent and measurable.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -227,7 +227,7 @@ export default function CaseStudiesPage() {
                 How It Works
               </h2>
               <p className="text-body-lg text-black/60 leading-relaxed">
-                From setup to qualified meetings in three simple steps.
+                From market definition to qualified meetings in three controlled steps.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -244,9 +244,9 @@ export default function CaseStudiesPage() {
                 <div className="w-16 h-16 mx-auto mb-6 bg-[#1E3A3A] rounded-full flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">2</span>
                 </div>
-                <h3 className="text-lg font-medium text-black mb-3">Deploy AI Agents</h3>
+                <h3 className="text-lg font-medium text-black mb-3">Run the Workflow</h3>
                 <p className="text-body-sm text-black/60">
-                  Your AI BDR agents begin researching prospects, crafting personalized outreach, and engaging across email, LinkedIn, and phone.
+                  ENAI researches accounts, prepares approved outreach, and engages across the channels you allow.
                 </p>
               </div>
               <div className="text-center">
@@ -270,7 +270,7 @@ export default function CaseStudiesPage() {
                 Ready to See ENAI in Action?
               </h2>
               <p className="text-body-lg text-white/70 leading-relaxed mb-10">
-                Book a demo to see how AI BDR agents can transform your sales pipeline.
+                Book a demo to see how ENAI turns market signals into qualified meetings.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

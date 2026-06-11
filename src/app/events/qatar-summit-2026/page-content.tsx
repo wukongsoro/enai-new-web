@@ -17,7 +17,7 @@ const eventStats = [
 
 // From pitch deck: Market Opportunity
 const marketOpportunity = [
-    { stat: "$4.1B", label: "AI sales automation (2025)" },
+    { stat: "$4.1B", label: "revenue workflows (2025)" },
     { stat: "$15B", label: "Projected market by 2030" },
     { stat: "72%", label: "Time lost to non-selling tasks" },
     { stat: "28%", label: "Time reps actually spend selling" },
@@ -85,7 +85,7 @@ const teamMembers = [
     {
         name: "Nikhil Nehra",
         role: "Founder and CEO",
-        background: "Founder and CEO of ENAI, leading the technical architecture and development of the platform's autonomous revenue engine. With expertise in scalable distributed systems, he oversees the engineering of ENAI's core infrastructure. Holds a Master's degree from Brunel University London.",
+        background: "Founder and CEO of ENAI, leading the technical architecture and development of the platform's revenue operating system engine. With expertise in scalable distributed systems, he oversees the engineering of ENAI's core infrastructure. Holds a Master's degree from Brunel University London.",
         email: "Nikhil@enai.ai",
     },
     {
@@ -146,7 +146,7 @@ const whyNow = [
     {
         icon: BrainCircuit,
         title: "Agentic AI Inflection",
-        detail: "LLMs can now reason, plan, and execute. We are building the operating system for autonomous revenue.",
+        detail: "LLMs can now reason, plan, and execute. We are building the operating system for revenue operating system.",
     },
     {
         icon: DollarSign,
@@ -184,7 +184,7 @@ export default function QatarSummit2026Content() {
                         "@context": "https://schema.org",
                         "@type": "Event",
                         "name": "ENAI at Web Summit Qatar 2026",
-                        "description": "Meet the ENAI team at Web Summit Qatar 2026 to discover the future of autonomous revenue execution.",
+                        "description": "Meet the ENAI team at Web Summit Qatar 2026 to discover the future of governed revenue execution.",
                         "startDate": "2026-02-01",
                         "endDate": "2026-02-04",
                         "location": {
@@ -225,11 +225,11 @@ export default function QatarSummit2026Content() {
                             </h1>
 
                             <p className="text-body-lg text-white/80 leading-relaxed max-w-2xl mx-auto mb-4">
-                                ENAI autonomously researches accounts, identifies intent, finds decision-makers, and executes multi-channel outreach. One platform. End-to-end revenue execution. $300K to $500K in annual savings.
+                                ENAI researches accounts, identifies intent, finds decision-makers, and executes multi-channel outreach. One platform. End-to-end revenue execution. $300K to $500K in annual savings.
                             </p>
 
                             <p className="text-body text-amber-300/90 font-medium mb-8">
-                                We are building the operating system for autonomous revenue. Meet us at Web Summit Qatar.
+                                We are building the operating system for revenue operating system. Meet us at Web Summit Qatar.
                             </p>
 
                             {/* Event Badge */}
@@ -282,7 +282,7 @@ export default function QatarSummit2026Content() {
                                     <div className="space-y-4 text-body text-black/60 mb-8">
                                         <p>
                                             We are thrilled to announce that ENAI has been selected for the <strong>Startup Showcase at Web Summit Qatar 2026</strong>.
-                                            Out of thousands of applicants, ENAI will take the stage to present the future of autonomous revenue execution.
+                                            Out of thousands of applicants, ENAI will take the stage to present the future of governed revenue execution.
                                         </p>
                                         <div className="grid sm:grid-cols-2 gap-4">
                                             <div className="flex items-start gap-3">
@@ -440,7 +440,7 @@ export default function QatarSummit2026Content() {
                                 End-to-End Revenue Execution
                             </h2>
                             <p className="text-body-lg text-white/70 leading-relaxed">
-                                One platform for the entire revenue workflow. ENAI autonomously researches accounts, identifies intent, finds decision-makers, and executes multi-channel outreach across Email, Social, and Voice.
+                                One platform for the entire revenue workflow. ENAI researches accounts, identifies intent, finds decision-makers, and executes multi-channel outreach across Email, Social, and Voice.
                             </p>
                         </div>
 
@@ -508,7 +508,7 @@ export default function QatarSummit2026Content() {
                                 $15 Billion Market by 2030
                             </h2>
                             <p className="text-body-lg text-black/60 leading-relaxed">
-                                The AI sales automation market is projected to grow from $4.1B in 2025 to $15B by 2030. We are building the category leader.
+                                The revenue workflows market is projected to grow from $4.1B in 2025 to $15B by 2030. We are building the category leader.
                             </p>
                         </div>
 
@@ -730,7 +730,7 @@ export default function QatarSummit2026Content() {
                                 Series A: Let&apos;s Talk
                             </h2>
                             <p className="text-body-lg text-white/70 leading-relaxed mb-4">
-                                We are preparing for Series A and taking limited meetings at Web Summit Qatar. If you are an investor interested in autonomous revenue and enterprise AI, we want to meet you.
+                                We are preparing for Series A and taking limited meetings at Web Summit Qatar. If you are an investor interested in revenue operating system and enterprise AI, we want to meet you.
                             </p>
                             <p className="text-body text-amber-300/90 font-medium mb-10">
                                 February 1-4, 2026 at DECC, Doha. Headquartered in London, UK.

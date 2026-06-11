@@ -5,8 +5,8 @@ import Link from "next/link";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Global AI Sales Automation Locations | Enai.ai",
-  description: "Find Enai.ai's global presence. We serve 11 major tech hubs worldwide with localized AI sales automation solutions. London, New York, San Francisco, and more.",
+  title: "Global Revenue Workflows | Enai.ai",
+  description: "ENAI supports revenue teams across major technology and business hubs, including London, New York, San Francisco, Singapore, and more.",
 };
 
 const locations = [
@@ -43,13 +43,13 @@ export default function LocationsHubPage() {
     <>
       <Navigation />
       <main className="min-h-screen bg-white">
-        <section className="bg-gradient-to-br from-orange-50 to-white py-20 px-6 mt-32">
+        <section className="bg-[#F5F1ED] py-20 px-6 mt-32">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Global Presence, Local Impact
+              Global Presence, Local Context
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Enai.ai provides AI sales automation solutions tailored to local markets across 11 major tech hubs worldwide.
+              ENAI helps revenue teams run account research, outreach, qualification, and handoff across regions, time zones, and local buying norms.
             </p>
           </div>
         </section>
@@ -67,11 +67,11 @@ export default function LocationsHubPage() {
                       <Link
                         key={city.slug}
                         href={`/locations/${city.slug}`}
-                        className="group block bg-gray-50 hover:bg-orange-50 border border-transparent hover:border-orange-100 rounded-xl p-6 transition-all duration-200"
+                        className="group block bg-gray-50 hover:bg-[#F5F1ED] border border-transparent hover:border-black/10 rounded-xl p-6 transition-all duration-200"
                       >
                         <div className="flex items-center gap-3 mb-2">
-                          <MapPin className="w-5 h-5 text-orange-600" />
-                          <h3 className="font-semibold text-lg text-gray-900 group-hover:text-orange-700">
+                          <MapPin className="w-5 h-5 text-[#1E3A3A]" />
+                          <h3 className="font-semibold text-lg text-gray-900 group-hover:text-[#1E3A3A]">
                             {city.name}
                           </h3>
                         </div>
@@ -91,7 +91,7 @@ export default function LocationsHubPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Don't See Your City?</h2>
             <p className="text-lg opacity-80 mb-8">
-              Our AI agents work globally from the cloud. No matter where you are located, Enai.ai can automate your sales process.
+              ENAI can support your revenue workflow wherever your target accounts are located.
             </p>
             <Link
               href="https://calendly.com/enai-ai2024/30min"

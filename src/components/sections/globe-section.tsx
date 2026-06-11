@@ -42,7 +42,7 @@ const GlobeSection = () => {
           
           {/* Left: Text Content */}
           <div className="w-full">
-            <div className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-[#1E3A3A]/70 font-bold px-4 py-2 mb-6 border border-[#1E3A3A]/10 rounded-full bg-white/50">
+            <div className="inline-flex items-center font-mono text-xs tracking-[0.2em] uppercase text-[#1E3A3A]/70 font-bold px-4 py-2 mb-6 border border-[#1E3A3A]/10 rounded-full bg-white/50">
               <span className="w-2 h-2 rounded-full bg-[#1E3A3A] mr-2" />
               Global Expansion
             </div>

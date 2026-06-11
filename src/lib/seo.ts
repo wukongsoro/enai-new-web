@@ -12,12 +12,12 @@ export const buildCanonicalUrl = (path: string = "/") => {
 };
 
 export const defaultKeywords = [
-  "AI sales automation",
-  "AI BDR software",
-  "autonomous SDR platform",
-  "AI prospecting tools",
-  "AI outbound sales",
-  "B2B sales automation",
+  "Revenue Operating System",
+  "revenue workflows",
+  "account research",
+  "buying committee mapping",
+  "governed outreach",
+  "qualified meetings",
 ];
 
 export const primaryGeoRegion = "GB-LND";

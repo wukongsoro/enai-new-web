@@ -23,15 +23,15 @@ const BLOG_URL = buildCanonicalUrl('/blog');
 const BLOG_OG_IMAGE = buildAbsoluteUrl('/social-share-image.png');
 
 export const metadata: Metadata = {
-  title: "ENAI Blog | AI Sales Automation Insights & Case Studies",
-  description: "Stay ahead with deep dives on AI BDR agents, geo-targeted sales automation, and revenue playbooks from ENAI.",
+  title: "ENAI Blog | Revenue Workflows and Governance",
+  description: "Founder notes and operating perspectives on governed revenue workflows, account research, outreach, qualification, and enterprise adoption.",
   keywords: defaultKeywords,
   alternates: {
     canonical: BLOG_URL,
   },
   openGraph: {
-    title: "ENAI Blog | AI Sales Automation Insights",
-    description: "Guides, playbooks, and case studies on scaling B2B sales with AI BDR agents.",
+    title: "ENAI Blog | Revenue Workflows and Governance",
+    description: "Founder notes and operating perspectives on governed revenue workflows.",
     url: BLOG_URL,
     type: "website",
     images: [
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ENAI Blog | AI BDR Strategies",
-    description: "Learn how high-growth teams automate prospecting, outreach, and qualification with AI.",
+    title: "ENAI Blog | Revenue Workflow Strategy",
+    description: "Perspectives on account research, governed outreach, qualification, and enterprise adoption.",
     images: [BLOG_OG_IMAGE],
     creator: "@enai_ai",
   },
@@ -212,7 +212,7 @@ As AI technology continues to advance, we can expect even more sophisticated col
 
 The most successful sales organizations will be those that view AI not as a tool, but as a collaborative partner that enhances human capabilities and drives sustainable growth.
 
-Ready to transform your sales development process? [Schedule a consultation](https://calendly.com/enai-ai2024/30min?month=2025-09) to learn how ENAI's AI BDR agents can accelerate your revenue growth.`
+Ready to transform your sales development process? [Schedule a consultation](https://calendly.com/enai-ai2024/30min) to learn how ENAI's AI BDR agents can accelerate your revenue growth.`
   },
   {
     title: "The Complete AI BDR Playbook: Scale Your Outbound Sales 10x Without Hiring",
@@ -406,7 +406,7 @@ The most successful organizations will be those that view AI not as a replacemen
 
 Ready to transform your outbound sales operations? Success requires careful planning, the right technology partners, and a commitment to data-driven optimization.
 
-[Schedule a strategic consultation](https://calendly.com/enai-ai2024/30min?month=2025-09) to discuss your specific requirements and learn how ENAI's AI BDR agents can accelerate your revenue growth. Our team will provide a customized implementation roadmap based on your current operations and growth objectives.`
+[Schedule a strategic consultation](https://calendly.com/enai-ai2024/30min) to discuss your specific requirements and learn how ENAI's AI BDR agents can accelerate your revenue growth. Our team will provide a customized implementation roadmap based on your current operations and growth objectives.`
   },
   {
     title: "How AI Automation Transforms Sales Productivity: A Deep Dive into ENAI's 70% Time Savings",
@@ -589,7 +589,7 @@ Beyond direct cost savings, the true value of AI automation lies in revenue acce
 
 This case study demonstrates that AI automation is not just about efficiency—it's about fundamentally reimagining what's possible in sales development. Organizations that embrace this transformation will gain significant competitive advantages in the evolving B2B landscape.
 
-[Learn how ENAI can transform your sales development operations](https://calendly.com/enai-ai2024/30min?month=2025-09). Our team will provide a customized analysis of your current operations and a roadmap for AI-powered growth.`
+[Learn how ENAI can transform your sales development operations](https://calendly.com/enai-ai2024/30min). Our team will provide a customized analysis of your current operations and a roadmap for AI-powered growth.`
   },
   {
     title: "AI Sales Automation 2025: The Definitive Guide to Transforming Revenue Operations",
@@ -834,7 +834,7 @@ ENAI's journey represents more than technological advancement—it's a commitmen
 
 As we continue this evolution, our focus remains on delivering practical solutions that generate measurable results. Every feature, every algorithm, every integration is designed with one goal: to help sales teams succeed in an increasingly competitive marketplace.
 
-[Join us in shaping the future of sales automation](https://calendly.com/enai-ai2024/30min?month=2025-09). Whether you're just beginning your AI journey or looking to optimize existing implementations, our team provides the insights and technology to accelerate your success.`
+[Join us in shaping the future of sales automation](https://calendly.com/enai-ai2024/30min). Whether you're just beginning your AI journey or looking to optimize existing implementations, our team provides the insights and technology to accelerate your success.`
   },
   {
     title: "The Financial Impact of AI BDR Agents: Comprehensive ROI Analysis for 2025",
@@ -1063,7 +1063,7 @@ In an environment where [83% of sales leaders expect increased demand with const
 
 The question is no longer whether to invest in AI BDR technology, but how quickly organizations can implement and optimize these solutions to capture the available market opportunity.
 
-[Calculate your organization's specific ROI potential](https://calendly.com/enai-ai2024/30min?month=2025-09). Our team provides customized financial modeling based on your current operations, revenue model, and growth objectives.`
+[Calculate your organization's specific ROI potential](https://calendly.com/enai-ai2024/30min). Our team provides customized financial modeling based on your current operations, revenue model, and growth objectives.`
   },
   {
     title: "AI Sales Automation in 2025: 7 Trends Reshaping Revenue Operations",
@@ -1308,7 +1308,7 @@ The trends reshaping AI sales automation in 2025 represent not just technologica
 
 The question is no longer whether to adopt AI sales automation, but how comprehensively and strategically to implement it. Organizations that view AI as a collaborative partner rather than a replacement for human expertise will be best positioned to capture the transformative opportunities ahead.
 
-[Explore how ENAI can help your organization navigate these trends](https://calendly.com/enai-ai2024/30min?month=2025-09). Our team provides strategic guidance on implementing AI sales automation that aligns with your business objectives and market position.`
+[Explore how ENAI can help your organization navigate these trends](https://calendly.com/enai-ai2024/30min). Our team provides strategic guidance on implementing AI sales automation that aligns with your business objectives and market position.`
   },
   {
     title: "The Human-AI Partnership: How Sales Teams Are Evolving in the Age of Automation",
@@ -1644,7 +1644,7 @@ The future belongs to organizations that invest in their people as much as their
 
 This partnership model doesn't just improve sales performance—it creates more meaningful work, better customer experiences, and sustainable competitive advantage in an increasingly automated marketplace.
 
-[Discover how ENAI can accelerate your team's evolution to AI-powered selling](https://calendly.com/enai-ai2024/30min?month=2025-09). Our human-centric approach ensures your sales professionals thrive alongside our AI agents, creating unprecedented revenue growth and career satisfaction.`
+[Discover how ENAI can accelerate your team's evolution to AI-powered selling](https://calendly.com/enai-ai2024/30min). Our human-centric approach ensures your sales professionals thrive alongside our AI agents, creating unprecedented revenue growth and career satisfaction.`
   },
   {
     title: "Conversational AI in Sales: The Next Frontier of Customer Engagement",
@@ -1977,7 +1977,7 @@ The most successful organizations will be those that view conversational AI not 
 
 The future of sales belongs to organizations that master conversational AI, creating not just more conversations, but better conversations that drive revenue growth and customer loyalty.
 
-[Experience the power of conversational AI in sales](https://calendly.com/enai-ai2024/30min?month=2025-09). Discover how ENAI's conversational AI agents can transform your sales engagement and accelerate your revenue growth.`
+[Experience the power of conversational AI in sales](https://calendly.com/enai-ai2024/30min). Discover how ENAI's conversational AI agents can transform your sales engagement and accelerate your revenue growth.`
   },
   {
     title: "Building an AI-First Sales Organization: A Strategic Framework for 2025",
@@ -2312,7 +2312,7 @@ The most successful AI-first organizations view AI not as a tool to be used, but
 
 The future belongs to organizations that embrace AI as their strategic foundation, creating sales capabilities that were previously impossible and competitive advantages that are fundamentally unassailable.
 
-[Start your AI-first sales transformation today](https://calendly.com/enai-ai2024/30min?month=2025-09). Discover how ENAI can help you build an AI-first sales organization that leads rather than follows in the AI revolution.`
+[Start your AI-first sales transformation today](https://calendly.com/enai-ai2024/30min). Discover how ENAI can help you build an AI-first sales organization that leads rather than follows in the AI revolution.`
   },
   {
     title: "The Future of AI in Sales Automation: Trends for 2025",
@@ -4884,7 +4884,7 @@ export default function BlogPage() {
                 <span className="block italic">Intelligence Hub</span>
               </h1>
               <p className="text-body-lg text-black/60">
-                Deep dives on autonomous revenue execution, enterprise sales automation, and the future of AI-powered pipeline generation.
+                Founder notes and operating perspectives on governed revenue workflows, enterprise adoption, and pipeline quality.
               </p>
             </div>
 
@@ -4906,7 +4906,7 @@ export default function BlogPage() {
                   {/* Content */}
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-6">
-                      <span className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-600 bg-orange-100 rounded-full">
+                      <span className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#1E3A3A] bg-[#F5F1ED] rounded-full">
                         Featured
                       </span>
                       <span className="px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-black/50 bg-black/5 rounded-full">
@@ -4921,7 +4921,7 @@ export default function BlogPage() {
                     </p>
                     <div className="flex items-center gap-4">
                       <span className="text-black/40 text-sm">{featuredPost.date}</span>
-                      <span className="inline-flex items-center gap-2 text-orange-500 font-medium text-sm group-hover:gap-3 transition-all">
+                      <span className="inline-flex items-center gap-2 text-[#1E3A3A] font-medium text-sm group-hover:gap-3 transition-all">
                         Read Article
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -4969,7 +4969,7 @@ export default function BlogPage() {
                       </p>
 
                       {/* Read More */}
-                      <div className="flex items-center gap-2 text-sm font-medium text-orange-500 group-hover:gap-3 transition-all">
+                      <div className="flex items-center gap-2 text-sm font-medium text-[#1E3A3A] group-hover:gap-3 transition-all">
                         Read Article
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -4996,9 +4996,9 @@ export default function BlogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-5 py-4 rounded-xl bg-white border border-black/10 text-black placeholder:text-black/30 focus:outline-none focus:border-orange-500/50 transition-colors"
+                className="flex-1 px-5 py-4 rounded-xl bg-white border border-black/10 text-black placeholder:text-black/30 focus:outline-none focus:border-[#1E3A3A]/40 transition-colors"
               />
-              <button className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-all">
+              <button className="px-8 py-4 bg-[#1E3A3A] text-white font-semibold rounded-xl hover:bg-[#16302F] transition-all">
                 Subscribe
               </button>
             </div>
