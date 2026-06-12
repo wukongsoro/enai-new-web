@@ -438,8 +438,12 @@ const HeroSection = () => {
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
               </a>
+              <p className="mb-5 font-mono text-[11px] font-medium uppercase tracking-[0.24em] text-white/55 [text-shadow:0_2px_18px_rgba(0,0,0,0.75)]">
+                The Revenue Operating System
+              </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-semibold text-white tracking-tight leading-[1.05] [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
-                The Revenue Operating System.
+                Your CRM knows everything.
+                <span className="block">It does nothing.</span>
               </h1>
             </div>
             <div className="mb-6 md:mb-10">
@@ -449,16 +453,23 @@ const HeroSection = () => {
             </div>
             <div className="max-w-2xl mx-auto mb-8 md:mb-10">
               <p className="text-base md:text-xl text-white/90 leading-relaxed [text-shadow:0_2px_18px_rgba(0,0,0,0.75)]">
-                ENAI researches accounts, maps buying committees, and executes governed revenue workflows from first signal to booked meeting.
+                ENAI is the first revenue platform that does the work — researches the account, maps the buying committee, writes governed outreach, and books the meeting.
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="#real-run"
+                aria-label="Watch it do the work"
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
+              >
+                Watch it do the work
+              </a>
               <a
                 href="https://calendly.com/enai-ai2024/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Request a Demo"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-300"
+                aria-label="Request a demo"
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white border border-white/30 rounded-lg hover:border-white/60 transition-colors duration-300"
               >
                 Request a demo
               </a>

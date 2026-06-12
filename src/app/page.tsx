@@ -1,6 +1,9 @@
 import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero-section";
 import EnterpriseAutonomy from "@/components/sections/enterprise-autonomy";
+import RealRunSection from "@/components/sections/real-run-section";
+import SdrMathSection from "@/components/sections/sdr-math-section";
+import GovernedSection from "@/components/sections/governed-section";
 import TractionSignal from "@/components/sections/traction-signal";
 import FounderVideoSection from "@/components/sections/founder-video-section";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
@@ -122,7 +125,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <EnterpriseAutonomy />
+        <RealRunSection />
+        <SdrMathSection />
         <TractionSignal />
+        <GovernedSection />
         <FounderVideoSection />
         <DigitalWorkersIntro />
         <WorkforceTransformation />

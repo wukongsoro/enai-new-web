@@ -8,7 +8,7 @@ const CtaSection = () => {
       <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <div className="bg-[#E8DDD4] rounded-[2rem] p-12 md:p-20 shadow-sm border border-black/5">
           <h2 className="text-[36px] md:text-[48px] heading-strong text-[#1E3A3A] leading-[1.1] mb-6">
-            Ready to see ENAI running your revenue motion?
+            See it running on your market, not a sample one.
           </h2>
           <p className="text-lg text-[#1E3A3A]/70 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
             See how ENAI coordinates account research, outreach, qualification, and handoff in one governed workflow.
