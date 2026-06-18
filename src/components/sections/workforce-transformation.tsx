@@ -181,7 +181,7 @@ export default function WorkforceTransformation() {
                                             </div>
 
                                             {/* Text Content */}
-                                            <div className="flex flex-col items-start flex-1 pb-4">
+                                            <div className="flex min-h-[112px] flex-col items-start flex-1 pb-4">
                                                 <p className={`text-xl md:text-2xl font-semibold transition-all duration-300 ${
                                                     isActive ? "text-black" : "text-black/40 group-hover:text-black/60"
                                                 }`}>
@@ -189,9 +189,10 @@ export default function WorkforceTransformation() {
                                                 </p>
                                                 
                                                 <div 
-                                                    className={`overflow-hidden transition-all duration-500 ease-out ${
-                                                        isActive ? "max-h-[200px] opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+                                                    className={`mt-3 min-h-[52px] transition-opacity duration-300 ease-out ${
+                                                        isActive ? "opacity-100" : "opacity-0"
                                                     }`}
+                                                    aria-hidden={!isActive}
                                                 >
                                                     <p className="text-base text-black/60 leading-relaxed text-balance pr-4">
                                                         {feature.description}

@@ -10,8 +10,836 @@ import type { Metadata } from "next";
 import ShareButtons from "./ShareButtons";
 import { buildAbsoluteUrl, buildCanonicalUrl, defaultKeywords, SITE_URL, primaryGeoRegion } from "@/lib/seo";
 
+const LAUNCH_BLOG_SLUGS = [
+  "founder-enterprise-autonomous-governance",
+  "governed-revenue-execution-vs-ai-sdr-tools",
+  "enai-for-logistics-transport-revenue-execution",
+  "enai-for-healthcare-revenue-execution",
+  "enai-for-wholesale-b2b-retail-revenue-execution",
+  "enai-for-industrials-revenue-workflows",
+  "enai-for-professional-services-business-development",
+  "enai-for-private-equity-deal-sourcing",
+  "enai-for-financial-services-compliant-revenue-workflows",
+  "enai-for-software-revenue-workflows",
+  "enai-for-hardware-sales-workflows",
+  "enai-for-ai-native-companies",
+  "enai-for-sovereign-ai-revenue-workflows",
+];
+
 // This would typically come from a CMS or database
 const blogPosts = [
+  {
+    title: "Governed Revenue Execution vs AI SDR Tools: Why ENAI Is a Different Category",
+    description: "A clear buyer guide explaining why ENAI is not another AI BDR or SDR bot, and where governed revenue execution fits for complex markets.",
+    date: "June 18, 2026",
+    type: "Category Guide",
+    slug: "governed-revenue-execution-vs-ai-sdr-tools",
+    author: "ENAI Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-blog-governed-execution.jpg",
+    content: `# Governed Revenue Execution vs AI SDR Tools: Why ENAI Is a Different Category
+
+## Short answer
+
+ENAI is not an AI BDR or an AI SDR tool. ENAI is a governed revenue execution platform for complex markets. It researches accounts, reads market signals, maps buying committees, drafts controlled outreach, qualifies replies, and hands meetings to the revenue team with context and auditability.
+
+That distinction matters. Most AI SDR tools optimize a narrow job: find people, write messages, and book meetings. ENAI is built for teams where the hard part is not sending more email. The hard part is understanding the account, the vertical, the buying committee, the rule set, and the business reason to act now.
+
+## The category mistake buyers should avoid
+
+When every new vendor says it can automate outbound, buyers start comparing everything as if it is the same product. It is not.
+
+- A data tool gives the team contacts and company records.
+- A workflow builder lets the team assemble enrichment and outbound logic.
+- An AI SDR automates parts of prospecting and meeting booking.
+- A governed revenue execution platform runs the motion with controls, context, approvals, and handoff.
+
+ENAI belongs in the last category.
+
+## What ENAI does that a generic AI SDR usually does not
+
+ENAI starts with the market and the revenue objective, then executes the work across the full path from signal to qualified meeting.
+
+It can identify logistics accounts showing expansion intent, understand lanes and regional coverage, map operations and commercial stakeholders, draft approved outreach, qualify the response, and hand the seller the account context.
+
+It can support healthcare revenue teams by researching provider networks, surfacing operational priorities, mapping clinical and commercial buying committees, and keeping outreach inside approved language.
+
+It can help wholesale and B2B retail teams detect demand signals, understand distributor or channel context, identify the right buyer roles, and convert account context into governed follow-up.
+
+That is materially different from a generic outbound bot.
+
+## Why vertical execution matters
+
+Complex markets do not convert through generic personalization. A logistics buyer does not respond to the same argument as a SaaS CFO. A healthcare operator does not evaluate risk like a retail distributor. A channel buyer does not think like an enterprise IT lead.
+
+ENAI is designed around vertical workflows because the context changes the work:
+
+- The account signals are different.
+- The buying committees are different.
+- The proof points are different.
+- The compliance and approval rules are different.
+- The seller handoff has to include different context.
+
+This is why the site should not position ENAI as another outbound automation tool. The stronger position is governed execution for specific revenue motions.
+
+## Where pricing comparisons still matter
+
+Buyers will still compare ENAI with AI SDR products because those products show up in the same budget conversation. Public pages show a wide range: Apollo publishes sales intelligence and engagement plans on its [pricing page](https://www.apollo.io/pricing), Clay publishes workflow and enrichment plans on its [pricing page](https://www.clay.com/pricing), and 11x states that Alice starts at $36,000 per year on its [Alice pricing page](https://www.11x.ai/products/alice/pricing).
+
+Those are useful market signals, but they should not define ENAI's category. ENAI should be compared against the operating cost of executing a revenue motion: research, account qualification, buying committee mapping, message control, follow-up, CRM handoff, and management oversight.
+
+## When ENAI is the right fit
+
+ENAI is strongest when the buyer says one of these things:
+
+- We sell into complex vertical markets.
+- We need qualified meetings, not just more activity.
+- We cannot let AI send unapproved claims.
+- We need to know why the system acted.
+- We want market-specific workflows without hiring a full SDR team.
+- We need the seller to receive context, not just a booked calendar slot.
+
+## When ENAI is not the right fit
+
+ENAI is probably not the right first purchase if the team only wants a cheaper contact database, a simple email sender, or high-volume generic prospecting. Those are valid needs, but they are not ENAI's strongest value.
+
+## FAQ
+
+### Is ENAI an AI SDR?
+
+No. ENAI can perform work that an SDR team would normally do, but the product category is broader: governed revenue execution for complex markets.
+
+### How is ENAI different from 11x?
+
+11x popularized the AI worker framing for sales development. ENAI is positioned around governed execution, vertical context, and accountable handoff rather than a generic AI SDR persona.
+
+### Why does ENAI lead with governance?
+
+Because revenue automation creates brand, compliance, and data-quality risk when it acts without rules. ENAI is built to show what it used, why it acted, what it drafted, and what it should never send.
+
+### What should buyers compare ENAI against?
+
+Compare ENAI against the cost of running the motion manually: research, enrichment, stakeholder mapping, message QA, SDR management, follow-up, and sales handoff.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Logistics and Transport: From Lane Signal to Qualified Meeting",
+    description: "How ENAI helps logistics and transport teams turn lane, shipper, carrier, and expansion signals into governed revenue execution.",
+    date: "June 18, 2026",
+    type: "Vertical Playbook",
+    slug: "enai-for-logistics-transport-revenue-execution",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-logistics-transport.jpg",
+    content: `# ENAI for Logistics and Transport: From Lane Signal to Qualified Meeting
+
+## Short answer
+
+Logistics revenue teams do not need generic outbound automation. They need a system that understands lanes, shippers, carriers, capacity, regional expansion, time-sensitive demand, and the buying committee behind each opportunity.
+
+ENAI turns those signals into execution: account research, stakeholder mapping, approved outreach, qualification, and meeting handoff.
+
+## Why logistics outbound breaks
+
+Most logistics teams already know the market is full of opportunity. The problem is converting scattered signals into timely, relevant action.
+
+A promising account may be opening a new facility, expanding into a region, hiring operations leaders, changing carriers, launching a new route, or increasing shipment volume. A generic AI SDR sees a company. A logistics revenue motion needs to understand the operational reason the account should care now.
+
+## What ENAI can do for logistics teams
+
+ENAI can run a logistics-specific workflow from signal to qualified meeting:
+
+- Identify accounts showing expansion, lane, capacity, or regional intent.
+- Research shipper, carrier, broker, and 3PL context.
+- Map the buying committee across operations, procurement, logistics, finance, and commercial roles.
+- Draft outreach grounded in the account's actual transport context.
+- Keep claims inside approved language and escalation rules.
+- Qualify replies and hand the seller the account context before the meeting.
+
+The output is not just a sent email. The output is a qualified conversation with the right operational context.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find logistics accounts showing expansion intent in the Southeast and book meetings with operations or supply chain leaders."
+
+ENAI can then:
+
+1. Search for expansion and facility signals.
+2. Match accounts to relevant logistics needs.
+3. Identify decision makers and influencers.
+4. Build account-specific messaging.
+5. Route drafts through approval rules.
+6. Follow up and qualify replies.
+7. Hand the meeting to the seller with context.
+
+## Why this is different from AI BDR tooling
+
+A generic AI BDR usually optimizes for contact discovery and outreach volume. Logistics selling requires precision. The wrong claim, wrong lane context, or wrong stakeholder can make the company look uninformed.
+
+ENAI's advantage is governed vertical context. It lets the team scale outreach without turning every message into generic automation.
+
+## FAQ
+
+### Can ENAI work with logistics teams that sell to shippers?
+
+Yes. ENAI can research shipper context, expansion signals, operational triggers, and buying committee roles before drafting outreach.
+
+### Can ENAI support brokers, carriers, and 3PLs?
+
+Yes. The workflow can be configured around the revenue motion: carrier acquisition, shipper growth, lane expansion, strategic accounts, or regional coverage.
+
+### Does ENAI replace the seller?
+
+No. ENAI prepares and executes the repeatable work so the seller enters the conversation with more context and less manual research.
+
+Watch the logistics workflow in the [demo library](/demo-library), or [request a demo](https://calendly.com/enai-ai2024/30min) for your market.`
+  },
+  {
+    title: "ENAI for Healthcare Revenue Teams: Governed Outreach for Complex Buying Committees",
+    description: "How ENAI helps healthcare revenue teams research accounts, map stakeholders, and run controlled outreach without generic automation.",
+    date: "June 18, 2026",
+    type: "Vertical Playbook",
+    slug: "enai-for-healthcare-revenue-execution",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-healthcare-revenue.jpg",
+    content: `# ENAI for Healthcare Revenue Teams: Governed Outreach for Complex Buying Committees
+
+## Short answer
+
+Healthcare revenue teams sell into complex organizations where clinical, operational, financial, compliance, and procurement stakeholders all shape the buying process. Generic outbound automation is not enough.
+
+ENAI helps healthcare revenue teams research account context, map the buying committee, draft approved outreach, qualify engagement, and hand sellers a clear view of why the account is worth time.
+
+## The healthcare revenue problem
+
+Healthcare buyers are rarely simple. A provider group, health system, clinic network, payer, or healthcare services organization may have different priorities across operations, clinical leadership, finance, compliance, and procurement.
+
+That means the message cannot be generic. The team needs to know who matters, what pressure the organization is under, and which claims are allowed.
+
+## What ENAI can do for healthcare teams
+
+ENAI can support a governed healthcare workflow:
+
+- Research provider, payer, services, or network account context.
+- Identify growth, hiring, operational, and market signals.
+- Map clinical, operational, commercial, finance, and procurement stakeholders.
+- Draft role-specific outreach using approved language.
+- Apply rules for sensitive claims and human approval.
+- Qualify replies before a seller invests time.
+- Handoff meetings with the research trail and stakeholder context.
+
+This is execution with control, not a generic AI sending messages at scale.
+
+## Why governance is central
+
+Healthcare revenue teams cannot afford loose automation. A message that exaggerates outcomes, references sensitive context incorrectly, or targets the wrong role can damage trust quickly.
+
+ENAI's governed model keeps the workflow accountable: what was researched, which signal mattered, what message was drafted, which rule applied, and what the system should never send.
+
+## Example workflow
+
+A healthcare revenue leader asks ENAI: "Find regional provider groups expanding operations and book qualified conversations with operations or finance leaders."
+
+ENAI can research expansion signals, map stakeholders, draft controlled outreach, route for approval where needed, qualify replies, and give the seller account context before the meeting.
+
+## FAQ
+
+### Is ENAI built only for SaaS healthcare vendors?
+
+No. ENAI can support healthcare services, provider-facing solutions, operational platforms, staffing, infrastructure, and other complex B2B healthcare motions.
+
+### Does ENAI make compliance decisions?
+
+No. ENAI operates under the rules and approved language the company defines. Sensitive actions can require human approval.
+
+### Why not use a normal AI SDR?
+
+Because healthcare selling requires account context, stakeholder nuance, and controlled claims. ENAI is designed for governed execution rather than generic outbound volume.
+
+See the healthcare workflow in the [demo library](/demo-library), or [request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Wholesale and B2B Retail: Turn Demand Signals Into Buyer Meetings",
+    description: "How ENAI helps wholesale and B2B retail teams detect demand signals, map buyers, and run governed account outreach.",
+    date: "June 18, 2026",
+    type: "Vertical Playbook",
+    slug: "enai-for-wholesale-b2b-retail-revenue-execution",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-wholesale-retail.jpg",
+    content: `# ENAI for Wholesale and B2B Retail: Turn Demand Signals Into Buyer Meetings
+
+## Short answer
+
+Wholesale and B2B retail teams do not win by blasting generic outbound. They win by understanding demand signals, category movement, reorder cycles, distributor relationships, channel context, and buyer priorities.
+
+ENAI helps these teams turn market signals into governed revenue execution: account research, buyer mapping, approved outreach, reply qualification, and seller handoff.
+
+## Why generic outbound underperforms
+
+A distributor, retailer, marketplace seller, franchise group, or procurement team may all care about different things: margin, availability, replenishment, regional demand, supplier reliability, operational capacity, or category expansion.
+
+Generic AI outreach flattens those differences. ENAI is designed to preserve them.
+
+## What ENAI can do for wholesale and B2B retail teams
+
+ENAI can support workflows such as:
+
+- Identifying accounts showing demand, expansion, reorder, or category signals.
+- Researching distributor, retailer, marketplace, and channel context.
+- Mapping buyers across procurement, merchandising, operations, finance, and commercial roles.
+- Drafting account-specific outreach with approved claims.
+- Qualifying interest and routing meetings with context.
+- Keeping the outreach motion auditable as the team scales.
+
+## Example workflow
+
+A commercial leader asks ENAI: "Find wholesale accounts showing demand signals in our target category and book meetings with buyers or procurement leaders."
+
+ENAI can research account activity, connect the signal to a relevant commercial reason, identify the buyer committee, draft governed outreach, and hand off a qualified meeting with the context a seller needs.
+
+## Why ENAI is not another tool in the stack
+
+Most tools ask the team to operate the workflow. ENAI is built to execute the workflow. It can use data, CRM context, approved messaging, vertical research, and governance rules to complete the work instead of leaving the team with another dashboard to manage.
+
+## FAQ
+
+### Can ENAI support channel or distributor sales?
+
+Yes. ENAI can be configured around distributor, channel, wholesale, retail, marketplace, or procurement-led motions.
+
+### What makes this different from list building?
+
+List building gives you accounts and contacts. ENAI connects signals to account context, maps the buyer roles, drafts controlled outreach, qualifies replies, and hands the seller a reasoned opportunity.
+
+### Does ENAI replace account executives?
+
+No. ENAI handles repeatable research and execution so sellers spend more time in qualified commercial conversations.
+
+See the wholesale and B2B retail workflow in the [demo library](/demo-library), or [request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Industrials: Governed Revenue Workflows for Complex Technical Sales",
+    description: "How industrial companies use ENAI to map accounts, qualify technical requirements, coordinate buying committees, and follow up from trade shows and RFQs.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-industrials-revenue-workflows",
+    author: "ENAI Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-blog-industrials.jpg",
+    content: `# ENAI for Industrials: Governed Revenue Workflows for Complex Technical Sales
+
+## Short answer
+
+ENAI helps industrial companies run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way manufacturers, construction suppliers, energy providers, infrastructure vendors, aerospace and defense suppliers, and industrial equipment companies actually buy.
+
+## Why this market needs a vertical workflow
+
+For industrial companies, industrial sales rarely fail because a team cannot send enough emails. They fail because the account is complex, the buying committee is fragmented, the technical requirement is unclear, and the follow-up takes too long after a market signal appears.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Map engineering, procurement, operations, finance, and executive stakeholders inside target accounts.
+- Research technical triggers such as plant expansion, modernization projects, safety initiatives, new facilities, and RFQ activity.
+- Draft role-specific outreach that respects product constraints and approved claims.
+- Qualify fit before sellers spend time on accounts that cannot buy.
+- Hand the seller a concise account brief with the signal, stakeholder map, and next step.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find industrial accounts expanding production capacity in our territory, identify procurement and operations leaders, and book qualified meetings with the right context."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for industrial companies", "AI revenue workflows for industrial companies", or "governed outreach for industrial companies" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the industrial companies industry page: [/industries/industrials](/industries/industrials)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### What makes industrial revenue workflows different?
+
+Industrial selling involves long cycles, technical criteria, procurement controls, distributor relationships, and multiple operational stakeholders. ENAI is designed to preserve that context instead of flattening the account into a generic prospect.
+
+### Can ENAI help after trade shows or RFQs?
+
+Yes. ENAI can turn event lists, RFQ signals, and account research into governed follow-up, qualification, and seller handoff.
+
+### Does ENAI replace technical sellers?
+
+No. ENAI handles repeatable research and coordination so technical sellers spend more time in qualified conversations.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Professional Services: Business Development Without Diluting Trust",
+    description: "How consulting, legal, accounting, and advisory firms use ENAI to scale relationship-led business development with controlled messaging.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-professional-services-business-development",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-professional-services.jpg",
+    content: `# ENAI for Professional Services: Business Development Without Diluting Trust
+
+## Short answer
+
+ENAI helps professional services firms run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way consulting firms, legal practices, accounting firms, advisory teams, and specialist service providers actually buy.
+
+## Why this market needs a vertical workflow
+
+For professional services firms, professional services growth depends on reputation and timing. Partners know which markets matter, but they rarely have enough time to research every account, follow up after every event, and nurture every referral with the same consistency.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Research target accounts, alumni networks, referral paths, and event attendees.
+- Map the relationship context before outreach is drafted.
+- Use partner-approved language rather than generic promotional copy.
+- Identify cross-sell and practice-area opportunities across existing accounts.
+- Route qualified conversations back to the right partner or practice leader.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find companies in our target sector that recently raised capital or entered a regulatory transition, then draft partner-level outreach for advisory conversations."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for professional services firms", "AI revenue workflows for professional services firms", or "governed outreach for professional services firms" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the professional services firms industry page: [/industries/professional-services](/industries/professional-services)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### Can ENAI preserve a high-trust professional services tone?
+
+Yes. ENAI works from approved language, relationship context, and escalation rules, so outreach can stay controlled and partner-grade.
+
+### Is this just newsletter automation?
+
+No. ENAI researches accounts, maps relationship context, drafts targeted outreach, qualifies replies, and hands opportunities to the right person.
+
+### Which firms benefit most?
+
+Firms with strong expertise but limited partner bandwidth benefit most, especially when business development depends on timing, referrals, events, or thought leadership.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Private Equity: Proprietary Deal Sourcing With Account-Level Context",
+    description: "How private equity, VC, growth equity, and fund services teams use ENAI for thesis-led sourcing, add-on mapping, and LP relationship workflows.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-private-equity-deal-sourcing",
+    author: "ENAI Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-blog-private-equity.jpg",
+    content: `# ENAI for Private Equity: Proprietary Deal Sourcing With Account-Level Context
+
+## Short answer
+
+ENAI helps private equity and investment firms run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way private equity firms, VC funds, growth equity investors, operating partners, and fund services teams actually buy.
+
+## Why this market needs a vertical workflow
+
+For private equity and investment firms, investment teams do not need another list of companies. They need thesis-fit accounts, a reason to act now, founder or operator context, and a controlled follow-up motion that does not feel mass-produced.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Translate an investment thesis into target-account criteria.
+- Research companies, ownership signals, hiring patterns, expansion events, and add-on potential.
+- Map founders, executives, advisors, and portfolio relationships.
+- Draft outreach that is specific to the investment angle and approved by the firm.
+- Track replies, qualify fit, and hand the opportunity to the deal team with source context.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find founder-led industrial services companies in the Midwest that match our add-on thesis and prepare outreach for the operating partner."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for private equity and investment firms", "AI revenue workflows for private equity and investment firms", or "governed outreach for private equity and investment firms" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the private equity and investment firms industry page: [/industries/private-equity](/industries/private-equity)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### How is ENAI different from a deal database?
+
+A deal database stores companies. ENAI converts thesis, signals, stakeholder context, and approved messaging into an active sourcing workflow.
+
+### Can ENAI support add-on acquisition sourcing?
+
+Yes. ENAI can map add-on targets, research ownership and operating context, draft controlled outreach, and qualify responses.
+
+### Can ENAI support LP workflows?
+
+Yes. The same governed execution model can support LP relationship touchpoints, investor update follow-up, and portfolio introduction workflows.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Financial Services: Compliant Revenue Workflows With Auditability",
+    description: "How banking, insurance, asset management, and wealth teams use ENAI to run governed outreach with regulatory controls and source lineage.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-financial-services-compliant-revenue-workflows",
+    author: "ENAI Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-blog-financial-services.jpg",
+    content: `# ENAI for Financial Services: Compliant Revenue Workflows With Auditability
+
+## Short answer
+
+ENAI helps financial services teams run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way commercial banking, insurance, lending, asset management, wealth advisory, and fintech revenue teams actually buy.
+
+## Why this market needs a vertical workflow
+
+For financial services teams, financial services revenue teams need growth, but every message carries compliance and reputational risk. The issue is not whether AI can write. The issue is whether the institution can prove what was sent, why it was sent, and which rules governed the action.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Research prospects and accounts within approved data boundaries.
+- Map commercial, compliance, finance, and relationship stakeholders.
+- Draft outreach using approved product and regulatory language.
+- Apply suppression, opt-out, and human approval rules before execution.
+- Record source lineage and hand qualified conversations to the right banker, advisor, or producer.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Identify commercial banking prospects showing expansion signals, draft compliant outreach, and route qualified replies to the relationship team with full context."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for financial services teams", "AI revenue workflows for financial services teams", or "governed outreach for financial services teams" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the financial services teams industry page: [/industries/financial-services](/industries/financial-services)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### Does ENAI make compliance decisions?
+
+No. ENAI executes within the rules, approved language, and escalation paths defined by the institution.
+
+### Why is auditability important for financial services AI?
+
+Auditability lets teams explain what signal was used, what action was taken, what message was drafted, and which approval rule applied.
+
+### Can ENAI support wealth, insurance, and banking motions?
+
+Yes. ENAI can be configured around the specific account, product, and governance model used by each team.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Software Companies: From Product Signal to Enterprise Meeting",
+    description: "How SaaS, enterprise software, and developer tool companies use ENAI to turn product usage, account signals, and buying committees into governed revenue execution.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-software-revenue-workflows",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-software.jpg",
+    content: `# ENAI for Software Companies: From Product Signal to Enterprise Meeting
+
+## Short answer
+
+ENAI helps software companies run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way SaaS companies, enterprise software vendors, developer tools, platform companies, and PLG teams actually buy.
+
+## Why this market needs a vertical workflow
+
+For software companies, software teams often have signals everywhere: product usage, free trials, job changes, security reviews, funding events, and account expansion. The challenge is turning those signals into the right action before the account goes cold.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Detect usage, expansion, funding, hiring, and technology signals.
+- Map economic, technical, security, and product stakeholders.
+- Draft account-specific outreach for the right buyer role.
+- Qualify whether the account should move to sales, success, or expansion.
+- Hand sellers context before the enterprise conversation starts.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find product-qualified accounts with rising usage and new executive hires, map the buying committee, and book qualified enterprise expansion meetings."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for software companies", "AI revenue workflows for software companies", or "governed outreach for software companies" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the software companies industry page: [/industries/software](/industries/software)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### Can ENAI support product-led growth motions?
+
+Yes. ENAI can convert product signals and account context into sales-assisted follow-up and enterprise handoff.
+
+### Is ENAI a sequencer for SaaS teams?
+
+No. ENAI is broader than sequencing. It researches, maps stakeholders, drafts governed outreach, qualifies replies, and prepares seller handoff.
+
+### Can ENAI help technical buyer engagement?
+
+Yes. ENAI can prepare role-specific messaging for developers, technical evaluators, security stakeholders, and economic buyers.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Hardware Companies: Technical Qualification Before the Sales Call",
+    description: "How semiconductor, device, IoT, and physical product companies use ENAI to qualify specs, map OEM and distributor relationships, and run controlled outreach.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-hardware-sales-workflows",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-hardware.jpg",
+    content: `# ENAI for Hardware Companies: Technical Qualification Before the Sales Call
+
+## Short answer
+
+ENAI helps hardware companies run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way semiconductor companies, device manufacturers, IoT vendors, component suppliers, and physical product teams actually buy.
+
+## Why this market needs a vertical workflow
+
+For hardware companies, hardware selling depends on technical fit, supply chain context, certifications, channel relationships, and timing. Generic automation cannot understand whether an account is actually worth a sales or engineering conversation.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Research product lines, certifications, technical requirements, and supply chain signals.
+- Map OEM, engineering, procurement, distributor, and operations stakeholders.
+- Draft outreach grounded in technical and commercial fit.
+- Qualify engineering sample, distributor, or enterprise interest.
+- Hand the seller or applications engineer a concise technical context brief.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find OEM accounts likely to need our component category, identify engineering and procurement stakeholders, and qualify whether a sample conversation makes sense."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for hardware companies", "AI revenue workflows for hardware companies", or "governed outreach for hardware companies" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the hardware companies industry page: [/industries/hardware](/industries/hardware)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### Why does hardware need a different revenue workflow?
+
+Hardware buying depends on specifications, certifications, procurement cycles, supply constraints, and technical validation. ENAI keeps those signals in the workflow.
+
+### Can ENAI support distributor or channel sales?
+
+Yes. ENAI can map distributors, OEMs, channel partners, and account-level opportunities.
+
+### Does ENAI replace applications engineers?
+
+No. ENAI prepares and qualifies the opportunity so technical experts spend time on better-fit conversations.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for AI-Native Companies: Revenue Execution for Technical Buyers",
+    description: "How AI-native companies use ENAI to reach ML engineers, AI leaders, platform teams, and enterprise buyers with credible, governed workflows.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-ai-native-companies",
+    author: "ENAI Editorial Team",
+    readTime: "6 min read",
+    image: "/enai-blog-ai-native.jpg",
+    content: `# ENAI for AI-Native Companies: Revenue Execution for Technical Buyers
+
+## Short answer
+
+ENAI helps AI-native companies run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way AI application companies, foundation model vendors, MLOps platforms, data infrastructure teams, and AI tooling companies actually buy.
+
+## Why this market needs a vertical workflow
+
+For AI-native companies, AI companies selling AI cannot rely on shallow personalization. Their buyers are technical, skeptical, and overloaded. Messaging must be precise, use-case driven, and credible enough for ML, data, platform, and executive stakeholders.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Research the target account’s AI maturity, data stack, hiring patterns, and use-case signals.
+- Map ML engineers, data leaders, platform teams, and executive sponsors.
+- Draft use-case-specific outreach with approved technical claims.
+- Qualify integration fit, urgency, and stakeholder interest.
+- Hand the seller a brief that connects the use case to the account context.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Find companies hiring ML platform engineers, identify the AI infrastructure owner, and book qualified conversations around our deployment workflow."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for AI-native companies", "AI revenue workflows for AI-native companies", or "governed outreach for AI-native companies" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the AI-native companies industry page: [/industries/ai-native](/industries/ai-native)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### Why do AI-native companies need governed execution?
+
+AI buyers are highly technical and sensitive to vague claims. Governance keeps messaging specific, approved, and accountable.
+
+### Can ENAI engage technical personas?
+
+Yes. ENAI can prepare messaging for ML engineers, data leaders, platform teams, AI executives, and procurement stakeholders.
+
+### Is this useful for early-stage AI companies?
+
+Yes. Founder-led AI companies can use ENAI to test markets, research accounts, and run controlled outreach without building a full sales team.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
+  {
+    title: "ENAI for Sovereign AI: Governed Execution for Public Sector and Critical Infrastructure",
+    description: "How sovereign AI, government, defense, and national infrastructure teams can use ENAI-style workflows with strict controls, audit trails, and escalation.",
+    date: "June 18, 2026",
+    type: "Industry Playbook",
+    slug: "enai-for-sovereign-ai-revenue-workflows",
+    author: "ENAI Editorial Team",
+    readTime: "7 min read",
+    image: "/enai-blog-sovereign-ai.jpg",
+    content: `# ENAI for Sovereign AI: Governed Execution for Public Sector and Critical Infrastructure
+
+## Short answer
+
+ENAI helps sovereign AI and public sector teams run governed revenue execution: account research, stakeholder mapping, controlled outreach, reply qualification, and seller handoff. It is not a generic AI BDR motion. It is a vertical workflow designed around the way government AI programs, defense contractors, critical infrastructure vendors, national AI initiatives, and regulated public sector suppliers actually buy.
+
+## Why this market needs a vertical workflow
+
+For sovereign AI and public sector teams, sovereign AI motions cannot be treated like ordinary outbound. The stakeholders are sensitive, procurement is structured, compliance requirements are strict, and the organization needs to prove control over every action.
+
+That is why a generic contact list or sequencer is not enough. The workflow has to preserve account context, buyer-role nuance, approval rules, and the reason to act now.
+
+## What ENAI does
+
+ENAI can execute a market-specific workflow across the revenue path:
+
+- Research agencies, programs, procurement notices, partners, and policy signals.
+- Map public sector, defense, technical, compliance, and program stakeholders.
+- Draft approved outreach with data-sovereignty and security boundaries enforced.
+- Escalate sensitive actions to humans before execution.
+- Maintain a clear trail from signal to action to handoff.
+
+## Example workflow
+
+A revenue leader asks ENAI: "Identify public sector programs aligned with our capability, map the partner ecosystem, and prepare governed outreach for approved stakeholders."
+
+ENAI turns that request into a governed run: it researches the market, identifies accounts, maps stakeholders, drafts controlled outreach, qualifies replies, and hands the seller a meeting with context rather than a bare calendar invite.
+
+## Why this matters for SEO and AEO buyers
+
+Buyers searching for "ENAI for sovereign AI and public sector teams", "AI revenue workflows for sovereign AI and public sector teams", or "governed outreach for sovereign AI and public sector teams" are usually not looking for another dashboard. They are trying to understand whether AI can safely perform real work in their market.
+
+The answer depends on governance. ENAI is strongest when the business needs auditability, vertical context, approved messaging, and a clear handoff from signal to qualified conversation.
+
+## Related ENAI pages
+
+- Explore the sovereign AI and public sector teams industry page: [/industries/sovereign-ai](/industries/sovereign-ai)
+- Watch vertical workflows in the [demo library](/demo-library)
+- Read the founder letter on [governed autonomous execution](/blog/founder-enterprise-autonomous-governance)
+
+## FAQ
+
+### What is sovereign revenue execution?
+
+It is revenue workflow execution where the organization maintains control over data boundaries, rules, approvals, source lineage, and escalation.
+
+### Can ENAI operate in regulated public sector motions?
+
+ENAI can be configured around strict rules, approved language, and human approval paths for sensitive workflows.
+
+### Why does audit trail matter here?
+
+Public sector and critical infrastructure motions require explainability. Teams need to know what was used, who was contacted, why, and under which rule.
+
+Want to see ENAI running on your market, not a sample one? [Request a demo](https://calendly.com/enai-ai2024/30min).`
+  },
   {
     title: "The Enterprise Will Be Autonomous. The Question Is Who Governs It.",
     description: "Enai founder Nikhil Nehra on why autonomous execution is the defining infrastructure challenge of the next decade, and why governance is the only path to enterprise adoption at scale.",
@@ -104,7 +932,7 @@ We are opening a small cohort of design partners in Q2. Spots are limited.
 
 ---
 
-Nikhil Nehra is the Founder and CEO of Enai. Enai was selected for the Web Summit Qatar 2026 Startup Showcase, one of 20 companies chosen worldwide. Enai is headquartered in London with R&D operations in Doha.`
+Nikhil Nehra is the Founder and CEO of Enai. Enai is based in London and was selected for the Web Summit Qatar 2026 Startup Showcase, one of 20 companies chosen worldwide.`
   },
   {
     title: "How AI-Powered Sales Collaboration Transforms B2B Revenue Generation",
@@ -3410,37 +4238,7 @@ Ready to transform your sales team's productivity? [Schedule a consultation](htt
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
-  // Include all blog post slugs from both old and new posts
-  const allSlugs = [
-    "founder-enterprise-autonomous-governance",
-    "ai-powered-sales-collaboration-transforms-b2b-revenue",
-    "complete-ai-bdr-playbook-scale-outbound-10x",
-    "ai-automation-transforms-sales-productivity-deep-dive",
-    "ai-sales-automation-2025-definitive-guide-revenue-operations",
-    "evolution-ai-sales-automation-enai-journey-market-leadership",
-    "financial-impact-ai-bdr-agents-comprehensive-roi-analysis-2025",
-    "ai-sales-automation-2025-trends-reshaping-revenue-operations",
-    "human-ai-partnership-sales-teams-evolving-age-automation",
-    "conversational-ai-sales-next-frontier-customer-engagement",
-    "building-ai-first-sales-organization-strategic-framework-2025",
-    "future-ai-sales-automation-trends-2025",
-    "roi-ai-powered-sales-automation",
-    "ai-vs-human-bdrs-comparison-guide",
-    "implement-ai-sales-team-guide",
-    "cold-email-automation-best-practices",
-    "lead-qualification-ai-complete-guide",
-    "scaling-outbound-sales-ai-strategies",
-    "ai-sales-tools-comparison-2025",
-    "linkedin-automation-sales-guide",
-    "b2b-sales-automation-playbook",
-    // Legacy slugs
-    "enai-cuts-prospecting-time-70-ai-automation",
-    "ai-sales-automation-complete-2025-guide",
-    "manual-to-automated-enai-journey",
-    "roi-ai-bdr-agents-real-numbers",
-  ];
-
-  return allSlugs.map((slug) => ({
+  return LAUNCH_BLOG_SLUGS.map((slug) => ({
     slug: slug,
   }));
 }
@@ -3485,6 +4283,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     mainEntityOfPage: canonicalUrl,
   };
+  const faqMatches = Array.from(
+    post.content.matchAll(/### (.+?)\n\n([\s\S]*?)(?=\n### |\n## |$)/g)
+  ).filter((match) => match[1]?.trim().endsWith("?"));
+  const faqSchema =
+    faqMatches.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqMatches.map((match) => ({
+            "@type": "Question",
+            name: match[1]?.trim(),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: match[2]?.trim().replace(/\s+/g, " "),
+            },
+          })),
+        }
+      : null;
 
   // Simple markdown-like content renderer
   const renderContent = (content: string) => {
@@ -3640,6 +4456,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
       <main className="min-h-screen bg-white pt-[152px] font-sans">
         {/* Back to Blog Button */}
         <div className="max-w-4xl mx-auto px-6 pt-6">
@@ -3723,8 +4545,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <section className="max-w-4xl mx-auto px-6 pb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related articles</h3>
           <div className="grid gap-6 md:grid-cols-3">
-            {blogPosts
-              .filter(p => p.slug !== post.slug)
+            {LAUNCH_BLOG_SLUGS
+              .map((slug) => blogPosts.find((p) => p.slug === slug))
+              .filter((p): p is (typeof blogPosts)[number] => p ? p.slug !== post.slug : false)
               .slice(0, 3)
               .map((relatedPost) => (
                 <Link

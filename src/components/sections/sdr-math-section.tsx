@@ -5,7 +5,12 @@ const rows = [
   {
     dimension: "Annual cost",
     sdr: "$380–480K for a four-person team, fully loaded",
-    enai: "$4K per month, flat",
+    enai: "From $4K/month for managed execution",
+  },
+  {
+    dimension: "Tooling reality",
+    sdr: "Prospecting, enrichment, sequencing, CRM, and QA billed separately",
+    enai: "Research, outreach, qualification, and audit trail in one run",
   },
   {
     dimension: "Ramp time",
@@ -31,26 +36,27 @@ const rows = [
 
 export default function SdrMathSection() {
   return (
-    <section className="bg-white px-6 py-20 md:py-28">
+    <section className="bg-white px-6 py-24 md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-black/45">
+          <p className="section-eyebrow text-[#1E3A3A]/60">
             The math
           </p>
-          <h2 className="mt-4 text-[34px] leading-[1.1] text-[#1E3A3A] md:text-[48px]">
+          <h2 className="section-title mt-4 text-[#1E3A3A]">
             An SDR team costs $400K a year.
             <span className="block text-[#1E3A3A]/45">
-              The work costs $4K a month.
+              ENAI starts at $4K a month.
             </span>
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-black/60 md:text-lg">
-            ENAI does the research, outreach, and qualification a four-person
-            SDR team does — governed, auditable, and live in hours instead of
+          <p className="section-copy mt-5 text-readable">
+            ENAI is priced against managed revenue execution, not lightweight
+            contact databases. It researches accounts, prepares governed
+            outreach, qualifies replies, and logs the work in hours instead of
             quarters.
           </p>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-black/10">
+        <div className="mt-14 overflow-hidden rounded-2xl border border-black/10">
           <div className="hidden md:grid grid-cols-3 bg-[#1E3A3A] text-white">
             <p className="px-5 py-4 font-mono text-[11px] uppercase tracking-[0.14em] text-white/60">
               Dimension
@@ -70,7 +76,7 @@ export default function SdrMathSection() {
               <p className="px-5 pt-4 text-sm font-semibold text-black/75 md:py-4">
                 {row.dimension}
               </p>
-              <p className="px-5 py-2 text-sm text-black/55 md:py-4">
+              <p className="px-5 py-2 text-sm text-black/68 md:py-4">
                 <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-black/40 md:hidden">
                   Hiring SDRs
                 </span>
@@ -87,9 +93,12 @@ export default function SdrMathSection() {
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
-          <p className="max-w-xl text-xs leading-relaxed text-black/40">
-            Headcount estimate based on $80–100K+ fully loaded cost per SDR in
-            major US markets, before tooling and management overhead.
+          <p className="max-w-xl text-xs leading-relaxed text-black/55">
+            Headcount estimate uses $80–100K+ fully loaded cost per SDR before
+            management and tool overhead. Market check: published and reported
+            AI SDR pricing commonly ranges from low-thousands per month to
+            enterprise contracts; ENAI&apos;s $4K/month anchor is for governed,
+            managed execution rather than self-serve data access.
           </p>
           <Link
             href="https://calendly.com/enai-ai2024/30min"

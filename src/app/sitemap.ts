@@ -16,6 +16,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Launch-ready blog post slugs
   const blogPosts = [
     'founder-enterprise-autonomous-governance',
+    'governed-revenue-execution-vs-ai-sdr-tools',
+    'enai-for-logistics-transport-revenue-execution',
+    'enai-for-healthcare-revenue-execution',
+    'enai-for-wholesale-b2b-retail-revenue-execution',
+    'enai-for-industrials-revenue-workflows',
+    'enai-for-professional-services-business-development',
+    'enai-for-private-equity-deal-sourcing',
+    'enai-for-financial-services-compliant-revenue-workflows',
+    'enai-for-software-revenue-workflows',
+    'enai-for-hardware-sales-workflows',
+    'enai-for-ai-native-companies',
+    'enai-for-sovereign-ai-revenue-workflows',
   ]
 
   // Comparison pages are excluded from launch sitemap until rewritten.
@@ -106,8 +118,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogUrls = blogPosts.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    changeFrequency: 'weekly' as const,
+    priority: slug === 'founder-enterprise-autonomous-governance' ? 0.9 : 0.85,
   }))
 
   // Comparison pages

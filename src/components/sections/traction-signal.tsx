@@ -36,15 +36,23 @@ const tractionSignals = [
 
 const TractionSignal = () => {
     return (
-        <section className="py-16 md:py-20 bg-[#F5F1ED]/30 relative overflow-hidden border-y border-black/5">
+        <section className="relative overflow-hidden border-y border-black/5 bg-white py-20 md:py-24">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                <div className="mb-10 max-w-3xl">
+                    <p className="section-eyebrow text-[#1E3A3A]/60">
+                        Proof
+                    </p>
+                    <h2 className="section-title mt-4 text-[#1E3A3A]">
+                        Numbers that explain why teams lean in.
+                    </h2>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {tractionSignals.map((signal, index) => {
                         const Icon = signal.icon;
                         return (
                             <div
                                 key={index}
-                                className="relative flex flex-col gap-5 p-6 md:p-8 rounded-2xl bg-white border border-black/5 hover:border-black/10 hover:shadow-md transition-all duration-300 group"
+                                className="relative flex flex-col gap-5 rounded-2xl border border-black/8 bg-[#F8F5F2] p-6 transition-all duration-300 hover:border-black/15 hover:shadow-md md:p-8 group"
                             >
                                 {/* Metric */}
                                 <div className="flex items-end justify-between">
@@ -69,7 +77,7 @@ const TractionSignal = () => {
                                     <h3 className="text-sm font-bold text-black uppercase tracking-wider mb-2">
                                         {signal.title}
                                     </h3>
-                                    <p className="text-sm text-black/50 leading-relaxed">
+                                    <p className="text-sm text-black/68 leading-relaxed">
                                         {signal.description}
                                     </p>
                                 </div>

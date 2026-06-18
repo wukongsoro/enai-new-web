@@ -111,34 +111,43 @@ export default function EnterpriseAutonomy() {
               </span>
             </div>
 
-            {/* Steps reveal one by one */}
+            {/* Steps keep a stable footprint so the page does not jump while the run animates. */}
             <div className="mt-4 grid flex-1 content-start gap-3 sm:grid-cols-2">
-              {workflowSteps.slice(0, revealed).map((row, index) => {
+              {workflowSteps.map((row, index) => {
+                const visible = index < revealed;
                 const isActive = !allDone && index === revealed - 1;
                 const done = allDone || index < revealed - 1;
                 return (
                   <div
                     key={row}
-                    className={`enai-step-in flex items-center gap-3 rounded-xl border px-3 py-3 transition-colors duration-500 ${
-                      isActive
+                    className={`flex min-h-[54px] items-center gap-3 rounded-xl border px-3 py-3 transition-[border-color,background-color,opacity] duration-500 ${
+                      visible && isActive
                         ? "border-[#1E3A3A]/25 bg-[#1E3A3A]/[0.05]"
-                        : "border-black/[0.07] bg-[#F8F5F2]"
+                        : visible
+                          ? "border-black/[0.07] bg-[#F8F5F2]"
+                          : "border-black/[0.04] bg-[#F8F5F2]/45 opacity-35"
                     }`}
                   >
                     <span
                       className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-colors duration-500 ${
-                        done
+                        visible && done
                           ? "bg-[#1E3A3A]/12 text-[#1E3A3A]"
-                          : "bg-[#1E3A3A]/[0.06] text-[#1E3A3A]/70"
+                          : visible
+                            ? "bg-[#1E3A3A]/[0.06] text-[#1E3A3A]/70"
+                            : "bg-black/[0.04] text-black/20"
                       }`}
                     >
-                      {done ? (
+                      {visible && done ? (
                         <CheckCircle2 className="h-3.5 w-3.5" />
-                      ) : (
+                      ) : visible ? (
                         <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      ) : (
+                        <span className="h-1.5 w-1.5 rounded-full bg-current" />
                       )}
                     </span>
-                    <span className="text-sm font-medium text-black/75">{row}</span>
+                    <span className={`text-sm font-medium ${visible ? "text-black/75" : "text-black/35"}`}>
+                      {row}
+                    </span>
                   </div>
                 );
               })}

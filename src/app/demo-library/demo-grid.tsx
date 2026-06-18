@@ -36,7 +36,7 @@ const entries: DemoEntry[] = [
     title: "B2B Revenue Workflow",
     by: "Nikhil Nehra",
     category: "Product demos",
-    youtubeId: "NIvogHJK9wM",
+    youtubeId: "eK7Qt-ep4_A",
     description:
       "From account signal to researched account, mapped stakeholders, governed outreach, and qualified handoff — one continuous run.",
     features: [
@@ -58,7 +58,7 @@ const entries: DemoEntry[] = [
     title: "Logistics & Transport Workflow",
     by: "Nikhil Nehra",
     category: "Industries",
-    youtubeId: "FgM6f3LeLVI",
+    youtubeId: "NIvogHJK9wM",
     description:
       "A market-specific walkthrough for teams selling across lanes, shippers, carriers, and time-sensitive transport opportunities.",
     features: [
@@ -80,7 +80,7 @@ const entries: DemoEntry[] = [
     title: "Healthcare Revenue Workflow",
     by: "Nikhil Nehra",
     category: "Industries",
-    youtubeId: "eK7Qt-ep4_A",
+    youtubeId: "FgM6f3LeLVI",
     description:
       "A market-specific walkthrough for teams selling into healthcare — mapping complex buying committees and running compliant, governed outreach to the right decision makers.",
     features: [

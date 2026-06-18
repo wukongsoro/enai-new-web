@@ -27,16 +27,16 @@ const neverSends = [
 
 export default function GovernedSection() {
   return (
-    <section className="bg-[#F5F1ED] px-6 py-20 md:py-28">
+    <section className="bg-[#F5F1ED] px-6 py-24 md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-black/45">
+          <p className="section-eyebrow text-[#1E3A3A]/60">
             Governed by design
           </p>
-          <h2 className="mt-4 text-[34px] leading-[1.1] text-[#1E3A3A] md:text-[48px]">
+          <h2 className="section-title mt-4 text-[#1E3A3A]">
             Autonomy your brand can sign off on.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-black/60 md:text-lg">
+          <p className="section-copy mt-5 text-readable">
             The reason teams trust ENAI to act isn&apos;t that it&apos;s clever.
             It&apos;s that every action is constrained, logged, and reversible.
           </p>
@@ -54,7 +54,7 @@ export default function GovernedSection() {
               <h3 className="mt-5 text-xl font-medium tracking-[-0.01em] text-[#1E3A3A]">
                 {title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-black/55">{text}</p>
+              <p className="mt-2 text-sm leading-relaxed text-black/68">{text}</p>
             </div>
           ))}
         </div>

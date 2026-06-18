@@ -87,17 +87,17 @@ const badgeStyles: Record<string, string> = {
 
 export default function MartechArchitectureFit() {
   return (
-    <section className="bg-[#E8DDD4] pb-24 md:pb-28">
+    <section className="bg-[#E8DDD4] py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="rounded-[2rem] border border-black/10 bg-[#F5F1ED] p-8 md:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.10)]">
+        <div className="rounded-[2rem] border border-black/10 bg-[#F5F1ED] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.10)] md:p-10 lg:p-12">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center font-mono text-xs tracking-[0.2em] uppercase text-black/45 font-bold px-4 py-2 border border-black/10 rounded-full bg-white/65">
+            <div className="inline-flex items-center rounded-full border border-black/10 bg-white/65 px-4 py-2 section-eyebrow text-[#1E3A3A]/60">
               Fits your current workflow
             </div>
-            <h3 className="mt-5 text-[30px] md:text-[44px] heading-strong text-black leading-tight text-balance">
+            <h3 className="section-title mt-5 text-[#1E3A3A]">
               Keep your tools. Give them an AI team that acts.
             </h3>
-            <p className="mt-4 text-base md:text-lg text-black/65 leading-relaxed">
+            <p className="section-copy mt-4 text-readable">
               ENAI plugs into the tools revenue teams already use, then turns signals,
               contacts, campaign activity, and conversations into booked meetings and next steps.
             </p>
@@ -109,7 +109,7 @@ export default function MartechArchitectureFit() {
                 <p className="text-black text-xl md:text-2xl heading-strong">
                   From signal to meeting, without tool sprawl
                 </p>
-                <p className="mt-1 text-sm md:text-base text-black/60">
+                <p className="mt-1 text-sm md:text-base text-black/68">
                   Your CRM, data tools, and outreach channels stay in place. ENAI does the work between them.
                 </p>
               </div>
@@ -146,7 +146,7 @@ export default function MartechArchitectureFit() {
                               {entry.tag}
                             </span>
                           </div>
-                          <p className="mt-2 text-xs md:text-sm text-black/60">{entry.detail}</p>
+                          <p className="mt-2 text-xs md:text-sm text-black/68">{entry.detail}</p>
                         </div>
                       ))}
                     </div>
@@ -176,7 +176,7 @@ export default function MartechArchitectureFit() {
               <h4 className="mt-3 font-display text-[28px] md:text-[36px] heading-strong text-black leading-tight">
                 More meetings without more manual revenue ops
               </h4>
-              <p className="mt-3 text-sm md:text-base text-black/65 leading-relaxed">
+              <p className="mt-3 text-sm md:text-base text-black/70 leading-relaxed">
                 Most revenue tools create more work for a person to interpret. ENAI is designed
                 for lean teams that need the work done: find the buyer, send the follow-up,
                 qualify the reply, and book the meeting.
@@ -201,7 +201,7 @@ export default function MartechArchitectureFit() {
                   className="grid grid-cols-1 md:grid-cols-3 border-t border-black/10 bg-white"
                 >
                   <p className="px-4 pt-3 md:py-3 text-sm font-semibold text-black/75">{row.dimension}</p>
-                  <p className="px-4 py-1.5 md:py-3 text-sm text-black/55">
+                  <p className="px-4 py-1.5 md:py-3 text-sm text-black/68">
                     <span className="md:hidden block font-mono text-[10px] uppercase tracking-[0.14em] text-black/40 font-semibold mb-0.5">Traditional revenue tools</span>
                     {row.legacy}
                   </p>

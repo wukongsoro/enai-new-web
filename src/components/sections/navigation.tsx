@@ -16,22 +16,21 @@ const banners = [
     href: "https://calendly.com/enai-ai2024/30min",
   },
   {
-    text: "Sovereign Revenue Execution: Full Audit Trail From Signal to Closed Deal",
-    href: "/blog/enai-ai-agents-generate-50-more-qualified-leads",
+    text: "Sovereign Revenue Execution: Full Audit Trail From Signal to Qualified Meeting",
+    href: "/blog/enai-for-sovereign-ai-revenue-workflows",
   },
   {
-    text: "Enterprise Revenue Teams Are Moving to Governed Autonomous Execution",
-    href: "/blog/autonomous-revenue-playbook-scale-outbound-at-speed",
+    text: "Enterprise Teams Are Moving to Governed Revenue Execution",
+    href: "/blog/governed-revenue-execution-vs-ai-sdr-tools",
   },
   {
-    text: "How Institutional Revenue Teams Achieve 70% Faster Pipeline Velocity",
-    href: "/blog/enai-cuts-prospecting-time-70-ai-automation",
+    text: "Industry Revenue Workflows for Industrials, PE, Financial Services, and AI-Native Teams",
+    href: "/blog/enai-for-industrials-revenue-workflows",
   },
 ];
 
 const navLinks = [
-  { text: "Platform", href: "/#platform" },
-  { text: "Solutions", href: "/#use-cases" },
+  { text: "Blog", href: "/blog" },
   { text: "Security", href: "/security" },
   { text: "Company", href: "/about-us" },
 ];

@@ -1,198 +1,267 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, BarChart3, Heart, ShieldCheck, Zap } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
 
-interface About3Props {
-  title?: string;
-  description?: string;
-  mainImage?: {
-    src: string;
-    alt: string;
-  };
-  secondaryImage?: {
-    src: string;
-    alt: string;
-  };
-  breakout?: {
-    src: string;
-    alt: string;
-    title?: string;
-    description?: string;
-    buttonText?: string;
-    buttonUrl?: string;
-  };
-  achievementsTitle?: string;
-  achievementsDescription?: string;
-  achievements?: Array<{
-    label: string;
-    value: string;
-  }>;
-}
+export const metadata: Metadata = {
+  title: "Company | ENAI",
+  description:
+    "ENAI is building governed revenue execution infrastructure for complex B2B markets. Learn about our mission, operating principles, and Web Summit Qatar 2026 selection.",
+  openGraph: {
+    title: "Company | ENAI",
+    description:
+      "Governed revenue execution infrastructure for complex B2B markets.",
+    type: "website",
+    images: [
+      {
+        url: "/GauJDBnXcAAkNUg.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "ENAI company visual",
+      },
+    ],
+  },
+};
 
-
-const defaultAchievements = [
-  { label: "Pipeline velocity increase", value: "50%" },
-  { label: "Cost reduction in sales acquisition", value: "70%" },
-  { label: "More qualified meetings generated", value: "3x" },
-  { label: "Lead conversion rate improvement", value: "35%" },
-  { label: "Sales cycle duration reduction", value: "20 days" },
-  { label: "Year-over-year revenue growth", value: "50%" },
+const companySignals = [
+  { label: "Company", value: "ENAI" },
+  { label: "Category", value: "Governed revenue execution" },
+  { label: "Base", value: "London" },
+  { label: "Recognition", value: "Selected for Web Summit Qatar 2026" },
 ];
 
-const About3 = ({
-  title = "About ENAI",
-  description = "ENAI is the Revenue Operating System for complex B2B teams. We help companies research accounts, map buying committees, run governed outreach, qualify replies, and hand off meetings with context.",
-  mainImage = {
-    src: "/GauJDBnXcAAkNUg.jpeg",
-    alt: "ENAI Team",
+const principles = [
+  {
+    title: "Execution, not dashboards",
+    icon: Zap,
+    body: "The product is built to complete account research, buyer mapping, outreach, qualification, and handoff instead of giving teams another system to watch.",
   },
-  secondaryImage = {
-    src: "",
-    alt: "AI Technology",
+  {
+    title: "Governance before autonomy",
+    icon: ShieldCheck,
+    body: "Autonomous work only belongs in serious companies when actions are explainable, controlled, and reversible.",
   },
-  breakout = {
-    src: "/enai-logo.png",
-    alt: "ENAI Logo",
-    title: "Built for serious revenue teams",
-    description: "ENAI gives teams a governed way to move from signal to qualified meeting without losing control of brand, data, or process.",
-    buttonText: "Book a Demo",
-    buttonUrl: "https://calendly.com/enai-ai2024/30min",
+  {
+    title: "Vertical context matters",
+    icon: BarChart3,
+    body: "Complex markets require different signals, buyer committees, approval paths, and handoff context.",
   },
-  achievementsTitle = "Measured by Revenue Outcomes",
-  achievementsDescription = "ENAI is built around the operating metrics revenue leaders already track: pipeline quality, meeting volume, cycle time, and acquisition cost.",
-  achievements = defaultAchievements,
-}: About3Props = {}) => {
-  return (
-    <section className="pt-48 pb-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 sm:mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black leading-tight">{title}</h1>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed">{description}</p>
-        </div>
-        <div className="grid gap-6 sm:gap-7 lg:grid-cols-3">
-          <img
-            src={mainImage.src}
-            alt={mainImage.alt}
-            className="w-full h-[260px] sm:h-[300px] lg:h-[340px] rounded-xl object-cover object-center lg:col-span-2"
-          />
-          <div className="max-w-md mx-auto lg:mx-0">
-            <div className="flex flex-col justify-between gap-6 rounded-xl bg-gray-50 p-6 sm:p-7">
-              <div className="flex items-center gap-3">
-                <img
-                  src={breakout.src}
-                  alt={breakout.alt}
-                  className="h-10 w-10 sm:h-12 sm:w-auto flex-shrink-0"
-                />
-                <span className="text-lg sm:text-xl font-bold text-black">ENAI</span>
-              </div>
-              <div>
-                <p className="mb-2 text-base sm:text-lg font-semibold text-black">{breakout.title}</p>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{breakout.description}</p>
-              </div>
-              <Button variant="outline" className="mr-auto border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white min-h-[44px] w-full sm:w-auto sm:min-w-[140px]" asChild>
-                <a href={breakout.buttonUrl} target="_blank">
-                  {breakout.buttonText}
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
+  {
+    title: "Human authority stays intact",
+    icon: Heart,
+    body: "ENAI executes repeatable work inside defined boundaries. Commercial judgment, policy, and escalation stay with the company.",
+  },
+];
 
-        {/* Mission Section */}
-        <div className="py-16 sm:py-24 lg:py-32">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8">
-              Our Mission
-            </h2>
-            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gray-900 mx-auto mb-8 sm:mb-12 lg:mb-16"></div>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
-              To give revenue teams a governed operating layer for the work that happens before a qualified meeting: research, prioritization, outreach, qualification, and handoff.
-            </p>
+const nonNegotiables = [
+  "No black-box action without source context",
+  "No outreach outside approved rules",
+  "No generic automation where vertical context is required",
+  "No replacement of human commercial judgment",
+];
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-5xl mx-auto px-4 sm:px-0">
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Account Intelligence</h3>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  ENAI reads account signals, company context, and buying committee structure before outreach begins.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Human Control</h3>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Teams define the rules, approvals, and handoff points. ENAI executes the repeatable work inside those boundaries.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Measurable Impact</h3>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  Every workflow is judged by pipeline quality, meeting readiness, and the time saved by the team.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Responsible Execution</h3>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  We prioritize clear audit trails, transparent decisioning, and responsible use of customer and prospect data.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative overflow-hidden rounded-xl bg-gray-50 p-6 sm:p-8 md:p-12 lg:p-16">
-          <div className="flex flex-col gap-4 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black">{achievementsTitle}</h2>
-            <p className="max-w-2xl text-gray-600 mx-auto text-sm sm:text-base leading-relaxed">
-              {achievementsDescription}
-            </p>
-          </div>
-          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-            {achievements.map((item, idx) => (
-              <div className="flex flex-col gap-2 sm:gap-3 text-center" key={item.label + idx}>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-                  {item.value}
-                </span>
-                <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-tight">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="pointer-events-none absolute -top-1 right-1 z-10 hidden h-full w-full bg-[linear-gradient(to_right,hsl(var(--muted-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--muted-foreground))_1px,transparent_1px)] bg-[size:80px_80px] opacity-15 [mask-image:linear-gradient(to_bottom_right,#000,transparent,transparent)] md:block"></div>
-        </div>
-      </div>
-    </section>
-  );
-};
+const markets = [
+  "Industrials",
+  "Professional Services",
+  "Private Equity",
+  "Financial Services",
+  "Software",
+  "Hardware",
+  "AI-Native",
+  "Sovereign AI",
+  "Logistics",
+  "Healthcare",
+  "Wholesale",
+];
 
 export default function AboutUs() {
   return (
     <>
       <Navigation />
-      <main>
-        <About3 />
+      <main className="bg-[#F7F3EE] text-black">
+        <section className="px-6 pt-44 pb-20 lg:px-10 lg:pt-52 lg:pb-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+              <div className="max-w-4xl">
+                <p className="section-eyebrow">Company</p>
+                <h1 className="mt-5 font-[family-name:var(--font-display)] text-[clamp(40px,6vw,72px)] leading-[1.02] tracking-[-0.01em] text-black">
+                  Building the execution layer for revenue teams.
+                </h1>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-black/66">
+                  ENAI builds governed AI systems for the work that happens before a
+                  qualified meeting: account research, buyer mapping, controlled
+                  outreach, reply qualification, and seller handoff. The ambition is
+                  not to add another tool to the stack. It is to make revenue work
+                  executable under company-defined rules.
+                </p>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Button asChild className="rounded-full bg-[#1E3A3A] px-7 text-white hover:bg-[#16302F]">
+                    <Link href="https://calendly.com/enai-ai2024/30min" target="_blank" rel="noopener noreferrer">
+                      Request a demo
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="rounded-full border-black/15 bg-transparent px-7 text-black hover:bg-black hover:text-white">
+                    <Link href="/blog/founder-enterprise-autonomous-governance">
+                      Read founder letter
+                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative aspect-[16/7] min-h-[280px] overflow-hidden rounded-2xl bg-black sm:min-h-[360px]">
+              <Image
+                src="/GauJDBnXcAAkNUg.jpeg"
+                alt="ENAI company visual"
+                fill
+                priority
+                className="object-cover object-center"
+              />
+            </div>
+
+            <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10 sm:grid-cols-2 lg:grid-cols-4">
+              {companySignals.map((signal) => (
+                <div key={signal.label} className="bg-white p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/38">{signal.label}</p>
+                  <p className="mt-3 text-base font-medium leading-snug text-black">{signal.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-black/10 bg-white px-6 py-20 lg:px-10 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="section-eyebrow">Founder Thesis</p>
+              <h2 className="section-title mt-4 text-black">
+                The enterprise will not adopt autonomous execution without governance.
+              </h2>
+            </div>
+            <div className="space-y-6 text-lg leading-8 text-black/66">
+              <p>
+                ENAI was built from a simple observation: the bottleneck in enterprise
+                AI is no longer generation. It is trust. Companies can generate copy,
+                research, and recommendations quickly. What they cannot accept is a
+                system acting without clear evidence, policy boundaries, and human
+                authority.
+              </p>
+              <p>
+                That is why ENAI focuses on governed execution. The system must act
+                inside rules the company defines, show its sources, know when to stop,
+                and preserve institutional judgment rather than replacing it with
+                opaque automation.
+              </p>
+              <Link href="/blog/founder-enterprise-autonomous-governance" className="inline-flex items-center text-sm font-semibold text-[#1E3A3A] hover:text-black">
+                Read the full founder letter
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-20 lg:px-10 lg:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
+              <div>
+                <p className="section-eyebrow">Principles</p>
+                <h2 className="section-title mt-4 text-black">
+                  Built for serious revenue teams.
+                </h2>
+                <p className="section-copy mt-5">
+                  ENAI is designed around the work that happens before a seller enters
+                  the room: account research, buyer mapping, controlled outreach,
+                  qualification, and handoff.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {principles.map((principle) => (
+                  <div key={principle.title} className="rounded-xl border border-black/10 bg-white p-6">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gray-900">
+                      <principle.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <p className="font-[family-name:var(--font-display)] text-xl text-black">{principle.title}</p>
+                    <p className="mt-3 text-sm leading-6 text-black/58">{principle.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-black/10 bg-[#101312] px-6 py-20 text-white lg:px-10 lg:py-24">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p className="section-eyebrow text-white/45">Standard</p>
+              <h2 className="section-title mt-4 text-white">
+                What we will not compromise.
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-7 text-white/62">
+                If AI is going to execute revenue work, the standard has to be higher
+                than speed. It has to be accountable enough for serious companies to
+                use in front of customers, boards, and regulators.
+              </p>
+            </div>
+            <div className="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2">
+              {nonNegotiables.map((item) => (
+                <div key={item} className="bg-[#101312] p-6">
+                  <p className="text-base font-medium leading-7 text-white/86">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-20 lg:px-10 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p className="section-eyebrow">Markets</p>
+              <h2 className="section-title mt-4 text-black">
+                Built for vertical revenue motions.
+              </h2>
+              <p className="section-copy mt-5">
+                Complex markets require different signals, buying committees, risk
+                boundaries, and handoff context. ENAI is being built as a vertical
+                execution layer, not a one-size-fits-all outbound bot.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {markets.map((market) => (
+                <span key={market} className="rounded-full border border-black/10 bg-[#F7F3EE] px-4 py-2 text-sm font-medium text-black/70">
+                  {market}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-20 lg:px-10 lg:py-28">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="section-eyebrow">Standard</p>
+            <h2 className="section-title mt-4 text-black">
+              We want ENAI to be judged by the quality of work it can safely complete.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/62">
+              Not by activity volume. Not by generic personalization. By whether a
+              serious company can trust the system to understand the account, respect
+              the rules, surface the evidence, and hand the seller a conversation
+              worth having.
+            </p>
+            <div className="mt-10">
+              <Button asChild className="rounded-full bg-[#1E3A3A] px-8 text-white hover:bg-[#16302F]">
+                <Link href="https://calendly.com/enai-ai2024/30min" target="_blank" rel="noopener noreferrer">
+                  See ENAI on your market
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
