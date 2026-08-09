@@ -1,27 +1,61 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buildCanonicalUrl } from "@/lib/seo";
+
+const pageUrl = buildCanonicalUrl("/knowledge-base");
 
 export const metadata: Metadata = {
-  title: "Enai AI Knowledge Base | Revenue Operating System",
-  description: "Company, product, pricing, location, and FAQ information about Enai.ai, the Revenue Operating System for complex B2B teams.",
-  keywords: "Enai AI, Enai.ai, revenue operating system, account research, buying committee mapping, governed outreach, qualified meetings, not European Network Academic Integrity",
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "ENAI Company and Product Facts | Revenue Operating System",
+  description:
+    "Authoritative facts about ENAI, governed revenue execution, vertical workflows, governance, deployment, and company information.",
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Enai AI Knowledge Base | Revenue Operating System",
-    description: "Enai.ai - the Revenue Operating System for complex B2B teams.",
-    url: "https://www.enai.ai/knowledge-base",
+    title: "ENAI Company and Product Facts",
+    description: "The authoritative overview of ENAI and governed revenue execution.",
+    url: pageUrl,
     type: "website",
   },
-  other: {
-    "article:tag": "Revenue Operating System, B2B SaaS, Account Research, Governed Outreach",
-  },
 };
+
+const workflow = [
+  "Read account and market signals",
+  "Build an evidence-based account brief",
+  "Map the buying committee and route into the account",
+  "Prepare outreach inside company-defined rules",
+  "Qualify replies and escalate judgment calls",
+  "Hand the seller a meeting with account and source context",
+];
+
+const faq = [
+  {
+    question: "What is ENAI?",
+    answer:
+      "ENAI is the Revenue Operating System for governed revenue execution in complex vertical markets. It turns account signals and company context into research, buying-committee maps, controlled outreach, reply qualification, and seller handoff.",
+  },
+  {
+    question: "Is ENAI an AI SDR or AI BDR?",
+    answer:
+      "No. ENAI can complete work that often sits across SDR, research, marketing, and revenue operations teams, but it is not positioned as a generic outbound bot. Its category is governed revenue execution.",
+  },
+  {
+    question: "Which markets does ENAI focus on?",
+    answer:
+      "ENAI currently demonstrates vertical execution for logistics and transport, healthcare, and wholesale and B2B retail.",
+  },
+  {
+    question: "How does ENAI govern autonomous action?",
+    answer:
+      "Customers define approval rules, exclusions, pacing, permitted claims, and escalation paths. ENAI connects work to source context and routes judgment calls to people.",
+  },
+  {
+    question: "How is ENAI priced?",
+    answer:
+      "Deployment scope depends on the workflow, account coverage, integrations, governance requirements, and level of managed execution. ENAI provides a commercial proposal after reviewing the target market and deployment.",
+  },
+];
 
 export default function KnowledgeBasePage() {
   return (
@@ -32,373 +66,137 @@ export default function KnowledgeBasePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is Enai AI?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Enai.ai is the Revenue Operating System for complex B2B teams. ENAI coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much does Enai AI cost?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Enai.ai offers Starter, Core, and Enterprise plans. Enterprise pricing depends on usage, integrations, governance requirements, and deployment scope."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How does ENAI work?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "ProspectorAI researches accounts and contacts, OutreachAI prepares governed outreach, and QualifierAI captures qualification signals and meeting handoff context."
-                }
-              }
-            ]
-          })
+            mainEntity: faq.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: { "@type": "Answer", text: item.answer },
+            })),
+          }),
         }}
       />
-      
       <Navigation />
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-6 mt-32">
-          <div className="max-w-6xl mx-auto">
-            <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Company Knowledge Base
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Everything About Enai AI
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl">
-              Structured information about ENAI, our product, pricing, locations, and frequently asked questions.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/data/enai-knowledge.json"
-                download
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
-              >
-                Download JSON Data
-              </Link>
-              <Link
-                href="https://calendly.com/enai-ai2024/30min"
-                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Company Overview */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Company Overview</h2>
-            
-            {/* Disambiguation Notice */}
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                ℹ️ Important: Enai AI vs ENAI (European Network)
-              </h3>
-              <p className="text-blue-800">
-                <strong>Enai AI (enai.ai)</strong> is a technology company providing <strong>a Revenue Operating System for complex B2B teams</strong>. 
-                We are <strong>NOT</strong> the European Network for Academic Integrity (ENAI). 
-                Enai AI is a commercial SaaS platform founded in 2024. The product includes ProspectorAI, OutreachAI, and QualifierAI workflows for revenue teams.
+      <main className="bg-white pt-36 md:pt-44">
+        <header className="border-b border-black/10 px-6 pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-7xl">
+            <p className="section-eyebrow">Company and product facts</p>
+            <div className="mt-6 grid gap-8 lg:grid-cols-[0.64fr_0.36fr] lg:items-end">
+              <h1 className="max-w-4xl text-[52px] leading-[1.02] text-black md:text-[76px]">
+                ENAI, in plain terms.
+              </h1>
+              <p className="max-w-md text-lg leading-8 text-black/60">
+                The authoritative reference for what ENAI is, what it does, where it is focused, and how it differs from generic AI sales automation.
               </p>
             </div>
+          </div>
+        </header>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">About Enai AI</h3>
-                <dl className="space-y-3">
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Company Name</dt>
-                    <dd className="text-gray-900">Enai AI (ENAI Inc.)</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Brand</dt>
-                    <dd className="text-gray-900">Enai.ai - The Revenue Operating System</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Founded</dt>
-                    <dd className="text-gray-900">2024</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Founder & CEO</dt>
-                    <dd className="text-gray-900">
-                      <a href="https://www.linkedin.com/in/nikhil-nehra-57716a23b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                        Nikhil Nehra
-                      </a>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Industry</dt>
-                    <dd className="text-gray-900">Revenue Technology, B2B SaaS</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Sector</dt>
-                    <dd className="text-gray-900">Commercial Technology (NOT Academic/Education)</dd>
-                  </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-600">Headquarters</dt>
-                    <dd className="text-gray-900">London, United Kingdom</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Mission</h3>
-                <p className="text-gray-700 mb-4">
-                  To give revenue teams a governed operating layer for the work between market signal and qualified meeting: research, prioritization, outreach, qualification, and handoff.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div>
-                    <div className="text-3xl font-bold text-blue-600">70%</div>
-                    <div className="text-sm text-gray-600">Cost Reduction</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-blue-600">3x</div>
-                    <div className="text-sm text-gray-600">More Meetings</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-blue-600">50%</div>
-                    <div className="text-sm text-gray-600">Pipeline Growth</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-blue-600">24/7</div>
-                    <div className="text-sm text-gray-600">Workflow Coverage</div>
-                  </div>
-                </div>
-              </div>
+        <section className="px-6 py-24 lg:px-10 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.32fr_0.68fr] lg:gap-20">
+            <div>
+              <p className="section-eyebrow">Definition</p>
+              <h2 className="mt-4 text-3xl leading-tight text-black md:text-4xl">The Revenue Operating System</h2>
+            </div>
+            <div className="max-w-3xl space-y-6 text-lg leading-8 text-black/64">
+              <p>
+                ENAI turns the signals and context already present across a company&apos;s revenue stack into governed work. It researches accounts, maps buying committees, prepares approved outreach, qualifies replies, and hands sellers meetings with evidence and context.
+              </p>
+              <p>
+                ENAI is not a contact database, email sequencer, or generic AI SDR persona. It is an execution layer for the work between a market signal and a qualified seller conversation.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Products */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Product Workflows</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="text-4xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold mb-3">ProspectorAI</h3>
-                <p className="text-gray-600 mb-4">
-                  AI agent that identifies and researches high-quality prospects automatically.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• Automated lead identification</li>
-                  <li>• Deep prospect research</li>
-                  <li>• Company intelligence</li>
-                  <li>• Contact data enrichment</li>
-                  <li>• ICP matching</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm border-2 border-blue-500">
-                <div className="text-4xl mb-4">📧</div>
-                <h3 className="text-xl font-semibold mb-3">OutreachAI</h3>
-                <p className="text-gray-600 mb-4">
-                  AI agent that handles personalized multi-channel outreach at scale.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• Personalized email generation</li>
-                  <li>• Multi-channel orchestration</li>
-                  <li>• A/B testing</li>
-                  <li>• Follow-up automation</li>
-                  <li>• Engagement tracking</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="text-4xl mb-4">✅</div>
-                <h3 className="text-xl font-semibold mb-3">QualifierAI</h3>
-                <p className="text-gray-600 mb-4">
-                  AI agent that conducts qualification conversations and schedules meetings.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>• Automated lead qualification</li>
-                  <li>• Intelligent conversation handling</li>
-                  <li>• Meeting scheduling</li>
-                  <li>• CRM integration</li>
-                  <li>• Objection handling</li>
-                </ul>
-              </div>
+        <section className="bg-[#F5F1ED] px-6 py-24 lg:px-10 lg:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="section-eyebrow">Core workflow</p>
+              <h2 className="section-title mt-4 text-black">From signal to seller handoff.</h2>
             </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Pricing Plans</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Free Trial</h3>
-                <div className="text-3xl font-bold mb-2">$0</div>
-                <div className="text-sm text-gray-600 mb-4">/14 days</div>
-                <p className="text-sm text-gray-700">Try core features with limits</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Starter</h3>
-                <div className="text-3xl font-bold mb-2">$100</div>
-                <div className="text-sm text-gray-600 mb-4">/per agent/month</div>
-                <p className="text-sm text-gray-700">Essential automation for small teams</p>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-500">
-                <div className="text-xs font-semibold text-blue-600 mb-2">MOST POPULAR</div>
-                <h3 className="text-lg font-semibold mb-2">Pro</h3>
-                <div className="text-3xl font-bold mb-2">$200</div>
-                <div className="text-sm text-gray-600 mb-4">/per agent/month</div>
-                <p className="text-sm text-gray-700">Full automation with voice and advanced features</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Team</h3>
-                <div className="text-3xl font-bold mb-2">Custom</div>
-                <div className="text-sm text-gray-600 mb-4">Contact Sales</div>
-                <p className="text-sm text-gray-700">Enterprise features with custom limits</p>
-              </div>
-            </div>
-            <div className="mt-8 text-center">
-              <Link href="/pricing" className="text-blue-600 hover:underline font-medium">
-                View detailed pricing comparison →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Locations */}
-        <section className="py-16 px-6 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Global Presence</h2>
-            <p className="text-gray-600 mb-8">
-              We serve customers worldwide with timezone support across all major business regions.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold mb-4">North America</h3>
-                <ul className="space-y-2">
-                  <li><Link href="/locations/new-york" className="text-blue-600 hover:underline">New York, NY</Link></li>
-                  <li><Link href="/locations/san-francisco" className="text-blue-600 hover:underline">San Francisco, CA</Link></li>
-                  <li><Link href="/locations/boston" className="text-blue-600 hover:underline">Boston, MA</Link></li>
-                  <li><Link href="/locations/austin" className="text-blue-600 hover:underline">Austin, TX</Link></li>
-                  <li><Link href="/locations/seattle" className="text-blue-600 hover:underline">Seattle, WA</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Europe</h3>
-                <ul className="space-y-2">
-                  <li className="font-medium">London, UK 🏢 (HQ)</li>
-                  <li><Link href="/locations/amsterdam" className="text-blue-600 hover:underline">Amsterdam, Netherlands</Link></li>
-                  <li><Link href="/locations/berlin" className="text-blue-600 hover:underline">Berlin, Germany</Link></li>
-                  <li><Link href="/locations/paris" className="text-blue-600 hover:underline">Paris, France</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Asia Pacific</h3>
-                <ul className="space-y-2">
-                  <li><Link href="/locations/singapore" className="text-blue-600 hover:underline">Singapore</Link></li>
-                  <li><Link href="/locations/sydney" className="text-blue-600 hover:underline">Sydney, Australia</Link></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQs */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {[
-                {
-                  q: "What is Enai AI?",
-                  a: "Enai.ai is the Revenue Operating System for complex B2B teams. It coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
-                },
-                {
-                  q: "How much does Enai AI cost?",
-                  a: "Pricing starts at $100/month for Starter and $200/month for Pro. We offer a free 14-day trial and custom Team pricing."
-                },
-                {
-                  q: "What integrations are supported?",
-                  a: "We integrate with Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Google Workspace, Microsoft 365, Slack, and Zapier."
-                },
-                {
-                  q: "How long does implementation take?",
-                  a: "Most customers are up and running within 1-2 weeks, including setup, integration, and training."
-                },
-                {
-                  q: "What results can I expect?",
-                  a: "Typical results include 50% pipeline increase, 70% cost reduction, 3x more meetings, and 35% conversion rate improvement."
-                },
-                {
-                  q: "Is my data secure?",
-                  a: "Yes. We're working towards SOC 2 Type II and ISO 27001 certifications, and are GDPR and CCPA compliant."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6">
-                  <h3 className="text-lg font-semibold mb-2">{faq.q}</h3>
-                  <p className="text-gray-700">{faq.a}</p>
+            <div className="mt-12 border-t border-black/12">
+              {workflow.map((step, index) => (
+                <div key={step} className="grid gap-3 border-b border-black/12 py-5 md:grid-cols-[80px_1fr] md:items-center">
+                  <span className="font-mono text-xs text-[#1E3A3A]/50">0{index + 1}</span>
+                  <p className="text-lg font-medium text-black">{step}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Contact */}
-        <section className="py-16 px-6 bg-gray-900 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Learn More?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized demo to see how Enai AI can strengthen your revenue workflow.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="https://calendly.com/enai-ai2024/30min"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition inline-block"
-              >
-                Book Demo
-              </Link>
-              <Link
-                href="/pricing"
-                className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold transition inline-block"
-              >
-                View Pricing
-              </Link>
-            </div>
-            <div className="mt-12 pt-8 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-4">Connect with us</p>
-              <div className="flex justify-center gap-6">
-                <a href="https://www.linkedin.com/company/enai-ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/enai_ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                  Twitter/X
-                </a>
-                <a href="https://www.enai.ai" className="text-gray-400 hover:text-white">
-                  Website
-                </a>
+        <section className="px-6 py-24 lg:px-10 lg:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-12 lg:grid-cols-[0.35fr_0.65fr] lg:gap-20">
+              <div>
+                <p className="section-eyebrow">Initial vertical focus</p>
+                <h2 className="section-title mt-4 text-black">Context changes the work.</h2>
+              </div>
+              <div className="divide-y divide-black/10 border-y border-black/10">
+                {[
+                  ["Logistics and transport", "Expansion, lane, capacity, network, operations, commercial, finance, and procurement context."],
+                  ["Healthcare", "Provider priorities, service-line change, controlled terminology, and multi-stakeholder review."],
+                  ["Wholesale and B2B retail", "Distributor, channel, assortment, regional demand, buyer, commercial, and finance context."],
+                ].map(([market, description]) => (
+                  <div key={market} className="grid gap-3 py-6 md:grid-cols-[0.36fr_0.64fr]">
+                    <h3 className="font-semibold text-black">{market}</h3>
+                    <p className="text-sm leading-6 text-black/60">{description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Machine-Readable Data Notice */}
-        <section className="py-8 px-6 bg-blue-50">
-          <div className="max-w-6xl mx-auto text-center">
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold">For AI Agents & Developers:</span> Download our complete knowledge base as structured JSON data at{" "}
-              <Link href="/data/enai-knowledge.json" className="text-blue-600 hover:underline font-mono">
-                /data/enai-knowledge.json
+        <section className="bg-[#173C3A] px-6 py-24 text-white lg:px-10 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.4fr_0.6fr] lg:gap-20">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/45">Governance</p>
+              <h2 className="mt-4 text-4xl leading-tight md:text-5xl">Authority remains explicit.</h2>
+            </div>
+            <div className="space-y-5">
+              {[
+                "Customer-defined approval, exclusion, pacing, and messaging rules",
+                "Source context and workflow traceability",
+                "Human escalation for sensitive accounts and unsupported claims",
+                "Customer data is not used to train generalized AI models",
+              ].map((item) => (
+                <p key={item} className="flex items-start gap-3 border-b border-white/12 pb-5 text-base leading-7 text-white/72">
+                  <CheckCircle2 className="mt-1 h-4 w-4 shrink-0" />
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24 lg:px-10 lg:py-28">
+          <div className="mx-auto max-w-5xl">
+            <p className="section-eyebrow">Frequently asked</p>
+            <div className="mt-10 divide-y divide-black/10 border-t border-black/10">
+              {faq.map((item) => (
+                <div key={item.question} className="grid gap-4 py-7 md:grid-cols-[0.36fr_0.64fr]">
+                  <h2 className="font-semibold text-black">{item.question}</h2>
+                  <p className="text-sm leading-6 text-black/62">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                href="/demo-library"
+                className="inline-flex items-center gap-2 bg-[#1E3A3A] px-6 py-3.5 text-sm font-semibold text-white"
+              >
+                Watch product runs
+                <ArrowUpRight className="h-4 w-4" />
               </Link>
-              {" "}for easy integration and programmatic access.
-            </p>
+              <Link
+                href="https://calendly.com/enai-ai2024/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center border border-black/15 px-6 py-3.5 text-sm font-semibold text-black"
+              >
+                Request a market-specific demo
+              </Link>
+            </div>
           </div>
         </section>
       </main>

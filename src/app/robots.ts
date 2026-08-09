@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/', '/private/', '/admin/'],
     },
-    sitemap: 'https://www.enai.ai/sitemap.xml',
+    sitemap: 'https://enai.ai/sitemap.xml',
   }
 }

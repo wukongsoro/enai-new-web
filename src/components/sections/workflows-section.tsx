@@ -1,65 +1,63 @@
-import { Quote } from 'lucide-react';
+import Link from "next/link";
+import { ArrowUpRight, PlayCircle, Route, ShieldCheck } from "lucide-react";
 
-const CustomerStories = () => {
+const evidence = [
+  {
+    icon: PlayCircle,
+    title: "Unedited product runs",
+    description:
+      "Watch ENAI work through real revenue workflows without relying on a deck, a staged dashboard, or an outcome claim.",
+    label: "Product evidence",
+  },
+  {
+    icon: Route,
+    title: "Market-specific execution",
+    description:
+      "Inspect how the signals, buying committee, permitted claims, and seller handoff change from one vertical to another.",
+    label: "Vertical evidence",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Visible control model",
+    description:
+      "Review the approval rules, exclusions, source context, escalation path, and authority boundary before a deployment begins.",
+    label: "Governance evidence",
+  },
+];
+
+export default function WorkflowsSection() {
   return (
-    <section className="bg-[#E8DDD4] py-20 md:py-32 border-t border-black/5">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center font-mono text-xs tracking-[0.2em] uppercase text-black/40 font-bold px-4 py-2 mb-6 border border-black/10 rounded-full">
-            Real Teams. Real Revenue.
+    <section className="border-t border-black/5 bg-[#E8DDD4] px-6 py-20 md:py-32 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
+          <div>
+            <p className="section-eyebrow">Evidence before promise</p>
+            <h2 className="section-title mt-4 text-black">What buyers can inspect before a pilot.</h2>
           </div>
-          <h2 className="text-[32px] md:text-5xl heading-strong text-black mb-6">
-            From pipeline to closed revenue in production.
-          </h2>
-          <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
-            Here's what our customers are seeing in the first 90 days of running ENAI.
+          <p className="max-w-xl text-lg leading-8 text-black/62 lg:justify-self-end">
+            ENAI should be evaluated on the work it can show, the market context it preserves, and the controls a customer can verify.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {/* Story 1 */}
-          <div className="bg-[#F5F1ED] p-8 rounded-2xl border border-black/5 hover:border-black/10 hover:shadow-md transition-all flex flex-col">
-            <Quote className="w-8 h-8 text-[#1E3A3A]/20 mb-6" />
-            <p className="text-black/80 text-lg leading-relaxed flex-1">
-              "We went from spray-and-pray outbound to knowing exactly which accounts to call on Monday morning. ENAI tells us who's in-market, why, and what to say — before our competitors even know they're looking."
-            </p>
-            <div className="mt-8 pt-6 border-t border-black/5">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#1E3A3A]">
-                Predictive Targeting
-              </p>
-            </div>
-          </div>
-
-          {/* Story 2 */}
-          <div className="bg-[#F5F1ED] p-8 rounded-2xl border border-black/5 hover:border-black/10 hover:shadow-md transition-all flex flex-col relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#1E3A3A]" />
-            <Quote className="w-8 h-8 text-[#1E3A3A]/20 mb-6" />
-            <p className="text-black/80 text-lg leading-relaxed flex-1">
-              "ENAI spotted two at-risk deals we had absolutely no idea about. Both had gone quiet in ways we hadn't noticed. We re-engaged both in time and saved them. That's $180K right there — in the first month."
-            </p>
-            <div className="mt-8 pt-6 border-t border-black/5">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#1E3A3A]">
-                $180K Pipeline Saved
-              </p>
-            </div>
-          </div>
-
-          {/* Story 3 */}
-          <div className="bg-[#F5F1ED] p-8 rounded-2xl border border-black/5 hover:border-black/10 hover:shadow-md transition-all flex flex-col">
-            <Quote className="w-8 h-8 text-[#1E3A3A]/20 mb-6" />
-            <p className="text-black/80 text-lg leading-relaxed flex-1">
-              "Our revenue ops used to run on weekly slide decks and gut feel. ENAI gave us real-time pipeline intelligence we simply couldn't access before. The team now operates at a level we thought was only possible for companies ten times our size."
-            </p>
-            <div className="mt-8 pt-6 border-t border-black/5">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#1E3A3A]">
-                Real-time Intelligence
-              </p>
-            </div>
-          </div>
+        <div className="mt-14 grid border-l border-t border-black/10 md:grid-cols-3">
+          {evidence.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article key={item.title} className="border-b border-r border-black/10 bg-[#F5F1ED] p-7 md:p-8">
+                <Icon className="h-6 w-6 text-[#1E3A3A]" />
+                <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.16em] text-black/38">{item.label}</p>
+                <h3 className="mt-3 text-2xl leading-tight text-black">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-black/60">{item.description}</p>
+              </article>
+            );
+          })}
         </div>
+
+        <Link href="/demo-library" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#1E3A3A]">
+          Open the demo library
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
       </div>
     </section>
   );
-};
-
-export default CustomerStories;
+}

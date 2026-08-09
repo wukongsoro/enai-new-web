@@ -28,14 +28,6 @@ const LAUNCH_BLOG_SLUGS = [
   "enai-for-logistics-transport-revenue-execution",
   "enai-for-healthcare-revenue-execution",
   "enai-for-wholesale-b2b-retail-revenue-execution",
-  "enai-for-industrials-revenue-workflows",
-  "enai-for-professional-services-business-development",
-  "enai-for-private-equity-deal-sourcing",
-  "enai-for-financial-services-compliant-revenue-workflows",
-  "enai-for-software-revenue-workflows",
-  "enai-for-hardware-sales-workflows",
-  "enai-for-ai-native-companies",
-  "enai-for-sovereign-ai-revenue-workflows",
 ];
 
 export const metadata: Metadata = {
@@ -952,7 +944,7 @@ We intend to make sure it is.
 
 ---
 
-Nikhil Nehra is the Founder and CEO of Enai, a sovereign revenue execution platform based in London. Enai was selected for the Web Summit Qatar 2026 Startup Showcase.
+Nikhil Nehra is the Founder and CEO of ENAI, a governed revenue execution platform based in London. ENAI was selected to present as part of the Agentic AI showcase at Web Summit Qatar 2026.
 
 [Learn more about our approach to governed autonomous execution.](https://calendly.com/enai-ai2024/30min)`
   },
@@ -1462,7 +1454,7 @@ As AI technology advances, we can expect:
 - Seamless integration across all sales tools
 - Increased focus on relationship building over transaction processing
 
-Ready to automate your sales process? [Schedule a demo](https://www.enai.ai/demo) to see how ENAI can transform your sales operations.`
+Ready to automate your sales process? [Schedule a demo](https://enai.ai/demo) to see how ENAI can transform your sales operations.`
   },
   {
     title: "The Evolution of AI Sales Automation: ENAI's Journey from Concept to Market Leadership",
@@ -5811,24 +5803,22 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Newsletter CTA Section - Warm Beige Darker */}
+        {/* Editorial CTA */}
         <section className="py-20 px-6 bg-[#E8DDD4]">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-semibold text-black mb-4 font-[family-name:var(--font-display)]">
-              Stay Ahead of the Curve
+              See the thesis become a workflow.
             </h2>
             <p className="text-black/50 mb-8 text-lg">
-              Get the latest insights on autonomous revenue execution delivered to your inbox.
+              Watch ENAI execute against logistics, healthcare, and wholesale revenue motions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-5 py-4 rounded-xl bg-white border border-black/10 text-black placeholder:text-black/30 focus:outline-none focus:border-[#1E3A3A]/40 transition-colors"
-              />
-              <button className="px-8 py-4 bg-[#1E3A3A] text-white font-semibold rounded-xl hover:bg-[#16302F] transition-all">
-                Subscribe
-              </button>
+            <div className="flex flex-col justify-center gap-3 sm:flex-row">
+              <Link href="/demo-library" className="inline-flex items-center justify-center bg-[#1E3A3A] px-7 py-3.5 text-sm font-semibold text-white">
+                Watch product runs
+              </Link>
+              <Link href="/blog/founder-enterprise-autonomous-governance" className="inline-flex items-center justify-center border border-black/15 px-7 py-3.5 text-sm font-semibold text-black">
+                Read the founder letter
+              </Link>
             </div>
           </div>
         </section>

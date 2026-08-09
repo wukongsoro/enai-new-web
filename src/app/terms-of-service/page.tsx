@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { buildCanonicalUrl, buildAbsoluteUrl, defaultKeywords } from '@/lib/seo';
+import Navigation from '@/components/sections/navigation';
+import Footer from '@/components/sections/footer';
 
 const TERMS_URL = buildCanonicalUrl('/terms-of-service');
 const TERMS_IMAGE = buildAbsoluteUrl('/social-share-image.png');
@@ -36,7 +38,9 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-[#F7F3EE] pb-20 pt-40 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <Link href="/" className="inline-block mb-6">
@@ -45,7 +49,7 @@ export default function TermsOfService() {
                 src="/enai-logo.png"
                 alt="ENAI Logo"
                 width={60}
-                height={30}
+                height={55}
                 className="object-contain"
               />
               <span className="text-2xl font-bold text-gray-900">ENAI</span>
@@ -55,9 +59,9 @@ export default function TermsOfService() {
           <p className="text-gray-600">Last updated: September 23, 2025</p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg p-8 prose prose-gray max-w-none">
+        <div className="bg-white border border-black/10 p-8 md:p-12 prose prose-gray max-w-none">
           <div className="mb-6">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
+            <Link href="/" className="text-[#1E3A3A] hover:text-black underline underline-offset-4">
               ← Back to Home
             </Link>
           </div>
@@ -99,7 +103,7 @@ export default function TermsOfService() {
             <p>Automated tools (such as bots) may only access the Service via Enai's official Application Program Interfaces (APIs). Unlawful attempts to access our Service, website, server, or database are strictly prohibited. We reserve the right to terminate, suspend, or block access for violations.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">8. Blocking of IP Addresses</h2>
-            <p>To protect the integrity of the Service, Enai reserves the right to block certain IP addresses from accessing the Service. If you believe your IP address has been blocked mistakenly, you may contact us at enai.ai2024@gmail.com.</p>
+            <p>To protect the integrity of the Service, Enai reserves the right to block certain IP addresses from accessing the Service. If you believe your IP address has been blocked mistakenly, you may contact us at Nikhil@enai.ai.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">9. Taxes and Fees</h2>
             <p>All prices and charges for our Service are exclusive of taxes and fees. Where applicable, taxes and fees will be added to invoices. Enai reserves the right to calculate and modify these amounts without prior notice. If you are exempt from taxes, you must provide valid tax exemption documentation. You are solely responsible for paying taxes and fees owed to relevant authorities.</p>
@@ -141,7 +145,7 @@ export default function TermsOfService() {
             <p>You represent and warrant compliance with all applicable laws, including export controls and sanctions, in your use of the Service.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">18. Contacting Enai</h2>
-            <p>Enai may be contacted via email at enai.ai2024@gmail.com. By contacting us, you grant Enai the right to use any ideas or materials shared unless expressly reserved by you in writing.</p>
+            <p>Enai may be contacted via email at Nikhil@enai.ai. By contacting us, you grant Enai the right to use any ideas or materials shared unless expressly reserved by you in writing.</p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">19. About These Terms</h2>
             <p>Enai may modify these terms to reflect changes in the law or the Service. Changes will not apply retroactively and will become effective no sooner than seven days after posting. Continued use of the Service indicates your acceptance of the modified terms.</p>
@@ -149,6 +153,8 @@ export default function TermsOfService() {
           </div>
         </div>
       </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }

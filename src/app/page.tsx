@@ -2,14 +2,12 @@ import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero-section";
 import EnterpriseAutonomy from "@/components/sections/enterprise-autonomy";
 import RealRunSection from "@/components/sections/real-run-section";
-import SdrMathSection from "@/components/sections/sdr-math-section";
 import GovernedSection from "@/components/sections/governed-section";
 import TractionSignal from "@/components/sections/traction-signal";
 import FounderVideoSection from "@/components/sections/founder-video-section";
 import DigitalWorkersIntro from "@/components/sections/digital-workers-intro";
-import WorkforceTransformation from "@/components/sections/workforce-transformation";
 import MartechArchitectureFit from "@/components/sections/martech-architecture-fit";
-import AmplifyIntelligence from "@/components/sections/amplify-intelligence";
+import IndustryWorkflowsSection from "@/components/sections/industry-workflows-section";
 import PlatformShowcase from "@/components/sections/platform-showcase";
 import WorkflowsSection from "@/components/sections/workflows-section";
 import GlobeSection from "@/components/sections/globe-section";
@@ -27,16 +25,16 @@ export default function Home() {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://www.enai.ai/#organization",
+                "@id": "https://enai.ai/#organization",
                 "name": "Enai AI",
-                "url": "https://www.enai.ai",
+                "url": "https://enai.ai",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://www.enai.ai/enai-logo.png",
+                  "url": "https://enai.ai/enai-logo.png",
                   "width": 512,
                   "height": 512
                 },
-                "description": "The Revenue Operating System for complex B2B teams, coordinating account research, buying committee mapping, governed outreach, qualification, and meeting handoff.",
+                "description": "The Revenue Operating System for governed execution in complex B2B markets, connecting market signals, buying systems, customer policy, qualification, and seller handoff.",
                 "sameAs": [
                   "https://twitter.com/enai_ai",
                   "https://www.linkedin.com/company/enai-ai"
@@ -49,11 +47,11 @@ export default function Home() {
               },
               {
                 "@type": "WebSite",
-                "@id": "https://www.enai.ai/#website",
-                "url": "https://www.enai.ai",
+                "@id": "https://enai.ai/#website",
+                "url": "https://enai.ai",
                 "name": "Enai AI",
                 "publisher": {
-                  "@id": "https://www.enai.ai/#organization"
+                  "@id": "https://enai.ai/#organization"
                 }
               },
               {
@@ -61,31 +59,13 @@ export default function Home() {
                 "name": "ENAI Revenue Operating System",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Web",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "4000",
-                  "priceCurrency": "USD",
-                  "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
-                    "price": "4000",
-                    "priceCurrency": "USD",
-                    "unitText": "MONTH"
-                  }
-                },
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "ratingCount": "127",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                },
-                "description": "Revenue Operating System that researches accounts, maps buying committees, executes governed outreach, qualifies replies, and books meetings.",
+                "description": "Revenue Operating System that connects market signals to buying systems, applies customer policy, coordinates permitted action, and preserves the seller handoff.",
                 "featureList": [
-                  "Account research",
-                  "Buying committee mapping",
-                  "Governed outreach",
-                  "Lead qualification",
-                  "Meeting handoff"
+                  "Market and account signal detection",
+                  "Vertical buying-system mapping",
+                  "Policy-controlled execution",
+                  "Response qualification",
+                  "Seller handoff with source context"
                 ]
               },
               {
@@ -96,15 +76,15 @@ export default function Home() {
                     "name": "What is Enai.ai?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Enai.ai is the Revenue Operating System for complex B2B teams. It coordinates account research, buying committee mapping, governed outreach, qualification, and meeting handoff."
+                      "text": "Enai.ai is the Revenue Operating System for governed execution in complex B2B markets. It connects market signals to the buying system, applies customer policy, coordinates permitted action, and preserves the seller handoff."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How much does Enai.ai cost?",
+                    "name": "How is ENAI priced?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Enai.ai offers plans for individuals, teams, and enterprise revenue organizations. Enterprise pricing depends on usage, integrations, governance requirements, and deployment scope."
+                      "text": "ENAI provides a commercial proposal after reviewing the target workflow, account coverage, integrations, governance requirements, and level of managed execution."
                     }
                   },
                   {
@@ -112,7 +92,7 @@ export default function Home() {
                     "name": "How does ENAI work?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "ProspectorAI researches accounts and contacts, OutreachAI prepares governed outreach, and QualifierAI handles qualification signals and meeting handoff with audit trails and human control points."
+                      "text": "ENAI connects market and account signals to the buying committee, prepares governed engagement, qualifies responses, and hands the opportunity to the responsible seller with source context, approval rules, and an audit trail."
                     }
                   }
                 ]
@@ -126,14 +106,12 @@ export default function Home() {
         <HeroSection />
         <EnterpriseAutonomy />
         <RealRunSection />
-        <SdrMathSection />
         <TractionSignal />
         <GovernedSection />
         <FounderVideoSection />
         <DigitalWorkersIntro />
-        <WorkforceTransformation />
         <MartechArchitectureFit />
-        <AmplifyIntelligence />
+        <IndustryWorkflowsSection />
         <PlatformShowcase />
         <WorkflowsSection />
         <GlobeSection />

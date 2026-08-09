@@ -63,18 +63,19 @@ const nonNegotiables = [
   "No replacement of human commercial judgment",
 ];
 
-const markets = [
-  "Industrials",
-  "Professional Services",
-  "Private Equity",
-  "Financial Services",
-  "Software",
-  "Hardware",
-  "AI-Native",
-  "Sovereign AI",
-  "Logistics",
-  "Healthcare",
-  "Wholesale",
+const initialMarkets = [
+  {
+    name: "Logistics and transport",
+    reason: "Network, lane, capacity, commercial, operations, finance, and procurement context.",
+  },
+  {
+    name: "Healthcare",
+    reason: "Provider priorities, controlled language, multi-stakeholder review, and high trust requirements.",
+  },
+  {
+    name: "Wholesale and B2B retail",
+    reason: "Distributor, channel, assortment, demand, buyer, commercial, and finance context.",
+  },
 ];
 
 export default function AboutUs() {
@@ -221,9 +222,9 @@ export default function AboutUs() {
         <section className="bg-white px-6 py-20 lg:px-10 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="section-eyebrow">Markets</p>
+              <p className="section-eyebrow">Initial market focus</p>
               <h2 className="section-title mt-4 text-black">
-                Built for vertical revenue motions.
+                Starting where context changes the work.
               </h2>
               <p className="section-copy mt-5">
                 Complex markets require different signals, buying committees, risk
@@ -231,11 +232,15 @@ export default function AboutUs() {
                 execution layer, not a one-size-fits-all outbound bot.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              {markets.map((market) => (
-                <span key={market} className="rounded-full border border-black/10 bg-[#F7F3EE] px-4 py-2 text-sm font-medium text-black/70">
-                  {market}
-                </span>
+            <div className="border-t border-black/10">
+              {initialMarkets.map((market, index) => (
+                <div key={market.name} className="grid grid-cols-[36px_1fr] gap-4 border-b border-black/10 py-6">
+                  <span className="font-mono text-[11px] text-black/30">0{index + 1}</span>
+                  <div>
+                    <p className="font-semibold text-black">{market.name}</p>
+                    <p className="mt-2 text-sm leading-6 text-black/58">{market.reason}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

@@ -35,32 +35,22 @@ const Footer = () => {
               <Image
                 src="/enai-logo.png"
                 alt="ENAI Logo"
-                width={70}
-                height={30}
-                className="object-contain brightness-0 invert"
+                width={54}
+                height={49}
+                className="h-[49px] w-[54px] object-contain brightness-0 invert"
+                style={{ width: "54px", height: "49px" }}
               />
               <span className="text-white font-medium text-xl tracking-tight">ENAI</span>
             </Link>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 h-full">
-            <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Revenue Agents</h3>
-            <ul className="space-y-3">
-              <li><Link href="/agents/prospectorai" className="text-white hover:text-white/70 transition-colors text-body-sm">ProspectorAI</Link></li>
-              <li><Link href="/agents/outreachai" className="text-white hover:text-white/70 transition-colors text-body-sm">OutreachAI</Link></li>
-              <li><Link href="/agents/qualifierai" className="text-white hover:text-white/70 transition-colors text-body-sm">QualifierAI</Link></li>
-            </ul>
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 h-full min-w-[230px]">
             <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Resources</h3>
             <ul className="space-y-3">
               <li><Link href="/" className="text-white hover:text-white/70 transition-colors text-body-sm">Home</Link></li>
-              <li><Link href="/pricing" className="text-white hover:text-white/70 transition-colors text-body-sm">Pricing</Link></li>
               <li><Link href="/demo-library" className="text-white hover:text-white/70 transition-colors text-body-sm">Demo Library</Link></li>
-              <li><Link href="/case-studies" className="text-white hover:text-white/70 transition-colors text-body-sm">Case Studies</Link></li>
+              <li><Link href="/industries" className="text-white hover:text-white/70 transition-colors text-body-sm">Industries</Link></li>
               <li><Link href="/integrations" className="text-white hover:text-white/70 transition-colors text-body-sm">Integrations</Link></li>
-              <li><Link href="/solutions/shipping" className="text-white hover:text-white/70 transition-colors text-body-sm">Shipping & Logistics</Link></li>
               <li><Link href="/security" className="text-white hover:text-white/70 transition-colors text-body-sm">Security</Link></li>
               <li>
                 <a
@@ -89,11 +79,10 @@ const Footer = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-              <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Events</h3>
+              <h3 className="text-caption uppercase tracking-wider mb-4 text-white/50">Explore</h3>
               <ul className="space-y-3">
-                <li><Link href="/events/qatar-summit-2026" className="text-white hover:text-white/70 transition-colors text-body-sm">Investor Brief</Link></li>
-                <li><Link href="/events/qatar-summit-2026/customers" className="text-white hover:text-white/70 transition-colors text-body-sm">Enterprise Demo</Link></li>
-                <li><Link href="/webinar/revenue-execution-gap" className="text-white hover:text-white/70 transition-colors text-body-sm">Webinar</Link></li>
+                <li><Link href="/demo-library" className="text-white hover:text-white/70 transition-colors text-body-sm">Industry Runs</Link></li>
+                <li><Link href="/blog/founder-enterprise-autonomous-governance" className="text-white hover:text-white/70 transition-colors text-body-sm">Founder Letter</Link></li>
               </ul>
             </div>
           </div>
@@ -114,7 +103,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="mailto:enai.ai2024@gmail.com"
+                  href="mailto:Nikhil@enai.ai"
                   className="flex items-center gap-2 text-white hover:text-white/70 transition-colors text-body-sm"
                   title="Send us an email"
                 >
@@ -135,7 +124,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col justify-end items-start h-full pt-4 w-full sm:w-auto">
-            <p className="text-white/40 text-caption mb-2">© 2026 ENAI Inc. All rights reserved.</p>
+            <p className="text-white/40 text-caption mb-2">© 2026 ENAI. All rights reserved.</p>
             <div className="flex items-center gap-6 mb-4">
               <Link href="/terms-of-service" className="text-white/40 hover:text-white/70 text-caption transition-colors">
                 Terms of Service
@@ -144,73 +133,13 @@ const Footer = () => {
                 Privacy Policy
               </Link>
             </div>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex flex-col items-center gap-1">
-                  <div title="SOC 2 Type II Underway" className="h-12 w-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-md border border-white/10">
-                    <Image
-                      src="/soc2-logo.svg"
-                      alt="SOC 2 Type II Underway"
-                      width={40}
-                      height={40}
-                      className="filter invert brightness-0"
-                    />
-                  </div>
-                  <Link href="/compliance/soc2" className="text-white/40 hover:text-white/70 text-[10px] transition-colors">
-                    SOC 2 Type II
-                  </Link>
-                  <span className="text-white/30 text-[8px]">Underway</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1">
-                  <div title="CCPA Compliant Underway" className="h-12 w-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-md border border-white/10">
-                    <Image
-                      src="/ccpa-logo.svg"
-                      alt="California Consumer Privacy Act (CCPA) Opt-Out Icon"
-                      width={32}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
-                  <Link href="/compliance/ccpa" className="text-white/40 hover:text-white/70 text-[10px] transition-colors">
-                    CCPA
-                  </Link>
-                  <span className="text-white/30 text-[8px]">Underway</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1">
-                  <div title="ISO 27001 Certified" className="h-12 w-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-md border border-white/10">
-                    <Image
-                      src="/iso27001-logo.svg"
-                      alt="ISO 27001 Certified"
-                      width={32}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
-                  <Link href="/compliance/iso27001" className="text-white/40 hover:text-white/70 text-[10px] transition-colors">
-                    ISO 27001
-                  </Link>
-                  <span className="text-white/30 text-[8px]">Underway</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1">
-                  <div title="GDPR Compliant" className="h-12 w-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-md border border-white/10">
-                    <Image
-                      src="/gdpr-logo.svg"
-                      alt="GDPR Compliant"
-                      width={32}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
-                  <Link href="/compliance/gdpr" className="text-white/40 hover:text-white/70 text-[10px] transition-colors">
-                    GDPR
-                  </Link>
-                  <span className="text-white/30 text-[8px]">Underway</span>
-                </div>
-              </div>
-            </div>
+            <Link
+              href="/security"
+              className="inline-flex items-center gap-2 rounded-full border border-white/12 px-4 py-2 text-[11px] font-medium text-white/55 transition-colors hover:border-white/25 hover:text-white"
+            >
+              Security and assurance programme
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </div>
 

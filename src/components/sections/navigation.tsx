@@ -6,29 +6,6 @@ import Image from "next/image";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const banners = [
-  {
-    text: "Read Founder Nikhil Nehra's Letter on Governed Autonomous Execution at Web Summit Qatar",
-    href: "/blog/founder-enterprise-autonomous-governance",
-  },
-  {
-    text: "🇶🇦 ENAI Selected for Web Summit Qatar 2026: 1 of 20 Worldwide",
-    href: "https://calendly.com/enai-ai2024/30min",
-  },
-  {
-    text: "Sovereign Revenue Execution: Full Audit Trail From Signal to Qualified Meeting",
-    href: "/blog/enai-for-sovereign-ai-revenue-workflows",
-  },
-  {
-    text: "Enterprise Teams Are Moving to Governed Revenue Execution",
-    href: "/blog/governed-revenue-execution-vs-ai-sdr-tools",
-  },
-  {
-    text: "Industry Revenue Workflows for Industrials, PE, Financial Services, and AI-Native Teams",
-    href: "/blog/enai-for-industrials-revenue-workflows",
-  },
-];
-
 const navLinks = [
   { text: "Blog", href: "/blog" },
   { text: "Security", href: "/security" },
@@ -38,14 +15,11 @@ const navLinks = [
 const resourceLinks = [
   { text: "Demo Library", href: "/demo-library" },
   { text: "Industries", href: "/industries" },
-  { text: "Case Studies", href: "/case-studies" },
   { text: "Integrations", href: "/integrations" },
-  { text: "Pricing", href: "/pricing" },
 ];
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentBanner, setCurrentBanner] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(112);
@@ -60,13 +34,6 @@ export default function Navigation() {
     updateHeight();
     window.addEventListener("resize", updateHeight);
     return () => window.removeEventListener("resize", updateHeight);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
@@ -117,28 +84,12 @@ export default function Navigation() {
                 Founder Letter: Governed Autonomous Execution at Web Summit Qatar 2026
               </span>
               <span className="sm:hidden">
-                Founder letter: ENAI at Doha 2026
+                Founder letter: governed execution
               </span>
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
           </Link>
         </div>
-        <div className="bg-black text-white hidden">
-          <div className="relative h-12 overflow-hidden">
-            {banners.map((banner, index) => (
-              <Link
-                key={index}
-                href={banner.href}
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out ${currentBanner === index ? "opacity-100" : "opacity-0"
-                  }`}
-              >
-                <span className="text-[13px] tracking-wide text-center px-4">{banner.text}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 flex-shrink-0" />
-              </Link>
-            ))}
-          </div>
-        </div>
-
         <div
           className={[
             "w-full transition-all duration-500 ease-out header-gloss no-blur-fallback",
@@ -157,9 +108,10 @@ export default function Navigation() {
                 <Image
                   src="/enai-logo.png"
                   alt="ENAI logo"
-                  width={52}
-                  height={22}
-                  className="transition-opacity duration-300 hover:opacity-80"
+                  width={50}
+                  height={46}
+                  className="h-[46px] w-[50px] object-contain transition-opacity duration-300 hover:opacity-80"
+                  style={{ width: "50px", height: "46px" }}
                   priority
                 />
               </Link>

@@ -18,7 +18,7 @@ const workflowSteps = [
   "Read market signals",
   "Build the account brief",
   "Map the buying committee",
-  "Prepare governed outreach",
+  "Prepare permitted action",
 ];
 const TOTAL = workflowSteps.length;
 
@@ -62,11 +62,11 @@ export default function EnterpriseAutonomy() {
         <div className="grid gap-8 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
           <h2 className="max-w-4xl text-[42px] leading-[1.02] text-[#1E3A3A] md:text-[64px] lg:text-[82px]">
             Run the revenue motion
-            <span className="block text-[#1E3A3A]/35">from signal to meeting</span>
+            <span className="block text-[#1E3A3A]/35">from signal to seller action</span>
           </h2>
           <p className="max-w-sm text-base leading-relaxed text-black/55 md:text-lg">
-            ENAI turns account signals, buyer context, outreach, qualification,
-            and handoff into one governed operating layer.
+            ENAI connects market evidence, the buying system, permitted action,
+            qualification, and human handoff in one governed operating layer.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function EnterpriseAutonomy() {
             <div className="mt-8 rounded-2xl border border-black/[0.07] bg-[#F5F1ED] p-4 md:p-5">
               <p className="text-[15px] leading-relaxed text-black/80">
                 Find logistics accounts showing expansion intent, map the buying
-                committee, and prepare a governed first-touch sequence.
+                committee, and prepare a governed execution plan.
                 <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-[#1E3A3A]/70 align-middle" />
               </p>
               <div className="mt-5 flex items-center justify-between">
@@ -184,10 +184,10 @@ export default function EnterpriseAutonomy() {
             </div>
           </article>
 
-          {/* Governed Outreach */}
+          {/* Governed Action */}
           <article className={`${cardClass} min-h-[310px] p-6 md:p-7`}>
             <div className="flex items-start justify-between">
-              <h3 className="text-2xl font-medium tracking-[-0.02em]">Governed Outreach</h3>
+              <h3 className="text-2xl font-medium tracking-[-0.02em]">Governed Action</h3>
               <Mail className="h-5 w-5 text-black/35" />
             </div>
             <div className="mt-12 rounded-xl border border-black/[0.06] bg-[#F5F1ED] p-4 text-[15px] leading-relaxed text-black/65">
@@ -199,11 +199,11 @@ export default function EnterpriseAutonomy() {
           {/* Qualification */}
           <article className={`${cardClass} min-h-[310px] p-6 md:p-7`}>
             <div className="flex items-start justify-between">
-              <h3 className="text-2xl font-medium tracking-[-0.02em]">Qualification</h3>
+              <h3 className="text-2xl font-medium tracking-[-0.02em]">Opportunity Qualification</h3>
               <MessageSquareText className="h-5 w-5 text-black/35" />
             </div>
             <div className="mt-12 space-y-3">
-              {["Budget confirmed", "Route volume shared", "Meeting booked"].map((item) => (
+              {["Operational need verified", "Buying route confirmed", "Seller action assigned"].map((item) => (
                 <div
                   key={item}
                   className="flex items-center justify-between rounded-xl border border-black/[0.06] bg-[#F8F5F2] px-3 py-3"

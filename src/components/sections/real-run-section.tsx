@@ -23,8 +23,8 @@ export default function RealRunSection() {
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-white/60 md:text-lg">
               No deck, no diagram. This is ENAI working a live workflow —
-              finding buyers, writing governed outreach, and booking the
-              meeting.
+              connecting market evidence to the buying route, permitted action,
+              qualification, and seller handoff.
             </p>
             <Link
               href="/demo-library"

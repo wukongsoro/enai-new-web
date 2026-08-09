@@ -149,10 +149,10 @@ export default function IntegrationsPage() {
                   Book Integration Demo
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="/demo-library"
                   className="inline-flex items-center justify-center border border-black/30 text-black px-8 py-4 text-sm font-medium hover:bg-black/10 transition-all duration-300"
                 >
-                  View Pricing
+                  Watch Product Runs
                 </Link>
               </div>
             </div>
@@ -290,10 +290,10 @@ export default function IntegrationsPage() {
                   Request Integration
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="/security"
                   className="inline-flex items-center justify-center border border-black text-black px-8 py-4 text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
                 >
-                  View Enterprise Plans
+                  Review Security
                 </Link>
               </div>
             </div>

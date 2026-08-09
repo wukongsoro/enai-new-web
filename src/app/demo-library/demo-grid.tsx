@@ -131,26 +131,13 @@ const entries: DemoEntry[] = [
       "Why autonomous execution needs governance",
       "How revenue teams adopt agents safely",
       "Top 10 Agentic AI selection, London 2026",
-      "The road to Web Summit Qatar 2026",
+      "On stage at Web Summit Qatar, February 2026",
     ],
     meta: [
       { label: "Format", value: "Stage talk" },
       { label: "Runtime", value: "1 min" },
       { label: "Location", value: "Doha, Qatar" },
     ],
-  },
-  {
-    id: "webinar",
-    coverTitle: ["The Revenue", "Execution Gap"],
-    cover: "bg-gradient-to-br from-[#121A19] via-[#1E3A3A] to-[#A88A57]",
-    title: "Live Webinar: Revenue Execution in Practice",
-    by: "ENAI Team",
-    category: "Founders & events",
-    href: "/webinar/revenue-execution-gap",
-    description:
-      "A live working session on closing the gap between revenue strategy and day-to-day execution — 24 June 2026.",
-    features: [],
-    meta: [],
   },
 ];
 
@@ -291,10 +278,10 @@ export default function DemoGrid() {
                       Book a demo
                     </Link>
                     <Link
-                      href="/pricing"
+                      href="/about-us"
                       className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/45"
                     >
-                      View pricing
+                      Why ENAI exists
                     </Link>
                   </div>
                 </div>

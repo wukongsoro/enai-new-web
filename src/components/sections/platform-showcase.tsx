@@ -5,20 +5,20 @@ import Link from "next/link";
 
 const capabilities = [
   {
-    title: "Find the right buyers",
-    description: "Spot accounts showing intent and rank them by fit, timing, and reachable decision makers.",
+    title: "Detect commercial change",
+    description: "Connect market, operational, product, and account signals to a reason for the revenue team to act.",
   },
   {
-    title: "Research before outreach",
-    description: "Pull company context, role relevance, and recent triggers into every message and handoff.",
+    title: "Map the buying system",
+    description: "Identify the operators, economic buyers, evaluators, procurement path, and relationship context around the decision.",
   },
   {
-    title: "Run outreach safely",
-    description: "Send personalized follow-ups across channels while keeping your approval rules and brand voice intact.",
+    title: "Execute within policy",
+    description: "Coordinate permitted actions using customer-defined claims, approvals, exclusions, pacing, and escalation rules.",
   },
   {
-    title: "Book qualified meetings",
-    description: "Ask the right questions, handle objections, and schedule sales conversations with full context.",
+    title: "Preserve the handoff",
+    description: "Give the responsible seller the opportunity, evidence, stakeholder route, authority boundary, and next action together.",
   },
 ];
 
@@ -28,13 +28,13 @@ export default function PlatformShowcase() {
       <div className="bg-[#E8DDD4] text-black rounded-[40px] max-w-[1248px] mx-auto py-16 px-6 sm:p-12 md:p-16 lg:px-20 lg:py-24">
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-block bg-[#F5F1ED] text-black text-sm font-medium py-1 px-3 rounded-full mb-4">
-            Controlled AI sales execution
+            Governed revenue execution
           </div>
           <h2 className="text-[40px] md:text-[48px] heading-strong leading-tight mb-4">
-            Ask for pipeline. ENAI does the work.
+            Define the outcome. ENAI runs the work.
           </h2>
           <p className="text-[22px] md:text-[26px] font-medium text-black/80 mb-6 leading-snug">
-            Tell ENAI who you sell to and what good looks like. It finds buyers, runs outreach, qualifies interest, and books meetings.
+            Define the market, evidence threshold, buying route, operating rules, and human owner. ENAI coordinates the work between them.
           </p>
           <p className="text-[#666666] text-lg mb-8 max-w-2xl mx-auto">
             Your team can review, approve, and trace every action. That means automation without losing control of customer experience, data, or brand.

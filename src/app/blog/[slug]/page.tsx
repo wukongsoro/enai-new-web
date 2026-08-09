@@ -16,14 +16,6 @@ const LAUNCH_BLOG_SLUGS = [
   "enai-for-logistics-transport-revenue-execution",
   "enai-for-healthcare-revenue-execution",
   "enai-for-wholesale-b2b-retail-revenue-execution",
-  "enai-for-industrials-revenue-workflows",
-  "enai-for-professional-services-business-development",
-  "enai-for-private-equity-deal-sourcing",
-  "enai-for-financial-services-compliant-revenue-workflows",
-  "enai-for-software-revenue-workflows",
-  "enai-for-hardware-sales-workflows",
-  "enai-for-ai-native-companies",
-  "enai-for-sovereign-ai-revenue-workflows",
 ];
 
 // This would typically come from a CMS or database
@@ -932,7 +924,7 @@ We are opening a small cohort of design partners in Q2. Spots are limited.
 
 ---
 
-Nikhil Nehra is the Founder and CEO of Enai. Enai is based in London and was selected for the Web Summit Qatar 2026 Startup Showcase, one of 20 companies chosen worldwide.`
+Nikhil Nehra is the Founder and CEO of ENAI. ENAI is based in London and was selected to present as part of the Agentic AI showcase at Web Summit Qatar 2026.`
   },
   {
     title: "How AI-Powered Sales Collaboration Transforms B2B Revenue Generation",
@@ -1435,7 +1427,7 @@ As AI technology advances, we can expect:
 - Seamless integration across all sales tools
 - Increased focus on relationship building over transaction processing
 
-Ready to automate your sales process? [Schedule a demo](https://www.enai.ai/demo) to see how ENAI can transform your sales operations.`
+Ready to automate your sales process? [Schedule a demo](https://enai.ai/demo) to see how ENAI can transform your sales operations.`
   },
   {
     title: "From Manual to Automated: ENAI's Journey",
@@ -1479,7 +1471,7 @@ Founded in 2023, ENAI started with a simple mission: to eliminate repetitive sal
 To create a world where every sales team has an AI co-pilot that handles the mundane while humans focus on strategic relationship building.
 
  Join Our Journey
-We're always looking for talented individuals to join our mission. [View open positions](https://www.enai.ai/careers).`
+We're always looking for talented individuals to join our mission. [View open positions](https://enai.ai/careers).`
   },
   {
     title: "The ROI of AI BDR Agents: Real Numbers",
@@ -1532,7 +1524,7 @@ Additional revenue: $650,000/year
  Conclusion
 AI BDR agents don't just reduce costs—they dramatically improve sales effectiveness and scale. The ROI is clear and compelling for forward-thinking sales organizations.
 
-[Calculate your potential ROI](https://www.enai.ai/roi-calculator).`
+[Calculate your potential ROI](https://enai.ai/roi-calculator).`
   },
   {
     title: "AI Sales Automation 2025: The Definitive Guide to Transforming Revenue Operations",
@@ -4587,13 +4579,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="bg-[#F5F1ED] rounded-2xl p-8 border border-black/10">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Hire our Digital Workers
+                See governed execution on your market
               </h3>
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                Automate every step of your outreach process, from finding and researching prospects to personalizing messages and booking meetings.
+                Watch ENAI research the account, map the buying committee, apply approval rules, and prepare the seller handoff in a real industry workflow.
               </p>
               <Button size="lg" className="bg-[#1E3A3A] hover:bg-[#16302F]">
-                <Link href="/demo">Book a Call</Link>
+                <Link href="/demo-library">Watch product runs</Link>
               </Button>
             </div>
           </div>

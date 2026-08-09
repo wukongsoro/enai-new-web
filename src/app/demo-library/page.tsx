@@ -125,10 +125,10 @@ export default function DemoLibraryPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="/about-us"
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/50"
                 >
-                  View pricing
+                  Why ENAI exists
                 </Link>
               </div>
             </div>

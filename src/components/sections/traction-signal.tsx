@@ -1,36 +1,36 @@
 "use client";
 
 import React from "react";
-import { Award, Globe, Building2, CheckCircle2 } from "lucide-react";
+import { Award, Layers3, PlayCircle, ShieldCheck } from "lucide-react";
 
 const tractionSignals = [
     {
         icon: Award,
         title: "Startup Showcase",
-        description: "Official Selection for Web Summit Qatar 2026 Startup Showcase.",
+        description: "Selected to present as part of London's Agentic AI showcase at Web Summit Qatar 2026.",
         metric: "Top 10",
         metricLabel: "Agentic AI",
     },
     {
-        icon: Globe,
-        title: "Research Automation",
-        description: "Account research, enrichment, and qualification compressed into governed workflows.",
-        metric: "40-60%",
-        metricLabel: "Less Research Time",
+        icon: PlayCircle,
+        title: "Recorded Workflows",
+        description: "Public product runs for logistics, healthcare, and wholesale revenue motions.",
+        metric: "03",
+        metricLabel: "Industry Runs",
     },
     {
-        icon: Building2,
-        title: "Meeting Conversion",
-        description: "Industry-trained playbooks improve fit, timing, and stakeholder relevance.",
-        metric: "20-35%",
-        metricLabel: "Conversion Lift",
+        icon: Layers3,
+        title: "Execution Architecture",
+        description: "Research, buying-committee mapping, controlled outreach, qualification, and handoff in one system.",
+        metric: "01",
+        metricLabel: "Operating Layer",
     },
     {
-        icon: CheckCircle2,
-        title: "Stack Consolidation",
-        description: "Replace fragmented research, orchestration, and engagement workflows.",
-        metric: "$300K+",
-        metricLabel: "Annual Savings",
+        icon: ShieldCheck,
+        title: "Human Authority",
+        description: "Approval rules, exclusions, source context, and escalation stay visible to the customer.",
+        metric: "Human",
+        metricLabel: "Control Owner",
     },
 ];
 
@@ -43,7 +43,7 @@ const TractionSignal = () => {
                         Proof
                     </p>
                     <h2 className="section-title mt-4 text-[#1E3A3A]">
-                        Numbers that explain why teams lean in.
+                        Proof an investor or buyer can inspect.
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

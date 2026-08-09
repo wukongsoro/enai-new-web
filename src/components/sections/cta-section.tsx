@@ -11,7 +11,7 @@ const CtaSection = () => {
             See it running on your market, not a sample one.
           </h2>
           <p className="text-lg text-[#1E3A3A]/70 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
-            See how ENAI coordinates account research, outreach, qualification, and handoff in one governed workflow.
+            See how ENAI turns market signals, buying-system context, customer policy, and human authority into one governed revenue workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-[#1E3A3A] text-white text-[15px] font-semibold px-10 hover:bg-[#1E3A3A]/90 shadow-md">
@@ -20,8 +20,8 @@ const CtaSection = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-[#1E3A3A] border-[#1E3A3A]/20 text-[15px] font-semibold px-10 hover:bg-white/50">
-              <Link href="/pricing">
-                View pricing
+              <Link href="/demo-library">
+                Watch industry runs
               </Link>
             </Button>
           </div>

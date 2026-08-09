@@ -19,12 +19,12 @@ const FounderVideoSection = () => {
                             </div>
                             
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-black leading-[1.1]">
-                                Hear from our<br />Founders
+                                Hear from our <span className="block">founders</span>
                             </h2>
                         </div>
                         
                         <p className="text-lg md:text-xl text-black/60 leading-relaxed">
-                            Nikhil Nehra and Zeeshan Idrees, Co-Founders of ENAI, took the stage at Doha Web Summit 2026, one of ten Agentic AI companies selected from London, to show how sales and marketing teams can leverage ENAI to build demand generation across the entire buyer journey.
+                            Nikhil Nehra and Zeeshan Idrees took the stage at Web Summit Qatar 2026 as part of London&apos;s Agentic AI showcase to explain why autonomous revenue execution needs governance, vertical context, and human authority.
                         </p>
                         
                         <div className="flex flex-col sm:flex-row gap-6 pt-4">
@@ -85,7 +85,7 @@ const FounderVideoSection = () => {
                         
                         <div className="mt-6 px-2 text-center sm:text-left">
                             <p className="text-[11px] font-bold text-black/40 uppercase tracking-widest">
-                                Nikhil Nehra & Zeeshan Idrees — Doha Web Summit 2026  ·  Demand generation across the full buyer journey
+                                Nikhil Nehra & Zeeshan Idrees — Web Summit Qatar 2026 · Governed autonomous execution
                             </p>
                         </div>
                     </div>

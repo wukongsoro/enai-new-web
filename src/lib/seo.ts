@@ -1,4 +1,4 @@
-export const SITE_URL = "https://www.enai.ai";
+export const SITE_URL = "https://enai.ai";
 
 export const buildAbsoluteUrl = (path?: string) => {
   if (!path) return `${SITE_URL}/social-share-image.png`;

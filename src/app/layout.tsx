@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
+import GoogleAnalytics from "@/components/analytics/google-analytics";
 import { SITE_URL, buildCanonicalUrl, defaultKeywords, primaryGeoRegion } from "@/lib/seo";
 
 export const viewport: Viewport = {
@@ -14,7 +15,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "ENAI | The Revenue Operating System",
-  description: "ENAI is the Revenue Operating System for complex B2B teams. Research accounts, map buying committees, execute governed outreach, and book qualified meetings.",
+  description: "ENAI is the Revenue Operating System for governed execution in complex B2B markets, connecting market signals, buying systems, customer policy, and seller handoff.",
   keywords: defaultKeywords,
   authors: [{ name: "Nikhil Nehra", url: "https://www.linkedin.com/in/nikhil-nehra-57716a23b" }],
   creator: "Nikhil Nehra",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ENAI | The Revenue Operating System",
-    description: "The Revenue Operating System for complex B2B teams: account research, buying committee mapping, governed outreach, and qualified meetings.",
+    description: "The Revenue Operating System for governed execution across market signals, buying systems, customer policy, and seller handoff.",
     url: buildCanonicalUrl('/'),
     siteName: "Enai AI",
     images: [
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ENAI | The Revenue Operating System",
-    description: "The Revenue Operating System for complex B2B teams: account research, buying committee mapping, governed outreach, and qualified meetings.",
+    description: "The Revenue Operating System for governed execution across market signals, buying systems, customer policy, and seller handoff.",
     creator: "@enai_ai",
     site: "@enai_ai",
     images: [`${SITE_URL}/social-share-image.png`],
@@ -115,34 +116,41 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://www.enai.ai/#organization",
+                  "@id": "https://enai.ai/#organization",
                   "name": "Enai AI",
-                  "legalName": "ENAI Inc.",
                   "alternateName": "Enai.ai",
-                  "url": "https://www.enai.ai",
+                  "url": "https://enai.ai",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://www.enai.ai/enai-logo.png",
+                    "url": "https://enai.ai/enai-logo.png",
                     "width": 512,
                     "height": 512
                   },
-                  "description": "Enai AI (enai.ai) is the Revenue Operating System for complex B2B teams, coordinating account research, buying committee mapping, governed outreach, qualification, and meeting handoff. We are a commercial technology company, NOT the European Network for Academic Integrity.",
-                  "disambiguatingDescription": "Commercial revenue technology company founded in 2024, providing governed AI workflows for B2B revenue teams. Not to be confused with European Network for Academic Integrity (ENAI).",
+                  "description": "ENAI is the Revenue Operating System for governed revenue execution in complex vertical markets, connecting market signals, buying systems, customer policy, qualification, and seller handoff.",
+                  "disambiguatingDescription": "Commercial revenue technology company founded in 2024. Distinct from the European Network for Academic Integrity.",
                   "slogan": "The Revenue Operating System",
                   "knowsAbout": [
                     "Revenue Operating System",
-                    "Sales Force Automation",
-                    "Enterprise AI",
-                    "Sales Prospecting",
-                    "Lead Qualification",
-                    "Pipeline Generation"
+                    "Governed Revenue Execution",
+                    "Enterprise AI Governance",
+                    "Buying Committee Mapping",
+                    "Vertical Revenue Workflows",
+                    "Seller Handoff"
                   ],
-                  "founder": {
-                    "@type": "Person",
-                    "name": "Nikhil Nehra",
-                    "jobTitle": "Founder & CEO",
-                    "url": "https://www.linkedin.com/in/nikhilnehra"
-                  },
+                  "founder": [
+                    {
+                      "@type": "Person",
+                      "name": "Nikhil Nehra",
+                      "jobTitle": "Founder & CEO",
+                      "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b"
+                    },
+                    {
+                      "@type": "Person",
+                      "name": "Zeeshan Idrees",
+                      "jobTitle": "Co-Founder",
+                      "url": "https://linkedin.com/in/zidrees"
+                    }
+                  ],
                   "foundingDate": "2024",
                   "foundingLocation": {
                     "@type": "Place",
@@ -159,52 +167,7 @@ export default function RootLayout({
                     "postalCode": "EC1V 2NX",
                     "addressCountry": "GB"
                   },
-                  "areaServed": [
-                    {
-                      "@type": "City",
-                      "name": "London"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "New York"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "San Francisco"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Boston"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Austin"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Seattle"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Amsterdam"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Berlin"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Paris"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Singapore"
-                    },
-                    {
-                      "@type": "City",
-                      "name": "Sydney"
-                    }
-                  ],
+                  "areaServed": "Worldwide",
                   "sameAs": [
                     "https://twitter.com/enai_ai",
                     "https://www.linkedin.com/company/enai-ai"
@@ -221,11 +184,11 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Person",
-                  "@id": "https://www.enai.ai/#nikhil-nehra",
+                  "@id": "https://enai.ai/#nikhil-nehra",
                   "name": "Nikhil Nehra",
                   "jobTitle": "Founder & CEO",
                   "worksFor": {
-                    "@id": "https://www.enai.ai/#organization"
+                    "@id": "https://enai.ai/#organization"
                   },
                   "description": "Founder and CEO of ENAI, leading the architecture and development of the company's governed revenue workflow platform.",
                   "url": "https://www.linkedin.com/in/nikhil-nehra-57716a23b",
@@ -236,54 +199,13 @@ export default function RootLayout({
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.enai.ai/#website",
-                  "url": "https://www.enai.ai",
+                  "@id": "https://enai.ai/#website",
+                  "url": "https://enai.ai",
                   "name": "Enai AI",
                   "publisher": {
-                    "@id": "https://www.enai.ai/#organization"
+                    "@id": "https://enai.ai/#organization"
                   },
-                  "inLanguage": "en-US",
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://www.enai.ai/blog?search={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                  }
-                },
-                {
-                  "@type": "LocalBusiness",
-                  "name": "Enai AI",
-                  "image": "https://www.enai.ai/enai-logo.png",
-                  "@id": "https://www.enai.ai",
-                  "url": "https://www.enai.ai",
-                  "telephone": "",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "128 City Road",
-                    "addressLocality": "London",
-                    "postalCode": "EC1V 2NX",
-                    "addressCountry": "GB"
-                  },
-                  "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 51.5271,
-                    "longitude": -0.0857
-                  },
-                  "openingHoursSpecification": {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday"
-                    ],
-                    "opens": "09:00",
-                    "closes": "18:00"
-                  },
-                  "sameAs": [
-                    "https://twitter.com/enai_ai",
-                    "https://www.linkedin.com/company/enai-ai"
-                  ]
+                  "inLanguage": "en-US"
                 }
               ]
             })
@@ -293,6 +215,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ErrorReporter />
         {children}
+        <GoogleAnalytics />
         <VisualEditsMessenger />
       </body>
     </html>
